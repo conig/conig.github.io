@@ -1,38 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Conigrave.com</title>
-    <link>https://conigrave.com/</link>
-    <description>Recent content on Conigrave.com</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://conigrave.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Contact</title>
-      <link>https://conigrave.com/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://conigrave.com/contact/</guid>
-      <description>Want Contact? Have questions or suggestions? Feel free to open an issue on GitHub or ask me on Twitter.</description>
-    </item>
-    
-    <item>
-      <title>James H. Conigrave</title>
-      <link>https://conigrave.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://conigrave.com/about/</guid>
-      <description>I am Research Fellow studying motivation for drinking alcohol. I received a PhD in psychology from Australian Catholic University. I am passionate about statistics, programming, and automation.</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>https://conigrave.com/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://conigrave.com/projects/</guid>
-      <description>Portfolio Demo Coder Portfolio This theme is created based on hugo-coder.
-I made it possible to tell yourself more by my change.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Conigrave.com</title><link>https://conigrave.com/</link><description>Recent content on Conigrave.com</description><generator>Hugo</generator><language>en</language><atom:link href="https://conigrave.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Contact</title><link>https://conigrave.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://conigrave.com/contact/</guid><description>&lt;h2 id="want-contact"&gt;Want Contact?&lt;/h2&gt;
+&lt;p&gt;Have questions or suggestions? Feel free to &lt;a href="https://github.com/naro143/hugo-coder-portfolio/issues/new"&gt;open an issue on GitHub&lt;/a&gt; or &lt;a href="https://twitter.com/naro143"&gt;ask me on Twitter&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>James H. Conigrave</title><link>https://conigrave.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://conigrave.com/about/</guid><description>&lt;p&gt;I am a Research Fellow at the Centre for Alcohol Policy Research (CAPR), La Trobe University, with a background in psychology. I am interested in what helps people make better decisions about their health, particularly in understanding motivation for behaviour change and risk taking. I have focused on building skills in biostatistics and programming, and have supported the ongoing development of the Grog Survey App.&lt;/p&gt;</description></item><item><title>Projects</title><link>https://conigrave.com/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://conigrave.com/projects/</guid><description>&lt;h2 id="portfolio-demo"&gt;Portfolio Demo&lt;/h2&gt;
+
+
+ 
+ 
+
+
+
+
+
+&lt;div class="portfolio"&gt;
+ &lt;div class="portfolio-inner"&gt;
+ &lt;div class="portfolio-image"&gt;&lt;img src="https://conigrave.com/images/tn.png" alt="Coder Portfolio"&gt;&lt;/div&gt;
+ &lt;div class="portfolio-content"&gt;
+ &lt;h2 id="coder-portfolio"&gt;Coder Portfolio&lt;/h2&gt;
+&lt;p&gt;This theme is created based on hugo-coder.&lt;br&gt;
+I made it possible to tell yourself more by my change.&lt;/p&gt;
+
+ &lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>
