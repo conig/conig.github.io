@@ -224,7 +224,12 @@ const parseHash = () => {
   const path = pathRaw.replace(/^\/+/, "");
   const parts = path.split("/").filter(Boolean);
   const tab = parts[0] === "cookbooks" ? "cookbooks" : "recipes";
-  const slug = decodeURIComponent(parts[1] || "");
+  let slug = "";
+  try {
+    slug = decodeURIComponent(parts[1] || "");
+  } catch (_error) {
+    slug = text(parts[1] || "");
+  }
 
   const params = new URLSearchParams(queryRaw || "");
   const flags = new Set(text(params.get("flags")).split(",").map((item) => item.trim()).filter(Boolean));
@@ -328,11 +333,15 @@ const openCookbook = (slug, sourceCard = null) => {
 
 const closeRecipe = () => {
   if (!state.recipeSlug) return;
+  clearMorphArtifacts();
+  pendingMorphRect = null;
   state.recipeSlug = "";
   updateHash();
 };
 
 const closeCookbook = () => {
+  clearMorphArtifacts();
+  pendingMorphRect = null;
   state.cookbookSlug = "";
   updateHash();
 };
@@ -926,6 +935,14 @@ const runMorphAnimation = () => {
 
   const endRect = target.getBoundingClientRect();
   if (startRect.width < 2 || startRect.height < 2 || endRect.width < 2 || endRect.height < 2) return;
+  if (
+    Math.abs(startRect.left - endRect.left) < 1 &&
+    Math.abs(startRect.top - endRect.top) < 1 &&
+    Math.abs(startRect.width - endRect.width) < 1 &&
+    Math.abs(startRect.height - endRect.height) < 1
+  ) {
+    return;
+  }
 
   const overlay = document.createElement("div");
   overlay.className = "vc-morph-overlay";
@@ -936,6 +953,29 @@ const runMorphAnimation = () => {
   document.body.appendChild(overlay);
   target.style.visibility = "hidden";
 
+  const finishMorph = () => {
+    target.style.visibility = "visible";
+    overlay.remove();
+  };
+
+  const timer = window.setTimeout(finishMorph, 420);
+  overlay.addEventListener(
+    "transitionend",
+    () => {
+      window.clearTimeout(timer);
+      finishMorph();
+    },
+    { once: true },
+  );
+  overlay.addEventListener(
+    "transitioncancel",
+    () => {
+      window.clearTimeout(timer);
+      finishMorph();
+    },
+    { once: true },
+  );
+
   requestAnimationFrame(() => {
     overlay.style.transition = "left 260ms cubic-bezier(0.2, 0, 0, 1), top 260ms cubic-bezier(0.2, 0, 0, 1), width 260ms cubic-bezier(0.2, 0, 0, 1), height 260ms cubic-bezier(0.2, 0, 0, 1), border-radius 260ms cubic-bezier(0.2, 0, 0, 1)";
     overlay.style.left = `${endRect.left}px`;
@@ -944,14 +984,16 @@ const runMorphAnimation = () => {
     overlay.style.height = `${endRect.height}px`;
     overlay.style.borderRadius = "24px";
   });
+};
 
-  overlay.addEventListener("transitionend", () => {
-    target.style.visibility = "visible";
-    overlay.remove();
-  }, { once: true });
+const clearMorphArtifacts = () => {
+  document.querySelectorAll(".vc-morph-overlay").forEach((node) => node.remove());
+  const detailSurface = refs.detail.querySelector("#vc-detail-surface");
+  if (detailSurface instanceof HTMLElement) detailSurface.style.visibility = "visible";
 };
 
 const render = () => {
+  clearMorphArtifacts();
   if (!(state.tab === "cookbooks" && state.cookbookSlug)) clearCookbookBindings();
   renderTabs();
   refs.searchInput.value = state.q;
