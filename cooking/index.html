@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vaultchef Library</title>
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <div class="vc-app" id="vc-app">
+    <header class="vc-topbar">
+      <div class="vc-brand-wrap">
+        <p class="vc-kicker">Vaultchef</p>
+        <h1>Recipe Library</h1>
+      </div>
+      <nav class="vc-tabs" role="tablist" aria-label="View selector">
+        <button class="vc-tab" id="vc-tab-recipes" data-tab="recipes" role="tab" aria-selected="true">Recipes</button>
+        <button class="vc-tab" id="vc-tab-cookbooks" data-tab="cookbooks" role="tab" aria-selected="false">Cookbooks</button>
+      </nav>
+    </header>
+
+    <main class="vc-main">
+      <section class="vc-list-pane" aria-label="Results">
+        <section class="vc-sidebar" aria-label="Search and filters">
+          <label class="vc-search-field" for="vc-search-input">
+            <span>Search</span>
+            <input id="vc-search-input" type="search" placeholder="Search recipes or cookbooks" autocomplete="off" />
+          </label>
+          <div class="vc-filters" id="vc-filter-row" aria-live="polite"></div>
+          <section class="vc-feature-slot" id="vc-feature-slot" aria-label="Featured cookbook" hidden></section>
+        </section>
+        <div class="vc-list" id="vc-list"></div>
+      </section>
+      <section class="vc-detail-pane" aria-label="Detail">
+        <div id="vc-detail-empty" class="vc-detail-empty">Choose an item to see details.</div>
+        <article id="vc-detail" class="vc-detail" hidden></article>
+      </section>
+    </main>
+  </div>
+
+  <template id="vc-card-template">
+    <article class="vc-card" tabindex="0"></article>
+  </template>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
