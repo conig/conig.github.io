@@ -753,7 +753,17 @@ const renderCookbookFullscreen = () => {
             cookbook.album_youtube_url
               ? `
             <p class="vc-music-links">
-              <a class="vc-music-link" data-vc-music-url="${escapeHtml(cookbook.album_youtube_url)}" href="${escapeHtml(cookbook.album_youtube_url)}" target="_blank" rel="noopener noreferrer">Play on YouTube Music</a>
+              <a
+                class="vc-music-link"
+                data-vc-music-url="${escapeHtml(cookbook.album_youtube_url)}"
+                href="${escapeHtml(cookbook.album_youtube_url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Play on YouTube Music"
+                title="Play on YouTube Music"
+              >
+                <span class="vc-music-link-label">Play on YouTube Music</span>
+              </a>
             </p>
           `
               : ""

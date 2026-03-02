@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-02T01:10:10.935069+00:00",
+  "generated_at": "2026-03-02T02:35:40.765505+00:00",
   "recipes": [
     {
       "id": "301",
@@ -1608,12 +1608,12 @@
       "subtitle": "Saturday, March 7, 2026 · Bright, low-effort late-summer East-Asian-inspired menu with crisp citrus, glossy umami, and tropical finish",
       "author": "",
       "date": "2026-03-07",
-      "source_mtime": 1772404445,
+      "source_mtime": 1772418899,
       "description": "",
       "album_title": "Midnight Sugar",
       "album_artist": "Tsuyoshi Yamamoto Trio",
       "album_style": "Instrumental jazz (intimate Japanese piano trio, warm late-night feel)",
-      "album_youtube_url": "",
+      "album_youtube_url": "https://www.youtube.com/watch?v=qocG8v1rToc",
       "recipe_slugs": [
         "recipe-414-pear-ginger-yuzu-soda",
         "recipe-415-miso-butter-broccolini-with-toasted-sesame-almonds",
