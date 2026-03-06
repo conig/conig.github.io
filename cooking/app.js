@@ -46,6 +46,8 @@ let activeCookbookList = [];
 let disposeCookbookView = null;
 let mobileRecipeListScrollY = 0;
 let suppressCookbookNavSyncUntil = 0;
+let lastViewportWidth = window.innerWidth;
+let lastViewportHeight = window.innerHeight;
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const recipeMobileQuery = window.matchMedia("(max-width: 959px)");
@@ -1381,9 +1383,15 @@ const setupEvents = () => {
   });
 
   window.addEventListener("resize", () => {
+    const nextWidth = window.innerWidth;
+    const nextHeight = window.innerHeight;
+    const widthChanged = Math.abs(nextWidth - lastViewportWidth) > 1;
+    lastViewportWidth = nextWidth;
+    lastViewportHeight = nextHeight;
+
     refreshImageFocus(refs.list);
     refreshImageFocus(refs.detail);
-    if (state.tab === "recipes" && state.recipeSlug) render();
+    if (state.tab === "recipes" && state.recipeSlug && widthChanged) render();
     if (state.tab === "cookbooks" && state.cookbookSlug) {
       syncCookbookHeaderHeight();
       syncCookbookRailGeometry();
