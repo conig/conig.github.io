@@ -1,3 +1,11 @@
+import {
+  COOKBOOK_NAV_SYNC_DELAY_MS,
+  isMobileViewport,
+  shouldActivateCard,
+  shouldMorphCardOpen,
+  shouldSyncCookbookNav,
+} from "./interaction.mjs";
+
 const DATA_URL = new URL("./content/index.json", import.meta.url);
 
 const FLAG_LABELS = {
@@ -36,8 +44,11 @@ let pendingMorphRect = null;
 let activeRecipeList = [];
 let activeCookbookList = [];
 let disposeCookbookView = null;
+let mobileRecipeListScrollY = 0;
+let suppressCookbookNavSyncUntil = 0;
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const recipeMobileQuery = window.matchMedia("(max-width: 959px)");
 
 const text = (value) => String(value || "").trim();
 const escapeHtml = (value) =>
@@ -182,6 +193,11 @@ const hydrateMusicLinks = (root) => {
   });
 };
 
+const isMobileRecipeLayout = () => isMobileViewport(window.innerWidth);
+const shouldUseMorphAnimation = () => shouldMorphCardOpen({ width: window.innerWidth, reducedMotion });
+const canSyncCookbookNav = () =>
+  shouldSyncCookbookNav({ now: window.performance.now(), suppressUntil: suppressCookbookNavSyncUntil });
+
 const syncCookbookHeaderHeight = () => {
   const shell = refs.detail.querySelector(".vc-cookbook-shell");
   const header = refs.detail.querySelector(".vc-cookbook-header");
@@ -214,6 +230,7 @@ const scrollCookbookTarget = (targetId) => {
   const shell = refs.detail.querySelector(".vc-cookbook-shell");
   const headerHeight = shell ? Number.parseInt(getComputedStyle(shell).getPropertyValue("--vc-header-height"), 10) || 0 : 0;
   const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+  suppressCookbookNavSyncUntil = window.performance.now() + COOKBOOK_NAV_SYNC_DELAY_MS;
   window.scrollTo({ top: Math.max(top, 0), behavior: reducedMotion ? "auto" : "smooth" });
 };
 
@@ -318,14 +335,15 @@ const setTab = (tab) => {
 };
 
 const openRecipe = (slug, sourceCard = null) => {
-  if (sourceCard instanceof HTMLElement) pendingMorphRect = sourceCard.getBoundingClientRect();
+  if (isMobileRecipeLayout()) mobileRecipeListScrollY = window.scrollY;
+  if (sourceCard instanceof HTMLElement && shouldUseMorphAnimation()) pendingMorphRect = sourceCard.getBoundingClientRect();
   state.tab = "recipes";
   state.recipeSlug = slug;
   updateHash();
 };
 
 const openCookbook = (slug, sourceCard = null) => {
-  if (sourceCard instanceof HTMLElement) pendingMorphRect = sourceCard.getBoundingClientRect();
+  if (sourceCard instanceof HTMLElement && shouldUseMorphAnimation()) pendingMorphRect = sourceCard.getBoundingClientRect();
   state.tab = "cookbooks";
   state.cookbookSlug = slug;
   updateHash();
@@ -333,10 +351,16 @@ const openCookbook = (slug, sourceCard = null) => {
 
 const closeRecipe = () => {
   if (!state.recipeSlug) return;
+  const restoreScroll = isMobileRecipeLayout();
   clearMorphArtifacts();
   pendingMorphRect = null;
   state.recipeSlug = "";
   updateHash();
+  if (restoreScroll) {
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: mobileRecipeListScrollY, behavior: "auto" });
+    });
+  }
 };
 
 const closeCookbook = () => {
@@ -367,6 +391,209 @@ const buildMetaPills = (values) => {
   return row;
 };
 
+const imageInitials = (value) => {
+  const words = text(value)
+    .split(/\s+/)
+    .map((item) => item.replace(/[^a-z0-9]/gi, ""))
+    .filter(Boolean);
+  if (words.length === 0) return "VC";
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+  return `${words[0][0] || ""}${words[1][0] || ""}`.toUpperCase();
+};
+
+const buildImageFallbackMarkup = ({ title, label = "", kind = "card" }) => `
+  <span class="vc-image-fallback vc-image-fallback-${kind}" aria-hidden="true">
+    <span class="vc-image-fallback-mark">${escapeHtml(imageInitials(title))}</span>
+    ${label ? `<span class="vc-image-fallback-label">${escapeHtml(label)}</span>` : ""}
+  </span>
+`;
+
+const buildImageMarkup = ({ src, alt = "", title = "", label = "", kind = "card" }) =>
+  `${buildImageFallbackMarkup({ title, label, kind })}<img data-vc-image src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />`;
+
+const clearImageFocus = (frame) => {
+  if (!(frame instanceof HTMLElement)) return;
+  frame.style.removeProperty("--vc-image-scale");
+  frame.style.removeProperty("--vc-image-shift-x");
+  frame.style.removeProperty("--vc-image-shift-y");
+  frame.dataset.vcImageFocus = "none";
+};
+
+const measureImageFocus = (img) => {
+  if (!(img instanceof HTMLImageElement) || img.naturalWidth <= 0 || img.naturalHeight <= 0) return null;
+
+  const sampleWidth = Math.min(img.naturalWidth, 128);
+  const sampleHeight = Math.max(1, Math.round((img.naturalHeight / img.naturalWidth) * sampleWidth));
+  const canvas = document.createElement("canvas");
+  canvas.width = sampleWidth;
+  canvas.height = sampleHeight;
+
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  if (!context) return null;
+
+  context.drawImage(img, 0, 0, sampleWidth, sampleHeight);
+  const pixels = context.getImageData(0, 0, sampleWidth, sampleHeight).data;
+  const cornerSize = Math.max(4, Math.floor(Math.min(sampleWidth, sampleHeight) * 0.12));
+  const cornerOffsets = [
+    [0, 0],
+    [sampleWidth - cornerSize, 0],
+    [0, sampleHeight - cornerSize],
+    [sampleWidth - cornerSize, sampleHeight - cornerSize],
+  ];
+
+  let cornerCount = 0;
+  let sumR = 0;
+  let sumG = 0;
+  let sumB = 0;
+  let sumA = 0;
+
+  cornerOffsets.forEach(([startX, startY]) => {
+    for (let y = startY; y < startY + cornerSize; y += 1) {
+      for (let x = startX; x < startX + cornerSize; x += 1) {
+        const index = (y * sampleWidth + x) * 4;
+        sumR += pixels[index];
+        sumG += pixels[index + 1];
+        sumB += pixels[index + 2];
+        sumA += pixels[index + 3];
+        cornerCount += 1;
+      }
+    }
+  });
+
+  if (cornerCount === 0) return null;
+
+  const bgR = sumR / cornerCount;
+  const bgG = sumG / cornerCount;
+  const bgB = sumB / cornerCount;
+  const bgA = sumA / cornerCount;
+  const bgLuma = (bgR + bgG + bgB) / 3;
+
+  let variance = 0;
+  cornerOffsets.forEach(([startX, startY]) => {
+    for (let y = startY; y < startY + cornerSize; y += 1) {
+      for (let x = startX; x < startX + cornerSize; x += 1) {
+        const index = (y * sampleWidth + x) * 4;
+        variance += Math.abs(pixels[index] - bgR);
+        variance += Math.abs(pixels[index + 1] - bgG);
+        variance += Math.abs(pixels[index + 2] - bgB);
+      }
+    }
+  });
+  const averageVariance = variance / Math.max(1, cornerCount * 3);
+  const lightUniformBackground = bgA >= 235 && bgLuma >= 232 && averageVariance <= 18;
+  if (!lightUniformBackground) return null;
+
+  let weightedCount = 0;
+  let sumX = 0;
+  let sumY = 0;
+  let minX = sampleWidth;
+  let maxX = -1;
+  let minY = sampleHeight;
+  let maxY = -1;
+
+  for (let y = 0; y < sampleHeight; y += 1) {
+    for (let x = 0; x < sampleWidth; x += 1) {
+      const index = (y * sampleWidth + x) * 4;
+      const alpha = pixels[index + 3];
+      if (alpha < 16) continue;
+
+      const r = pixels[index];
+      const g = pixels[index + 1];
+      const b = pixels[index + 2];
+      const luma = (r + g + b) / 3;
+      const distance = (Math.abs(r - bgR) + Math.abs(g - bgG) + Math.abs(b - bgB)) / 3;
+      const weight = Math.max(bgLuma - luma, distance * 1.2);
+      if (weight < 18) continue;
+
+      weightedCount += weight;
+      sumX += x * weight;
+      sumY += y * weight;
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (y < minY) minY = y;
+      if (y > maxY) maxY = y;
+    }
+  }
+
+  if (weightedCount <= 0 || maxX < minX || maxY < minY) return null;
+
+  const centerX = sumX / weightedCount;
+  const centerY = sumY / weightedCount;
+  const offsetX = centerX / sampleWidth - 0.5;
+  const offsetY = centerY / sampleHeight - 0.5;
+  const fill = Math.max((maxX - minX + 1) / sampleWidth, (maxY - minY + 1) / sampleHeight);
+
+  if (Math.abs(offsetX) < 0.012 && Math.abs(offsetY) < 0.016 && fill >= 0.9) return null;
+
+  return { offsetX, offsetY, fill };
+};
+
+const applyImageFocus = (frame, img) => {
+  if (!(frame instanceof HTMLElement) || !(img instanceof HTMLImageElement)) return;
+  if (!window.matchMedia("(min-width: 960px)").matches) {
+    clearImageFocus(frame);
+    return;
+  }
+
+  const focus = measureImageFocus(img);
+  if (!focus) {
+    clearImageFocus(frame);
+    return;
+  }
+
+  const shiftX = Math.max(-6, Math.min(6, -focus.offsetX * 95));
+  const shiftY = Math.max(-8, Math.min(6, -focus.offsetY * 105));
+  const scale = Math.max(1, Math.min(1.12, 1 + Math.max(0, 0.9 - focus.fill) * 0.22 + Math.hypot(shiftX, shiftY) * 0.004));
+
+  frame.style.setProperty("--vc-image-shift-x", `${shiftX.toFixed(2)}%`);
+  frame.style.setProperty("--vc-image-shift-y", `${shiftY.toFixed(2)}%`);
+  frame.style.setProperty("--vc-image-scale", scale.toFixed(3));
+  frame.dataset.vcImageFocus = "auto";
+};
+
+const refreshImageFocus = (root = document) => {
+  if (!root || typeof root.querySelectorAll !== "function") return;
+  root.querySelectorAll("[data-vc-image-frame]").forEach((frame) => {
+    if (!(frame instanceof HTMLElement)) return;
+    const img = frame.querySelector("[data-vc-image]");
+    if (!(img instanceof HTMLImageElement) || img.naturalWidth <= 0) {
+      clearImageFocus(frame);
+      return;
+    }
+    applyImageFocus(frame, img);
+  });
+};
+
+const hydrateImageFallbacks = (root) => {
+  if (!root) return;
+  root.querySelectorAll("[data-vc-image-frame]").forEach((frame) => {
+    if (!(frame instanceof HTMLElement)) return;
+    const img = frame.querySelector("[data-vc-image]");
+    if (!(img instanceof HTMLImageElement)) return;
+
+    const markLoaded = () => {
+      frame.classList.remove("is-loading", "is-broken");
+      frame.classList.add("is-loaded");
+      applyImageFocus(frame, img);
+    };
+    const markBroken = () => {
+      frame.classList.remove("is-loading", "is-loaded");
+      frame.classList.add("is-broken");
+      clearImageFocus(frame);
+    };
+
+    frame.classList.add("is-loading");
+    if (img.complete) {
+      if (img.naturalWidth > 0) markLoaded();
+      else markBroken();
+      return;
+    }
+
+    img.addEventListener("load", markLoaded, { once: true });
+    img.addEventListener("error", markBroken, { once: true });
+  });
+};
+
 const buildCookbookCollageHtml = (cookbook) => {
   const candidates = (cookbook.recipe_slugs || [])
     .map((slug) => recipesBySlug.get(slug))
@@ -379,10 +606,80 @@ const buildCookbookCollageHtml = (cookbook) => {
   const cells = Array.from({ length: 4 }, (_value, idx) => {
     const src = candidates[idx] || "";
     return src
-      ? `<span class="vc-collage-cell"><img src="${escapeHtml(src)}" alt="" loading="lazy" decoding="async" /></span>`
-      : `<span class="vc-collage-cell vc-collage-cell-empty" aria-hidden="true"></span>`;
+      ? `<span class="vc-collage-cell" data-vc-image-frame>${buildImageMarkup({ src, title: cookbook.title, label: "Cookbook", kind: "collage" })}</span>`
+      : `<span class="vc-collage-cell vc-collage-cell-empty" aria-hidden="true">${buildImageFallbackMarkup({ title: cookbook.title, label: "Cookbook", kind: "collage" })}</span>`;
   }).join("");
   return `<div class="vc-cookbook-collage" aria-hidden="true">${cells}</div>`;
+};
+
+const attachCardInteraction = (card, onOpen) => {
+  let pointerState = null;
+  let suppressClick = false;
+
+  const clearPointerState = () => {
+    pointerState = null;
+  };
+
+  card.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0) return;
+    pointerState = {
+      pointerId: event.pointerId,
+      pointerType: event.pointerType || "mouse",
+      startX: event.clientX,
+      startY: event.clientY,
+      startTime: window.performance.now(),
+      startScrollY: window.scrollY,
+      cancelled: false,
+    };
+    suppressClick = false;
+  });
+
+  card.addEventListener("pointermove", (event) => {
+    if (!pointerState || pointerState.pointerId !== event.pointerId) return;
+    if (pointerState.pointerType === "mouse") return;
+    const moveY = Math.abs(event.clientY - pointerState.startY);
+    const scrollDeltaY = Math.abs(window.scrollY - pointerState.startScrollY);
+    if (moveY > 10 || scrollDeltaY > 10) {
+      pointerState.cancelled = true;
+      suppressClick = true;
+    }
+  });
+
+  card.addEventListener("pointercancel", () => {
+    suppressClick = true;
+    clearPointerState();
+  });
+
+  card.addEventListener("pointerup", (event) => {
+    if (!pointerState || pointerState.pointerId !== event.pointerId) return;
+    const gesture = {
+      pointerType: pointerState.pointerType,
+      startX: pointerState.startX,
+      startY: pointerState.startY,
+      endX: event.clientX,
+      endY: event.clientY,
+      scrollDeltaY: window.scrollY - pointerState.startScrollY,
+      elapsedMs: window.performance.now() - pointerState.startTime,
+      wasCancelled: pointerState.cancelled,
+    };
+    const activate = shouldActivateCard(gesture);
+    suppressClick = pointerState.pointerType !== "mouse";
+    clearPointerState();
+    if (activate && gesture.pointerType !== "mouse") {
+      event.preventDefault();
+      onOpen(card);
+    }
+  });
+
+  card.addEventListener("click", (event) => {
+    if (suppressClick) {
+      suppressClick = false;
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+    onOpen(card);
+  });
 };
 
 const extractDateFromTitle = (title) => {
@@ -413,7 +710,12 @@ const makeCard = ({ title, body, pills, image, heroHtml, heroClass, onOpen }) =>
   if (heroHtml || image) {
     const figure = document.createElement("figure");
     figure.className = `vc-card-hero ${heroClass || ""}`.trim();
-    figure.innerHTML = heroHtml || `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async" />`;
+    if (heroHtml) {
+      figure.innerHTML = heroHtml;
+    } else {
+      figure.setAttribute("data-vc-image-frame", "");
+      figure.innerHTML = buildImageMarkup({ src: image, title, alt: "", label: "Recipe", kind: "card" });
+    }
     card.appendChild(figure);
   }
 
@@ -430,7 +732,7 @@ const makeCard = ({ title, body, pills, image, heroHtml, heroClass, onOpen }) =>
 
   if (pills && pills.length > 0) card.appendChild(buildMetaPills(pills));
 
-  card.addEventListener("click", () => onOpen(card));
+  attachCardInteraction(card, onOpen);
   card.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
@@ -443,11 +745,13 @@ const makeCard = ({ title, body, pills, image, heroHtml, heroClass, onOpen }) =>
 
 const renderTabs = () => {
   const recipeSelected = state.tab === "recipes";
+  const mobileRecipeReader = recipeSelected && Boolean(state.recipeSlug) && isMobileRecipeLayout();
   refs.tabRecipes.setAttribute("aria-selected", recipeSelected ? "true" : "false");
   refs.tabCookbooks.setAttribute("aria-selected", recipeSelected ? "false" : "true");
 
   refs.app.classList.toggle("vc-mode-recipes", recipeSelected);
-  refs.app.classList.toggle("vc-mode-recipe-open", recipeSelected && Boolean(state.recipeSlug));
+  refs.app.classList.toggle("vc-mode-recipe-open", recipeSelected && Boolean(state.recipeSlug) && !mobileRecipeReader);
+  refs.app.classList.toggle("vc-mode-recipe-reader", mobileRecipeReader);
   refs.app.classList.toggle("vc-mode-cookbook-library", state.tab === "cookbooks" && !state.cookbookSlug);
   const cookbookFullscreen = state.tab === "cookbooks" && Boolean(state.cookbookSlug);
   refs.app.classList.toggle("vc-mode-cookbook", cookbookFullscreen);
@@ -488,6 +792,7 @@ const renderSidebarFeature = () => {
 
   refs.featureSlot.appendChild(card);
   refs.featureSlot.hidden = false;
+  hydrateImageFallbacks(refs.featureSlot);
 };
 
 const renderFilters = () => {
@@ -553,6 +858,7 @@ const renderRecipesList = () => {
     });
     refs.list.appendChild(card);
   });
+  hydrateImageFallbacks(refs.list);
 };
 
 const renderCookbooksList = () => {
@@ -583,12 +889,15 @@ const renderCookbooksList = () => {
     });
     refs.list.appendChild(card);
   });
+  hydrateImageFallbacks(refs.list);
 };
 
 const renderRecipeHero = (recipe) => {
-  if (!recipe.image) return "";
-  const alt = escapeHtml(recipe.image_alt || recipe.title || "Recipe image");
-  return `<figure class="vc-hero"><img src="${escapeHtml(recipe.image)}" alt="${alt}" loading="lazy" decoding="async" /></figure>`;
+  const alt = recipe.image_alt || recipe.title || "Recipe image";
+  if (!recipe.image) {
+    return `<figure class="vc-hero vc-hero-placeholder">${buildImageFallbackMarkup({ title: recipe.title, label: recipe.course || "Recipe", kind: "detail" })}</figure>`;
+  }
+  return `<figure class="vc-hero" data-vc-image-frame>${buildImageMarkup({ src: recipe.image, alt, title: recipe.title, label: recipe.course || "Recipe", kind: "detail" })}</figure>`;
 };
 
 const cookbookLinksHtml = (slugs) =>
@@ -608,43 +917,48 @@ const renderRecipeDetail = () => {
     return;
   }
 
+  const mobileReader = isMobileRecipeLayout();
   refs.detail.innerHTML = `
-    <div class="vc-detail-surface vc-recipe-modal" id="vc-detail-surface" role="dialog" aria-modal="true" aria-label="${escapeHtml(recipe.title)}">
-      <header class="vc-modal-head">
-        <div class="vc-modal-title-wrap">
-          <h2>${escapeHtml(recipe.title)}</h2>
-          ${recipe.menu ? `<p class="vc-lede">${escapeHtml(recipe.menu)}</p>` : ""}
+    <article class="vc-detail-surface vc-recipe-reader-surface" id="vc-detail-surface" aria-label="${escapeHtml(recipe.title)}" data-recipe-layout="${mobileReader ? "mobile" : "desktop"}">
+      <header class="vc-recipe-head">
+        <div class="vc-recipe-head-top">
+          <button class="vc-back-btn vc-detail-back-btn" type="button" data-close-recipe aria-label="Back to recipes" title="Back to recipes">&larr; Recipes</button>
+          <div class="vc-modal-actions">
+            <button class="vc-icon-btn vc-icon-btn-plain" type="button" data-copy-recipe aria-label="Copy recipe markdown" title="Copy recipe markdown">
+              ${iconClipboard}
+            </button>
+            <button class="vc-icon-btn vc-icon-btn-plain" type="button" data-share-recipe aria-label="Share recipe link" title="Share recipe link">
+              ${iconShare}
+            </button>
+          </div>
         </div>
-        <div class="vc-modal-actions">
-          <button class="vc-icon-btn vc-icon-btn-plain" type="button" data-copy-recipe aria-label="Copy recipe markdown" title="Copy recipe markdown">
-            ${iconClipboard}
-          </button>
-          <button class="vc-icon-btn vc-icon-btn-plain" type="button" data-share-recipe aria-label="Share recipe link" title="Share recipe link">
-            ${iconShare}
-          </button>
-          <button class="vc-icon-btn vc-close-btn" type="button" data-close-recipe aria-label="Close recipe" title="Close recipe">&times;</button>
+      <div class="vc-modal-head">
+          <div class="vc-modal-title-wrap">
+            <h2>${escapeHtml(recipe.title)}</h2>
+            ${recipe.menu ? `<p class="vc-lede">${escapeHtml(recipe.menu)}</p>` : ""}
+          </div>
         </div>
       </header>
       ${renderRecipeHero(recipe)}
-      <div class="vc-meta-row">
+      <div class="vc-meta-row vc-recipe-meta-row">
         ${recipe.serves ? `<span class="vc-pill">Serves ${escapeHtml(recipe.serves)}</span>` : ""}
         ${recipe.prep ? `<span class="vc-pill">Prep ${escapeHtml(recipe.prep)}</span>` : ""}
         ${recipe.cook ? `<span class="vc-pill">Cook ${escapeHtml(recipe.cook)}</span>` : ""}
         ${recipe.rest ? `<span class="vc-pill">Rest ${escapeHtml(recipe.rest)}</span>` : ""}
       </div>
       <div class="vc-detail-grid">
-        <section>
+        <section class="vc-detail-panel vc-detail-panel-ingredients">
           <h3>Ingredients</h3>
           ${recipe.sections.ingredients_html || "<p>No ingredients section found.</p>"}
         </section>
-        <section>
+        <section class="vc-detail-panel vc-detail-panel-method">
           <h3>Method</h3>
           ${recipe.sections.method_html || "<p>No method section found.</p>"}
           ${recipe.sections.notes_html ? `<h3>Notes</h3>${recipe.sections.notes_html}` : ""}
         </section>
       </div>
       ${recipe.cookbook_slugs.length > 0 ? `<section><h3>In Cookbooks</h3><div class="vc-meta-row">${cookbookLinksHtml(recipe.cookbook_slugs)}</div></section>` : ""}
-    </div>
+    </article>
   `;
 
   refs.detail.querySelectorAll("[data-cookbook-jump]").forEach((button) => {
@@ -677,6 +991,13 @@ const renderRecipeDetail = () => {
 
   refs.detail.hidden = false;
   refs.detailEmpty.hidden = true;
+  hydrateImageFallbacks(refs.detail);
+  if (mobileReader) {
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    });
+    return;
+  }
   runMorphAnimation();
 };
 
@@ -684,21 +1005,27 @@ const renderCookbookRecipeCard = (recipe) => {
   return `
     <article class="vc-recipe-card" id="recipe-${escapeHtml(recipe.slug)}">
       <div class="vc-recipe-shell">
-        <div class="vc-recipe-col vc-col-left">
-          <h2 class="vc-recipe-title">${escapeHtml(recipe.title)}</h2>
-          ${recipe.menu ? `<p class="vc-recipe-intro">${escapeHtml(recipe.menu)}</p>` : ""}
-          ${renderRecipeHero(recipe)}
-          <section class="vc-section vc-section-ingredients">
-            <h2 class="vc-ingredients-heading">Ingredients</h2>
-            ${recipe.sections.ingredients_html || "<p>No ingredients section found.</p>"}
-          </section>
-        </div>
-        <div class="vc-recipe-col vc-col-right">
-          <section class="vc-section vc-section-method">
-            <h2 class="vc-method-heading">Method</h2>
-            ${recipe.sections.method_html || "<p>No method section found.</p>"}
-          </section>
-          ${recipe.sections.notes_html ? `<section class="vc-section vc-section-notes"><h2 class="vc-notes-heading">Notes</h2>${recipe.sections.notes_html}</section>` : ""}
+        <div class="vc-recipe-body">
+          <div class="vc-recipe-visual-column">
+            <header class="vc-recipe-head">
+              <h2 class="vc-recipe-title">${escapeHtml(recipe.title)}</h2>
+              ${recipe.menu ? `<p class="vc-recipe-intro">${escapeHtml(recipe.menu)}</p>` : ""}
+            </header>
+            <figure class="vc-recipe-visual">
+              ${renderRecipeHero(recipe)}
+            </figure>
+          </div>
+          <div class="vc-recipe-prose">
+            <section class="vc-section vc-section-panel vc-section-ingredients">
+              <h2 class="vc-ingredients-heading">Ingredients</h2>
+              ${recipe.sections.ingredients_html || "<p>No ingredients section found.</p>"}
+            </section>
+            <section class="vc-section vc-section-panel vc-section-method">
+              <h2 class="vc-method-heading">Method</h2>
+              ${recipe.sections.method_html || "<p>No method section found.</p>"}
+            </section>
+            ${recipe.sections.notes_html ? `<section class="vc-section vc-section-panel vc-section-notes"><h2 class="vc-notes-heading">Notes</h2>${recipe.sections.notes_html}</section>` : ""}
+          </div>
         </div>
       </div>
     </article>
@@ -779,10 +1106,10 @@ const renderCookbookFullscreen = () => {
         <div class="vc-cookbook-heading">
           <h2>${escapeHtml(cookbook.title)}</h2>
           ${cookbook.subtitle ? `<p class="vc-lede">${escapeHtml(cookbook.subtitle)}</p>` : ""}
-          <div class="vc-meta-row">
+          <div class="vc-meta-row vc-cookbook-meta-row">
             ${cookbook.author ? `<span class="vc-pill">${escapeHtml(cookbook.author)}</span>` : ""}
             ${cookbook.date ? `<span class="vc-pill">${escapeHtml(cookbook.date)}</span>` : ""}
-            <span class="vc-pill">${cookbook.recipe_slugs.length} recipes</span>
+            <span class="vc-pill vc-cookbook-count">${cookbook.recipe_slugs.length} recipes</span>
           </div>
         </div>
         <button
@@ -804,7 +1131,7 @@ const renderCookbookFullscreen = () => {
         <aside class="vc-cookbook-rail" aria-label="Cookbook navigation">
           <div class="vc-cookbook-rail-inner" id="vc-cookbook-menu">
             <div class="vc-cookbook-menu-actions">
-              <button class="vc-back-btn vc-back-btn-menu" type="button" data-back-library aria-label="Back to cookbooks" title="Back to cookbooks">&larr;</button>
+              <button class="vc-back-btn vc-back-btn-menu" type="button" data-back-library aria-label="Back to cookbooks" title="Back to cookbooks">&larr; Cookbooks</button>
             </div>
             <section class="vc-nav-panel vc-nav-panel-inline">
               <h2 class="vc-nav-title">Contents</h2>
@@ -849,6 +1176,7 @@ const renderCookbookFullscreen = () => {
   navButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const targetId = button.dataset.scrollTarget || "";
+      setCurrentNav(button);
       scrollCookbookTarget(targetId);
       if (window.matchMedia("(max-width: 959px)").matches) setNavOpen(false);
     });
@@ -876,15 +1204,17 @@ const renderCookbookFullscreen = () => {
   if ("IntersectionObserver" in window) {
     observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const button = targetMap.get(entry.target.id);
-          if (button) setCurrentNav(button);
-        });
+        if (!canSyncCookbookNav()) return;
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio || a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (!visible) return;
+        const button = targetMap.get(visible.target.id);
+        if (button) setCurrentNav(button);
       },
       {
-        rootMargin: "-30% 0px -60% 0px",
-        threshold: [0, 1],
+        rootMargin: "-18% 0px -62% 0px",
+        threshold: [0.15, 0.35, 0.6],
       },
     );
 
@@ -896,6 +1226,7 @@ const renderCookbookFullscreen = () => {
 
   const onScroll = () => {
     if (!(state.tab === "cookbooks" && state.cookbookSlug)) return;
+    if (!canSyncCookbookNav()) return;
     setFirstNavAtTop();
   };
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -916,6 +1247,7 @@ const renderCookbookFullscreen = () => {
   document.addEventListener("click", onDocumentClick);
 
   hydrateMusicLinks(refs.detail);
+  hydrateImageFallbacks(refs.detail);
   syncCookbookHeaderHeight();
   syncCookbookRailGeometry();
   requestAnimationFrame(syncCookbookHeaderHeight);
@@ -941,7 +1273,7 @@ const runMorphAnimation = () => {
   const startRect = pendingMorphRect;
   pendingMorphRect = null;
 
-  if (!target || reducedMotion) return;
+  if (!target || !shouldUseMorphAnimation()) return;
 
   const endRect = target.getBoundingClientRect();
   if (startRect.width < 2 || startRect.height < 2 || endRect.width < 2 || endRect.height < 2) return;
@@ -1044,15 +1376,14 @@ const setupEvents = () => {
     updateHash(true);
   });
 
-  refs.detail.closest(".vc-detail-pane")?.addEventListener("click", (event) => {
-    if (!(state.tab === "recipes" && state.recipeSlug)) return;
-    if (event.target === event.currentTarget) closeRecipe();
-  });
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && state.tab === "recipes" && state.recipeSlug) closeRecipe();
   });
 
   window.addEventListener("resize", () => {
+    refreshImageFocus(refs.list);
+    refreshImageFocus(refs.detail);
+    if (state.tab === "recipes" && state.recipeSlug) render();
     if (state.tab === "cookbooks" && state.cookbookSlug) {
       syncCookbookHeaderHeight();
       syncCookbookRailGeometry();
@@ -1065,6 +1396,9 @@ const setupEvents = () => {
         }
       }
     }
+  });
+  recipeMobileQuery.addEventListener?.("change", () => {
+    if (state.tab === "recipes" && state.recipeSlug) render();
   });
   window.addEventListener("hashchange", applyStateFromHash);
 };
