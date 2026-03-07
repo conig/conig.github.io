@@ -21,6 +21,7 @@ const state = {
   cookbookSlug: "",
   q: "",
   flags: new Set(),
+  courses: new Set(),
   tags: new Set(),
 };
 
@@ -252,6 +253,7 @@ const parseHash = () => {
 
   const params = new URLSearchParams(queryRaw || "");
   const flags = new Set(text(params.get("flags")).split(",").map((item) => item.trim()).filter(Boolean));
+  const courses = new Set(text(params.get("courses")).split(",").map((item) => item.trim()).filter(Boolean));
   const tags = new Set(text(params.get("tags")).split(",").map((item) => item.trim()).filter(Boolean));
 
   return {
@@ -260,6 +262,7 @@ const parseHash = () => {
     cookbookSlug: tab === "cookbooks" ? slug : "",
     q: text(params.get("q")),
     flags,
+    courses,
     tags,
   };
 };
@@ -270,6 +273,7 @@ const encodeHash = () => {
 
   if (state.q) params.set("q", state.q);
   if (state.flags.size > 0) params.set("flags", Array.from(state.flags).sort().join(","));
+  if (state.courses.size > 0 && state.tab === "recipes") params.set("courses", Array.from(state.courses).sort().join(","));
   if (state.tags.size > 0 && state.tab === "recipes") params.set("tags", Array.from(state.tags).sort().join(","));
 
   const query = params.toString();
@@ -283,6 +287,7 @@ const applyStateFromHash = () => {
   state.cookbookSlug = parsed.cookbookSlug;
   state.q = parsed.q;
   state.flags = parsed.flags;
+  state.courses = parsed.courses;
   state.tags = parsed.tags;
   render();
 };
@@ -310,6 +315,7 @@ const matchesRecipeFilters = (recipe) => {
   for (const flag of state.flags) {
     if (!recipe.flags || recipe.flags[flag] !== true) return false;
   }
+  if (state.courses.size > 0 && !state.courses.has(text(recipe.course))) return false;
   for (const tag of state.tags) {
     if (!recipe.tags.includes(tag)) return false;
   }
@@ -327,6 +333,7 @@ const setTab = (tab) => {
   state.tab = tab;
   state.q = "";
   state.flags = new Set();
+  state.courses = new Set();
   state.tags = new Set();
   if (tab === "recipes") {
     state.cookbookSlug = "";
@@ -386,11 +393,42 @@ const buildMetaPills = (values) => {
   row.className = "vc-meta-row";
   values.filter(Boolean).forEach((value) => {
     const pill = document.createElement("span");
-    pill.className = "vc-pill";
-    pill.textContent = value;
+    if (typeof value === "object" && value !== null) {
+      pill.className = `vc-pill${value.className ? ` ${value.className}` : ""}`;
+      pill.textContent = text(value.label);
+    } else {
+      pill.className = "vc-pill";
+      pill.textContent = text(value);
+    }
     row.appendChild(pill);
   });
   return row;
+};
+
+const formatCalories = (value, { perServe = false } = {}) => {
+  if (value === null || value === undefined || value === "") return "";
+  const amount = Number.parseInt(String(value), 10);
+  if (!Number.isFinite(amount)) return "";
+  return perServe ? `${amount} kcal / serve` : `${amount} kcal`;
+};
+
+const renderFilterGroup = (title, items) => {
+  if (!Array.isArray(items) || items.length === 0) return null;
+
+  const group = document.createElement("section");
+  group.className = "vc-filter-group";
+
+  const heading = document.createElement("h2");
+  heading.className = "vc-filter-heading";
+  heading.textContent = title;
+  group.appendChild(heading);
+
+  const row = document.createElement("div");
+  row.className = "vc-filter-group-row";
+  items.forEach((item) => row.appendChild(item));
+  group.appendChild(row);
+
+  return group;
 };
 
 const imageInitials = (value) => {
@@ -801,6 +839,23 @@ const renderFilters = () => {
   clearNode(refs.filterRow);
   if (state.tab !== "recipes" || state.cookbookSlug) return;
 
+  const courseButtons = [];
+  (data.facets.courses || []).forEach((course) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "vc-chip vc-chip-course";
+    chip.textContent = course;
+    chip.setAttribute("aria-pressed", state.courses.has(course) ? "true" : "false");
+    chip.addEventListener("click", () => {
+      if (state.courses.has(course)) state.courses.delete(course);
+      else state.courses.add(course);
+      state.recipeSlug = "";
+      updateHash(true);
+    });
+    courseButtons.push(chip);
+  });
+
+  const flagButtons = [];
   const activeFlags = data.facets.flags || [];
   activeFlags.forEach((flag) => {
     const chip = document.createElement("button");
@@ -814,9 +869,10 @@ const renderFilters = () => {
       state.recipeSlug = "";
       updateHash(true);
     });
-    refs.filterRow.appendChild(chip);
+    flagButtons.push(chip);
   });
 
+  const tagButtons = [];
   (data.facets.tags || []).slice(0, 10).forEach((tag) => {
     const chip = document.createElement("button");
     chip.type = "button";
@@ -829,8 +885,16 @@ const renderFilters = () => {
       state.recipeSlug = "";
       updateHash(true);
     });
-    refs.filterRow.appendChild(chip);
+    tagButtons.push(chip);
   });
+
+  [
+    renderFilterGroup("Course", courseButtons),
+    renderFilterGroup("Dietary", flagButtons),
+    renderFilterGroup("Tags", tagButtons),
+  ]
+    .filter(Boolean)
+    .forEach((group) => refs.filterRow.appendChild(group));
 };
 
 const renderRecipesList = () => {
@@ -847,9 +911,10 @@ const renderRecipesList = () => {
 
   activeRecipeList.forEach((recipe) => {
     const pills = [];
-    if (recipe.course) pills.push(recipe.course);
-    (recipe.tags || []).slice(0, 3).forEach((tag) => pills.push(`#${tag}`));
-    if (pills.length < 3 && recipe.serves) pills.push(`Serves ${recipe.serves}`);
+    if (recipe.course) pills.push({ label: recipe.course, className: "vc-pill-course" });
+    if (recipe.serves) pills.push(`Serves ${recipe.serves}`);
+    if (recipe.calories) pills.push({ label: formatCalories(recipe.calories), className: "vc-pill-accent" });
+    (recipe.tags || []).slice(0, 2).forEach((tag) => pills.push(`#${tag}`));
 
     const card = makeCard({
       title: recipe.title,
@@ -943,7 +1008,9 @@ const renderRecipeDetail = () => {
       </header>
       ${renderRecipeHero(recipe)}
       <div class="vc-meta-row vc-recipe-meta-row">
+        ${recipe.course ? `<span class="vc-pill vc-pill-course">${escapeHtml(recipe.course)}</span>` : ""}
         ${recipe.serves ? `<span class="vc-pill">Serves ${escapeHtml(recipe.serves)}</span>` : ""}
+        ${recipe.calories ? `<span class="vc-pill vc-pill-accent">${escapeHtml(formatCalories(recipe.calories, { perServe: true }))}</span>` : ""}
         ${recipe.prep ? `<span class="vc-pill">Prep ${escapeHtml(recipe.prep)}</span>` : ""}
         ${recipe.cook ? `<span class="vc-pill">Cook ${escapeHtml(recipe.cook)}</span>` : ""}
         ${recipe.rest ? `<span class="vc-pill">Rest ${escapeHtml(recipe.rest)}</span>` : ""}
@@ -1012,6 +1079,11 @@ const renderCookbookRecipeCard = (recipe) => {
             <header class="vc-recipe-head">
               <h2 class="vc-recipe-title">${escapeHtml(recipe.title)}</h2>
               ${recipe.menu ? `<p class="vc-recipe-intro">${escapeHtml(recipe.menu)}</p>` : ""}
+              <div class="vc-meta-row vc-recipe-meta-row">
+                ${recipe.course ? `<span class="vc-pill vc-pill-course">${escapeHtml(recipe.course)}</span>` : ""}
+                ${recipe.serves ? `<span class="vc-pill">Serves ${escapeHtml(recipe.serves)}</span>` : ""}
+                ${recipe.calories ? `<span class="vc-pill vc-pill-accent">${escapeHtml(formatCalories(recipe.calories, { perServe: true }))}</span>` : ""}
+              </div>
             </header>
             <figure class="vc-recipe-visual">
               ${renderRecipeHero(recipe)}

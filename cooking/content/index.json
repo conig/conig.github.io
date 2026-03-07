@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-06T01:59:42.387732+00:00",
+  "generated_at": "2026-03-07T21:35:24.262598+00:00",
   "recipes": [
     {
       "id": "301",
@@ -12,6 +12,7 @@
       "cuisine": "modern",
       "occasion": "summer",
       "serves": "2",
+      "calories": 210,
       "prep": "5m",
       "cook": "",
       "rest": "",
@@ -53,7 +54,7 @@
       "cookbook_slugs": [
         "date-night-jan-31"
       ],
-      "search_text": "berry sparkler mocktail bright berries with sparkling juice and a citrusy fizz. beverage drink modern mocktail berries sparkling - 1 cup frozen mixed berries (thawed slightly) - 500 ml non-alcoholic sparkling grape juice or sparkling apple juice - 200 ml lemonade or ginger ale - 2-4 fresh strawberries (for garnish) - ice cubes, as needed 1. divide the thawed mixed berries between two tall glasses (about 1/2 cup per glass). 2. lightly muddle the berries with a spoon to release some juice, keeping them mostly whole. 3. fill each glass halfway with ice cubes. 4. pour 250 ml of sparkling grape or apple juice into each glass, then top with 100 ml of lemonade or ginger ale. 5. stir gently to combine. garnish each glass with a sliced strawberry on the rim and serve immediately."
+      "search_text": "berry sparkler mocktail bright berries with sparkling juice and a citrusy fizz. beverage drink modern 2 210 mocktail berries sparkling - 1 cup frozen mixed berries (thawed slightly) - 500 ml non-alcoholic sparkling grape juice or sparkling apple juice - 200 ml lemonade or ginger ale - 2-4 fresh strawberries (for garnish) - ice cubes, as needed 1. divide the thawed mixed berries between two tall glasses (about 1/2 cup per glass). 2. lightly muddle the berries with a spoon to release some juice, keeping them mostly whole. 3. fill each glass halfway with ice cubes. 4. pour 250 ml of sparkling grape or apple juice into each glass, then top with 100 ml of lemonade or ginger ale. 5. stir gently to combine. garnish each glass with a sliced strawberry on the rim and serve immediately."
     },
     {
       "id": "302",
@@ -65,6 +66,7 @@
       "cuisine": "italian",
       "occasion": "weekday",
       "serves": "2",
+      "calories": 530,
       "prep": "10m",
       "cook": "",
       "rest": "",
@@ -107,7 +109,7 @@
       "cookbook_slugs": [
         "date-night-jan-31"
       ],
-      "search_text": "caprese salad with balsamic glaze tomatoes and mozzarella with basil and balsamic. salad starter italian salad caprese no-cook - 3-4 ripe tomatoes (about 400 g), sliced into rounds - 200 g bocconcini or fresh mozzarella, sliced into rounds - 1 punnet fresh basil leaves (about 20-30 leaves) - 2 tbsp balsamic glaze - optional: 1 tbsp pesto (for drizzling) - 4-6 slices sourdough or baguette (for serving) 1. on a serving platter or two plates, alternate slices of tomato and mozzarella in a circular or linear pattern. 2. tuck fresh basil leaves between the slices for even distribution. 3. drizzle evenly with the balsamic glaze (and pesto if using). season lightly with salt and pepper. 4. if desired, lightly toast the sourdough slices at 180 c for 5 minutes. 5. serve immediately with the bread on the side for scooping or dipping."
+      "search_text": "caprese salad with balsamic glaze tomatoes and mozzarella with basil and balsamic. salad starter italian 2 530 salad caprese no-cook - 3-4 ripe tomatoes (about 400 g), sliced into rounds - 200 g bocconcini or fresh mozzarella, sliced into rounds - 1 punnet fresh basil leaves (about 20-30 leaves) - 2 tbsp balsamic glaze - optional: 1 tbsp pesto (for drizzling) - 4-6 slices sourdough or baguette (for serving) 1. on a serving platter or two plates, alternate slices of tomato and mozzarella in a circular or linear pattern. 2. tuck fresh basil leaves between the slices for even distribution. 3. drizzle evenly with the balsamic glaze (and pesto if using). season lightly with salt and pepper. 4. if desired, lightly toast the sourdough slices at 180 c for 5 minutes. 5. serve immediately with the bread on the side for scooping or dipping."
     },
     {
       "id": "304",
@@ -119,6 +121,7 @@
       "cuisine": "modern",
       "occasion": "special",
       "serves": "2",
+      "calories": 965,
       "prep": "10m",
       "cook": "",
       "rest": "10m",
@@ -160,7 +163,7 @@
       "cookbook_slugs": [
         "date-night-jan-31"
       ],
-      "search_text": "chocolate-dipped strawberries with chantilly cream glossy chocolate berries with vanilla-scented cream. sweet dessert modern dessert chocolate strawberries - 1 punnet fresh strawberries (about 250 g), washed and dried - 150 g dark or milk chocolate melts - 300 ml thickened cream - 2 tbsp icing sugar - 1 tsp vanilla essence 1. line a plate or tray with baking paper. melt the chocolate in a microwave-safe bowl in 30-second bursts, stirring between each, until smooth. 2. holding each strawberry by the stem, dip halfway into the melted chocolate. let excess drip off, then place on the prepared tray. 3. refrigerate the dipped strawberries for 10 minutes to set. 4. meanwhile, whip the thickened cream with the icing sugar and vanilla until soft peaks form. 5. serve the set strawberries with a dollop or piped swirl of chantilly cream on the side."
+      "search_text": "chocolate-dipped strawberries with chantilly cream glossy chocolate berries with vanilla-scented cream. sweet dessert modern 2 965 dessert chocolate strawberries - 1 punnet fresh strawberries (about 250 g), washed and dried - 150 g dark or milk chocolate melts - 300 ml thickened cream - 2 tbsp icing sugar - 1 tsp vanilla essence 1. line a plate or tray with baking paper. melt the chocolate in a microwave-safe bowl in 30-second bursts, stirring between each, until smooth. 2. holding each strawberry by the stem, dip halfway into the melted chocolate. let excess drip off, then place on the prepared tray. 3. refrigerate the dipped strawberries for 10 minutes to set. 4. meanwhile, whip the thickened cream with the icing sugar and vanilla until soft peaks form. 5. serve the set strawberries with a dollop or piped swirl of chantilly cream on the side."
     },
     {
       "id": "417",
@@ -172,11 +175,12 @@
       "cuisine": "southeast-asian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 575,
       "prep": "10m",
       "cook": "14m",
       "rest": "5m",
       "difficulty": 1,
-      "rating": null,
+      "rating": 65.0,
       "image": "assets/images/417-coconut-sago-lime-glossed-pineapple-740a8d13.png",
       "image_alt": "Coconut Sago with Lime-Glossed Pineapple",
       "tags": [
@@ -220,7 +224,7 @@
       "cookbook_slugs": [
         "date-night-lantern-coast-supper"
       ],
-      "search_text": "coconut sago with lime-glossed pineapple silky coconut pudding and bright tropical fruit close the menu with a light but luxe finish. sweet dessert southeast-asian-inspired dessert coconut pineapple lime quick - 80 g sago pearls - 250 ml water - 400 ml coconut milk - 2 tbsp sugar - 1 pinch salt - 250 g pineapple, diced - 1 tbsp lime juice - 1 tsp lime zest - 1 tbsp toasted coconut flakes - 6 mint leaves 1. rinse the sago pearls, then simmer in 250 ml water for 10 minutes, stirring often, until mostly translucent. 2. drain the sago, return it to the pan, add coconut milk, sugar, and salt, and cook for 3-4 minutes until glossy. 3. in a small skillet over medium heat, cook the diced pineapple for 2-3 minutes until lightly caramelized. 4. add lime juice to the pineapple, toss for 30 seconds, then remove from heat. 5. spoon the warm coconut sago into bowls, top with lime-glossed pineapple, and finish with lime zest, toasted coconut flakes, and mint leaves."
+      "search_text": "coconut sago with lime-glossed pineapple silky coconut pudding and bright tropical fruit close the menu with a light but luxe finish. sweet dessert southeast-asian-inspired 2 575 dessert coconut pineapple lime quick - 80 g sago pearls - 250 ml water - 400 ml coconut milk - 2 tbsp sugar - 1 pinch salt - 250 g pineapple, diced - 1 tbsp lime juice - 1 tsp lime zest - 1 tbsp toasted coconut flakes - 6 mint leaves 1. rinse the sago pearls, then simmer in 250 ml water for 10 minutes, stirring often, until mostly translucent. 2. drain the sago, return it to the pan, add coconut milk, sugar, and salt, and cook for 3-4 minutes until glossy. 3. in a small skillet over medium heat, cook the diced pineapple for 2-3 minutes until lightly caramelized. 4. add lime juice to the pineapple, toss for 30 seconds, then remove from heat. 5. spoon the warm coconut sago into bowls, top with lime-glossed pineapple, and finish with lime zest, toasted coconut flakes, and mint leaves."
     },
     {
       "id": "303",
@@ -232,6 +236,7 @@
       "cuisine": "italian",
       "occasion": "weeknight",
       "serves": "2",
+      "calories": 940,
       "prep": "10m",
       "cook": "15m",
       "rest": "",
@@ -278,7 +283,7 @@
       "cookbook_slugs": [
         "date-night-jan-31"
       ],
-      "search_text": "creamy garlic prawn pasta silky garlic cream with prawns and spinach. pasta main italian pasta seafood creamy - 250 g raw prawns (peeled and deveined) - 200 g fresh fettuccine or linguine - 2 garlic cloves, minced - 300 ml thickened cream - 2 cups baby spinach (about 100 g) - 1/2 cup grated parmesan cheese, plus extra for serving - 1 tbsp olive oil - 1 tbsp butter - optional: pinch of chilli flakes 1. bring a large pot of salted water to a boil. add the pasta and cook according to packet instructions (usually 3-4 minutes for fresh). drain and set aside, reserving 1/2 cup pasta water. 2. in a large frying pan over medium heat, warm the olive oil and butter. add the garlic (and chilli flakes if using) and saute for 1 minute until fragrant. 3. add the prawns and cook for 3-4 minutes, stirring occasionally, until pink and opaque. 4. pour in the thickened cream and bring to a gentle simmer for 2-3 minutes to thicken slightly. stir in the baby spinach until wilted, about 1 minute. 5. add the cooked pasta and parmesan to the pan. toss to combine, adding a splash of reserved pasta water if needed. season with salt and pepper. 6. divide between two bowls, top with extra parmesan, and serve hot."
+      "search_text": "creamy garlic prawn pasta silky garlic cream with prawns and spinach. pasta main italian 2 940 pasta seafood creamy - 250 g raw prawns (peeled and deveined) - 200 g fresh fettuccine or linguine - 2 garlic cloves, minced - 300 ml thickened cream - 2 cups baby spinach (about 100 g) - 1/2 cup grated parmesan cheese, plus extra for serving - 1 tbsp olive oil - 1 tbsp butter - optional: pinch of chilli flakes 1. bring a large pot of salted water to a boil. add the pasta and cook according to packet instructions (usually 3-4 minutes for fresh). drain and set aside, reserving 1/2 cup pasta water. 2. in a large frying pan over medium heat, warm the olive oil and butter. add the garlic (and chilli flakes if using) and saute for 1 minute until fragrant. 3. add the prawns and cook for 3-4 minutes, stirring occasionally, until pink and opaque. 4. pour in the thickened cream and bring to a gentle simmer for 2-3 minutes to thicken slightly. stir in the baby spinach until wilted, about 1 minute. 5. add the cooked pasta and parmesan to the pan. toss to combine, adding a splash of reserved pasta water if needed. season with salt and pepper. 6. divide between two bowls, top with extra parmesan, and serve hot."
     },
     {
       "id": "402",
@@ -290,6 +295,7 @@
       "cuisine": "italian-inspired",
       "occasion": "special",
       "serves": "2",
+      "calories": 700,
       "prep": "15m",
       "cook": "25m",
       "rest": "",
@@ -340,7 +346,7 @@
       "cookbook_slugs": [
         "date-night-feb-07"
       ],
-      "search_text": "crispy chicken with lemon-caper butter, parmesan polenta & garlicky greens crisp-skinned chicken, silky polenta, bright lemon-caper butter. meat main italian-inspired chicken quick pan-seared - 2 chicken thighs (skin-on, bone-in or boneless) - salt and black pepper (for chicken, polenta, and greens) - 4 tsp olive oil (1 tbsp for chicken, 1 tsp for greens) - 30-40 g butter - 1 tbsp capers, drained - 1 lemon (zest + 2 tbsp juice) - 2 small garlic cloves (1 finely grated for lemon-caper butter, optional; 1 sliced for greens) - 1 tbsp chopped parsley (or a small pinch of chopped sage) - 1/2 cup instant polenta - 2 cups water (or 1 cup water + 1 cup milk) - 30 g parmesan, finely grated - 1 bunch broccolini or 2 handfuls baby spinach 1. season chicken well with salt and pepper. 2. heat olive oil in a pan over medium-high heat. place chicken skin-side down and cook until deeply golden and crisp, about 8-12 minutes (reduce heat if it's browning too fast). 3. flip chicken and cook through, 6-10 minutes more (boneless cooks faster). rest on a plate, loosely covered. 4. polenta: bring water (or water + milk) to a simmer. whisk in polenta in a steady stream. cook 2-3 minutes, stirring, until thick. stir in parmesan, season, and cover to keep warm. 5. greens: in a second pan (or after chicken comes out), warm olive oil, add sliced garlic for 20-30 seconds, then add greens and cook until just tender. season lightly. 6. lemon-caper butter: in the chicken pan (leave the tasty bits), reduce heat to low. add butter, capers, lemon zest, and garlic (if using). swirl until foamy. add lemon juice, taste, and adjust salt. 7. spoon polenta onto plates, add greens, top with chicken, then drizzle over lemon-caper butter. finish with parsley (or a touch of sage). - easy vegetarian swap: replace chicken with thick slices of halloumi or large field mushrooms. sear until golden, then use the same lemon-caper butter."
+      "search_text": "crispy chicken with lemon-caper butter, parmesan polenta & garlicky greens crisp-skinned chicken, silky polenta, bright lemon-caper butter. meat main italian-inspired 2 700 chicken quick pan-seared - 2 chicken thighs (skin-on, bone-in or boneless) - salt and black pepper (for chicken, polenta, and greens) - 4 tsp olive oil (1 tbsp for chicken, 1 tsp for greens) - 30-40 g butter - 1 tbsp capers, drained - 1 lemon (zest + 2 tbsp juice) - 2 small garlic cloves (1 finely grated for lemon-caper butter, optional; 1 sliced for greens) - 1 tbsp chopped parsley (or a small pinch of chopped sage) - 1/2 cup instant polenta - 2 cups water (or 1 cup water + 1 cup milk) - 30 g parmesan, finely grated - 1 bunch broccolini or 2 handfuls baby spinach 1. season chicken well with salt and pepper. 2. heat olive oil in a pan over medium-high heat. place chicken skin-side down and cook until deeply golden and crisp, about 8-12 minutes (reduce heat if it's browning too fast). 3. flip chicken and cook through, 6-10 minutes more (boneless cooks faster). rest on a plate, loosely covered. 4. polenta: bring water (or water + milk) to a simmer. whisk in polenta in a steady stream. cook 2-3 minutes, stirring, until thick. stir in parmesan, season, and cover to keep warm. 5. greens: in a second pan (or after chicken comes out), warm olive oil, add sliced garlic for 20-30 seconds, then add greens and cook until just tender. season lightly. 6. lemon-caper butter: in the chicken pan (leave the tasty bits), reduce heat to low. add butter, capers, lemon zest, and garlic (if using). swirl until foamy. add lemon juice, taste, and adjust salt. 7. spoon polenta onto plates, add greens, top with chicken, then drizzle over lemon-caper butter. finish with parsley (or a touch of sage). - easy vegetarian swap: replace chicken with thick slices of halloumi or large field mushrooms. sear until golden, then use the same lemon-caper butter."
     },
     {
       "id": "306",
@@ -352,6 +358,7 @@
       "cuisine": "mediterranean",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 470,
       "prep": "8m",
       "cook": "8m",
       "rest": "0m",
@@ -399,7 +406,7 @@
       "cookbook_slugs": [
         "date-night-velvet-mediterranean-night"
       ],
-      "search_text": "crispy halloumi with hot honey, mint & pistachio salty-crisp halloumi with floral heat and fresh herbs for a bold but effortless first plate. small-plate starter mediterranean starter halloumi quick skillet pistachio highly rated - 200 g halloumi, sliced into 8 pieces - 1 tbsp olive oil - 1 tbsp honey - 1/2 tsp chilli flakes - 1 tbsp lemon juice - 60 g baby rocket - 1 tbsp fresh mint, chopped - 20 g pistachios, chopped - freshly cracked black pepper 1. stir honey, chilli flakes, and lemon juice in a small bowl. 2. heat olive oil in a skillet over medium-high heat and sear halloumi for 2-3 minutes per side until deeply golden. 3. spread baby rocket on two plates and top with hot halloumi slices. 4. spoon over the hot honey dressing, then finish with mint, pistachios, and black pepper."
+      "search_text": "crispy halloumi with hot honey, mint & pistachio salty-crisp halloumi with floral heat and fresh herbs for a bold but effortless first plate. small-plate starter mediterranean 2 470 starter halloumi quick skillet pistachio highly rated - 200 g halloumi, sliced into 8 pieces - 1 tbsp olive oil - 1 tbsp honey - 1/2 tsp chilli flakes - 1 tbsp lemon juice - 60 g baby rocket - 1 tbsp fresh mint, chopped - 20 g pistachios, chopped - freshly cracked black pepper 1. stir honey, chilli flakes, and lemon juice in a small bowl. 2. heat olive oil in a skillet over medium-high heat and sear halloumi for 2-3 minutes per side until deeply golden. 3. spread baby rocket on two plates and top with hot halloumi slices. 4. spoon over the hot honey dressing, then finish with mint, pistachios, and black pepper."
     },
     {
       "id": "403",
@@ -411,6 +418,7 @@
       "cuisine": "italian",
       "occasion": "special",
       "serves": "2",
+      "calories": 650,
       "prep": "15m",
       "cook": "",
       "rest": "30m",
@@ -456,7 +464,7 @@
       "cookbook_slugs": [
         "date-night-feb-07"
       ],
-      "search_text": "espresso tiramisu cups (no alcohol) creamy mascarpone layers with espresso-soaked biscuits and cocoa. sweet dessert italian dessert no-bake coffee - 125 g mascarpone - 150 ml thickened cream - 2 tbsp icing sugar - 1 tsp vanilla extract - 1/2 cup strong espresso or very strong instant coffee, cooled - 8-10 sponge fingers (savoiardi), broken to fit - 1-2 tbsp cocoa powder - optional: dark chocolate, finely grated (to finish) 1. whip cream, icing sugar, and vanilla to soft peaks. 2. fold mascarpone through gently until smooth and thick. 3. dip sponge finger pieces quickly into cooled coffee (1-2 seconds per side). 4. layer coffee-dipped biscuits and mascarpone cream into two glasses. aim for 2-3 layers. 5. chill for at least 30 minutes. 6. dust generously with cocoa just before serving. add grated dark chocolate if you feel fancy."
+      "search_text": "espresso tiramisu cups (no alcohol) creamy mascarpone layers with espresso-soaked biscuits and cocoa. sweet dessert italian 2 650 dessert no-bake coffee - 125 g mascarpone - 150 ml thickened cream - 2 tbsp icing sugar - 1 tsp vanilla extract - 1/2 cup strong espresso or very strong instant coffee, cooled - 8-10 sponge fingers (savoiardi), broken to fit - 1-2 tbsp cocoa powder - optional: dark chocolate, finely grated (to finish) 1. whip cream, icing sugar, and vanilla to soft peaks. 2. fold mascarpone through gently until smooth and thick. 3. dip sponge finger pieces quickly into cooled coffee (1-2 seconds per side). 4. layer coffee-dipped biscuits and mascarpone cream into two glasses. aim for 2-3 layers. 5. chill for at least 30 minutes. 6. dust generously with cocoa just before serving. add grated dark chocolate if you feel fancy."
     },
     {
       "id": "409",
@@ -467,7 +475,8 @@
       "course": "dessert",
       "cuisine": "",
       "occasion": "family-recipe",
-      "serves": "",
+      "serves": "12",
+      "calories": 290,
       "prep": "",
       "cook": "45m",
       "rest": "",
@@ -512,7 +521,7 @@
         "Cool in tin, cut in wedges."
       ],
       "cookbook_slugs": [],
-      "search_text": "ginger slice slice dessert heirloom family ginger slice handwritten nan - 1 3/4 cups flour - 1 cup caster sugar - 125 g glace ginger - 1 egg - 150--185g butter - 30 g blanched almonds 1. sift flour, then add sugar, and chopped ginger. 2. mix in melted butter and egg. press into well. 3. pour mixture into greased sandwich tin. 4. brush top with milk, decorate with almonds. 5. bake 45 minutes at 170c. 6. cool in tin, cut in wedges. **notes** very rich, small serves."
+      "search_text": "ginger slice slice dessert 12 290 heirloom family ginger slice handwritten nan - 1 3/4 cups flour - 1 cup caster sugar - 125 g glace ginger - 1 egg - 150--185g butter - 30 g blanched almonds 1. sift flour, then add sugar, and chopped ginger. 2. mix in melted butter and egg. press into well. 3. pour mixture into greased sandwich tin. 4. brush top with milk, decorate with almonds. 5. bake 45 minutes at 170c. 6. cool in tin, cut in wedges. **notes** very rich, small serves."
     },
     {
       "id": "410",
@@ -524,6 +533,7 @@
       "cuisine": "east-asian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 75,
       "prep": "8m",
       "cook": "0m",
       "rest": "0m",
@@ -571,7 +581,7 @@
       "cookbook_slugs": [
         "date-night-neon-night-market-escape"
       ],
-      "search_text": "lychee ginger lime cooler floral lychee, bright lime, and ginger spice open the night with a crisp bar-style fizz. mocktail drink east-asian-inspired drink mocktail lychee ginger sparkling quick highly rated - 1 can lychees in syrup (reserve 80 ml syrup and 6 lychees, plus 2 extra lychees for garnish) - 40 ml fresh lime juice - 20 ml ginger syrup - 6 mint leaves - 240 ml chilled soda water - 2 cup ice - 2 strip lime peel 1. blend 6 lychees with 80 ml syrup, lime juice, and ginger syrup until smooth. 2. strain into a jug, add mint leaves and ice, then stir for 20 seconds to chill. 3. divide between two tall glasses and top with chilled soda water. 4. garnish each glass with one whole lychee and a strip of lime peel. 5. optional cocktail conversion: add 30 ml gin or vodka per glass and stir once."
+      "search_text": "lychee ginger lime cooler floral lychee, bright lime, and ginger spice open the night with a crisp bar-style fizz. mocktail drink east-asian-inspired 2 75 drink mocktail lychee ginger sparkling quick highly rated - 1 can lychees in syrup (reserve 80 ml syrup and 6 lychees, plus 2 extra lychees for garnish) - 40 ml fresh lime juice - 20 ml ginger syrup - 6 mint leaves - 240 ml chilled soda water - 2 cup ice - 2 strip lime peel 1. blend 6 lychees with 80 ml syrup, lime juice, and ginger syrup until smooth. 2. strain into a jug, add mint leaves and ice, then stir for 20 seconds to chill. 3. divide between two tall glasses and top with chilled soda water. 4. garnish each glass with one whole lychee and a strip of lime peel. 5. optional cocktail conversion: add 30 ml gin or vodka per glass and stir once."
     },
     {
       "id": "415",
@@ -583,15 +593,17 @@
       "cuisine": "east-asian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 265,
       "prep": "8m",
       "cook": "8m",
       "rest": "0m",
       "difficulty": 1,
-      "rating": null,
+      "rating": 90.0,
       "image": "assets/images/415-miso-butter-broccolini-toasted-sesame-almonds-80b48790.png",
       "image_alt": "Miso-Butter Broccolini with Toasted Sesame Almonds",
       "tags": [
         "broccolini",
+        "highly rated",
         "miso",
         "quick",
         "sesame",
@@ -631,7 +643,7 @@
       "cookbook_slugs": [
         "date-night-lantern-coast-supper"
       ],
-      "search_text": "miso-butter broccolini with toasted sesame almonds fast charred greens with nutty crunch and savory glaze for a restaurant-style small plate. small-plate starter east-asian-inspired starter broccolini miso sesame quick - 250 g broccolini - 1 tbsp olive oil - 1 tbsp unsalted butter - 1 tbsp white miso paste - 1 tsp honey - 1 tbsp water - 1 tsp lime juice - 1 tsp lime zest - 20 g flaked almonds - 1 tbsp toasted sesame seeds 1. heat a dry skillet over medium heat, toast the flaked almonds for 1-2 minutes, then transfer to a plate. 2. add olive oil to the same skillet, add broccolini, and cook for 3-4 minutes until blistered in spots. 3. add 1 tbsp water, cover for 1 minute, then uncover and cook until the water evaporates. 4. lower heat, add butter, miso paste, honey, and lime juice, and toss until the broccolini is evenly glazed. 5. plate the broccolini, finish with lime zest, toasted almonds, and sesame seeds, and serve hot."
+      "search_text": "miso-butter broccolini with toasted sesame almonds fast charred greens with nutty crunch and savory glaze for a restaurant-style small plate. small-plate starter east-asian-inspired 2 265 starter broccolini miso sesame quick highly rated - 250 g broccolini - 1 tbsp olive oil - 1 tbsp unsalted butter - 1 tbsp white miso paste - 1 tsp honey - 1 tbsp water - 1 tsp lime juice - 1 tsp lime zest - 20 g flaked almonds - 1 tbsp toasted sesame seeds 1. heat a dry skillet over medium heat, toast the flaked almonds for 1-2 minutes, then transfer to a plate. 2. add olive oil to the same skillet, add broccolini, and cook for 3-4 minutes until blistered in spots. 3. add 1 tbsp water, cover for 1 minute, then uncover and cook until the water evaporates. 4. lower heat, add butter, miso paste, honey, and lime juice, and toss until the broccolini is evenly glazed. 5. plate the broccolini, finish with lime zest, toasted almonds, and sesame seeds, and serve hot."
     },
     {
       "id": "411",
@@ -643,6 +655,7 @@
       "cuisine": "east-asian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 205,
       "prep": "10m",
       "cook": "10m",
       "rest": "0m",
@@ -693,7 +706,7 @@
       "cookbook_slugs": [
         "date-night-neon-night-market-escape"
       ],
-      "search_text": "miso-sesame mushroom lettuce cups savory glossy mushrooms in crisp lettuce cups deliver big umami and clean contrast with almost no cleanup. small-plate starter east-asian-inspired starter mushrooms lettuce-cups umami quick - 300 g swiss brown mushrooms, finely chopped - 1 tbsp neutral oil - 2 tbsp white miso paste - 1 tbsp soy sauce - 2 tsp rice vinegar - 2 tsp caster sugar - 1 tsp sesame oil - 1 garlic clove, minced - 1 tsp grated ginger - 8 butter lettuce leaves - 2 spring onions, thinly sliced - 1 tbsp toasted sesame seeds 1. heat neutral oil in a large frying pan over medium-high heat, add mushrooms, and cook for 4-5 minutes until most moisture evaporates. 2. add garlic and ginger, stir for 30 seconds, then reduce heat to medium. 3. stir in miso paste, soy sauce, rice vinegar, caster sugar, and sesame oil; cook for 2 minutes until glossy and lightly sticky. 4. spoon the hot mushroom mixture into butter lettuce leaves. 5. finish with spring onions and toasted sesame seeds, then serve immediately."
+      "search_text": "miso-sesame mushroom lettuce cups savory glossy mushrooms in crisp lettuce cups deliver big umami and clean contrast with almost no cleanup. small-plate starter east-asian-inspired 2 205 starter mushrooms lettuce-cups umami quick - 300 g swiss brown mushrooms, finely chopped - 1 tbsp neutral oil - 2 tbsp white miso paste - 1 tbsp soy sauce - 2 tsp rice vinegar - 2 tsp caster sugar - 1 tsp sesame oil - 1 garlic clove, minced - 1 tsp grated ginger - 8 butter lettuce leaves - 2 spring onions, thinly sliced - 1 tbsp toasted sesame seeds 1. heat neutral oil in a large frying pan over medium-high heat, add mushrooms, and cook for 4-5 minutes until most moisture evaporates. 2. add garlic and ginger, stir for 30 seconds, then reduce heat to medium. 3. stir in miso paste, soy sauce, rice vinegar, caster sugar, and sesame oil; cook for 2 minutes until glossy and lightly sticky. 4. spoon the hot mushroom mixture into butter lettuce leaves. 5. finish with spring onions and toasted sesame seeds, then serve immediately."
     },
     {
       "id": "408",
@@ -705,6 +718,7 @@
       "cuisine": "italian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 655,
       "prep": "12m",
       "cook": "",
       "rest": "20m",
@@ -753,7 +767,69 @@
       "cookbook_slugs": [
         "date-night-citrus-glow-italian-night"
       ],
-      "search_text": "no-bake lemon mascarpone pots with pistachio crunch lush lemon mascarpone cream layered with biscuit and pistachio for a bright, elegant finish. sweet dessert italian-inspired dessert no-bake lemon mascarpone - 125 g mascarpone - 150 ml thickened cream - 2 tbsp icing sugar - 1 tsp vanilla extract - 1 tsp finely grated lemon zest - 1 tbsp lemon juice - 6 plain sweet biscuits (e.g., marie biscuits), crushed - 2 tbsp chopped pistachios - pinch of flaky salt - optional: extra lemon zest to finish 1. mix crushed biscuits, pistachios, and flaky salt in a small bowl. 2. whip cream, icing sugar, and vanilla to soft peaks. 3. fold mascarpone, lemon zest, and lemon juice into the whipped cream until smooth. 4. spoon a little biscuit mixture into two small glasses, then add a thick layer of lemon mascarpone cream. 5. repeat with another light biscuit layer and finish with cream on top. 6. chill for 20 minutes, then garnish with extra lemon zest before serving."
+      "search_text": "no-bake lemon mascarpone pots with pistachio crunch lush lemon mascarpone cream layered with biscuit and pistachio for a bright, elegant finish. sweet dessert italian-inspired 2 655 dessert no-bake lemon mascarpone - 125 g mascarpone - 150 ml thickened cream - 2 tbsp icing sugar - 1 tsp vanilla extract - 1 tsp finely grated lemon zest - 1 tbsp lemon juice - 6 plain sweet biscuits (e.g., marie biscuits), crushed - 2 tbsp chopped pistachios - pinch of flaky salt - optional: extra lemon zest to finish 1. mix crushed biscuits, pistachios, and flaky salt in a small bowl. 2. whip cream, icing sugar, and vanilla to soft peaks. 3. fold mascarpone, lemon zest, and lemon juice into the whipped cream until smooth. 4. spoon a little biscuit mixture into two small glasses, then add a thick layer of lemon mascarpone cream. 5. repeat with another light biscuit layer and finish with cream on top. 6. chill for 20 minutes, then garnish with extra lemon zest before serving."
+    },
+    {
+      "id": "421",
+      "slug": "recipe-421-no-bake-white-peach-mascarpone-glasses-with-almond-crunch",
+      "title": "No-Bake White Peach Mascarpone Glasses with Almond Crunch",
+      "menu": "Soft mascarpone cream, glossy peaches, and almond crunch finish the menu like an easy restaurant parfait.",
+      "category": "sweet",
+      "course": "dessert",
+      "cuisine": "provence-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 476,
+      "prep": "12m",
+      "cook": "5m",
+      "rest": "20m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/421-no-bake-white-peach-mascarpone-glasses-with-almond-crunch-a07628e6.png",
+      "image_alt": "No-Bake White Peach Mascarpone Glasses with Almond Crunch",
+      "tags": [
+        "almonds",
+        "dessert",
+        "mascarpone",
+        "no-bake",
+        "peach"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": false,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>1 ripe white peach, finely diced</li>\n<li>1 tsp honey</li>\n<li>1 tsp lemon juice</li>\n<li>3 plain sweet biscuits (e.g., Marie biscuits), crushed</li>\n<li>20 g flaked almonds</li>\n<li>125 g mascarpone</li>\n<li>100 ml thickened cream</li>\n<li>1 tbsp icing sugar</li>\n<li>1 tsp vanilla extract</li>\n<li>Pinch of flaky salt</li>\n</ul>",
+        "method_html": "<ol>\n<li>Add the peach, honey, and lemon juice to a small pan and cook over medium heat for 3-5 minutes until the fruit turns glossy but still holds its shape, then cool for a few minutes.</li>\n<li>Toast the crushed biscuits and flaked almonds in a dry pan for 1-2 minutes, then stir through a pinch of flaky salt and set aside.</li>\n<li>Whip the mascarpone, thickened cream, icing sugar, and vanilla until softly thickened.</li>\n<li>Spoon a little almond crunch into two small glasses, add a layer of mascarpone cream, then spoon over some warm peach.</li>\n<li>Repeat with another light layer of cream and finish with the remaining peach and crunch.</li>\n<li>Chill for 20 minutes before serving.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "1 ripe white peach, finely diced",
+        "1 tsp honey",
+        "1 tsp lemon juice",
+        "3 plain sweet biscuits (e.g., Marie biscuits), crushed",
+        "20 g flaked almonds",
+        "125 g mascarpone",
+        "100 ml thickened cream",
+        "1 tbsp icing sugar",
+        "1 tsp vanilla extract",
+        "Pinch of flaky salt"
+      ],
+      "method_items": [
+        "Add the peach, honey, and lemon juice to a small pan and cook over medium heat for 3-5 minutes until the fruit turns glossy but still holds its shape, then cool for a few minutes.",
+        "Toast the crushed biscuits and flaked almonds in a dry pan for 1-2 minutes, then stir through a pinch of flaky salt and set aside.",
+        "Whip the mascarpone, thickened cream, icing sugar, and vanilla until softly thickened.",
+        "Spoon a little almond crunch into two small glasses, add a layer of mascarpone cream, then spoon over some warm peach.",
+        "Repeat with another light layer of cream and finish with the remaining peach and crunch.",
+        "Chill for 20 minutes before serving."
+      ],
+      "cookbook_slugs": [
+        "date-night-provence-at-golden-hour"
+      ],
+      "search_text": "no-bake white peach mascarpone glasses with almond crunch soft mascarpone cream, glossy peaches, and almond crunch finish the menu like an easy restaurant parfait. sweet dessert provence-inspired 2 476 dessert no-bake peach mascarpone almonds - 1 ripe white peach, finely diced - 1 tsp honey - 1 tsp lemon juice - 3 plain sweet biscuits (e.g., marie biscuits), crushed - 20 g flaked almonds - 125 g mascarpone - 100 ml thickened cream - 1 tbsp icing sugar - 1 tsp vanilla extract - pinch of flaky salt 1. add the peach, honey, and lemon juice to a small pan and cook over medium heat for 3-5 minutes until the fruit turns glossy but still holds its shape, then cool for a few minutes. 2. toast the crushed biscuits and flaked almonds in a dry pan for 1-2 minutes, then stir through a pinch of flaky salt and set aside. 3. whip the mascarpone, thickened cream, icing sugar, and vanilla until softly thickened. 4. spoon a little almond crunch into two small glasses, add a layer of mascarpone cream, then spoon over some warm peach. 5. repeat with another light layer of cream and finish with the remaining peach and crunch. 6. chill for 20 minutes before serving."
     },
     {
       "id": "416",
@@ -765,15 +841,17 @@
       "cuisine": "east-asian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 760,
       "prep": "12m",
       "cook": "20m",
       "rest": "3m",
       "difficulty": 2,
-      "rating": null,
+      "rating": 86.0,
       "image": "assets/images/416-one-pan-ginger-miso-chicken-rice-bok-choy-386d46f1.png",
       "image_alt": "One-Pan Ginger Miso Chicken Rice with Bok Choy",
       "tags": [
         "chicken",
+        "highly rated",
         "main",
         "one-pan",
         "quick",
@@ -817,7 +895,73 @@
       "cookbook_slugs": [
         "date-night-lantern-coast-supper"
       ],
-      "search_text": "one-pan ginger miso chicken rice with bok choy comforting one-pan centerpiece with glossy umami sauce and tender greens for low-stress cooking. one-pan main east-asian-inspired main one-pan chicken rice quick - 300 g chicken thigh fillets (boneless, skinless), sliced - 1 tbsp neutral oil - 2 clove garlic, minced - 1 tsp grated ginger - 1 tbsp white miso paste - 1 tbsp soy sauce - 1 tbsp honey - 180 g jasmine rice - 430 ml chicken stock - 2 baby bok choy, halved lengthways - 1 tsp sesame oil - 1 spring onion, finely sliced - 1 tbsp toasted sesame seeds 1. heat a deep skillet with neutral oil over medium-high heat and brown the chicken for 3-4 minutes. 2. stir in garlic and grated ginger for 30 seconds, then add miso paste, soy sauce, and honey. 3. add jasmine rice and chicken stock, scrape the pan base, and bring to a gentle boil. 4. nestle the chicken evenly into the rice, cover, and cook on low heat for 12 minutes. 5. place bok choy on top, cover again, and cook for 4 more minutes until the rice is tender and bok choy is bright. 6. rest the pan off heat for 3 minutes, then finish with sesame oil, spring onion, and sesame seeds before serving."
+      "search_text": "one-pan ginger miso chicken rice with bok choy comforting one-pan centerpiece with glossy umami sauce and tender greens for low-stress cooking. one-pan main east-asian-inspired 2 760 main one-pan chicken rice quick highly rated - 300 g chicken thigh fillets (boneless, skinless), sliced - 1 tbsp neutral oil - 2 clove garlic, minced - 1 tsp grated ginger - 1 tbsp white miso paste - 1 tbsp soy sauce - 1 tbsp honey - 180 g jasmine rice - 430 ml chicken stock - 2 baby bok choy, halved lengthways - 1 tsp sesame oil - 1 spring onion, finely sliced - 1 tbsp toasted sesame seeds 1. heat a deep skillet with neutral oil over medium-high heat and brown the chicken for 3-4 minutes. 2. stir in garlic and grated ginger for 30 seconds, then add miso paste, soy sauce, and honey. 3. add jasmine rice and chicken stock, scrape the pan base, and bring to a gentle boil. 4. nestle the chicken evenly into the rice, cover, and cook on low heat for 12 minutes. 5. place bok choy on top, cover again, and cook for 4 more minutes until the rice is tender and bok choy is bright. 6. rest the pan off heat for 3 minutes, then finish with sesame oil, spring onion, and sesame seeds before serving."
+    },
+    {
+      "id": "420",
+      "slug": "recipe-420-one-pan-lemon-chicken-pearl-couscous-with-zucchini-herbs",
+      "title": "One-Pan Lemon Chicken Pearl Couscous with Zucchini & Herbs",
+      "menu": "Golden chicken, tender pearl couscous, and bright herbs make a polished one-pan centerpiece with citrus lift and low cleanup.",
+      "category": "one-pan",
+      "course": "main",
+      "cuisine": "provence-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 658,
+      "prep": "12m",
+      "cook": "20m",
+      "rest": "3m",
+      "difficulty": 2,
+      "rating": null,
+      "image": "assets/images/420-one-pan-lemon-chicken-pearl-couscous-with-zucchini-and-herbs-b98e0963.png",
+      "image_alt": "One-Pan Lemon Chicken Pearl Couscous with Zucchini & Herbs",
+      "tags": [
+        "chicken",
+        "main",
+        "one-pan",
+        "pearl-couscous",
+        "quick",
+        "zucchini"
+      ],
+      "flags": {
+        "vegetarian": false,
+        "vegan": false,
+        "gluten_free": false,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>300 g chicken thigh fillets (boneless, skinless), cut into bite-sized pieces</li>\n<li>1 tbsp olive oil</li>\n<li>1 small zucchini, halved lengthways and sliced</li>\n<li>2 clove garlic, finely chopped</li>\n<li>180 g pearl couscous</li>\n<li>450 ml chicken stock</li>\n<li>80 ml thickened cream</li>\n<li>1 tsp lemon zest</li>\n<li>1 tbsp lemon juice</li>\n<li>2 tbsp grated parmesan</li>\n<li>2 tbsp chopped flat-leaf parsley</li>\n<li>1 tbsp chopped chives</li>\n<li>Freshly cracked black pepper</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat a deep skillet over medium-high heat with olive oil, then brown the chicken for 4-5 minutes until lightly golden.</li>\n<li>Add the zucchini and garlic, then cook for 2 minutes until the zucchini starts to soften.</li>\n<li>Stir in the pearl couscous, chicken stock, and a few grinds of black pepper, bring to a gentle simmer, then cover and cook on low heat for 10 minutes.</li>\n<li>Remove the lid, stir in the cream, lemon zest, lemon juice, and parmesan, then cook uncovered for 3-4 minutes until the couscous is tender and glossy.</li>\n<li>Rest the pan off the heat for 3 minutes, then fold through the parsley and chives.</li>\n<li>Spoon into shallow bowls and finish with extra herbs and black pepper.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "300 g chicken thigh fillets (boneless, skinless), cut into bite-sized pieces",
+        "1 tbsp olive oil",
+        "1 small zucchini, halved lengthways and sliced",
+        "2 clove garlic, finely chopped",
+        "180 g pearl couscous",
+        "450 ml chicken stock",
+        "80 ml thickened cream",
+        "1 tsp lemon zest",
+        "1 tbsp lemon juice",
+        "2 tbsp grated parmesan",
+        "2 tbsp chopped flat-leaf parsley",
+        "1 tbsp chopped chives",
+        "Freshly cracked black pepper"
+      ],
+      "method_items": [
+        "Heat a deep skillet over medium-high heat with olive oil, then brown the chicken for 4-5 minutes until lightly golden.",
+        "Add the zucchini and garlic, then cook for 2 minutes until the zucchini starts to soften.",
+        "Stir in the pearl couscous, chicken stock, and a few grinds of black pepper, bring to a gentle simmer, then cover and cook on low heat for 10 minutes.",
+        "Remove the lid, stir in the cream, lemon zest, lemon juice, and parmesan, then cook uncovered for 3-4 minutes until the couscous is tender and glossy.",
+        "Rest the pan off the heat for 3 minutes, then fold through the parsley and chives.",
+        "Spoon into shallow bowls and finish with extra herbs and black pepper."
+      ],
+      "cookbook_slugs": [
+        "date-night-provence-at-golden-hour"
+      ],
+      "search_text": "one-pan lemon chicken pearl couscous with zucchini & herbs golden chicken, tender pearl couscous, and bright herbs make a polished one-pan centerpiece with citrus lift and low cleanup. one-pan main provence-inspired 2 658 main one-pan chicken pearl-couscous zucchini quick - 300 g chicken thigh fillets (boneless, skinless), cut into bite-sized pieces - 1 tbsp olive oil - 1 small zucchini, halved lengthways and sliced - 2 clove garlic, finely chopped - 180 g pearl couscous - 450 ml chicken stock - 80 ml thickened cream - 1 tsp lemon zest - 1 tbsp lemon juice - 2 tbsp grated parmesan - 2 tbsp chopped flat-leaf parsley - 1 tbsp chopped chives - freshly cracked black pepper 1. heat a deep skillet over medium-high heat with olive oil, then brown the chicken for 4-5 minutes until lightly golden. 2. add the zucchini and garlic, then cook for 2 minutes until the zucchini starts to soften. 3. stir in the pearl couscous, chicken stock, and a few grinds of black pepper, bring to a gentle simmer, then cover and cook on low heat for 10 minutes. 4. remove the lid, stir in the cream, lemon zest, lemon juice, and parmesan, then cook uncovered for 3-4 minutes until the couscous is tender and glossy. 5. rest the pan off the heat for 3 minutes, then fold through the parsley and chives. 6. spoon into shallow bowls and finish with extra herbs and black pepper."
     },
     {
       "id": "407",
@@ -829,6 +973,7 @@
       "cuisine": "italian",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 1040,
       "prep": "10m",
       "cook": "18m",
       "rest": "",
@@ -880,7 +1025,7 @@
       "cookbook_slugs": [
         "date-night-citrus-glow-italian-night"
       ],
-      "search_text": "one-pan lemon parmesan gnocchi with spinach golden pan-seared gnocchi in a silky lemon-parmesan sauce with wilted spinach and crispy sage. gnocchi main italian main gnocchi one-pan lemon highly rated - 500 g shelf-stable potato gnocchi - 1 tbsp olive oil - 30 g butter - 8-10 fresh sage leaves - 2 garlic cloves, minced - 1 cup low-sodium vegetable stock - 3/4 cup thickened cream - 1 lemon (zest + 2 tbsp juice) - 1/2 cup finely grated parmesan, plus extra to finish - 2 cups baby spinach - salt and black pepper - optional: pinch of chili flakes 1. heat a large frying pan over medium heat with butter until foamy, add sage leaves, and fry for 30-45 seconds until crisp; transfer leaves to a plate. 2. add olive oil and gnocchi to the same pan and cook for 4-5 minutes, stirring occasionally, until lightly golden. 3. add garlic (and chili flakes if using) and stir for 30 seconds. 4. pour in stock and cream, then simmer for 3-4 minutes until the sauce thickens slightly. 5. stir in lemon zest, lemon juice, parmesan, and spinach; cook for 1-2 minutes until spinach wilts and sauce is glossy. 6. season to taste, divide between bowls, and top with crispy sage, extra parmesan, and black pepper."
+      "search_text": "one-pan lemon parmesan gnocchi with spinach golden pan-seared gnocchi in a silky lemon-parmesan sauce with wilted spinach and crispy sage. gnocchi main italian 2 1040 main gnocchi one-pan lemon highly rated - 500 g shelf-stable potato gnocchi - 1 tbsp olive oil - 30 g butter - 8-10 fresh sage leaves - 2 garlic cloves, minced - 1 cup low-sodium vegetable stock - 3/4 cup thickened cream - 1 lemon (zest + 2 tbsp juice) - 1/2 cup finely grated parmesan, plus extra to finish - 2 cups baby spinach - salt and black pepper - optional: pinch of chili flakes 1. heat a large frying pan over medium heat with butter until foamy, add sage leaves, and fry for 30-45 seconds until crisp; transfer leaves to a plate. 2. add olive oil and gnocchi to the same pan and cook for 4-5 minutes, stirring occasionally, until lightly golden. 3. add garlic (and chili flakes if using) and stir for 30 seconds. 4. pour in stock and cream, then simmer for 3-4 minutes until the sauce thickens slightly. 5. stir in lemon zest, lemon juice, parmesan, and spinach; cook for 1-2 minutes until spinach wilts and sauce is glossy. 6. season to taste, divide between bowls, and top with crispy sage, extra parmesan, and black pepper."
     },
     {
       "id": "307",
@@ -892,6 +1037,7 @@
       "cuisine": "mediterranean",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 630,
       "prep": "10m",
       "cook": "18m",
       "rest": "2m",
@@ -945,7 +1091,7 @@
       "cookbook_slugs": [
         "date-night-velvet-mediterranean-night"
       ],
-      "search_text": "one-pan saffron prawn orzo with spinach golden saffron orzo with tender prawns and greens delivers a luxe one-pan centerplate with minimal cleanup. one-pan main mediterranean main one-pan prawns orzo quick highly rated - 1 tbsp olive oil - 2 garlic cloves, minced - 180 g orzo - 300 ml vegetable stock - 200 ml water - 1 pinch saffron threads - 250 g raw prawns, peeled and deveined - 120 g cherry tomatoes, halved - 60 g baby spinach - 40 g parmesan, finely grated - 1 tbsp lemon juice - 1 tbsp fresh parsley, chopped - freshly cracked black pepper 1. warm the stock with saffron in a small pot for 2 minutes, then keep it hot. 2. heat olive oil in a deep skillet over medium heat and cook garlic for 30 seconds. 3. add orzo and stir for 1 minute, then pour in saffron stock and water. 4. simmer for 10 minutes, stirring occasionally, until the orzo is almost tender. 5. add prawns and cherry tomatoes, cook for 3-4 minutes until prawns turn pink, then fold in spinach. 6. turn off heat, stir in parmesan and lemon juice, rest for 2 minutes, then plate with parsley and black pepper."
+      "search_text": "one-pan saffron prawn orzo with spinach golden saffron orzo with tender prawns and greens delivers a luxe one-pan centerplate with minimal cleanup. one-pan main mediterranean 2 630 main one-pan prawns orzo quick highly rated - 1 tbsp olive oil - 2 garlic cloves, minced - 180 g orzo - 300 ml vegetable stock - 200 ml water - 1 pinch saffron threads - 250 g raw prawns, peeled and deveined - 120 g cherry tomatoes, halved - 60 g baby spinach - 40 g parmesan, finely grated - 1 tbsp lemon juice - 1 tbsp fresh parsley, chopped - freshly cracked black pepper 1. warm the stock with saffron in a small pot for 2 minutes, then keep it hot. 2. heat olive oil in a deep skillet over medium heat and cook garlic for 30 seconds. 3. add orzo and stir for 1 minute, then pour in saffron stock and water. 4. simmer for 10 minutes, stirring occasionally, until the orzo is almost tender. 5. add prawns and cherry tomatoes, cook for 3-4 minutes until prawns turn pink, then fold in spinach. 6. turn off heat, stir in parmesan and lemon juice, rest for 2 minutes, then plate with parsley and black pepper."
     },
     {
       "id": "412",
@@ -957,6 +1103,7 @@
       "cuisine": "east-asian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 690,
       "prep": "12m",
       "cook": "16m",
       "rest": "2m",
@@ -1010,7 +1157,7 @@
       "cookbook_slugs": [
         "date-night-neon-night-market-escape"
       ],
-      "search_text": "one-pan soy-honey chicken udon with broccolini slippery udon, caramelized soy-honey chicken, and tender broccolini create a glossy restaurant-style bowl from one pan. one-pan main east-asian-inspired main one-pan chicken udon quick - 300 g chicken thigh fillet, thinly sliced - 1 tbsp neutral oil - 2 garlic cloves, minced - 2 tsp grated ginger - 1 bunch broccolini, cut into 4 cm pieces - 2 packet fresh udon noodles (about 400 g total) - 3 tbsp soy sauce - 1 tbsp honey - 1 tbsp rice vinegar - 80 ml water - 1 tsp sesame oil - 2 spring onions, thinly sliced - 1 tsp toasted sesame seeds - optional: chili flakes to finish 1. heat neutral oil in a large deep frying pan over medium-high heat, add chicken, and cook for 4-5 minutes until lightly browned. 2. add garlic and ginger, stir for 30 seconds, then add broccolini and cook for 2 minutes. 3. stir in soy sauce, honey, rice vinegar, and water, then simmer for 1 minute. 4. add udon noodles and toss for 2-3 minutes until the noodles loosen and coat in the sauce. 5. turn off heat, drizzle in sesame oil, and rest for 2 minutes. 6. serve in bowls and finish with spring onions, toasted sesame seeds, and chili flakes if using."
+      "search_text": "one-pan soy-honey chicken udon with broccolini slippery udon, caramelized soy-honey chicken, and tender broccolini create a glossy restaurant-style bowl from one pan. one-pan main east-asian-inspired 2 690 main one-pan chicken udon quick - 300 g chicken thigh fillet, thinly sliced - 1 tbsp neutral oil - 2 garlic cloves, minced - 2 tsp grated ginger - 1 bunch broccolini, cut into 4 cm pieces - 2 packet fresh udon noodles (about 400 g total) - 3 tbsp soy sauce - 1 tbsp honey - 1 tbsp rice vinegar - 80 ml water - 1 tsp sesame oil - 2 spring onions, thinly sliced - 1 tsp toasted sesame seeds - optional: chili flakes to finish 1. heat neutral oil in a large deep frying pan over medium-high heat, add chicken, and cook for 4-5 minutes until lightly browned. 2. add garlic and ginger, stir for 30 seconds, then add broccolini and cook for 2 minutes. 3. stir in soy sauce, honey, rice vinegar, and water, then simmer for 1 minute. 4. add udon noodles and toss for 2-3 minutes until the noodles loosen and coat in the sauce. 5. turn off heat, drizzle in sesame oil, and rest for 2 minutes. 6. serve in bowls and finish with spring onions, toasted sesame seeds, and chili flakes if using."
     },
     {
       "id": "414",
@@ -1022,11 +1169,12 @@
       "cuisine": "east-asian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 110,
       "prep": "8m",
       "cook": "0m",
       "rest": "0m",
       "difficulty": 1,
-      "rating": null,
+      "rating": 69.0,
       "image": "assets/images/414-pear-ginger-yuzu-soda-cd248ece.png",
       "image_alt": "Pear, Ginger & Yuzu Soda",
       "tags": [
@@ -1068,7 +1216,7 @@
       "cookbook_slugs": [
         "date-night-lantern-coast-supper"
       ],
-      "search_text": "pear, ginger & yuzu soda bright, lightly floral opener that starts the menu with crisp sweetness and citrus lift. mocktail drink east-asian-inspired drink mocktail pear ginger sparkling quick - 300 ml pear juice (chilled) - 1 tbsp ginger juice - 2 tbsp yuzu juice - 1 tbsp honey - 200 ml soda water (chilled) - 1 cup ice cubes - 2 thin pear slices 1. whisk the pear juice, ginger juice, yuzu juice, and honey in a jug until the honey dissolves. 2. divide the ice and pear slices between two tall glasses. 3. pour the pear mixture evenly into each glass and top with soda water. 4. optional cocktail conversion: add 30 ml dry gin per glass and stir once. 5. serve immediately while fully chilled and sparkling."
+      "search_text": "pear, ginger & yuzu soda bright, lightly floral opener that starts the menu with crisp sweetness and citrus lift. mocktail drink east-asian-inspired 2 110 drink mocktail pear ginger sparkling quick - 300 ml pear juice (chilled) - 1 tbsp ginger juice - 2 tbsp yuzu juice - 1 tbsp honey - 200 ml soda water (chilled) - 1 cup ice cubes - 2 thin pear slices 1. whisk the pear juice, ginger juice, yuzu juice, and honey in a jug until the honey dissolves. 2. divide the ice and pear slices between two tall glasses. 3. pour the pear mixture evenly into each glass and top with soda water. 4. optional cocktail conversion: add 30 ml dry gin per glass and stir once. 5. serve immediately while fully chilled and sparkling."
     },
     {
       "id": "404",
@@ -1080,6 +1228,7 @@
       "cuisine": "modern",
       "occasion": "special",
       "serves": "2",
+      "calories": 110,
       "prep": "10m",
       "cook": "",
       "rest": "",
@@ -1125,7 +1274,7 @@
       "cookbook_slugs": [
         "date-night-feb-07"
       ],
-      "search_text": "pink grapefruit, thyme & ginger spritz bright grapefruit with a hint of thyme and spicy ginger. mocktail drink modern mocktail citrus fizzy ### thyme syrup - 2 tbsp sugar - 2 tbsp water - 4-6 thyme sprigs ### spritz - 1/2 cup pink grapefruit juice (fresh or bottled) - 1 cup ginger beer - soda water, to top - 2 tsp lemon juice (optional, for extra zip) - ice - garnish: grapefruit slices + thyme sprigs 1. make thyme syrup: simmer sugar, water, and thyme for 2 minutes, then turn off heat and steep 5 minutes. strain and cool. 2. fill two glasses with ice. add 1-2 tsp thyme syrup per glass (to taste). 3. add grapefruit juice (and lemon juice if using). 4. top with ginger beer and a splash of soda water. 5. garnish with grapefruit and thyme."
+      "search_text": "pink grapefruit, thyme & ginger spritz bright grapefruit with a hint of thyme and spicy ginger. mocktail drink modern 2 110 mocktail citrus fizzy ### thyme syrup - 2 tbsp sugar - 2 tbsp water - 4-6 thyme sprigs ### spritz - 1/2 cup pink grapefruit juice (fresh or bottled) - 1 cup ginger beer - soda water, to top - 2 tsp lemon juice (optional, for extra zip) - ice - garnish: grapefruit slices + thyme sprigs 1. make thyme syrup: simmer sugar, water, and thyme for 2 minutes, then turn off heat and steep 5 minutes. strain and cool. 2. fill two glasses with ice. add 1-2 tsp thyme syrup per glass (to taste). 3. add grapefruit juice (and lemon juice if using). 4. top with ginger beer and a splash of soda water. 5. garnish with grapefruit and thyme."
     },
     {
       "id": "305",
@@ -1137,6 +1286,7 @@
       "cuisine": "mediterranean-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 80,
       "prep": "8m",
       "cook": "0m",
       "rest": "0m",
@@ -1185,7 +1335,7 @@
       "cookbook_slugs": [
         "date-night-velvet-mediterranean-night"
       ],
-      "search_text": "rosemary blackberry verjus fizz a bright blackberry-herb fizz that opens the menu with crisp acidity and a clean finish. mocktail drink mediterranean-inspired drink mocktail sparkling blackberry rosemary quick - 90 g blackberries (plus 2 extra for garnish) - 1 tbsp sugar - 1 tsp fresh rosemary leaves, finely chopped - 60 ml white verjus - 30 ml lemon juice - 240 ml chilled sparkling water - 120 ml chilled tonic water - 1 cup ice - 2 rosemary sprigs 1. in a small bowl, muddle blackberries with sugar and chopped rosemary until juicy. 2. strain the mixture into a jug, then stir in verjus and lemon juice. 3. fill two short glasses with ice and divide the blackberry base between them. 4. top each glass with sparkling water and tonic water, stir once, and garnish with a blackberry and rosemary sprig. 5. optional cocktail conversion: add 30 ml (1 oz) gin per glass and stir gently."
+      "search_text": "rosemary blackberry verjus fizz a bright blackberry-herb fizz that opens the menu with crisp acidity and a clean finish. mocktail drink mediterranean-inspired 2 80 drink mocktail sparkling blackberry rosemary quick - 90 g blackberries (plus 2 extra for garnish) - 1 tbsp sugar - 1 tsp fresh rosemary leaves, finely chopped - 60 ml white verjus - 30 ml lemon juice - 240 ml chilled sparkling water - 120 ml chilled tonic water - 1 cup ice - 2 rosemary sprigs 1. in a small bowl, muddle blackberries with sugar and chopped rosemary until juicy. 2. strain the mixture into a jug, then stir in verjus and lemon juice. 3. fill two short glasses with ice and divide the blackberry base between them. 4. top each glass with sparkling water and tonic water, stir once, and garnish with a blackberry and rosemary sprig. 5. optional cocktail conversion: add 30 ml (1 oz) gin per glass and stir gently."
     },
     {
       "id": "405",
@@ -1197,6 +1347,7 @@
       "cuisine": "italian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 135,
       "prep": "8m",
       "cook": "",
       "rest": "",
@@ -1242,7 +1393,7 @@
       "cookbook_slugs": [
         "date-night-citrus-glow-italian-night"
       ],
-      "search_text": "sparkling basil limonata zesty lemon and basil with gentle sweetness and a crisp sparkling finish. mocktail drink italian-inspired mocktail citrus basil sparkling - 1/2 cup fresh lemon juice - 2 tbsp honey or simple syrup - 8 fresh basil leaves, plus extra to garnish - 1 cup chilled apple juice - 1 cup chilled soda water - ice cubes - 2 lemon wheels (for garnish) 1. in a jug, muddle basil leaves with honey and lemon juice for 20-30 seconds. 2. strain into the jug again for a smoother drink, pressing well to keep the basil flavor. 3. add apple juice and stir until combined. 4. fill two glasses with ice and divide the mixture evenly. 5. top each glass with soda water, stir gently, and garnish with a lemon wheel and basil leaf. 6. optional cocktail conversion: add 30 ml (1 oz) gin or vodka per glass, then stir once."
+      "search_text": "sparkling basil limonata zesty lemon and basil with gentle sweetness and a crisp sparkling finish. mocktail drink italian-inspired 2 135 mocktail citrus basil sparkling - 1/2 cup fresh lemon juice - 2 tbsp honey or simple syrup - 8 fresh basil leaves, plus extra to garnish - 1 cup chilled apple juice - 1 cup chilled soda water - ice cubes - 2 lemon wheels (for garnish) 1. in a jug, muddle basil leaves with honey and lemon juice for 20-30 seconds. 2. strain into the jug again for a smoother drink, pressing well to keep the basil flavor. 3. add apple juice and stir until combined. 4. fill two glasses with ice and divide the mixture evenly. 5. top each glass with soda water, stir gently, and garnish with a lemon wheel and basil leaf. 6. optional cocktail conversion: add 30 ml (1 oz) gin or vodka per glass, then stir once."
     },
     {
       "id": "413",
@@ -1254,6 +1405,7 @@
       "cuisine": "southeast-asian-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 510,
       "prep": "10m",
       "cook": "15m",
       "rest": "5m",
@@ -1302,7 +1454,7 @@
       "cookbook_slugs": [
         "date-night-neon-night-market-escape"
       ],
-      "search_text": "toasted coconut mango rice cups creamy coconut rice with bright mango and toasted coconut lands as a warm-cool tropical dessert with elegant texture. sweet dessert southeast-asian-inspired dessert coconut mango rice quick highly rated - 250 g microwave jasmine rice - 200 ml coconut cream - 2 tbsp caster sugar - 0.25 tsp sea salt - 1 ripe mango, diced - 1 tsp lime zest - 1 tbsp lime juice - 2 tbsp toasted coconut flakes - 1 tsp toasted sesame seeds 1. add jasmine rice, coconut cream, caster sugar, and sea salt to a small saucepan over medium heat. 2. cook for 6-8 minutes, stirring often, until thick, glossy, and spoonable. 3. toss mango with lime zest and lime juice in a small bowl. 4. divide warm coconut rice between two glasses or bowls, then top with mango. 5. finish with toasted coconut flakes and toasted sesame seeds, then rest for 5 minutes before serving."
+      "search_text": "toasted coconut mango rice cups creamy coconut rice with bright mango and toasted coconut lands as a warm-cool tropical dessert with elegant texture. sweet dessert southeast-asian-inspired 2 510 dessert coconut mango rice quick highly rated - 250 g microwave jasmine rice - 200 ml coconut cream - 2 tbsp caster sugar - 0.25 tsp sea salt - 1 ripe mango, diced - 1 tsp lime zest - 1 tbsp lime juice - 2 tbsp toasted coconut flakes - 1 tsp toasted sesame seeds 1. add jasmine rice, coconut cream, caster sugar, and sea salt to a small saucepan over medium heat. 2. cook for 6-8 minutes, stirring often, until thick, glossy, and spoonable. 3. toss mango with lime zest and lime juice in a small bowl. 4. divide warm coconut rice between two glasses or bowls, then top with mango. 5. finish with toasted coconut flakes and toasted sesame seeds, then rest for 5 minutes before serving."
     },
     {
       "id": "401",
@@ -1314,6 +1466,7 @@
       "cuisine": "modern",
       "occasion": "special",
       "serves": "2",
+      "calories": 460,
       "prep": "10m",
       "cook": "5m",
       "rest": "",
@@ -1364,7 +1517,7 @@
       "cookbook_slugs": [
         "date-night-feb-07"
       ],
-      "search_text": "warm beetroot, goat's cheese, orange & walnut salad sweet beetroot with citrus and tangy chevre, finished with toasted walnuts. salad starter modern salad beetroot quick - 250-300 g cooked beetroot (vac-pack), cut into wedges - 60-80 g soft goat's cheese - 1 orange - 1 large handful rocket - 1/3 cup walnuts - 2 tsp honey - 1 tbsp red wine vinegar (or balsamic vinegar) - 2 tbsp extra virgin olive oil - 1 tsp dijon mustard - salt and black pepper - optional: 1 tbsp chopped parsley (to finish) 1. toast walnuts in a dry pan over medium heat for 2-3 minutes, tossing, until fragrant. 2. segment the orange over a bowl so you catch the juice. 3. whisk orange juice (about 2 tbsp), honey, vinegar, olive oil, dijon, salt, and pepper to make a dressing. 4. warm beetroot wedges in the same pan for 1-2 minutes, just to take the chill off. 5. toss rocket with half the dressing and arrange on two plates. 6. add warm beetroot and orange segments. 7. crumble over goat's cheese, scatter walnuts, and spoon over remaining dressing. 8. finish with black pepper and parsley, if using."
+      "search_text": "warm beetroot, goat's cheese, orange & walnut salad sweet beetroot with citrus and tangy chevre, finished with toasted walnuts. salad starter modern 2 460 salad beetroot quick - 250-300 g cooked beetroot (vac-pack), cut into wedges - 60-80 g soft goat's cheese - 1 orange - 1 large handful rocket - 1/3 cup walnuts - 2 tsp honey - 1 tbsp red wine vinegar (or balsamic vinegar) - 2 tbsp extra virgin olive oil - 1 tsp dijon mustard - salt and black pepper - optional: 1 tbsp chopped parsley (to finish) 1. toast walnuts in a dry pan over medium heat for 2-3 minutes, tossing, until fragrant. 2. segment the orange over a bowl so you catch the juice. 3. whisk orange juice (about 2 tbsp), honey, vinegar, olive oil, dijon, salt, and pepper to make a dressing. 4. warm beetroot wedges in the same pan for 1-2 minutes, just to take the chill off. 5. toss rocket with half the dressing and arrange on two plates. 6. add warm beetroot and orange segments. 7. crumble over goat's cheese, scatter walnuts, and spoon over remaining dressing. 8. finish with black pepper and parsley, if using."
     },
     {
       "id": "308",
@@ -1376,6 +1529,7 @@
       "cuisine": "mediterranean-inspired",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 380,
       "prep": "8m",
       "cook": "12m",
       "rest": "0m",
@@ -1424,7 +1578,7 @@
       "cookbook_slugs": [
         "date-night-velvet-mediterranean-night"
       ],
-      "search_text": "warm honeyed pears with vanilla ricotta & walnut crunch warm spiced pears, cool vanilla ricotta, and crisp walnut crunch finish the meal with elegant contrast. fruit-dessert dessert mediterranean-inspired dessert pears ricotta quick skillet - 2 ripe pears, cored and sliced - 1 tbsp unsalted butter - 1 tbsp honey - 1/2 tsp ground cinnamon - 120 g ricotta - 1 tsp vanilla extract - 20 g walnuts, finely chopped - 1 tbsp sugar - 1 tsp lemon zest - 1 pinch sea salt 1. toast walnuts, sugar, and sea salt in a dry skillet over medium heat for 2-3 minutes until fragrant, then transfer to a plate. 2. in a small bowl, whisk ricotta and vanilla until smooth. 3. melt butter in the same skillet, add pears, honey, and cinnamon, and cook for 6-8 minutes until glossy and tender. 4. spoon vanilla ricotta into shallow bowls and top with warm pears and pan syrup. 5. finish with walnut crunch and lemon zest just before serving."
+      "search_text": "warm honeyed pears with vanilla ricotta & walnut crunch warm spiced pears, cool vanilla ricotta, and crisp walnut crunch finish the meal with elegant contrast. fruit-dessert dessert mediterranean-inspired 2 380 dessert pears ricotta quick skillet - 2 ripe pears, cored and sliced - 1 tbsp unsalted butter - 1 tbsp honey - 1/2 tsp ground cinnamon - 120 g ricotta - 1 tsp vanilla extract - 20 g walnuts, finely chopped - 1 tbsp sugar - 1 tsp lemon zest - 1 pinch sea salt 1. toast walnuts, sugar, and sea salt in a dry skillet over medium heat for 2-3 minutes until fragrant, then transfer to a plate. 2. in a small bowl, whisk ricotta and vanilla until smooth. 3. melt butter in the same skillet, add pears, honey, and cinnamon, and cook for 6-8 minutes until glossy and tender. 4. spoon vanilla ricotta into shallow bowls and top with warm pears and pan syrup. 5. finish with walnut crunch and lemon zest just before serving."
     },
     {
       "id": "406",
@@ -1436,6 +1590,7 @@
       "cuisine": "mediterranean",
       "occasion": "date-night",
       "serves": "2",
+      "calories": 530,
       "prep": "10m",
       "cook": "8m",
       "rest": "",
@@ -1484,7 +1639,129 @@
       "cookbook_slugs": [
         "date-night-citrus-glow-italian-night"
       ],
-      "search_text": "whipped feta artichoke toasts with lemon creamy whipped feta and warm lemony artichokes on crisp toast for a savory first bite. toast starter mediterranean starter feta artichoke quick highly rated - 120 g feta - 80 g ricotta - 1 tsp lemon zest - 1 tbsp lemon juice - 1 small garlic clove, finely grated - 1 tbsp olive oil, plus extra to drizzle - 1 cup jarred artichoke hearts, drained and chopped - 1 tbsp chopped parsley or basil - 4 slices sourdough - freshly cracked black pepper 1. toast the sourdough slices until golden and crisp. 2. in a bowl, mash feta, ricotta, lemon zest, and half the lemon juice until creamy and spreadable. 3. warm olive oil in a small pan over medium heat, then cook artichokes with garlic for 2-3 minutes. 4. add remaining lemon juice and parsley, toss for 30 seconds, then turn off the heat. 5. spread whipped feta on the toasts, spoon warm artichokes over the top, and finish with black pepper and a light olive oil drizzle."
+      "search_text": "whipped feta artichoke toasts with lemon creamy whipped feta and warm lemony artichokes on crisp toast for a savory first bite. toast starter mediterranean 2 530 starter feta artichoke quick highly rated - 120 g feta - 80 g ricotta - 1 tsp lemon zest - 1 tbsp lemon juice - 1 small garlic clove, finely grated - 1 tbsp olive oil, plus extra to drizzle - 1 cup jarred artichoke hearts, drained and chopped - 1 tbsp chopped parsley or basil - 4 slices sourdough - freshly cracked black pepper 1. toast the sourdough slices until golden and crisp. 2. in a bowl, mash feta, ricotta, lemon zest, and half the lemon juice until creamy and spreadable. 3. warm olive oil in a small pan over medium heat, then cook artichokes with garlic for 2-3 minutes. 4. add remaining lemon juice and parsley, toss for 30 seconds, then turn off the heat. 5. spread whipped feta on the toasts, spoon warm artichokes over the top, and finish with black pepper and a light olive oil drizzle."
+    },
+    {
+      "id": "419",
+      "slug": "recipe-419-whipped-goat-cheese-tartines-with-roasted-grapes-walnuts",
+      "title": "Whipped Goat Cheese Tartines with Roasted Grapes & Walnuts",
+      "menu": "Creamy goat cheese, jammy roasted grapes, and toasted walnuts deliver a bistro-style first plate with very little effort.",
+      "category": "toast",
+      "course": "starter",
+      "cuisine": "provence-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 392,
+      "prep": "10m",
+      "cook": "10m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/419-whipped-goat-cheese-tartines-with-roasted-grapes-and-walnuts-3ca2d27b.png",
+      "image_alt": "Whipped Goat Cheese Tartines with Roasted Grapes & Walnuts",
+      "tags": [
+        "goat-cheese",
+        "grapes",
+        "quick",
+        "starter",
+        "toast",
+        "walnuts"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": false,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>150 g seedless red grapes</li>\n<li>1 tsp olive oil</li>\n<li>1 tsp honey</li>\n<li>100 g soft goat cheese</li>\n<li>60 g ricotta</li>\n<li>1 tsp lemon zest</li>\n<li>4 slices baguette or sourdough</li>\n<li>25 g walnuts, roughly chopped</li>\n<li>1 tsp thyme leaves</li>\n<li>Freshly cracked black pepper</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat the oven grill to high or heat a small oven to 220 C.</li>\n<li>Toss the grapes with olive oil and honey, spread them on a small tray, and roast for 8-10 minutes until some grapes collapse and look glossy.</li>\n<li>Stir goat cheese, ricotta, and lemon zest together until smooth and spreadable.</li>\n<li>Toast the bread slices until crisp at the edges.</li>\n<li>Spoon the whipped goat cheese onto the toasts, top with warm roasted grapes, then scatter over walnuts, thyme leaves, and black pepper before serving.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "150 g seedless red grapes",
+        "1 tsp olive oil",
+        "1 tsp honey",
+        "100 g soft goat cheese",
+        "60 g ricotta",
+        "1 tsp lemon zest",
+        "4 slices baguette or sourdough",
+        "25 g walnuts, roughly chopped",
+        "1 tsp thyme leaves",
+        "Freshly cracked black pepper"
+      ],
+      "method_items": [
+        "Heat the oven grill to high or heat a small oven to 220 C.",
+        "Toss the grapes with olive oil and honey, spread them on a small tray, and roast for 8-10 minutes until some grapes collapse and look glossy.",
+        "Stir goat cheese, ricotta, and lemon zest together until smooth and spreadable.",
+        "Toast the bread slices until crisp at the edges.",
+        "Spoon the whipped goat cheese onto the toasts, top with warm roasted grapes, then scatter over walnuts, thyme leaves, and black pepper before serving."
+      ],
+      "cookbook_slugs": [
+        "date-night-provence-at-golden-hour"
+      ],
+      "search_text": "whipped goat cheese tartines with roasted grapes & walnuts creamy goat cheese, jammy roasted grapes, and toasted walnuts deliver a bistro-style first plate with very little effort. toast starter provence-inspired 2 392 starter goat-cheese grapes toast walnuts quick - 150 g seedless red grapes - 1 tsp olive oil - 1 tsp honey - 100 g soft goat cheese - 60 g ricotta - 1 tsp lemon zest - 4 slices baguette or sourdough - 25 g walnuts, roughly chopped - 1 tsp thyme leaves - freshly cracked black pepper 1. heat the oven grill to high or heat a small oven to 220 c. 2. toss the grapes with olive oil and honey, spread them on a small tray, and roast for 8-10 minutes until some grapes collapse and look glossy. 3. stir goat cheese, ricotta, and lemon zest together until smooth and spreadable. 4. toast the bread slices until crisp at the edges. 5. spoon the whipped goat cheese onto the toasts, top with warm roasted grapes, then scatter over walnuts, thyme leaves, and black pepper before serving."
+    },
+    {
+      "id": "418",
+      "slug": "recipe-418-white-peach-thyme-lemon-spritz",
+      "title": "White Peach, Thyme & Lemon Spritz",
+      "menu": "A chilled late-summer peach spritz with lemon and thyme opens the menu with soft fruit, sharp citrus, and a clean fizz.",
+      "category": "mocktail",
+      "course": "drink",
+      "cuisine": "provence-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 88,
+      "prep": "8m",
+      "cook": "0m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/418-white-peach-thyme-and-lemon-spritz-72071ef4.png",
+      "image_alt": "White Peach, Thyme & Lemon Spritz",
+      "tags": [
+        "drink",
+        "mocktail",
+        "peach",
+        "quick",
+        "sparkling",
+        "thyme"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": true,
+        "gluten_free": true,
+        "dairy_free": true
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>1 ripe white peach, peeled and finely diced</li>\n<li>2 tsp honey</li>\n<li>2 tsp lemon juice</li>\n<li>4 small thyme sprigs, plus extra to garnish</li>\n<li>250 ml chilled sparkling mineral water</li>\n<li>100 ml chilled soda water</li>\n<li>Ice cubes</li>\n<li>Optional: 30 ml gin per glass for cocktail serves</li>\n</ul>",
+        "method_html": "<ol>\n<li>Add the diced peach, honey, lemon juice, and thyme sprigs to a jug and muddle until the peach is very juicy.</li>\n<li>Fill two tall glasses with ice, then divide the peach mixture between them.</li>\n<li>Top each glass with sparkling mineral water and a splash of soda water, then stir gently.</li>\n<li>Optional cocktail conversion: add 30 ml gin per glass and stir.</li>\n<li>Garnish with an extra thyme sprig and serve immediately.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "1 ripe white peach, peeled and finely diced",
+        "2 tsp honey",
+        "2 tsp lemon juice",
+        "4 small thyme sprigs, plus extra to garnish",
+        "250 ml chilled sparkling mineral water",
+        "100 ml chilled soda water",
+        "Ice cubes",
+        "Optional: 30 ml gin per glass for cocktail serves"
+      ],
+      "method_items": [
+        "Add the diced peach, honey, lemon juice, and thyme sprigs to a jug and muddle until the peach is very juicy.",
+        "Fill two tall glasses with ice, then divide the peach mixture between them.",
+        "Top each glass with sparkling mineral water and a splash of soda water, then stir gently.",
+        "Optional cocktail conversion: add 30 ml gin per glass and stir.",
+        "Garnish with an extra thyme sprig and serve immediately."
+      ],
+      "cookbook_slugs": [
+        "date-night-provence-at-golden-hour"
+      ],
+      "search_text": "white peach, thyme & lemon spritz a chilled late-summer peach spritz with lemon and thyme opens the menu with soft fruit, sharp citrus, and a clean fizz. mocktail drink provence-inspired 2 88 drink mocktail peach thyme sparkling quick - 1 ripe white peach, peeled and finely diced - 2 tsp honey - 2 tsp lemon juice - 4 small thyme sprigs, plus extra to garnish - 250 ml chilled sparkling mineral water - 100 ml chilled soda water - ice cubes - optional: 30 ml gin per glass for cocktail serves 1. add the diced peach, honey, lemon juice, and thyme sprigs to a jug and muddle until the peach is very juicy. 2. fill two tall glasses with ice, then divide the peach mixture between them. 3. top each glass with sparkling mineral water and a splash of soda water, then stir gently. 4. optional cocktail conversion: add 30 ml gin per glass and stir. 5. garnish with an extra thyme sprig and serve immediately."
     }
   ],
   "cookbooks": [
@@ -1679,6 +1956,44 @@
       ]
     },
     {
+      "slug": "date-night-provence-at-golden-hour",
+      "title": "Date Night: Provence at Golden Hour",
+      "subtitle": "Saturday, March 14, 2026 · Low-effort late-summer Provence-inspired menu with white peach, lemon, herbs, and creamy bistro textures",
+      "author": "Codex",
+      "date": "2026-03-14",
+      "source_mtime": 1772918723,
+      "description": "",
+      "album_title": "Moon Beams",
+      "album_artist": "Bill Evans Trio",
+      "album_style": "Instrumental jazz (luminous piano-trio intimacy for a warm terrace feel)",
+      "album_youtube_url": "",
+      "recipe_slugs": [
+        "recipe-418-white-peach-thyme-lemon-spritz",
+        "recipe-419-whipped-goat-cheese-tartines-with-roasted-grapes-walnuts",
+        "recipe-420-one-pan-lemon-chicken-pearl-couscous-with-zucchini-herbs",
+        "recipe-421-no-bake-white-peach-mascarpone-glasses-with-almond-crunch"
+      ],
+      "reader_intro_html": "",
+      "reader_blocks": [
+        {
+          "type": "recipe",
+          "slug": "recipe-418-white-peach-thyme-lemon-spritz"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-419-whipped-goat-cheese-tartines-with-roasted-grapes-walnuts"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-420-one-pan-lemon-chicken-pearl-couscous-with-zucchini-herbs"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-421-no-bake-white-peach-mascarpone-glasses-with-almond-crunch"
+        }
+      ]
+    },
+    {
       "slug": "date-night-velvet-mediterranean-night",
       "title": "Date Night: Velvet Mediterranean Night",
       "subtitle": "Saturday, February 21, 2026 · Low-effort Mediterranean date-night menu with bright herbs, warm spice, and silky textures",
@@ -1720,6 +2035,7 @@
   "facets": {
     "tags": [
       "Nan",
+      "almonds",
       "artichoke",
       "basil",
       "beetroot",
@@ -1740,6 +2056,8 @@
       "fizzy",
       "ginger",
       "gnocchi",
+      "goat-cheese",
+      "grapes",
       "halloumi",
       "handwritten",
       "heirloom",
@@ -1760,7 +2078,9 @@
       "orzo",
       "pan-seared",
       "pasta",
+      "peach",
       "pear",
+      "pearl-couscous",
       "pears",
       "pineapple",
       "pistachio",
@@ -1777,8 +2097,12 @@
       "sparkling",
       "starter",
       "strawberries",
+      "thyme",
+      "toast",
       "udon",
-      "umami"
+      "umami",
+      "walnuts",
+      "zucchini"
     ],
     "categories": [
       "beverage",
