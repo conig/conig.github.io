@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-07T21:35:24.262598+00:00",
+  "generated_at": "2026-03-07T23:24:06.406075+00:00",
   "recipes": [
     {
       "id": "301",
@@ -110,6 +110,70 @@
         "date-night-jan-31"
       ],
       "search_text": "caprese salad with balsamic glaze tomatoes and mozzarella with basil and balsamic. salad starter italian 2 530 salad caprese no-cook - 3-4 ripe tomatoes (about 400 g), sliced into rounds - 200 g bocconcini or fresh mozzarella, sliced into rounds - 1 punnet fresh basil leaves (about 20-30 leaves) - 2 tbsp balsamic glaze - optional: 1 tbsp pesto (for drizzling) - 4-6 slices sourdough or baguette (for serving) 1. on a serving platter or two plates, alternate slices of tomato and mozzarella in a circular or linear pattern. 2. tuck fresh basil leaves between the slices for even distribution. 3. drizzle evenly with the balsamic glaze (and pesto if using). season lightly with salt and pepper. 4. if desired, lightly toast the sourdough slices at 180 c for 5 minutes. 5. serve immediately with the bread on the side for scooping or dipping."
+    },
+    {
+      "id": "423",
+      "slug": "recipe-423-charred-corn-tostadas-with-avocado-tomato-lime",
+      "title": "Charred Corn Tostadas with Avocado, Tomato & Lime",
+      "menu": "Crisp tostadas with charred corn and creamy avocado give the menu a brighter, crunchier opening than the recent dairy-led starters.",
+      "category": "small-plate",
+      "course": "starter",
+      "cuisine": "mexican-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 278,
+      "prep": "12m",
+      "cook": "10m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/423-charred-corn-tostadas-with-avocado-tomato-and-lime-1a0ed630.png",
+      "image_alt": "Charred Corn Tostadas with Avocado, Tomato & Lime",
+      "tags": [
+        "avocado",
+        "corn",
+        "lime",
+        "quick",
+        "starter",
+        "tostada"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": true,
+        "gluten_free": true,
+        "dairy_free": true
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>4 small white corn tortillas</li>\n<li>1 tbsp olive oil</li>\n<li>200 g sweet corn kernels</li>\n<li>1 ripe avocado</li>\n<li>150 g cherry tomatoes, finely diced</li>\n<li>2 tbsp finely diced red onion</li>\n<li>1 tbsp lime juice</li>\n<li>1 tbsp chopped coriander</li>\n<li>1/2 tsp ground cumin</li>\n<li>1/4 tsp chilli flakes</li>\n<li>Flaky salt</li>\n<li>Black pepper</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat the oven to 220 C and brush both sides of the tortillas lightly with a little of the olive oil, then bake directly on the oven rack for 6-8 minutes until crisp and lightly golden.</li>\n<li>Heat the remaining olive oil in a skillet over high heat and cook the sweet corn with the cumin and chilli flakes for 3-4 minutes until it picks up dark charred spots.</li>\n<li>Stir the cherry tomatoes, red onion, and half the coriander into the hot corn, then season with flaky salt and black pepper.</li>\n<li>Mash the avocado with the lime juice and a pinch of flaky salt.</li>\n<li>Spread the avocado over the tostadas, spoon over the charred corn mixture, and finish with the remaining coriander before serving.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "4 small white corn tortillas",
+        "1 tbsp olive oil",
+        "200 g sweet corn kernels",
+        "1 ripe avocado",
+        "150 g cherry tomatoes, finely diced",
+        "2 tbsp finely diced red onion",
+        "1 tbsp lime juice",
+        "1 tbsp chopped coriander",
+        "1/2 tsp ground cumin",
+        "1/4 tsp chilli flakes",
+        "Flaky salt",
+        "Black pepper"
+      ],
+      "method_items": [
+        "Heat the oven to 220 C and brush both sides of the tortillas lightly with a little of the olive oil, then bake directly on the oven rack for 6-8 minutes until crisp and lightly golden.",
+        "Heat the remaining olive oil in a skillet over high heat and cook the sweet corn with the cumin and chilli flakes for 3-4 minutes until it picks up dark charred spots.",
+        "Stir the cherry tomatoes, red onion, and half the coriander into the hot corn, then season with flaky salt and black pepper.",
+        "Mash the avocado with the lime juice and a pinch of flaky salt.",
+        "Spread the avocado over the tostadas, spoon over the charred corn mixture, and finish with the remaining coriander before serving."
+      ],
+      "cookbook_slugs": [
+        "date-night-rooftop-cantina-after-dark"
+      ],
+      "search_text": "charred corn tostadas with avocado, tomato & lime crisp tostadas with charred corn and creamy avocado give the menu a brighter, crunchier opening than the recent dairy-led starters. small-plate starter mexican-inspired 2 278 starter corn avocado tostada lime quick - 4 small white corn tortillas - 1 tbsp olive oil - 200 g sweet corn kernels - 1 ripe avocado - 150 g cherry tomatoes, finely diced - 2 tbsp finely diced red onion - 1 tbsp lime juice - 1 tbsp chopped coriander - 1/2 tsp ground cumin - 1/4 tsp chilli flakes - flaky salt - black pepper 1. heat the oven to 220 c and brush both sides of the tortillas lightly with a little of the olive oil, then bake directly on the oven rack for 6-8 minutes until crisp and lightly golden. 2. heat the remaining olive oil in a skillet over high heat and cook the sweet corn with the cumin and chilli flakes for 3-4 minutes until it picks up dark charred spots. 3. stir the cherry tomatoes, red onion, and half the coriander into the hot corn, then season with flaky salt and black pepper. 4. mash the avocado with the lime juice and a pinch of flaky salt. 5. spread the avocado over the tostadas, spoon over the charred corn mixture, and finish with the remaining coriander before serving."
     },
     {
       "id": "304",
@@ -770,68 +834,6 @@
       "search_text": "no-bake lemon mascarpone pots with pistachio crunch lush lemon mascarpone cream layered with biscuit and pistachio for a bright, elegant finish. sweet dessert italian-inspired 2 655 dessert no-bake lemon mascarpone - 125 g mascarpone - 150 ml thickened cream - 2 tbsp icing sugar - 1 tsp vanilla extract - 1 tsp finely grated lemon zest - 1 tbsp lemon juice - 6 plain sweet biscuits (e.g., marie biscuits), crushed - 2 tbsp chopped pistachios - pinch of flaky salt - optional: extra lemon zest to finish 1. mix crushed biscuits, pistachios, and flaky salt in a small bowl. 2. whip cream, icing sugar, and vanilla to soft peaks. 3. fold mascarpone, lemon zest, and lemon juice into the whipped cream until smooth. 4. spoon a little biscuit mixture into two small glasses, then add a thick layer of lemon mascarpone cream. 5. repeat with another light biscuit layer and finish with cream on top. 6. chill for 20 minutes, then garnish with extra lemon zest before serving."
     },
     {
-      "id": "421",
-      "slug": "recipe-421-no-bake-white-peach-mascarpone-glasses-with-almond-crunch",
-      "title": "No-Bake White Peach Mascarpone Glasses with Almond Crunch",
-      "menu": "Soft mascarpone cream, glossy peaches, and almond crunch finish the menu like an easy restaurant parfait.",
-      "category": "sweet",
-      "course": "dessert",
-      "cuisine": "provence-inspired",
-      "occasion": "date-night",
-      "serves": "2",
-      "calories": 476,
-      "prep": "12m",
-      "cook": "5m",
-      "rest": "20m",
-      "difficulty": 1,
-      "rating": null,
-      "image": "assets/images/421-no-bake-white-peach-mascarpone-glasses-with-almond-crunch-a07628e6.png",
-      "image_alt": "No-Bake White Peach Mascarpone Glasses with Almond Crunch",
-      "tags": [
-        "almonds",
-        "dessert",
-        "mascarpone",
-        "no-bake",
-        "peach"
-      ],
-      "flags": {
-        "vegetarian": true,
-        "vegan": false,
-        "gluten_free": false,
-        "dairy_free": false
-      },
-      "sections": {
-        "intro_html": "",
-        "ingredients_html": "<ul>\n<li>1 ripe white peach, finely diced</li>\n<li>1 tsp honey</li>\n<li>1 tsp lemon juice</li>\n<li>3 plain sweet biscuits (e.g., Marie biscuits), crushed</li>\n<li>20 g flaked almonds</li>\n<li>125 g mascarpone</li>\n<li>100 ml thickened cream</li>\n<li>1 tbsp icing sugar</li>\n<li>1 tsp vanilla extract</li>\n<li>Pinch of flaky salt</li>\n</ul>",
-        "method_html": "<ol>\n<li>Add the peach, honey, and lemon juice to a small pan and cook over medium heat for 3-5 minutes until the fruit turns glossy but still holds its shape, then cool for a few minutes.</li>\n<li>Toast the crushed biscuits and flaked almonds in a dry pan for 1-2 minutes, then stir through a pinch of flaky salt and set aside.</li>\n<li>Whip the mascarpone, thickened cream, icing sugar, and vanilla until softly thickened.</li>\n<li>Spoon a little almond crunch into two small glasses, add a layer of mascarpone cream, then spoon over some warm peach.</li>\n<li>Repeat with another light layer of cream and finish with the remaining peach and crunch.</li>\n<li>Chill for 20 minutes before serving.</li>\n</ol>",
-        "notes_html": ""
-      },
-      "ingredients_items": [
-        "1 ripe white peach, finely diced",
-        "1 tsp honey",
-        "1 tsp lemon juice",
-        "3 plain sweet biscuits (e.g., Marie biscuits), crushed",
-        "20 g flaked almonds",
-        "125 g mascarpone",
-        "100 ml thickened cream",
-        "1 tbsp icing sugar",
-        "1 tsp vanilla extract",
-        "Pinch of flaky salt"
-      ],
-      "method_items": [
-        "Add the peach, honey, and lemon juice to a small pan and cook over medium heat for 3-5 minutes until the fruit turns glossy but still holds its shape, then cool for a few minutes.",
-        "Toast the crushed biscuits and flaked almonds in a dry pan for 1-2 minutes, then stir through a pinch of flaky salt and set aside.",
-        "Whip the mascarpone, thickened cream, icing sugar, and vanilla until softly thickened.",
-        "Spoon a little almond crunch into two small glasses, add a layer of mascarpone cream, then spoon over some warm peach.",
-        "Repeat with another light layer of cream and finish with the remaining peach and crunch.",
-        "Chill for 20 minutes before serving."
-      ],
-      "cookbook_slugs": [
-        "date-night-provence-at-golden-hour"
-      ],
-      "search_text": "no-bake white peach mascarpone glasses with almond crunch soft mascarpone cream, glossy peaches, and almond crunch finish the menu like an easy restaurant parfait. sweet dessert provence-inspired 2 476 dessert no-bake peach mascarpone almonds - 1 ripe white peach, finely diced - 1 tsp honey - 1 tsp lemon juice - 3 plain sweet biscuits (e.g., marie biscuits), crushed - 20 g flaked almonds - 125 g mascarpone - 100 ml thickened cream - 1 tbsp icing sugar - 1 tsp vanilla extract - pinch of flaky salt 1. add the peach, honey, and lemon juice to a small pan and cook over medium heat for 3-5 minutes until the fruit turns glossy but still holds its shape, then cool for a few minutes. 2. toast the crushed biscuits and flaked almonds in a dry pan for 1-2 minutes, then stir through a pinch of flaky salt and set aside. 3. whip the mascarpone, thickened cream, icing sugar, and vanilla until softly thickened. 4. spoon a little almond crunch into two small glasses, add a layer of mascarpone cream, then spoon over some warm peach. 5. repeat with another light layer of cream and finish with the remaining peach and crunch. 6. chill for 20 minutes before serving."
-    },
-    {
       "id": "416",
       "slug": "recipe-416-one-pan-ginger-miso-chicken-rice-with-bok-choy",
       "title": "One-Pan Ginger Miso Chicken Rice with Bok Choy",
@@ -896,72 +898,6 @@
         "date-night-lantern-coast-supper"
       ],
       "search_text": "one-pan ginger miso chicken rice with bok choy comforting one-pan centerpiece with glossy umami sauce and tender greens for low-stress cooking. one-pan main east-asian-inspired 2 760 main one-pan chicken rice quick highly rated - 300 g chicken thigh fillets (boneless, skinless), sliced - 1 tbsp neutral oil - 2 clove garlic, minced - 1 tsp grated ginger - 1 tbsp white miso paste - 1 tbsp soy sauce - 1 tbsp honey - 180 g jasmine rice - 430 ml chicken stock - 2 baby bok choy, halved lengthways - 1 tsp sesame oil - 1 spring onion, finely sliced - 1 tbsp toasted sesame seeds 1. heat a deep skillet with neutral oil over medium-high heat and brown the chicken for 3-4 minutes. 2. stir in garlic and grated ginger for 30 seconds, then add miso paste, soy sauce, and honey. 3. add jasmine rice and chicken stock, scrape the pan base, and bring to a gentle boil. 4. nestle the chicken evenly into the rice, cover, and cook on low heat for 12 minutes. 5. place bok choy on top, cover again, and cook for 4 more minutes until the rice is tender and bok choy is bright. 6. rest the pan off heat for 3 minutes, then finish with sesame oil, spring onion, and sesame seeds before serving."
-    },
-    {
-      "id": "420",
-      "slug": "recipe-420-one-pan-lemon-chicken-pearl-couscous-with-zucchini-herbs",
-      "title": "One-Pan Lemon Chicken Pearl Couscous with Zucchini & Herbs",
-      "menu": "Golden chicken, tender pearl couscous, and bright herbs make a polished one-pan centerpiece with citrus lift and low cleanup.",
-      "category": "one-pan",
-      "course": "main",
-      "cuisine": "provence-inspired",
-      "occasion": "date-night",
-      "serves": "2",
-      "calories": 658,
-      "prep": "12m",
-      "cook": "20m",
-      "rest": "3m",
-      "difficulty": 2,
-      "rating": null,
-      "image": "assets/images/420-one-pan-lemon-chicken-pearl-couscous-with-zucchini-and-herbs-b98e0963.png",
-      "image_alt": "One-Pan Lemon Chicken Pearl Couscous with Zucchini & Herbs",
-      "tags": [
-        "chicken",
-        "main",
-        "one-pan",
-        "pearl-couscous",
-        "quick",
-        "zucchini"
-      ],
-      "flags": {
-        "vegetarian": false,
-        "vegan": false,
-        "gluten_free": false,
-        "dairy_free": false
-      },
-      "sections": {
-        "intro_html": "",
-        "ingredients_html": "<ul>\n<li>300 g chicken thigh fillets (boneless, skinless), cut into bite-sized pieces</li>\n<li>1 tbsp olive oil</li>\n<li>1 small zucchini, halved lengthways and sliced</li>\n<li>2 clove garlic, finely chopped</li>\n<li>180 g pearl couscous</li>\n<li>450 ml chicken stock</li>\n<li>80 ml thickened cream</li>\n<li>1 tsp lemon zest</li>\n<li>1 tbsp lemon juice</li>\n<li>2 tbsp grated parmesan</li>\n<li>2 tbsp chopped flat-leaf parsley</li>\n<li>1 tbsp chopped chives</li>\n<li>Freshly cracked black pepper</li>\n</ul>",
-        "method_html": "<ol>\n<li>Heat a deep skillet over medium-high heat with olive oil, then brown the chicken for 4-5 minutes until lightly golden.</li>\n<li>Add the zucchini and garlic, then cook for 2 minutes until the zucchini starts to soften.</li>\n<li>Stir in the pearl couscous, chicken stock, and a few grinds of black pepper, bring to a gentle simmer, then cover and cook on low heat for 10 minutes.</li>\n<li>Remove the lid, stir in the cream, lemon zest, lemon juice, and parmesan, then cook uncovered for 3-4 minutes until the couscous is tender and glossy.</li>\n<li>Rest the pan off the heat for 3 minutes, then fold through the parsley and chives.</li>\n<li>Spoon into shallow bowls and finish with extra herbs and black pepper.</li>\n</ol>",
-        "notes_html": ""
-      },
-      "ingredients_items": [
-        "300 g chicken thigh fillets (boneless, skinless), cut into bite-sized pieces",
-        "1 tbsp olive oil",
-        "1 small zucchini, halved lengthways and sliced",
-        "2 clove garlic, finely chopped",
-        "180 g pearl couscous",
-        "450 ml chicken stock",
-        "80 ml thickened cream",
-        "1 tsp lemon zest",
-        "1 tbsp lemon juice",
-        "2 tbsp grated parmesan",
-        "2 tbsp chopped flat-leaf parsley",
-        "1 tbsp chopped chives",
-        "Freshly cracked black pepper"
-      ],
-      "method_items": [
-        "Heat a deep skillet over medium-high heat with olive oil, then brown the chicken for 4-5 minutes until lightly golden.",
-        "Add the zucchini and garlic, then cook for 2 minutes until the zucchini starts to soften.",
-        "Stir in the pearl couscous, chicken stock, and a few grinds of black pepper, bring to a gentle simmer, then cover and cook on low heat for 10 minutes.",
-        "Remove the lid, stir in the cream, lemon zest, lemon juice, and parmesan, then cook uncovered for 3-4 minutes until the couscous is tender and glossy.",
-        "Rest the pan off the heat for 3 minutes, then fold through the parsley and chives.",
-        "Spoon into shallow bowls and finish with extra herbs and black pepper."
-      ],
-      "cookbook_slugs": [
-        "date-night-provence-at-golden-hour"
-      ],
-      "search_text": "one-pan lemon chicken pearl couscous with zucchini & herbs golden chicken, tender pearl couscous, and bright herbs make a polished one-pan centerpiece with citrus lift and low cleanup. one-pan main provence-inspired 2 658 main one-pan chicken pearl-couscous zucchini quick - 300 g chicken thigh fillets (boneless, skinless), cut into bite-sized pieces - 1 tbsp olive oil - 1 small zucchini, halved lengthways and sliced - 2 clove garlic, finely chopped - 180 g pearl couscous - 450 ml chicken stock - 80 ml thickened cream - 1 tsp lemon zest - 1 tbsp lemon juice - 2 tbsp grated parmesan - 2 tbsp chopped flat-leaf parsley - 1 tbsp chopped chives - freshly cracked black pepper 1. heat a deep skillet over medium-high heat with olive oil, then brown the chicken for 4-5 minutes until lightly golden. 2. add the zucchini and garlic, then cook for 2 minutes until the zucchini starts to soften. 3. stir in the pearl couscous, chicken stock, and a few grinds of black pepper, bring to a gentle simmer, then cover and cook on low heat for 10 minutes. 4. remove the lid, stir in the cream, lemon zest, lemon juice, and parmesan, then cook uncovered for 3-4 minutes until the couscous is tender and glossy. 5. rest the pan off the heat for 3 minutes, then fold through the parsley and chives. 6. spoon into shallow bowls and finish with extra herbs and black pepper."
     },
     {
       "id": "407",
@@ -1277,6 +1213,68 @@
       "search_text": "pink grapefruit, thyme & ginger spritz bright grapefruit with a hint of thyme and spicy ginger. mocktail drink modern 2 110 mocktail citrus fizzy ### thyme syrup - 2 tbsp sugar - 2 tbsp water - 4-6 thyme sprigs ### spritz - 1/2 cup pink grapefruit juice (fresh or bottled) - 1 cup ginger beer - soda water, to top - 2 tsp lemon juice (optional, for extra zip) - ice - garnish: grapefruit slices + thyme sprigs 1. make thyme syrup: simmer sugar, water, and thyme for 2 minutes, then turn off heat and steep 5 minutes. strain and cool. 2. fill two glasses with ice. add 1-2 tsp thyme syrup per glass (to taste). 3. add grapefruit juice (and lemon juice if using). 4. top with ginger beer and a splash of soda water. 5. garnish with grapefruit and thyme."
     },
     {
+      "id": "425",
+      "slug": "recipe-425-roasted-plums-with-cinnamon-tortilla-crisps-vanilla-ice-cream",
+      "title": "Roasted Plums with Cinnamon Tortilla Crisps & Vanilla Ice Cream",
+      "menu": "Warm roasted plums and crisp cinnamon tortillas finish the menu with a plated dessert that feels lighter and less familiar than the recent creamy cups.",
+      "category": "fruit-dessert",
+      "course": "dessert",
+      "cuisine": "mexican-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 372,
+      "prep": "10m",
+      "cook": "18m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/425-roasted-plums-with-cinnamon-tortilla-crisps-and-vanilla-ice-cream-e22c0f7d.png",
+      "image_alt": "Roasted Plums with Cinnamon Tortilla Crisps & Vanilla Ice Cream",
+      "tags": [
+        "cinnamon",
+        "dessert",
+        "ice-cream",
+        "plums",
+        "tortilla"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>3 ripe red plums, cut into wedges</li>\n<li>1 tbsp brown sugar</li>\n<li>1/2 tsp ground cinnamon</li>\n<li>1 tsp lime juice</li>\n<li>2 small white corn tortillas, cut into wedges</li>\n<li>1 tbsp melted butter</li>\n<li>1 tbsp caster sugar</li>\n<li>250 ml vanilla ice cream</li>\n<li>1 tbsp honey</li>\n<li>Pinch of flaky salt</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat the oven to 220 C and line a small tray.</li>\n<li>Toss the plum wedges with the brown sugar, half the cinnamon, and the lime juice, then spread them over one side of the tray.</li>\n<li>Toss the tortilla wedges with the melted butter, caster sugar, the remaining cinnamon, and a tiny pinch of flaky salt, then spread them over the other side of the tray.</li>\n<li>Roast for 10-12 minutes, removing the tortilla crisps as soon as they are golden and leaving the plums in for another 4-6 minutes until glossy and just slumped.</li>\n<li>Divide the warm plums between two shallow bowls, add scoops of vanilla ice cream, and tuck in the tortilla crisps.</li>\n<li>Drizzle with honey and serve straight away.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "3 ripe red plums, cut into wedges",
+        "1 tbsp brown sugar",
+        "1/2 tsp ground cinnamon",
+        "1 tsp lime juice",
+        "2 small white corn tortillas, cut into wedges",
+        "1 tbsp melted butter",
+        "1 tbsp caster sugar",
+        "250 ml vanilla ice cream",
+        "1 tbsp honey",
+        "Pinch of flaky salt"
+      ],
+      "method_items": [
+        "Heat the oven to 220 C and line a small tray.",
+        "Toss the plum wedges with the brown sugar, half the cinnamon, and the lime juice, then spread them over one side of the tray.",
+        "Toss the tortilla wedges with the melted butter, caster sugar, the remaining cinnamon, and a tiny pinch of flaky salt, then spread them over the other side of the tray.",
+        "Roast for 10-12 minutes, removing the tortilla crisps as soon as they are golden and leaving the plums in for another 4-6 minutes until glossy and just slumped.",
+        "Divide the warm plums between two shallow bowls, add scoops of vanilla ice cream, and tuck in the tortilla crisps.",
+        "Drizzle with honey and serve straight away."
+      ],
+      "cookbook_slugs": [
+        "date-night-rooftop-cantina-after-dark"
+      ],
+      "search_text": "roasted plums with cinnamon tortilla crisps & vanilla ice cream warm roasted plums and crisp cinnamon tortillas finish the menu with a plated dessert that feels lighter and less familiar than the recent creamy cups. fruit-dessert dessert mexican-inspired 2 372 dessert plums tortilla cinnamon ice-cream - 3 ripe red plums, cut into wedges - 1 tbsp brown sugar - 1/2 tsp ground cinnamon - 1 tsp lime juice - 2 small white corn tortillas, cut into wedges - 1 tbsp melted butter - 1 tbsp caster sugar - 250 ml vanilla ice cream - 1 tbsp honey - pinch of flaky salt 1. heat the oven to 220 c and line a small tray. 2. toss the plum wedges with the brown sugar, half the cinnamon, and the lime juice, then spread them over one side of the tray. 3. toss the tortilla wedges with the melted butter, caster sugar, the remaining cinnamon, and a tiny pinch of flaky salt, then spread them over the other side of the tray. 4. roast for 10-12 minutes, removing the tortilla crisps as soon as they are golden and leaving the plums in for another 4-6 minutes until glossy and just slumped. 5. divide the warm plums between two shallow bowls, add scoops of vanilla ice cream, and tuck in the tortilla crisps. 6. drizzle with honey and serve straight away."
+    },
+    {
       "id": "305",
       "slug": "recipe-305-rosemary-blackberry-verjus-fizz",
       "title": "Rosemary Blackberry Verjus Fizz",
@@ -1336,6 +1334,77 @@
         "date-night-velvet-mediterranean-night"
       ],
       "search_text": "rosemary blackberry verjus fizz a bright blackberry-herb fizz that opens the menu with crisp acidity and a clean finish. mocktail drink mediterranean-inspired 2 80 drink mocktail sparkling blackberry rosemary quick - 90 g blackberries (plus 2 extra for garnish) - 1 tbsp sugar - 1 tsp fresh rosemary leaves, finely chopped - 60 ml white verjus - 30 ml lemon juice - 240 ml chilled sparkling water - 120 ml chilled tonic water - 1 cup ice - 2 rosemary sprigs 1. in a small bowl, muddle blackberries with sugar and chopped rosemary until juicy. 2. strain the mixture into a jug, then stir in verjus and lemon juice. 3. fill two short glasses with ice and divide the blackberry base between them. 4. top each glass with sparkling water and tonic water, stir once, and garnish with a blackberry and rosemary sprig. 5. optional cocktail conversion: add 30 ml (1 oz) gin per glass and stir gently."
+    },
+    {
+      "id": "424",
+      "slug": "recipe-424-sheet-pan-smoky-chicken-tacos-with-pickled-onion",
+      "title": "Sheet-Pan Smoky Chicken Tacos with Pickled Onion",
+      "menu": "Smoky roast chicken, warm tortillas, and sharp pickled onion turn the main into an easy cantina-style assembly dinner.",
+      "category": "tray-bake",
+      "course": "main",
+      "cuisine": "mexican-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 538,
+      "prep": "15m",
+      "cook": "20m",
+      "rest": "3m",
+      "difficulty": 2,
+      "rating": null,
+      "image": "assets/images/424-sheet-pan-smoky-chicken-tacos-with-pickled-onion-d76d2e74.png",
+      "image_alt": "Sheet-Pan Smoky Chicken Tacos with Pickled Onion",
+      "tags": [
+        "chicken",
+        "main",
+        "quick",
+        "smoky",
+        "tacos",
+        "tray-bake"
+      ],
+      "flags": {
+        "vegetarian": false,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": true
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>1/2 red onion, very thinly sliced</li>\n<li>2 tbsp lime juice</li>\n<li>1/2 tsp caster sugar</li>\n<li>1/4 tsp flaky salt</li>\n<li>350 g chicken thigh fillets (boneless, skinless), sliced</li>\n<li>1 red capsicum, thinly sliced</li>\n<li>1 tbsp olive oil</li>\n<li>1 tbsp tomato paste</li>\n<li>1 tsp smoked paprika</li>\n<li>1 tsp ground cumin</li>\n<li>1/2 tsp dried oregano</li>\n<li>1/2 tsp garlic powder</li>\n<li>1/4 tsp chilli flakes</li>\n<li>100 ml tomato passata</li>\n<li>8 small white corn tortillas</li>\n<li>80 g shredded iceberg lettuce</li>\n<li>2 tbsp chopped coriander</li>\n<li>1 lime, cut into wedges</li>\n</ul>",
+        "method_html": "<ol>\n<li>Toss the sliced red onion with 1 tbsp of the lime juice, the caster sugar, and the flaky salt, then leave it to pickle while you cook the chicken.</li>\n<li>Heat the oven to 220 C and line a tray. Toss the chicken and red capsicum with the olive oil, tomato paste, smoked paprika, cumin, oregano, garlic powder, chilli flakes, and the remaining lime juice.</li>\n<li>Spread the chicken mixture over the tray and roast for 15-18 minutes until the chicken is cooked through and the capsicum is tender at the edges.</li>\n<li>Pour the tomato passata over the hot tray, toss everything together, and rest for 3 minutes so the chicken picks up the smoky juices.</li>\n<li>Warm the tortillas in a dry pan or directly over a gas flame for a few seconds per side.</li>\n<li>Fill each tortilla with lettuce, smoky chicken, pickled onion, and coriander, then serve with lime wedges for squeezing over.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "1/2 red onion, very thinly sliced",
+        "2 tbsp lime juice",
+        "1/2 tsp caster sugar",
+        "1/4 tsp flaky salt",
+        "350 g chicken thigh fillets (boneless, skinless), sliced",
+        "1 red capsicum, thinly sliced",
+        "1 tbsp olive oil",
+        "1 tbsp tomato paste",
+        "1 tsp smoked paprika",
+        "1 tsp ground cumin",
+        "1/2 tsp dried oregano",
+        "1/2 tsp garlic powder",
+        "1/4 tsp chilli flakes",
+        "100 ml tomato passata",
+        "8 small white corn tortillas",
+        "80 g shredded iceberg lettuce",
+        "2 tbsp chopped coriander",
+        "1 lime, cut into wedges"
+      ],
+      "method_items": [
+        "Toss the sliced red onion with 1 tbsp of the lime juice, the caster sugar, and the flaky salt, then leave it to pickle while you cook the chicken.",
+        "Heat the oven to 220 C and line a tray. Toss the chicken and red capsicum with the olive oil, tomato paste, smoked paprika, cumin, oregano, garlic powder, chilli flakes, and the remaining lime juice.",
+        "Spread the chicken mixture over the tray and roast for 15-18 minutes until the chicken is cooked through and the capsicum is tender at the edges.",
+        "Pour the tomato passata over the hot tray, toss everything together, and rest for 3 minutes so the chicken picks up the smoky juices.",
+        "Warm the tortillas in a dry pan or directly over a gas flame for a few seconds per side.",
+        "Fill each tortilla with lettuce, smoky chicken, pickled onion, and coriander, then serve with lime wedges for squeezing over."
+      ],
+      "cookbook_slugs": [
+        "date-night-rooftop-cantina-after-dark"
+      ],
+      "search_text": "sheet-pan smoky chicken tacos with pickled onion smoky roast chicken, warm tortillas, and sharp pickled onion turn the main into an easy cantina-style assembly dinner. tray-bake main mexican-inspired 2 538 main chicken tacos tray-bake smoky quick - 1/2 red onion, very thinly sliced - 2 tbsp lime juice - 1/2 tsp caster sugar - 1/4 tsp flaky salt - 350 g chicken thigh fillets (boneless, skinless), sliced - 1 red capsicum, thinly sliced - 1 tbsp olive oil - 1 tbsp tomato paste - 1 tsp smoked paprika - 1 tsp ground cumin - 1/2 tsp dried oregano - 1/2 tsp garlic powder - 1/4 tsp chilli flakes - 100 ml tomato passata - 8 small white corn tortillas - 80 g shredded iceberg lettuce - 2 tbsp chopped coriander - 1 lime, cut into wedges 1. toss the sliced red onion with 1 tbsp of the lime juice, the caster sugar, and the flaky salt, then leave it to pickle while you cook the chicken. 2. heat the oven to 220 c and line a tray. toss the chicken and red capsicum with the olive oil, tomato paste, smoked paprika, cumin, oregano, garlic powder, chilli flakes, and the remaining lime juice. 3. spread the chicken mixture over the tray and roast for 15-18 minutes until the chicken is cooked through and the capsicum is tender at the edges. 4. pour the tomato passata over the hot tray, toss everything together, and rest for 3 minutes so the chicken picks up the smoky juices. 5. warm the tortillas in a dry pan or directly over a gas flame for a few seconds per side. 6. fill each tortilla with lettuce, smoky chicken, pickled onion, and coriander, then serve with lime wedges for squeezing over."
     },
     {
       "id": "405",
@@ -1581,6 +1650,66 @@
       "search_text": "warm honeyed pears with vanilla ricotta & walnut crunch warm spiced pears, cool vanilla ricotta, and crisp walnut crunch finish the meal with elegant contrast. fruit-dessert dessert mediterranean-inspired 2 380 dessert pears ricotta quick skillet - 2 ripe pears, cored and sliced - 1 tbsp unsalted butter - 1 tbsp honey - 1/2 tsp ground cinnamon - 120 g ricotta - 1 tsp vanilla extract - 20 g walnuts, finely chopped - 1 tbsp sugar - 1 tsp lemon zest - 1 pinch sea salt 1. toast walnuts, sugar, and sea salt in a dry skillet over medium heat for 2-3 minutes until fragrant, then transfer to a plate. 2. in a small bowl, whisk ricotta and vanilla until smooth. 3. melt butter in the same skillet, add pears, honey, and cinnamon, and cook for 6-8 minutes until glossy and tender. 4. spoon vanilla ricotta into shallow bowls and top with warm pears and pan syrup. 5. finish with walnut crunch and lemon zest just before serving."
     },
     {
+      "id": "422",
+      "slug": "recipe-422-watermelon-lime-mint-agua-fresca",
+      "title": "Watermelon, Lime & Mint Agua Fresca",
+      "menu": "A chilled watermelon agua fresca opens the menu with clean fruit, sharp lime, and a fresh mint lift instead of another spritz.",
+      "category": "mocktail",
+      "course": "drink",
+      "cuisine": "mexican-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 86,
+      "prep": "8m",
+      "cook": "0m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/422-watermelon-lime-and-mint-agua-fresca-ea020649.png",
+      "image_alt": "Watermelon, Lime & Mint Agua Fresca",
+      "tags": [
+        "drink",
+        "lime",
+        "mint",
+        "mocktail",
+        "quick",
+        "watermelon"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": true,
+        "gluten_free": true,
+        "dairy_free": true
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>450 g seedless watermelon, cubed</li>\n<li>2 tbsp lime juice</li>\n<li>1 tbsp caster sugar</li>\n<li>8 mint leaves, plus extra to garnish</li>\n<li>250 ml chilled water</li>\n<li>Pinch of flaky salt</li>\n<li>Ice cubes</li>\n<li>Optional: 30 ml blanco tequila per glass for cocktail serves</li>\n</ul>",
+        "method_html": "<ol>\n<li>Add the watermelon, lime juice, caster sugar, mint leaves, chilled water, and flaky salt to a blender and blend until very smooth.</li>\n<li>Taste and add a little more lime if the melon is very sweet, then strain through a fine sieve if you want a smoother finish.</li>\n<li>Fill two short glasses with ice and divide the agua fresca between them.</li>\n<li>Optional cocktail conversion: add 30 ml blanco tequila per glass and stir.</li>\n<li>Garnish with extra mint and serve immediately.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "450 g seedless watermelon, cubed",
+        "2 tbsp lime juice",
+        "1 tbsp caster sugar",
+        "8 mint leaves, plus extra to garnish",
+        "250 ml chilled water",
+        "Pinch of flaky salt",
+        "Ice cubes",
+        "Optional: 30 ml blanco tequila per glass for cocktail serves"
+      ],
+      "method_items": [
+        "Add the watermelon, lime juice, caster sugar, mint leaves, chilled water, and flaky salt to a blender and blend until very smooth.",
+        "Taste and add a little more lime if the melon is very sweet, then strain through a fine sieve if you want a smoother finish.",
+        "Fill two short glasses with ice and divide the agua fresca between them.",
+        "Optional cocktail conversion: add 30 ml blanco tequila per glass and stir.",
+        "Garnish with extra mint and serve immediately."
+      ],
+      "cookbook_slugs": [
+        "date-night-rooftop-cantina-after-dark"
+      ],
+      "search_text": "watermelon, lime & mint agua fresca a chilled watermelon agua fresca opens the menu with clean fruit, sharp lime, and a fresh mint lift instead of another spritz. mocktail drink mexican-inspired 2 86 drink mocktail watermelon lime mint quick - 450 g seedless watermelon, cubed - 2 tbsp lime juice - 1 tbsp caster sugar - 8 mint leaves, plus extra to garnish - 250 ml chilled water - pinch of flaky salt - ice cubes - optional: 30 ml blanco tequila per glass for cocktail serves 1. add the watermelon, lime juice, caster sugar, mint leaves, chilled water, and flaky salt to a blender and blend until very smooth. 2. taste and add a little more lime if the melon is very sweet, then strain through a fine sieve if you want a smoother finish. 3. fill two short glasses with ice and divide the agua fresca between them. 4. optional cocktail conversion: add 30 ml blanco tequila per glass and stir. 5. garnish with extra mint and serve immediately."
+    },
+    {
       "id": "406",
       "slug": "recipe-406-whipped-feta-artichoke-toasts-with-lemon",
       "title": "Whipped Feta Artichoke Toasts with Lemon",
@@ -1640,128 +1769,6 @@
         "date-night-citrus-glow-italian-night"
       ],
       "search_text": "whipped feta artichoke toasts with lemon creamy whipped feta and warm lemony artichokes on crisp toast for a savory first bite. toast starter mediterranean 2 530 starter feta artichoke quick highly rated - 120 g feta - 80 g ricotta - 1 tsp lemon zest - 1 tbsp lemon juice - 1 small garlic clove, finely grated - 1 tbsp olive oil, plus extra to drizzle - 1 cup jarred artichoke hearts, drained and chopped - 1 tbsp chopped parsley or basil - 4 slices sourdough - freshly cracked black pepper 1. toast the sourdough slices until golden and crisp. 2. in a bowl, mash feta, ricotta, lemon zest, and half the lemon juice until creamy and spreadable. 3. warm olive oil in a small pan over medium heat, then cook artichokes with garlic for 2-3 minutes. 4. add remaining lemon juice and parsley, toss for 30 seconds, then turn off the heat. 5. spread whipped feta on the toasts, spoon warm artichokes over the top, and finish with black pepper and a light olive oil drizzle."
-    },
-    {
-      "id": "419",
-      "slug": "recipe-419-whipped-goat-cheese-tartines-with-roasted-grapes-walnuts",
-      "title": "Whipped Goat Cheese Tartines with Roasted Grapes & Walnuts",
-      "menu": "Creamy goat cheese, jammy roasted grapes, and toasted walnuts deliver a bistro-style first plate with very little effort.",
-      "category": "toast",
-      "course": "starter",
-      "cuisine": "provence-inspired",
-      "occasion": "date-night",
-      "serves": "2",
-      "calories": 392,
-      "prep": "10m",
-      "cook": "10m",
-      "rest": "0m",
-      "difficulty": 1,
-      "rating": null,
-      "image": "assets/images/419-whipped-goat-cheese-tartines-with-roasted-grapes-and-walnuts-3ca2d27b.png",
-      "image_alt": "Whipped Goat Cheese Tartines with Roasted Grapes & Walnuts",
-      "tags": [
-        "goat-cheese",
-        "grapes",
-        "quick",
-        "starter",
-        "toast",
-        "walnuts"
-      ],
-      "flags": {
-        "vegetarian": true,
-        "vegan": false,
-        "gluten_free": false,
-        "dairy_free": false
-      },
-      "sections": {
-        "intro_html": "",
-        "ingredients_html": "<ul>\n<li>150 g seedless red grapes</li>\n<li>1 tsp olive oil</li>\n<li>1 tsp honey</li>\n<li>100 g soft goat cheese</li>\n<li>60 g ricotta</li>\n<li>1 tsp lemon zest</li>\n<li>4 slices baguette or sourdough</li>\n<li>25 g walnuts, roughly chopped</li>\n<li>1 tsp thyme leaves</li>\n<li>Freshly cracked black pepper</li>\n</ul>",
-        "method_html": "<ol>\n<li>Heat the oven grill to high or heat a small oven to 220 C.</li>\n<li>Toss the grapes with olive oil and honey, spread them on a small tray, and roast for 8-10 minutes until some grapes collapse and look glossy.</li>\n<li>Stir goat cheese, ricotta, and lemon zest together until smooth and spreadable.</li>\n<li>Toast the bread slices until crisp at the edges.</li>\n<li>Spoon the whipped goat cheese onto the toasts, top with warm roasted grapes, then scatter over walnuts, thyme leaves, and black pepper before serving.</li>\n</ol>",
-        "notes_html": ""
-      },
-      "ingredients_items": [
-        "150 g seedless red grapes",
-        "1 tsp olive oil",
-        "1 tsp honey",
-        "100 g soft goat cheese",
-        "60 g ricotta",
-        "1 tsp lemon zest",
-        "4 slices baguette or sourdough",
-        "25 g walnuts, roughly chopped",
-        "1 tsp thyme leaves",
-        "Freshly cracked black pepper"
-      ],
-      "method_items": [
-        "Heat the oven grill to high or heat a small oven to 220 C.",
-        "Toss the grapes with olive oil and honey, spread them on a small tray, and roast for 8-10 minutes until some grapes collapse and look glossy.",
-        "Stir goat cheese, ricotta, and lemon zest together until smooth and spreadable.",
-        "Toast the bread slices until crisp at the edges.",
-        "Spoon the whipped goat cheese onto the toasts, top with warm roasted grapes, then scatter over walnuts, thyme leaves, and black pepper before serving."
-      ],
-      "cookbook_slugs": [
-        "date-night-provence-at-golden-hour"
-      ],
-      "search_text": "whipped goat cheese tartines with roasted grapes & walnuts creamy goat cheese, jammy roasted grapes, and toasted walnuts deliver a bistro-style first plate with very little effort. toast starter provence-inspired 2 392 starter goat-cheese grapes toast walnuts quick - 150 g seedless red grapes - 1 tsp olive oil - 1 tsp honey - 100 g soft goat cheese - 60 g ricotta - 1 tsp lemon zest - 4 slices baguette or sourdough - 25 g walnuts, roughly chopped - 1 tsp thyme leaves - freshly cracked black pepper 1. heat the oven grill to high or heat a small oven to 220 c. 2. toss the grapes with olive oil and honey, spread them on a small tray, and roast for 8-10 minutes until some grapes collapse and look glossy. 3. stir goat cheese, ricotta, and lemon zest together until smooth and spreadable. 4. toast the bread slices until crisp at the edges. 5. spoon the whipped goat cheese onto the toasts, top with warm roasted grapes, then scatter over walnuts, thyme leaves, and black pepper before serving."
-    },
-    {
-      "id": "418",
-      "slug": "recipe-418-white-peach-thyme-lemon-spritz",
-      "title": "White Peach, Thyme & Lemon Spritz",
-      "menu": "A chilled late-summer peach spritz with lemon and thyme opens the menu with soft fruit, sharp citrus, and a clean fizz.",
-      "category": "mocktail",
-      "course": "drink",
-      "cuisine": "provence-inspired",
-      "occasion": "date-night",
-      "serves": "2",
-      "calories": 88,
-      "prep": "8m",
-      "cook": "0m",
-      "rest": "0m",
-      "difficulty": 1,
-      "rating": null,
-      "image": "assets/images/418-white-peach-thyme-and-lemon-spritz-72071ef4.png",
-      "image_alt": "White Peach, Thyme & Lemon Spritz",
-      "tags": [
-        "drink",
-        "mocktail",
-        "peach",
-        "quick",
-        "sparkling",
-        "thyme"
-      ],
-      "flags": {
-        "vegetarian": true,
-        "vegan": true,
-        "gluten_free": true,
-        "dairy_free": true
-      },
-      "sections": {
-        "intro_html": "",
-        "ingredients_html": "<ul>\n<li>1 ripe white peach, peeled and finely diced</li>\n<li>2 tsp honey</li>\n<li>2 tsp lemon juice</li>\n<li>4 small thyme sprigs, plus extra to garnish</li>\n<li>250 ml chilled sparkling mineral water</li>\n<li>100 ml chilled soda water</li>\n<li>Ice cubes</li>\n<li>Optional: 30 ml gin per glass for cocktail serves</li>\n</ul>",
-        "method_html": "<ol>\n<li>Add the diced peach, honey, lemon juice, and thyme sprigs to a jug and muddle until the peach is very juicy.</li>\n<li>Fill two tall glasses with ice, then divide the peach mixture between them.</li>\n<li>Top each glass with sparkling mineral water and a splash of soda water, then stir gently.</li>\n<li>Optional cocktail conversion: add 30 ml gin per glass and stir.</li>\n<li>Garnish with an extra thyme sprig and serve immediately.</li>\n</ol>",
-        "notes_html": ""
-      },
-      "ingredients_items": [
-        "1 ripe white peach, peeled and finely diced",
-        "2 tsp honey",
-        "2 tsp lemon juice",
-        "4 small thyme sprigs, plus extra to garnish",
-        "250 ml chilled sparkling mineral water",
-        "100 ml chilled soda water",
-        "Ice cubes",
-        "Optional: 30 ml gin per glass for cocktail serves"
-      ],
-      "method_items": [
-        "Add the diced peach, honey, lemon juice, and thyme sprigs to a jug and muddle until the peach is very juicy.",
-        "Fill two tall glasses with ice, then divide the peach mixture between them.",
-        "Top each glass with sparkling mineral water and a splash of soda water, then stir gently.",
-        "Optional cocktail conversion: add 30 ml gin per glass and stir.",
-        "Garnish with an extra thyme sprig and serve immediately."
-      ],
-      "cookbook_slugs": [
-        "date-night-provence-at-golden-hour"
-      ],
-      "search_text": "white peach, thyme & lemon spritz a chilled late-summer peach spritz with lemon and thyme opens the menu with soft fruit, sharp citrus, and a clean fizz. mocktail drink provence-inspired 2 88 drink mocktail peach thyme sparkling quick - 1 ripe white peach, peeled and finely diced - 2 tsp honey - 2 tsp lemon juice - 4 small thyme sprigs, plus extra to garnish - 250 ml chilled sparkling mineral water - 100 ml chilled soda water - ice cubes - optional: 30 ml gin per glass for cocktail serves 1. add the diced peach, honey, lemon juice, and thyme sprigs to a jug and muddle until the peach is very juicy. 2. fill two tall glasses with ice, then divide the peach mixture between them. 3. top each glass with sparkling mineral water and a splash of soda water, then stir gently. 4. optional cocktail conversion: add 30 ml gin per glass and stir. 5. garnish with an extra thyme sprig and serve immediately."
     }
   ],
   "cookbooks": [
@@ -1956,40 +1963,40 @@
       ]
     },
     {
-      "slug": "date-night-provence-at-golden-hour",
-      "title": "Date Night: Provence at Golden Hour",
-      "subtitle": "Saturday, March 14, 2026 · Low-effort late-summer Provence-inspired menu with white peach, lemon, herbs, and creamy bistro textures",
+      "slug": "date-night-rooftop-cantina-after-dark",
+      "title": "Date Night: Rooftop Cantina After Dark",
+      "subtitle": "Sunday, March 8, 2026 · A low-effort late-summer cantina menu with crisp corn, smoky chicken, bright lime, and a lighter fruit dessert",
       "author": "Codex",
-      "date": "2026-03-14",
-      "source_mtime": 1772918723,
+      "date": "2026-03-08",
+      "source_mtime": 1772923398,
       "description": "",
-      "album_title": "Moon Beams",
-      "album_artist": "Bill Evans Trio",
-      "album_style": "Instrumental jazz (luminous piano-trio intimacy for a warm terrace feel)",
+      "album_title": "Soul Sauce",
+      "album_artist": "Cal Tjader",
+      "album_style": "Instrumental jazz (Latin-jazz vibraphone and percussion fit the breezy rooftop cantina mood)",
       "album_youtube_url": "",
       "recipe_slugs": [
-        "recipe-418-white-peach-thyme-lemon-spritz",
-        "recipe-419-whipped-goat-cheese-tartines-with-roasted-grapes-walnuts",
-        "recipe-420-one-pan-lemon-chicken-pearl-couscous-with-zucchini-herbs",
-        "recipe-421-no-bake-white-peach-mascarpone-glasses-with-almond-crunch"
+        "recipe-422-watermelon-lime-mint-agua-fresca",
+        "recipe-423-charred-corn-tostadas-with-avocado-tomato-lime",
+        "recipe-424-sheet-pan-smoky-chicken-tacos-with-pickled-onion",
+        "recipe-425-roasted-plums-with-cinnamon-tortilla-crisps-vanilla-ice-cream"
       ],
       "reader_intro_html": "",
       "reader_blocks": [
         {
           "type": "recipe",
-          "slug": "recipe-418-white-peach-thyme-lemon-spritz"
+          "slug": "recipe-422-watermelon-lime-mint-agua-fresca"
         },
         {
           "type": "recipe",
-          "slug": "recipe-419-whipped-goat-cheese-tartines-with-roasted-grapes-walnuts"
+          "slug": "recipe-423-charred-corn-tostadas-with-avocado-tomato-lime"
         },
         {
           "type": "recipe",
-          "slug": "recipe-420-one-pan-lemon-chicken-pearl-couscous-with-zucchini-herbs"
+          "slug": "recipe-424-sheet-pan-smoky-chicken-tacos-with-pickled-onion"
         },
         {
           "type": "recipe",
-          "slug": "recipe-421-no-bake-white-peach-mascarpone-glasses-with-almond-crunch"
+          "slug": "recipe-425-roasted-plums-with-cinnamon-tortilla-crisps-vanilla-ice-cream"
         }
       ]
     },
@@ -2035,8 +2042,8 @@
   "facets": {
     "tags": [
       "Nan",
-      "almonds",
       "artichoke",
+      "avocado",
       "basil",
       "beetroot",
       "berries",
@@ -2045,9 +2052,11 @@
       "caprese",
       "chicken",
       "chocolate",
+      "cinnamon",
       "citrus",
       "coconut",
       "coffee",
+      "corn",
       "creamy",
       "dessert",
       "drink",
@@ -2056,12 +2065,11 @@
       "fizzy",
       "ginger",
       "gnocchi",
-      "goat-cheese",
-      "grapes",
       "halloumi",
       "handwritten",
       "heirloom",
       "highly rated",
+      "ice-cream",
       "lemon",
       "lettuce-cups",
       "lime",
@@ -2069,6 +2077,7 @@
       "main",
       "mango",
       "mascarpone",
+      "mint",
       "miso",
       "mocktail",
       "mushrooms",
@@ -2078,12 +2087,11 @@
       "orzo",
       "pan-seared",
       "pasta",
-      "peach",
       "pear",
-      "pearl-couscous",
       "pears",
       "pineapple",
       "pistachio",
+      "plums",
       "prawns",
       "quick",
       "rice",
@@ -2094,15 +2102,17 @@
       "sesame",
       "skillet",
       "slice",
+      "smoky",
       "sparkling",
       "starter",
       "strawberries",
-      "thyme",
-      "toast",
+      "tacos",
+      "tortilla",
+      "tostada",
+      "tray-bake",
       "udon",
       "umami",
-      "walnuts",
-      "zucchini"
+      "watermelon"
     ],
     "categories": [
       "beverage",
@@ -2116,7 +2126,8 @@
       "slice",
       "small-plate",
       "sweet",
-      "toast"
+      "toast",
+      "tray-bake"
     ],
     "courses": [
       "dessert",
