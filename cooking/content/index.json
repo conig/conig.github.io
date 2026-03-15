@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-07T23:24:06.406075+00:00",
+  "generated_at": "2026-03-15T11:10:56.306320+00:00",
   "recipes": [
     {
       "id": "301",
@@ -126,12 +126,13 @@
       "cook": "10m",
       "rest": "0m",
       "difficulty": 1,
-      "rating": null,
+      "rating": 87.0,
       "image": "assets/images/423-charred-corn-tostadas-with-avocado-tomato-and-lime-1a0ed630.png",
       "image_alt": "Charred Corn Tostadas with Avocado, Tomato & Lime",
       "tags": [
         "avocado",
         "corn",
+        "highly rated",
         "lime",
         "quick",
         "starter",
@@ -173,7 +174,7 @@
       "cookbook_slugs": [
         "date-night-rooftop-cantina-after-dark"
       ],
-      "search_text": "charred corn tostadas with avocado, tomato & lime crisp tostadas with charred corn and creamy avocado give the menu a brighter, crunchier opening than the recent dairy-led starters. small-plate starter mexican-inspired 2 278 starter corn avocado tostada lime quick - 4 small white corn tortillas - 1 tbsp olive oil - 200 g sweet corn kernels - 1 ripe avocado - 150 g cherry tomatoes, finely diced - 2 tbsp finely diced red onion - 1 tbsp lime juice - 1 tbsp chopped coriander - 1/2 tsp ground cumin - 1/4 tsp chilli flakes - flaky salt - black pepper 1. heat the oven to 220 c and brush both sides of the tortillas lightly with a little of the olive oil, then bake directly on the oven rack for 6-8 minutes until crisp and lightly golden. 2. heat the remaining olive oil in a skillet over high heat and cook the sweet corn with the cumin and chilli flakes for 3-4 minutes until it picks up dark charred spots. 3. stir the cherry tomatoes, red onion, and half the coriander into the hot corn, then season with flaky salt and black pepper. 4. mash the avocado with the lime juice and a pinch of flaky salt. 5. spread the avocado over the tostadas, spoon over the charred corn mixture, and finish with the remaining coriander before serving."
+      "search_text": "charred corn tostadas with avocado, tomato & lime crisp tostadas with charred corn and creamy avocado give the menu a brighter, crunchier opening than the recent dairy-led starters. small-plate starter mexican-inspired 2 278 starter corn avocado tostada lime quick highly rated - 4 small white corn tortillas - 1 tbsp olive oil - 200 g sweet corn kernels - 1 ripe avocado - 150 g cherry tomatoes, finely diced - 2 tbsp finely diced red onion - 1 tbsp lime juice - 1 tbsp chopped coriander - 1/2 tsp ground cumin - 1/4 tsp chilli flakes - flaky salt - black pepper 1. heat the oven to 220 c and brush both sides of the tortillas lightly with a little of the olive oil, then bake directly on the oven rack for 6-8 minutes until crisp and lightly golden. 2. heat the remaining olive oil in a skillet over high heat and cook the sweet corn with the cumin and chilli flakes for 3-4 minutes until it picks up dark charred spots. 3. stir the cherry tomatoes, red onion, and half the coriander into the hot corn, then season with flaky salt and black pepper. 4. mash the avocado with the lime juice and a pinch of flaky salt. 5. spread the avocado over the tostadas, spoon over the charred corn mixture, and finish with the remaining coriander before serving."
     },
     {
       "id": "304",
@@ -471,6 +472,65 @@
         "date-night-velvet-mediterranean-night"
       ],
       "search_text": "crispy halloumi with hot honey, mint & pistachio salty-crisp halloumi with floral heat and fresh herbs for a bold but effortless first plate. small-plate starter mediterranean 2 470 starter halloumi quick skillet pistachio highly rated - 200 g halloumi, sliced into 8 pieces - 1 tbsp olive oil - 1 tbsp honey - 1/2 tsp chilli flakes - 1 tbsp lemon juice - 60 g baby rocket - 1 tbsp fresh mint, chopped - 20 g pistachios, chopped - freshly cracked black pepper 1. stir honey, chilli flakes, and lemon juice in a small bowl. 2. heat olive oil in a skillet over medium-high heat and sear halloumi for 2-3 minutes per side until deeply golden. 3. spread baby rocket on two plates and top with hot halloumi slices. 4. spoon over the hot honey dressing, then finish with mint, pistachios, and black pepper."
+    },
+    {
+      "id": "421",
+      "slug": "recipe-421-dark-chocolate-tahini-pots-with-orange-pistachio",
+      "title": "Dark Chocolate Tahini Pots with Orange & Pistachio",
+      "menu": "Bitter chocolate, nutty tahini, and fresh orange finish the meal with a richer, more intimate dessert than the fruit-led sets around it.",
+      "category": "sweet",
+      "course": "dessert",
+      "cuisine": "levantine-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 472,
+      "prep": "10m",
+      "cook": "5m",
+      "rest": "15m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/421-dark-chocolate-tahini-pots-with-orange-pistachio-add2d4bc.png",
+      "image_alt": "Dark Chocolate Tahini Pots with Orange & Pistachio",
+      "tags": [
+        "chocolate",
+        "dessert",
+        "no-bake",
+        "orange",
+        "pistachio",
+        "tahini"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>120 g dark chocolate, finely chopped</li>\n<li>150 ml thickened cream</li>\n<li>2 tbsp tahini</li>\n<li>1 tbsp honey</li>\n<li>1 pinch flaky salt</li>\n<li>1 orange</li>\n<li>2 tbsp pistachios, finely chopped</li>\n</ul>",
+        "method_html": "<ol>\n<li>Put the dark chocolate in a heatproof bowl. Warm the thickened cream in a small saucepan until just steaming, then pour it over the chocolate.</li>\n<li>Leave for 1 minute, add the tahini, honey, and flaky salt, then whisk until smooth and glossy.</li>\n<li>Divide between two small glasses or ramekins and chill for 15 minutes until softly set.</li>\n<li>Cut away the peel from the orange and segment it over a bowl to catch any juices.</li>\n<li>Spoon the orange segments over the chocolate pots, finish with the pistachios, and serve cold.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "120 g dark chocolate, finely chopped",
+        "150 ml thickened cream",
+        "2 tbsp tahini",
+        "1 tbsp honey",
+        "1 pinch flaky salt",
+        "1 orange",
+        "2 tbsp pistachios, finely chopped"
+      ],
+      "method_items": [
+        "Put the dark chocolate in a heatproof bowl. Warm the thickened cream in a small saucepan until just steaming, then pour it over the chocolate.",
+        "Leave for 1 minute, add the tahini, honey, and flaky salt, then whisk until smooth and glossy.",
+        "Divide between two small glasses or ramekins and chill for 15 minutes until softly set.",
+        "Cut away the peel from the orange and segment it over a bowl to catch any juices.",
+        "Spoon the orange segments over the chocolate pots, finish with the pistachios, and serve cold."
+      ],
+      "cookbook_slugs": [
+        "date-night-levantine-supper-club"
+      ],
+      "search_text": "dark chocolate tahini pots with orange & pistachio bitter chocolate, nutty tahini, and fresh orange finish the meal with a richer, more intimate dessert than the fruit-led sets around it. sweet dessert levantine-inspired 2 472 dessert chocolate tahini orange pistachio no-bake - 120 g dark chocolate, finely chopped - 150 ml thickened cream - 2 tbsp tahini - 1 tbsp honey - 1 pinch flaky salt - 1 orange - 2 tbsp pistachios, finely chopped 1. put the dark chocolate in a heatproof bowl. warm the thickened cream in a small saucepan until just steaming, then pour it over the chocolate. 2. leave for 1 minute, add the tahini, honey, and flaky salt, then whisk until smooth and glossy. 3. divide between two small glasses or ramekins and chill for 15 minutes until softly set. 4. cut away the peel from the orange and segment it over a bowl to catch any juices. 5. spoon the orange segments over the chocolate pots, finish with the pistachios, and serve cold."
     },
     {
       "id": "403",
@@ -1213,6 +1273,134 @@
       "search_text": "pink grapefruit, thyme & ginger spritz bright grapefruit with a hint of thyme and spicy ginger. mocktail drink modern 2 110 mocktail citrus fizzy ### thyme syrup - 2 tbsp sugar - 2 tbsp water - 4-6 thyme sprigs ### spritz - 1/2 cup pink grapefruit juice (fresh or bottled) - 1 cup ginger beer - soda water, to top - 2 tsp lemon juice (optional, for extra zip) - ice - garnish: grapefruit slices + thyme sprigs 1. make thyme syrup: simmer sugar, water, and thyme for 2 minutes, then turn off heat and steep 5 minutes. strain and cool. 2. fill two glasses with ice. add 1-2 tsp thyme syrup per glass (to taste). 3. add grapefruit juice (and lemon juice if using). 4. top with ginger beer and a splash of soda water. 5. garnish with grapefruit and thyme."
     },
     {
+      "id": "418",
+      "slug": "recipe-418-pomegranate-lime-mint-sharbat-fizz",
+      "title": "Pomegranate, Lime & Mint Sharbat Fizz",
+      "menu": "Pomegranate, lime, and mint bring a cool late-night sharbat feel that sets up the Levantine menu without any heavy prep.",
+      "category": "mocktail",
+      "course": "drink",
+      "cuisine": "levantine-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 112,
+      "prep": "8m",
+      "cook": "0m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/418-pomegranate-lime-mint-sharbat-fizz-b659883c.png",
+      "image_alt": "Pomegranate, Lime & Mint Sharbat Fizz",
+      "tags": [
+        "drink",
+        "lime",
+        "mint",
+        "mocktail",
+        "pomegranate",
+        "quick",
+        "sparkling"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": true,
+        "gluten_free": true,
+        "dairy_free": true
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>180 ml chilled pomegranate juice</li>\n<li>30 ml fresh lime juice</li>\n<li>2 tsp pomegranate molasses</li>\n<li>2 tsp honey</li>\n<li>8 mint leaves, plus 2 extra sprigs for garnish</li>\n<li>240 ml chilled soda water</li>\n<li>2 cup ice</li>\n<li>2 thin lime wheels</li>\n</ul>",
+        "method_html": "<ol>\n<li>Stir the pomegranate juice, lime juice, pomegranate molasses, and honey in a jug until the honey dissolves.</li>\n<li>Clap the mint leaves between your hands, add them to the jug with the ice, and stir for 20 seconds to chill.</li>\n<li>Divide between two tall glasses and top with the soda water.</li>\n<li>Garnish each glass with a lime wheel and a mint sprig.</li>\n<li>Optional cocktail conversion: add 30 ml gin or vodka per glass and stir once.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "180 ml chilled pomegranate juice",
+        "30 ml fresh lime juice",
+        "2 tsp pomegranate molasses",
+        "2 tsp honey",
+        "8 mint leaves, plus 2 extra sprigs for garnish",
+        "240 ml chilled soda water",
+        "2 cup ice",
+        "2 thin lime wheels"
+      ],
+      "method_items": [
+        "Stir the pomegranate juice, lime juice, pomegranate molasses, and honey in a jug until the honey dissolves.",
+        "Clap the mint leaves between your hands, add them to the jug with the ice, and stir for 20 seconds to chill.",
+        "Divide between two tall glasses and top with the soda water.",
+        "Garnish each glass with a lime wheel and a mint sprig.",
+        "Optional cocktail conversion: add 30 ml gin or vodka per glass and stir once."
+      ],
+      "cookbook_slugs": [
+        "date-night-levantine-supper-club"
+      ],
+      "search_text": "pomegranate, lime & mint sharbat fizz pomegranate, lime, and mint bring a cool late-night sharbat feel that sets up the levantine menu without any heavy prep. mocktail drink levantine-inspired 2 112 drink mocktail pomegranate lime mint sparkling quick - 180 ml chilled pomegranate juice - 30 ml fresh lime juice - 2 tsp pomegranate molasses - 2 tsp honey - 8 mint leaves, plus 2 extra sprigs for garnish - 240 ml chilled soda water - 2 cup ice - 2 thin lime wheels 1. stir the pomegranate juice, lime juice, pomegranate molasses, and honey in a jug until the honey dissolves. 2. clap the mint leaves between your hands, add them to the jug with the ice, and stir for 20 seconds to chill. 3. divide between two tall glasses and top with the soda water. 4. garnish each glass with a lime wheel and a mint sprig. 5. optional cocktail conversion: add 30 ml gin or vodka per glass and stir once."
+    },
+    {
+      "id": "419",
+      "slug": "recipe-419-roasted-carrots-with-lemon-labneh-pistachio-dukkah-pomegranate-molasses",
+      "title": "Roasted Carrots with Lemon Labneh, Pistachio Dukkah & Pomegranate Molasses",
+      "menu": "Sweet roast carrots, cool lemon labneh, and nutty dukkah give the opening plate the contrast and polish of a small restaurant dish.",
+      "category": "small-plate",
+      "course": "starter",
+      "cuisine": "levantine-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 286,
+      "prep": "10m",
+      "cook": "22m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/419-roasted-carrots-with-lemon-labneh-pistachio-dukkah-pomegranate-molasses-7be1f142.png",
+      "image_alt": "Roasted Carrots with Lemon Labneh, Pistachio Dukkah & Pomegranate Molasses",
+      "tags": [
+        "carrots",
+        "labneh",
+        "pistachio",
+        "pomegranate",
+        "quick",
+        "starter"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>350 g carrots, halved lengthways if thick</li>\n<li>1 tbsp olive oil</li>\n<li>1/2 tsp ground cumin</li>\n<li>1/4 tsp ground coriander</li>\n<li>Flaky salt</li>\n<li>Black pepper</li>\n<li>160 g labneh</li>\n<li>1 tsp lemon zest</li>\n<li>2 tsp lemon juice</li>\n<li>25 g pistachios, finely chopped</li>\n<li>1 tbsp sesame seeds</li>\n<li>1/2 tsp cumin seeds</li>\n<li>1/2 tsp coriander seeds</li>\n<li>2 tsp pomegranate molasses</li>\n<li>1 tbsp mint leaves, torn</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat the oven to 220 C and line a tray. Toss the carrots with the olive oil, ground cumin, ground coriander, a pinch of flaky salt, and black pepper, then roast for 20-22 minutes until tender and lightly caramelised.</li>\n<li>While the carrots roast, stir the labneh with the lemon zest, lemon juice, and a pinch of flaky salt until smooth and spreadable.</li>\n<li>Toast the pistachios, sesame seeds, cumin seeds, and coriander seeds in a dry pan for 2-3 minutes until fragrant, then crush lightly with the side of a knife or a mortar and pestle.</li>\n<li>Spread the lemon labneh over a plate, pile the hot carrots on top, and drizzle over the pomegranate molasses.</li>\n<li>Finish with the pistachio dukkah and torn mint, then serve straight away.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "350 g carrots, halved lengthways if thick",
+        "1 tbsp olive oil",
+        "1/2 tsp ground cumin",
+        "1/4 tsp ground coriander",
+        "Flaky salt",
+        "Black pepper",
+        "160 g labneh",
+        "1 tsp lemon zest",
+        "2 tsp lemon juice",
+        "25 g pistachios, finely chopped",
+        "1 tbsp sesame seeds",
+        "1/2 tsp cumin seeds",
+        "1/2 tsp coriander seeds",
+        "2 tsp pomegranate molasses",
+        "1 tbsp mint leaves, torn"
+      ],
+      "method_items": [
+        "Heat the oven to 220 C and line a tray. Toss the carrots with the olive oil, ground cumin, ground coriander, a pinch of flaky salt, and black pepper, then roast for 20-22 minutes until tender and lightly caramelised.",
+        "While the carrots roast, stir the labneh with the lemon zest, lemon juice, and a pinch of flaky salt until smooth and spreadable.",
+        "Toast the pistachios, sesame seeds, cumin seeds, and coriander seeds in a dry pan for 2-3 minutes until fragrant, then crush lightly with the side of a knife or a mortar and pestle.",
+        "Spread the lemon labneh over a plate, pile the hot carrots on top, and drizzle over the pomegranate molasses.",
+        "Finish with the pistachio dukkah and torn mint, then serve straight away."
+      ],
+      "cookbook_slugs": [
+        "date-night-levantine-supper-club"
+      ],
+      "search_text": "roasted carrots with lemon labneh, pistachio dukkah & pomegranate molasses sweet roast carrots, cool lemon labneh, and nutty dukkah give the opening plate the contrast and polish of a small restaurant dish. small-plate starter levantine-inspired 2 286 starter carrots labneh pistachio pomegranate quick - 350 g carrots, halved lengthways if thick - 1 tbsp olive oil - 1/2 tsp ground cumin - 1/4 tsp ground coriander - flaky salt - black pepper - 160 g labneh - 1 tsp lemon zest - 2 tsp lemon juice - 25 g pistachios, finely chopped - 1 tbsp sesame seeds - 1/2 tsp cumin seeds - 1/2 tsp coriander seeds - 2 tsp pomegranate molasses - 1 tbsp mint leaves, torn 1. heat the oven to 220 c and line a tray. toss the carrots with the olive oil, ground cumin, ground coriander, a pinch of flaky salt, and black pepper, then roast for 20-22 minutes until tender and lightly caramelised. 2. while the carrots roast, stir the labneh with the lemon zest, lemon juice, and a pinch of flaky salt until smooth and spreadable. 3. toast the pistachios, sesame seeds, cumin seeds, and coriander seeds in a dry pan for 2-3 minutes until fragrant, then crush lightly with the side of a knife or a mortar and pestle. 4. spread the lemon labneh over a plate, pile the hot carrots on top, and drizzle over the pomegranate molasses. 5. finish with the pistachio dukkah and torn mint, then serve straight away."
+    },
+    {
       "id": "425",
       "slug": "recipe-425-roasted-plums-with-cinnamon-tortilla-crisps-vanilla-ice-cream",
       "title": "Roasted Plums with Cinnamon Tortilla Crisps & Vanilla Ice Cream",
@@ -1227,7 +1415,7 @@
       "cook": "18m",
       "rest": "0m",
       "difficulty": 1,
-      "rating": null,
+      "rating": 83.0,
       "image": "assets/images/425-roasted-plums-with-cinnamon-tortilla-crisps-and-vanilla-ice-cream-e22c0f7d.png",
       "image_alt": "Roasted Plums with Cinnamon Tortilla Crisps & Vanilla Ice Cream",
       "tags": [
@@ -1350,7 +1538,7 @@
       "cook": "20m",
       "rest": "3m",
       "difficulty": 2,
-      "rating": null,
+      "rating": 82.0,
       "image": "assets/images/424-sheet-pan-smoky-chicken-tacos-with-pickled-onion-d76d2e74.png",
       "image_alt": "Sheet-Pan Smoky Chicken Tacos with Pickled Onion",
       "tags": [
@@ -1526,6 +1714,77 @@
       "search_text": "toasted coconut mango rice cups creamy coconut rice with bright mango and toasted coconut lands as a warm-cool tropical dessert with elegant texture. sweet dessert southeast-asian-inspired 2 510 dessert coconut mango rice quick highly rated - 250 g microwave jasmine rice - 200 ml coconut cream - 2 tbsp caster sugar - 0.25 tsp sea salt - 1 ripe mango, diced - 1 tsp lime zest - 1 tbsp lime juice - 2 tbsp toasted coconut flakes - 1 tsp toasted sesame seeds 1. add jasmine rice, coconut cream, caster sugar, and sea salt to a small saucepan over medium heat. 2. cook for 6-8 minutes, stirring often, until thick, glossy, and spoonable. 3. toss mango with lime zest and lime juice in a small bowl. 4. divide warm coconut rice between two glasses or bowls, then top with mango. 5. finish with toasted coconut flakes and toasted sesame seeds, then rest for 5 minutes before serving."
     },
     {
+      "id": "420",
+      "slug": "recipe-420-tray-baked-baharat-lamb-meatballs-with-herbed-couscous",
+      "title": "Tray-Baked Baharat Lamb Meatballs with Herbed Couscous",
+      "menu": "Spiced lamb meatballs and lemony herb couscous deliver the sense of a supper-club centerpiece while keeping the workload to one tray and one bowl.",
+      "category": "tray-bake",
+      "course": "main",
+      "cuisine": "levantine-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 648,
+      "prep": "15m",
+      "cook": "18m",
+      "rest": "3m",
+      "difficulty": 2,
+      "rating": null,
+      "image": "assets/images/420-tray-baked-baharat-lamb-meatballs-with-herbed-couscous-8263d339.png",
+      "image_alt": "Tray-Baked Baharat Lamb Meatballs with Herbed Couscous",
+      "tags": [
+        "couscous",
+        "lamb",
+        "main",
+        "meatballs",
+        "quick",
+        "tray-bake"
+      ],
+      "flags": {
+        "vegetarian": false,
+        "vegan": false,
+        "gluten_free": false,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>400 g lamb mince</li>\n<li>1 small garlic clove, finely grated</li>\n<li>2 tbsp chopped parsley</li>\n<li>1 tsp ground cumin</li>\n<li>1 tsp ground coriander</li>\n<li>1/2 tsp smoked paprika</li>\n<li>1/4 tsp ground cinnamon</li>\n<li>1/2 tsp flaky salt</li>\n<li>Black pepper</li>\n<li>200 g cherry tomatoes</li>\n<li>1 tbsp olive oil</li>\n<li>120 g couscous</li>\n<li>160 ml boiling water</li>\n<li>1/2 cucumber, finely diced</li>\n<li>2 tbsp chopped mint</li>\n<li>2 tbsp chopped parsley</li>\n<li>1 tbsp lemon juice</li>\n<li>100 g thick Greek yoghurt</li>\n<li>1 tsp lemon zest</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat the oven to 220 C and line a tray. Mix the lamb mince with the garlic, 2 tbsp parsley, ground cumin, ground coriander, smoked paprika, cinnamon, flaky salt, and a few grinds of black pepper, then shape into 8 meatballs.</li>\n<li>Toss the cherry tomatoes with the olive oil on the tray, nestle the meatballs among them, and bake for 15-18 minutes until the lamb is cooked through and the tomatoes collapse into a quick sauce.</li>\n<li>Put the couscous in a heatproof bowl with a pinch of flaky salt, pour over the boiling water, cover, and leave for 5 minutes.</li>\n<li>Stir the Greek yoghurt with the lemon zest and half the lemon juice. Fluff the couscous with a fork, then fold through the cucumber, mint, remaining parsley, and the rest of the lemon juice.</li>\n<li>Rest the tray for 3 minutes, then spoon the herbed couscous onto plates, top with the lamb meatballs and burst tomatoes, and finish with lemon yoghurt and any tray juices.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "400 g lamb mince",
+        "1 small garlic clove, finely grated",
+        "2 tbsp chopped parsley",
+        "1 tsp ground cumin",
+        "1 tsp ground coriander",
+        "1/2 tsp smoked paprika",
+        "1/4 tsp ground cinnamon",
+        "1/2 tsp flaky salt",
+        "Black pepper",
+        "200 g cherry tomatoes",
+        "1 tbsp olive oil",
+        "120 g couscous",
+        "160 ml boiling water",
+        "1/2 cucumber, finely diced",
+        "2 tbsp chopped mint",
+        "2 tbsp chopped parsley",
+        "1 tbsp lemon juice",
+        "100 g thick Greek yoghurt",
+        "1 tsp lemon zest"
+      ],
+      "method_items": [
+        "Heat the oven to 220 C and line a tray. Mix the lamb mince with the garlic, 2 tbsp parsley, ground cumin, ground coriander, smoked paprika, cinnamon, flaky salt, and a few grinds of black pepper, then shape into 8 meatballs.",
+        "Toss the cherry tomatoes with the olive oil on the tray, nestle the meatballs among them, and bake for 15-18 minutes until the lamb is cooked through and the tomatoes collapse into a quick sauce.",
+        "Put the couscous in a heatproof bowl with a pinch of flaky salt, pour over the boiling water, cover, and leave for 5 minutes.",
+        "Stir the Greek yoghurt with the lemon zest and half the lemon juice. Fluff the couscous with a fork, then fold through the cucumber, mint, remaining parsley, and the rest of the lemon juice.",
+        "Rest the tray for 3 minutes, then spoon the herbed couscous onto plates, top with the lamb meatballs and burst tomatoes, and finish with lemon yoghurt and any tray juices."
+      ],
+      "cookbook_slugs": [
+        "date-night-levantine-supper-club"
+      ],
+      "search_text": "tray-baked baharat lamb meatballs with herbed couscous spiced lamb meatballs and lemony herb couscous deliver the sense of a supper-club centerpiece while keeping the workload to one tray and one bowl. tray-bake main levantine-inspired 2 648 main lamb meatballs couscous tray-bake quick - 400 g lamb mince - 1 small garlic clove, finely grated - 2 tbsp chopped parsley - 1 tsp ground cumin - 1 tsp ground coriander - 1/2 tsp smoked paprika - 1/4 tsp ground cinnamon - 1/2 tsp flaky salt - black pepper - 200 g cherry tomatoes - 1 tbsp olive oil - 120 g couscous - 160 ml boiling water - 1/2 cucumber, finely diced - 2 tbsp chopped mint - 2 tbsp chopped parsley - 1 tbsp lemon juice - 100 g thick greek yoghurt - 1 tsp lemon zest 1. heat the oven to 220 c and line a tray. mix the lamb mince with the garlic, 2 tbsp parsley, ground cumin, ground coriander, smoked paprika, cinnamon, flaky salt, and a few grinds of black pepper, then shape into 8 meatballs. 2. toss the cherry tomatoes with the olive oil on the tray, nestle the meatballs among them, and bake for 15-18 minutes until the lamb is cooked through and the tomatoes collapse into a quick sauce. 3. put the couscous in a heatproof bowl with a pinch of flaky salt, pour over the boiling water, cover, and leave for 5 minutes. 4. stir the greek yoghurt with the lemon zest and half the lemon juice. fluff the couscous with a fork, then fold through the cucumber, mint, remaining parsley, and the rest of the lemon juice. 5. rest the tray for 3 minutes, then spoon the herbed couscous onto plates, top with the lamb meatballs and burst tomatoes, and finish with lemon yoghurt and any tray juices."
+    },
+    {
       "id": "401",
       "slug": "recipe-401-warm-beetroot-goats-cheese-orange-walnut-salad",
       "title": "Warm Beetroot, Goat's Cheese, Orange & Walnut Salad",
@@ -1664,7 +1923,7 @@
       "cook": "0m",
       "rest": "0m",
       "difficulty": 1,
-      "rating": null,
+      "rating": 70.0,
       "image": "assets/images/422-watermelon-lime-and-mint-agua-fresca-ea020649.png",
       "image_alt": "Watermelon, Lime & Mint Agua Fresca",
       "tags": [
@@ -1925,6 +2184,44 @@
       ]
     },
     {
+      "slug": "date-night-levantine-supper-club",
+      "title": "Date Night: Levantine Supper Club",
+      "subtitle": "Sunday, March 15, 2026 · A low-effort late-summer Levantine menu with pomegranate, herbs, warm spice, and a darker chocolate finish",
+      "author": "Codex",
+      "date": "2026-03-15",
+      "source_mtime": 1773571548,
+      "description": "",
+      "album_title": "Le Pas Du Chat Noir",
+      "album_artist": "Anouar Brahem",
+      "album_style": "Instrumental jazz (oud-led chamber jazz with warm Middle Eastern colour that suits the intimate Levantine supper-club mood)",
+      "album_youtube_url": "",
+      "recipe_slugs": [
+        "recipe-418-pomegranate-lime-mint-sharbat-fizz",
+        "recipe-419-roasted-carrots-with-lemon-labneh-pistachio-dukkah-pomegranate-molasses",
+        "recipe-420-tray-baked-baharat-lamb-meatballs-with-herbed-couscous",
+        "recipe-421-dark-chocolate-tahini-pots-with-orange-pistachio"
+      ],
+      "reader_intro_html": "",
+      "reader_blocks": [
+        {
+          "type": "recipe",
+          "slug": "recipe-418-pomegranate-lime-mint-sharbat-fizz"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-419-roasted-carrots-with-lemon-labneh-pistachio-dukkah-pomegranate-molasses"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-420-tray-baked-baharat-lamb-meatballs-with-herbed-couscous"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-421-dark-chocolate-tahini-pots-with-orange-pistachio"
+        }
+      ]
+    },
+    {
       "slug": "date-night-neon-night-market-escape",
       "title": "Date Night: Neon Night Market Escape",
       "subtitle": "Tuesday, February 24, 2026 · A fresh night-market-inspired menu with bright acidity, deep umami, and tropical finish",
@@ -2050,6 +2347,7 @@
       "blackberry",
       "broccolini",
       "caprese",
+      "carrots",
       "chicken",
       "chocolate",
       "cinnamon",
@@ -2057,6 +2355,7 @@
       "coconut",
       "coffee",
       "corn",
+      "couscous",
       "creamy",
       "dessert",
       "drink",
@@ -2070,6 +2369,8 @@
       "heirloom",
       "highly rated",
       "ice-cream",
+      "labneh",
+      "lamb",
       "lemon",
       "lettuce-cups",
       "lime",
@@ -2077,6 +2378,7 @@
       "main",
       "mango",
       "mascarpone",
+      "meatballs",
       "mint",
       "miso",
       "mocktail",
@@ -2084,6 +2386,7 @@
       "no-bake",
       "no-cook",
       "one-pan",
+      "orange",
       "orzo",
       "pan-seared",
       "pasta",
@@ -2092,6 +2395,7 @@
       "pineapple",
       "pistachio",
       "plums",
+      "pomegranate",
       "prawns",
       "quick",
       "rice",
@@ -2107,6 +2411,7 @@
       "starter",
       "strawberries",
       "tacos",
+      "tahini",
       "tortilla",
       "tostada",
       "tray-bake",
