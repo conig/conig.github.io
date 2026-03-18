@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-15T11:10:56.306320+00:00",
+  "generated_at": "2026-03-18T09:10:14.024166+00:00",
   "recipes": [
     {
       "id": "301",
@@ -1019,7 +1019,8 @@
         "Season to taste, divide between bowls, and top with crispy sage, extra parmesan, and black pepper."
       ],
       "cookbook_slugs": [
-        "date-night-citrus-glow-italian-night"
+        "date-night-citrus-glow-italian-night",
+        "date-night-devine-visit"
       ],
       "search_text": "one-pan lemon parmesan gnocchi with spinach golden pan-seared gnocchi in a silky lemon-parmesan sauce with wilted spinach and crispy sage. gnocchi main italian 2 1040 main gnocchi one-pan lemon highly rated - 500 g shelf-stable potato gnocchi - 1 tbsp olive oil - 30 g butter - 8-10 fresh sage leaves - 2 garlic cloves, minced - 1 cup low-sodium vegetable stock - 3/4 cup thickened cream - 1 lemon (zest + 2 tbsp juice) - 1/2 cup finely grated parmesan, plus extra to finish - 2 cups baby spinach - salt and black pepper - optional: pinch of chili flakes 1. heat a large frying pan over medium heat with butter until foamy, add sage leaves, and fry for 30-45 seconds until crisp; transfer leaves to a plate. 2. add olive oil and gnocchi to the same pan and cook for 4-5 minutes, stirring occasionally, until lightly golden. 3. add garlic (and chili flakes if using) and stir for 30 seconds. 4. pour in stock and cream, then simmer for 3-4 minutes until the sauce thickens slightly. 5. stir in lemon zest, lemon juice, parmesan, and spinach; cook for 1-2 minutes until spinach wilts and sauce is glossy. 6. season to taste, divide between bowls, and top with crispy sage, extra parmesan, and black pepper."
     },
@@ -2025,7 +2026,8 @@
         "Spread whipped feta on the toasts, spoon warm artichokes over the top, and finish with black pepper and a light olive oil drizzle."
       ],
       "cookbook_slugs": [
-        "date-night-citrus-glow-italian-night"
+        "date-night-citrus-glow-italian-night",
+        "date-night-devine-visit"
       ],
       "search_text": "whipped feta artichoke toasts with lemon creamy whipped feta and warm lemony artichokes on crisp toast for a savory first bite. toast starter mediterranean 2 530 starter feta artichoke quick highly rated - 120 g feta - 80 g ricotta - 1 tsp lemon zest - 1 tbsp lemon juice - 1 small garlic clove, finely grated - 1 tbsp olive oil, plus extra to drizzle - 1 cup jarred artichoke hearts, drained and chopped - 1 tbsp chopped parsley or basil - 4 slices sourdough - freshly cracked black pepper 1. toast the sourdough slices until golden and crisp. 2. in a bowl, mash feta, ricotta, lemon zest, and half the lemon juice until creamy and spreadable. 3. warm olive oil in a small pan over medium heat, then cook artichokes with garlic for 2-3 minutes. 4. add remaining lemon juice and parsley, toss for 30 seconds, then turn off the heat. 5. spread whipped feta on the toasts, spoon warm artichokes over the top, and finish with black pepper and a light olive oil drizzle."
     }
@@ -2146,6 +2148,38 @@
       ]
     },
     {
+      "slug": "date-night-devine-visit",
+      "title": "Date Night: Devine visit",
+      "subtitle": "A couple of highlights",
+      "author": "Codex",
+      "date": "2026-03-20",
+      "source_mtime": 1773825007,
+      "description": "",
+      "album_title": "",
+      "album_artist": "",
+      "album_style": "",
+      "album_youtube_url": "",
+      "recipe_slugs": [
+        "recipe-406-whipped-feta-artichoke-toasts-with-lemon",
+        "recipe-407-one-pan-lemon-parmesan-gnocchi-with-spinach"
+      ],
+      "reader_intro_html": "",
+      "reader_blocks": [
+        {
+          "type": "chapter",
+          "title": "Recipes"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-406-whipped-feta-artichoke-toasts-with-lemon"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-407-one-pan-lemon-parmesan-gnocchi-with-spinach"
+        }
+      ]
+    },
+    {
       "slug": "date-night-lantern-coast-supper",
       "title": "Date Night: Lantern Coast Supper",
       "subtitle": "Saturday, March 7, 2026 · Bright, low-effort late-summer East-Asian-inspired menu with crisp citrus, glossy umami, and tropical finish",
@@ -2188,8 +2222,8 @@
       "title": "Date Night: Levantine Supper Club",
       "subtitle": "Sunday, March 15, 2026 · A low-effort late-summer Levantine menu with pomegranate, herbs, warm spice, and a darker chocolate finish",
       "author": "Codex",
-      "date": "2026-03-15",
-      "source_mtime": 1773571548,
+      "date": "",
+      "source_mtime": 1773824780,
       "description": "",
       "album_title": "Le Pas Du Chat Noir",
       "album_artist": "Anouar Brahem",
