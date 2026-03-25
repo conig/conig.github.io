@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-18T09:10:14.024166+00:00",
+  "generated_at": "2026-03-25T01:51:47.144352+00:00",
   "recipes": [
     {
       "id": "301",
@@ -175,6 +175,65 @@
         "date-night-rooftop-cantina-after-dark"
       ],
       "search_text": "charred corn tostadas with avocado, tomato & lime crisp tostadas with charred corn and creamy avocado give the menu a brighter, crunchier opening than the recent dairy-led starters. small-plate starter mexican-inspired 2 278 starter corn avocado tostada lime quick highly rated - 4 small white corn tortillas - 1 tbsp olive oil - 200 g sweet corn kernels - 1 ripe avocado - 150 g cherry tomatoes, finely diced - 2 tbsp finely diced red onion - 1 tbsp lime juice - 1 tbsp chopped coriander - 1/2 tsp ground cumin - 1/4 tsp chilli flakes - flaky salt - black pepper 1. heat the oven to 220 c and brush both sides of the tortillas lightly with a little of the olive oil, then bake directly on the oven rack for 6-8 minutes until crisp and lightly golden. 2. heat the remaining olive oil in a skillet over high heat and cook the sweet corn with the cumin and chilli flakes for 3-4 minutes until it picks up dark charred spots. 3. stir the cherry tomatoes, red onion, and half the coriander into the hot corn, then season with flaky salt and black pepper. 4. mash the avocado with the lime juice and a pinch of flaky salt. 5. spread the avocado over the tostadas, spoon over the charred corn mixture, and finish with the remaining coriander before serving."
+    },
+    {
+      "id": "429",
+      "slug": "recipe-429-chocolate-malt-mousse-sundae-cups",
+      "title": "Chocolate Malt Mousse Sundae Cups",
+      "menu": "Silky chocolate mousse with a gentle malt note lands the diner theme in dessert form without asking for any baking.",
+      "category": "sweet",
+      "course": "dessert",
+      "cuisine": "american-diner",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 524,
+      "prep": "15m",
+      "cook": "5m",
+      "rest": "20m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/429-chocolate-malt-mousse-sundae-cups-4817ff4a.png",
+      "image_alt": "Chocolate Malt Mousse Sundae Cups",
+      "tags": [
+        "chocolate",
+        "dessert",
+        "malt",
+        "mousse",
+        "no-bake",
+        "quick"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>150 g milk cooking chocolate (mousse and garnish)</li>\n<li>250 ml thickened cream (mousse and topping)</li>\n<li>1 tbsp malted chocolate powder</li>\n<li>2 tsp caster sugar</li>\n<li>1/2 tsp vanilla extract</li>\n<li>Pinch of flaky salt</li>\n</ul>",
+        "method_html": "<ol>\n<li>Put 100 ml of the thickened cream in a small saucepan and warm it just to a simmer.</li>\n<li>Tip the hot cream over the milk chocolate, add the malted chocolate powder, vanilla extract, and flaky salt, then whisk until smooth and glossy. Leave it to cool for 10 minutes.</li>\n<li>Whip the remaining thickened cream with the caster sugar to soft peaks.</li>\n<li>Fold two-thirds of the whipped cream through the cooled chocolate mixture until no streaks remain.</li>\n<li>Spoon the mousse into two glasses or sundae cups and chill for 20 minutes.</li>\n<li>Top with the remaining whipped cream, then grate a little of the reserved chocolate over each serve before taking them to the table.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "150 g milk cooking chocolate (mousse and garnish)",
+        "250 ml thickened cream (mousse and topping)",
+        "1 tbsp malted chocolate powder",
+        "2 tsp caster sugar",
+        "1/2 tsp vanilla extract",
+        "Pinch of flaky salt"
+      ],
+      "method_items": [
+        "Put 100 ml of the thickened cream in a small saucepan and warm it just to a simmer.",
+        "Tip the hot cream over the milk chocolate, add the malted chocolate powder, vanilla extract, and flaky salt, then whisk until smooth and glossy. Leave it to cool for 10 minutes.",
+        "Whip the remaining thickened cream with the caster sugar to soft peaks.",
+        "Fold two-thirds of the whipped cream through the cooled chocolate mixture until no streaks remain.",
+        "Spoon the mousse into two glasses or sundae cups and chill for 20 minutes.",
+        "Top with the remaining whipped cream, then grate a little of the reserved chocolate over each serve before taking them to the table."
+      ],
+      "cookbook_slugs": [
+        "date-night-after-hours-american-diner"
+      ],
+      "search_text": "chocolate malt mousse sundae cups silky chocolate mousse with a gentle malt note lands the diner theme in dessert form without asking for any baking. sweet dessert american-diner 2 524 dessert chocolate mousse malt no-bake quick - 150 g milk cooking chocolate (mousse and garnish) - 250 ml thickened cream (mousse and topping) - 1 tbsp malted chocolate powder - 2 tsp caster sugar - 1/2 tsp vanilla extract - pinch of flaky salt 1. put 100 ml of the thickened cream in a small saucepan and warm it just to a simmer. 2. tip the hot cream over the milk chocolate, add the malted chocolate powder, vanilla extract, and flaky salt, then whisk until smooth and glossy. leave it to cool for 10 minutes. 3. whip the remaining thickened cream with the caster sugar to soft peaks. 4. fold two-thirds of the whipped cream through the cooled chocolate mixture until no streaks remain. 5. spoon the mousse into two glasses or sundae cups and chill for 20 minutes. 6. top with the remaining whipped cream, then grate a little of the reserved chocolate over each serve before taking them to the table."
     },
     {
       "id": "304",
@@ -531,6 +590,138 @@
         "date-night-levantine-supper-club"
       ],
       "search_text": "dark chocolate tahini pots with orange & pistachio bitter chocolate, nutty tahini, and fresh orange finish the meal with a richer, more intimate dessert than the fruit-led sets around it. sweet dessert levantine-inspired 2 472 dessert chocolate tahini orange pistachio no-bake - 120 g dark chocolate, finely chopped - 150 ml thickened cream - 2 tbsp tahini - 1 tbsp honey - 1 pinch flaky salt - 1 orange - 2 tbsp pistachios, finely chopped 1. put the dark chocolate in a heatproof bowl. warm the thickened cream in a small saucepan until just steaming, then pour it over the chocolate. 2. leave for 1 minute, add the tahini, honey, and flaky salt, then whisk until smooth and glossy. 3. divide between two small glasses or ramekins and chill for 15 minutes until softly set. 4. cut away the peel from the orange and segment it over a bowl to catch any juices. 5. spoon the orange segments over the chocolate pots, finish with the pistachios, and serve cold."
+    },
+    {
+      "id": "427",
+      "slug": "recipe-427-diner-basket-crinkle-fries-with-dill-pickle-mayo",
+      "title": "Diner Basket Crinkle Fries with Dill Pickle Mayo",
+      "menu": "Basket fries with sharp pickle mayo give the menu its salty-crisp side without adding much active work before the burger.",
+      "category": "side",
+      "course": "starter",
+      "cuisine": "american-diner",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 468,
+      "prep": "10m",
+      "cook": "25m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/427-diner-basket-crinkle-fries-with-dill-pickle-mayo-a02e0b24.png",
+      "image_alt": "Diner Basket Crinkle Fries with Dill Pickle Mayo",
+      "tags": [
+        "diner",
+        "fries",
+        "pickle",
+        "quick",
+        "starter"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": false,
+        "dairy_free": true
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>500 g frozen crinkle cut chips</li>\n<li>1 tbsp neutral oil</li>\n<li>1/2 tsp flaky salt</li>\n<li>1/4 tsp garlic powder</li>\n<li>1/4 tsp smoked paprika</li>\n<li>80 g whole-egg mayonnaise</li>\n<li>2 dill pickles, finely chopped</li>\n<li>1 tsp dill pickle brine</li>\n<li>1 tbsp finely chopped chives</li>\n<li>1 tsp lemon juice</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat the oven to 220 C and line a tray.</li>\n<li>Toss the frozen crinkle cut chips with the neutral oil, spread them on the tray, and bake for 22-25 minutes, turning once, until deeply golden.</li>\n<li>While the fries cook, stir the mayonnaise, finely chopped dill pickles, dill pickle brine, half the chives, and the lemon juice together in a small bowl.</li>\n<li>As soon as the fries come out of the oven, season them with the flaky salt, garlic powder, and smoked paprika.</li>\n<li>Pile the fries into two lined bowls or one shared basket, spoon over the remaining chives, and serve with the dill pickle mayo alongside.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "500 g frozen crinkle cut chips",
+        "1 tbsp neutral oil",
+        "1/2 tsp flaky salt",
+        "1/4 tsp garlic powder",
+        "1/4 tsp smoked paprika",
+        "80 g whole-egg mayonnaise",
+        "2 dill pickles, finely chopped",
+        "1 tsp dill pickle brine",
+        "1 tbsp finely chopped chives",
+        "1 tsp lemon juice"
+      ],
+      "method_items": [
+        "Heat the oven to 220 C and line a tray.",
+        "Toss the frozen crinkle cut chips with the neutral oil, spread them on the tray, and bake for 22-25 minutes, turning once, until deeply golden.",
+        "While the fries cook, stir the mayonnaise, finely chopped dill pickles, dill pickle brine, half the chives, and the lemon juice together in a small bowl.",
+        "As soon as the fries come out of the oven, season them with the flaky salt, garlic powder, and smoked paprika.",
+        "Pile the fries into two lined bowls or one shared basket, spoon over the remaining chives, and serve with the dill pickle mayo alongside."
+      ],
+      "cookbook_slugs": [
+        "date-night-after-hours-american-diner"
+      ],
+      "search_text": "diner basket crinkle fries with dill pickle mayo basket fries with sharp pickle mayo give the menu its salty-crisp side without adding much active work before the burger. side starter american-diner 2 468 starter fries diner pickle quick - 500 g frozen crinkle cut chips - 1 tbsp neutral oil - 1/2 tsp flaky salt - 1/4 tsp garlic powder - 1/4 tsp smoked paprika - 80 g whole-egg mayonnaise - 2 dill pickles, finely chopped - 1 tsp dill pickle brine - 1 tbsp finely chopped chives - 1 tsp lemon juice 1. heat the oven to 220 c and line a tray. 2. toss the frozen crinkle cut chips with the neutral oil, spread them on the tray, and bake for 22-25 minutes, turning once, until deeply golden. 3. while the fries cook, stir the mayonnaise, finely chopped dill pickles, dill pickle brine, half the chives, and the lemon juice together in a small bowl. 4. as soon as the fries come out of the oven, season them with the flaky salt, garlic powder, and smoked paprika. 5. pile the fries into two lined bowls or one shared basket, spoon over the remaining chives, and serve with the dill pickle mayo alongside."
+    },
+    {
+      "id": "428",
+      "slug": "recipe-428-dutch-oven-fried-chicken-burgers-with-shrettuce-pickle-sauce",
+      "title": "Dutch-Oven Fried Chicken Burgers with Shrettuce & Pickle Sauce",
+      "menu": "A crunchy Dutch-oven fried chicken burger with cool lettuce and sharp pickle sauce makes the whole menu feel like a proper late-night diner order.",
+      "category": "burger",
+      "course": "main",
+      "cuisine": "american-diner",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 862,
+      "prep": "20m",
+      "cook": "20m",
+      "rest": "5m",
+      "difficulty": 2,
+      "rating": null,
+      "image": "assets/images/428-dutch-oven-fried-chicken-burgers-with-shrettuce-and-pickle-sauce-40163ad0.png",
+      "image_alt": "Dutch-Oven Fried Chicken Burgers with Shrettuce & Pickle Sauce",
+      "tags": [
+        "burger",
+        "chicken",
+        "diner",
+        "fried",
+        "main"
+      ],
+      "flags": {
+        "vegetarian": false,
+        "vegan": false,
+        "gluten_free": false,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>350 g chicken thigh fillets, trimmed and halved into 2 large pieces</li>\n<li>150 ml buttermilk</li>\n<li>4 tbsp dill pickle brine</li>\n<li>140 g plain flour</li>\n<li>40 g cornflour</li>\n<li>1 tsp smoked paprika</li>\n<li>1 tsp garlic powder</li>\n<li>1/2 tsp onion powder</li>\n<li>1/2 tsp baking powder</li>\n<li>1 tsp flaky salt</li>\n<li>1/2 tsp cracked black pepper</li>\n<li>1 l vegetable oil</li>\n<li>3 tbsp whole-egg mayonnaise</li>\n<li>1 tbsp tomato sauce</li>\n<li>1 tsp American mustard</li>\n<li>1 dill pickle, finely chopped</li>\n<li>2 brioche burger buns</li>\n<li>60 g shredded iceberg lettuce</li>\n<li>6 dill pickle slices</li>\n</ul>",
+        "method_html": "<ol>\n<li>Toss the chicken with the buttermilk and 2 tbsp of the dill pickle brine, then leave it to marinate for 15 minutes while you prepare the rest.</li>\n<li>In a shallow bowl, mix the plain flour, cornflour, smoked paprika, garlic powder, onion powder, baking powder, flaky salt, and black pepper. Drizzle 1 tbsp of the chicken marinade into the flour and rub it through with your fingertips so the coating forms small craggy clumps.</li>\n<li>Heat the vegetable oil in a medium Dutch oven over medium-high heat until it reaches 175 C. While it heats, stir the mayonnaise, tomato sauce, American mustard, finely chopped dill pickle, and the remaining dill pickle brine together for the sauce.</li>\n<li>Lift the chicken out of the marinade, press it firmly into the flour mixture, and fry for 3-4 minutes per side until deep golden and cooked through. Rest the chicken on a rack or paper towel for 5 minutes.</li>\n<li>Toast the brioche buns cut-side down in a dry pan until lightly golden.</li>\n<li>Spread the pickle sauce over both bun halves, pile the base buns with shredded iceberg lettuce, top with the fried chicken and dill pickle slices, then close the burgers and serve hot.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "350 g chicken thigh fillets, trimmed and halved into 2 large pieces",
+        "150 ml buttermilk",
+        "4 tbsp dill pickle brine",
+        "140 g plain flour",
+        "40 g cornflour",
+        "1 tsp smoked paprika",
+        "1 tsp garlic powder",
+        "1/2 tsp onion powder",
+        "1/2 tsp baking powder",
+        "1 tsp flaky salt",
+        "1/2 tsp cracked black pepper",
+        "1 l vegetable oil",
+        "3 tbsp whole-egg mayonnaise",
+        "1 tbsp tomato sauce",
+        "1 tsp American mustard",
+        "1 dill pickle, finely chopped",
+        "2 brioche burger buns",
+        "60 g shredded iceberg lettuce",
+        "6 dill pickle slices"
+      ],
+      "method_items": [
+        "Toss the chicken with the buttermilk and 2 tbsp of the dill pickle brine, then leave it to marinate for 15 minutes while you prepare the rest.",
+        "In a shallow bowl, mix the plain flour, cornflour, smoked paprika, garlic powder, onion powder, baking powder, flaky salt, and black pepper. Drizzle 1 tbsp of the chicken marinade into the flour and rub it through with your fingertips so the coating forms small craggy clumps.",
+        "Heat the vegetable oil in a medium Dutch oven over medium-high heat until it reaches 175 C. While it heats, stir the mayonnaise, tomato sauce, American mustard, finely chopped dill pickle, and the remaining dill pickle brine together for the sauce.",
+        "Lift the chicken out of the marinade, press it firmly into the flour mixture, and fry for 3-4 minutes per side until deep golden and cooked through. Rest the chicken on a rack or paper towel for 5 minutes.",
+        "Toast the brioche buns cut-side down in a dry pan until lightly golden.",
+        "Spread the pickle sauce over both bun halves, pile the base buns with shredded iceberg lettuce, top with the fried chicken and dill pickle slices, then close the burgers and serve hot."
+      ],
+      "cookbook_slugs": [
+        "date-night-after-hours-american-diner"
+      ],
+      "search_text": "dutch-oven fried chicken burgers with shrettuce & pickle sauce a crunchy dutch-oven fried chicken burger with cool lettuce and sharp pickle sauce makes the whole menu feel like a proper late-night diner order. burger main american-diner 2 862 main burger chicken fried diner - 350 g chicken thigh fillets, trimmed and halved into 2 large pieces - 150 ml buttermilk - 4 tbsp dill pickle brine - 140 g plain flour - 40 g cornflour - 1 tsp smoked paprika - 1 tsp garlic powder - 1/2 tsp onion powder - 1/2 tsp baking powder - 1 tsp flaky salt - 1/2 tsp cracked black pepper - 1 l vegetable oil - 3 tbsp whole-egg mayonnaise - 1 tbsp tomato sauce - 1 tsp american mustard - 1 dill pickle, finely chopped - 2 brioche burger buns - 60 g shredded iceberg lettuce - 6 dill pickle slices 1. toss the chicken with the buttermilk and 2 tbsp of the dill pickle brine, then leave it to marinate for 15 minutes while you prepare the rest. 2. in a shallow bowl, mix the plain flour, cornflour, smoked paprika, garlic powder, onion powder, baking powder, flaky salt, and black pepper. drizzle 1 tbsp of the chicken marinade into the flour and rub it through with your fingertips so the coating forms small craggy clumps. 3. heat the vegetable oil in a medium dutch oven over medium-high heat until it reaches 175 c. while it heats, stir the mayonnaise, tomato sauce, american mustard, finely chopped dill pickle, and the remaining dill pickle brine together for the sauce. 4. lift the chicken out of the marinade, press it firmly into the flour mixture, and fry for 3-4 minutes per side until deep golden and cooked through. rest the chicken on a rack or paper towel for 5 minutes. 5. toast the brioche buns cut-side down in a dry pan until lightly golden. 6. spread the pickle sauce over both bun halves, pile the base buns with shredded iceberg lettuce, top with the fried chicken and dill pickle slices, then close the burgers and serve hot."
     },
     {
       "id": "403",
@@ -1596,6 +1787,61 @@
       "search_text": "sheet-pan smoky chicken tacos with pickled onion smoky roast chicken, warm tortillas, and sharp pickled onion turn the main into an easy cantina-style assembly dinner. tray-bake main mexican-inspired 2 538 main chicken tacos tray-bake smoky quick - 1/2 red onion, very thinly sliced - 2 tbsp lime juice - 1/2 tsp caster sugar - 1/4 tsp flaky salt - 350 g chicken thigh fillets (boneless, skinless), sliced - 1 red capsicum, thinly sliced - 1 tbsp olive oil - 1 tbsp tomato paste - 1 tsp smoked paprika - 1 tsp ground cumin - 1/2 tsp dried oregano - 1/2 tsp garlic powder - 1/4 tsp chilli flakes - 100 ml tomato passata - 8 small white corn tortillas - 80 g shredded iceberg lettuce - 2 tbsp chopped coriander - 1 lime, cut into wedges 1. toss the sliced red onion with 1 tbsp of the lime juice, the caster sugar, and the flaky salt, then leave it to pickle while you cook the chicken. 2. heat the oven to 220 c and line a tray. toss the chicken and red capsicum with the olive oil, tomato paste, smoked paprika, cumin, oregano, garlic powder, chilli flakes, and the remaining lime juice. 3. spread the chicken mixture over the tray and roast for 15-18 minutes until the chicken is cooked through and the capsicum is tender at the edges. 4. pour the tomato passata over the hot tray, toss everything together, and rest for 3 minutes so the chicken picks up the smoky juices. 5. warm the tortillas in a dry pan or directly over a gas flame for a few seconds per side. 6. fill each tortilla with lettuce, smoky chicken, pickled onion, and coriander, then serve with lime wedges for squeezing over."
     },
     {
+      "id": "426",
+      "slug": "recipe-426-soda-fountain-cola-spiders",
+      "title": "Soda Fountain Cola Spiders",
+      "menu": "Fizzy cola and vanilla ice cream bring instant soda-fountain nostalgia and set the diner mood from the first sip.",
+      "category": "mocktail",
+      "course": "drink",
+      "cuisine": "american-diner",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 214,
+      "prep": "5m",
+      "cook": "0m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/426-soda-fountain-cola-spiders-8599799d.png",
+      "image_alt": "Soda Fountain Cola Spiders",
+      "tags": [
+        "cola",
+        "drink",
+        "mocktail",
+        "quick",
+        "spider",
+        "vanilla"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>500 ml chilled cola</li>\n<li>4 small scoops vanilla ice cream</li>\n<li>2 cup ice</li>\n</ul>",
+        "method_html": "<ol>\n<li>Divide the ice between two tall chilled glasses.</li>\n<li>Pour the cola into the glasses, leaving a little room at the top for the foam.</li>\n<li>Add two small scoops of vanilla ice cream to each glass and let the fizz rise.</li>\n<li>Serve straight away with a straw and a long spoon.</li>\n<li>Optional cocktail conversion: add 30 ml bourbon per glass before pouring in the cola.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "500 ml chilled cola",
+        "4 small scoops vanilla ice cream",
+        "2 cup ice"
+      ],
+      "method_items": [
+        "Divide the ice between two tall chilled glasses.",
+        "Pour the cola into the glasses, leaving a little room at the top for the foam.",
+        "Add two small scoops of vanilla ice cream to each glass and let the fizz rise.",
+        "Serve straight away with a straw and a long spoon.",
+        "Optional cocktail conversion: add 30 ml bourbon per glass before pouring in the cola."
+      ],
+      "cookbook_slugs": [
+        "date-night-after-hours-american-diner"
+      ],
+      "search_text": "soda fountain cola spiders fizzy cola and vanilla ice cream bring instant soda-fountain nostalgia and set the diner mood from the first sip. mocktail drink american-diner 2 214 drink mocktail spider cola vanilla quick - 500 ml chilled cola - 4 small scoops vanilla ice cream - 2 cup ice 1. divide the ice between two tall chilled glasses. 2. pour the cola into the glasses, leaving a little room at the top for the foam. 3. add two small scoops of vanilla ice cream to each glass and let the fizz rise. 4. serve straight away with a straw and a long spoon. 5. optional cocktail conversion: add 30 ml bourbon per glass before pouring in the cola."
+    },
+    {
       "id": "405",
       "slug": "recipe-405-sparkling-basil-limonata",
       "title": "Sparkling Basil Limonata",
@@ -2110,6 +2356,44 @@
       ]
     },
     {
+      "slug": "date-night-after-hours-american-diner",
+      "title": "Date Night: After-Hours American Diner",
+      "subtitle": "Saturday, March 28, 2026 · Low-effort American diner menu with cola spiders, basket fries, Dutch-oven fried chicken burgers, and chocolate malt mousse",
+      "author": "Codex",
+      "date": "2026-03-28",
+      "source_mtime": 1774389940,
+      "description": "",
+      "album_title": "Back at the Chicken Shack",
+      "album_artist": "Jimmy Smith",
+      "album_style": "Instrumental jazz (Blue Note soul-jazz organ grooves fit the late-night diner mood perfectly)",
+      "album_youtube_url": "",
+      "recipe_slugs": [
+        "recipe-426-soda-fountain-cola-spiders",
+        "recipe-427-diner-basket-crinkle-fries-with-dill-pickle-mayo",
+        "recipe-428-dutch-oven-fried-chicken-burgers-with-shrettuce-pickle-sauce",
+        "recipe-429-chocolate-malt-mousse-sundae-cups"
+      ],
+      "reader_intro_html": "",
+      "reader_blocks": [
+        {
+          "type": "recipe",
+          "slug": "recipe-426-soda-fountain-cola-spiders"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-427-diner-basket-crinkle-fries-with-dill-pickle-mayo"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-428-dutch-oven-fried-chicken-burgers-with-shrettuce-pickle-sauce"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-429-chocolate-malt-mousse-sundae-cups"
+        }
+      ]
+    },
+    {
       "slug": "date-night-citrus-glow-italian-night",
       "title": "Date Night: Citrus Glow Italian Night",
       "subtitle": "Saturday, February 14, 2026 · Low-effort Italian-inspired menu with bright lemon, herbs, and creamy finishes",
@@ -2380,6 +2664,7 @@
       "berries",
       "blackberry",
       "broccolini",
+      "burger",
       "caprese",
       "carrots",
       "chicken",
@@ -2388,14 +2673,18 @@
       "citrus",
       "coconut",
       "coffee",
+      "cola",
       "corn",
       "couscous",
       "creamy",
       "dessert",
+      "diner",
       "drink",
       "family",
       "feta",
       "fizzy",
+      "fried",
+      "fries",
       "ginger",
       "gnocchi",
       "halloumi",
@@ -2410,12 +2699,14 @@
       "lime",
       "lychee",
       "main",
+      "malt",
       "mango",
       "mascarpone",
       "meatballs",
       "mint",
       "miso",
       "mocktail",
+      "mousse",
       "mushrooms",
       "no-bake",
       "no-cook",
@@ -2426,6 +2717,7 @@
       "pasta",
       "pear",
       "pears",
+      "pickle",
       "pineapple",
       "pistachio",
       "plums",
@@ -2442,6 +2734,7 @@
       "slice",
       "smoky",
       "sparkling",
+      "spider",
       "starter",
       "strawberries",
       "tacos",
@@ -2451,10 +2744,12 @@
       "tray-bake",
       "udon",
       "umami",
+      "vanilla",
       "watermelon"
     ],
     "categories": [
       "beverage",
+      "burger",
       "fruit-dessert",
       "gnocchi",
       "meat",
@@ -2462,6 +2757,7 @@
       "one-pan",
       "pasta",
       "salad",
+      "side",
       "slice",
       "small-plate",
       "sweet",
