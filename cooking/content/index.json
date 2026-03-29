@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-25T01:51:47.144352+00:00",
+  "generated_at": "2026-03-29T09:42:14.142901+00:00",
   "recipes": [
     {
       "id": "301",
@@ -839,6 +839,69 @@
       "search_text": "ginger slice slice dessert 12 290 heirloom family ginger slice handwritten nan - 1 3/4 cups flour - 1 cup caster sugar - 125 g glace ginger - 1 egg - 150--185g butter - 30 g blanched almonds 1. sift flour, then add sugar, and chopped ginger. 2. mix in melted butter and egg. press into well. 3. pour mixture into greased sandwich tin. 4. brush top with milk, decorate with almonds. 5. bake 45 minutes at 170c. 6. cool in tin, cut in wedges. **notes** very rich, small serves."
     },
     {
+      "id": "431",
+      "slug": "recipe-431-goat-cheese-tartines-with-balsamic-shallots-thyme",
+      "title": "Goat Cheese Tartines with Balsamic Shallots & Thyme",
+      "menu": "Creamy goat cheese and glossy balsamic shallots turn simple tartines into a proper little wine-bar starter.",
+      "category": "toast",
+      "course": "starter",
+      "cuisine": "french-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 338,
+      "prep": "10m",
+      "cook": "10m",
+      "rest": "0m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/431-goat-cheese-tartines-with-balsamic-shallots-and-thyme-ba4cfc5c.png",
+      "image_alt": "Goat Cheese Tartines with Balsamic Shallots & Thyme",
+      "tags": [
+        "goat-cheese",
+        "quick",
+        "shallot",
+        "starter",
+        "thyme",
+        "toast"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": false,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>2 banana shallots, thinly sliced</li>\n<li>1 tbsp olive oil</li>\n<li>1 tbsp balsamic vinegar</li>\n<li>1 tsp honey</li>\n<li>100 g goat cheese</li>\n<li>2 tbsp thickened cream</li>\n<li>4 baguette slices</li>\n<li>1 tsp thyme leaves</li>\n<li>Pinch of flaky salt</li>\n<li>Black pepper</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat the olive oil in a small frying pan over medium heat, add the shallots and a pinch of flaky salt, and cook for 5-6 minutes until soft and lightly golden.</li>\n<li>Stir in the balsamic vinegar and honey, cook for 1 minute until glossy, then take the pan off the heat.</li>\n<li>Toast the baguette slices in a dry pan, under the grill, or in the toaster until crisp at the edges.</li>\n<li>Stir the goat cheese, thickened cream, and half the thyme together until spreadable.</li>\n<li>Spread the goat cheese mixture over the warm tartines, spoon the balsamic shallots on top, and finish with the remaining thyme and a few grinds of black pepper.</li>\n<li>Plate the tartines on a small board or side plates and serve while still slightly warm.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "2 banana shallots, thinly sliced",
+        "1 tbsp olive oil",
+        "1 tbsp balsamic vinegar",
+        "1 tsp honey",
+        "100 g goat cheese",
+        "2 tbsp thickened cream",
+        "4 baguette slices",
+        "1 tsp thyme leaves",
+        "Pinch of flaky salt",
+        "Black pepper"
+      ],
+      "method_items": [
+        "Heat the olive oil in a small frying pan over medium heat, add the shallots and a pinch of flaky salt, and cook for 5-6 minutes until soft and lightly golden.",
+        "Stir in the balsamic vinegar and honey, cook for 1 minute until glossy, then take the pan off the heat.",
+        "Toast the baguette slices in a dry pan, under the grill, or in the toaster until crisp at the edges.",
+        "Stir the goat cheese, thickened cream, and half the thyme together until spreadable.",
+        "Spread the goat cheese mixture over the warm tartines, spoon the balsamic shallots on top, and finish with the remaining thyme and a few grinds of black pepper.",
+        "Plate the tartines on a small board or side plates and serve while still slightly warm."
+      ],
+      "cookbook_slugs": [
+        "date-night-paris-bistro-after-dusk"
+      ],
+      "search_text": "goat cheese tartines with balsamic shallots & thyme creamy goat cheese and glossy balsamic shallots turn simple tartines into a proper little wine-bar starter. toast starter french-inspired 2 338 starter toast goat-cheese shallot thyme quick - 2 banana shallots, thinly sliced - 1 tbsp olive oil - 1 tbsp balsamic vinegar - 1 tsp honey - 100 g goat cheese - 2 tbsp thickened cream - 4 baguette slices - 1 tsp thyme leaves - pinch of flaky salt - black pepper 1. heat the olive oil in a small frying pan over medium heat, add the shallots and a pinch of flaky salt, and cook for 5-6 minutes until soft and lightly golden. 2. stir in the balsamic vinegar and honey, cook for 1 minute until glossy, then take the pan off the heat. 3. toast the baguette slices in a dry pan, under the grill, or in the toaster until crisp at the edges. 4. stir the goat cheese, thickened cream, and half the thyme together until spreadable. 5. spread the goat cheese mixture over the warm tartines, spoon the balsamic shallots on top, and finish with the remaining thyme and a few grinds of black pepper. 6. plate the tartines on a small board or side plates and serve while still slightly warm."
+    },
+    {
       "id": "410",
       "slug": "recipe-410-lychee-ginger-lime-cooler",
       "title": "Lychee Ginger Lime Cooler",
@@ -1083,6 +1146,72 @@
         "date-night-citrus-glow-italian-night"
       ],
       "search_text": "no-bake lemon mascarpone pots with pistachio crunch lush lemon mascarpone cream layered with biscuit and pistachio for a bright, elegant finish. sweet dessert italian-inspired 2 655 dessert no-bake lemon mascarpone - 125 g mascarpone - 150 ml thickened cream - 2 tbsp icing sugar - 1 tsp vanilla extract - 1 tsp finely grated lemon zest - 1 tbsp lemon juice - 6 plain sweet biscuits (e.g., marie biscuits), crushed - 2 tbsp chopped pistachios - pinch of flaky salt - optional: extra lemon zest to finish 1. mix crushed biscuits, pistachios, and flaky salt in a small bowl. 2. whip cream, icing sugar, and vanilla to soft peaks. 3. fold mascarpone, lemon zest, and lemon juice into the whipped cream until smooth. 4. spoon a little biscuit mixture into two small glasses, then add a thick layer of lemon mascarpone cream. 5. repeat with another light biscuit layer and finish with cream on top. 6. chill for 20 minutes, then garnish with extra lemon zest before serving."
+    },
+    {
+      "id": "432",
+      "slug": "recipe-432-one-pan-dijon-chicken-with-leeks-baby-potatoes-thyme",
+      "title": "One-Pan Dijon Chicken with Leeks, Baby Potatoes & Thyme",
+      "menu": "Dijon-coated chicken, sweet leeks, and buttery potatoes deliver an easy bistro main with very little washing up.",
+      "category": "one-pan",
+      "course": "main",
+      "cuisine": "french-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 624,
+      "prep": "15m",
+      "cook": "30m",
+      "rest": "5m",
+      "difficulty": 2,
+      "rating": null,
+      "image": "assets/images/432-one-pan-dijon-chicken-with-leeks-baby-potatoes-and-thyme-fd77b2fe.png",
+      "image_alt": "One-Pan Dijon Chicken with Leeks, Baby Potatoes & Thyme",
+      "tags": [
+        "chicken",
+        "leek",
+        "main",
+        "one-pan",
+        "potato",
+        "quick"
+      ],
+      "flags": {
+        "vegetarian": false,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>450 g baby potatoes, halved</li>\n<li>1 leek, halved lengthways and sliced into thick half-moons</li>\n<li>350 g chicken thigh fillets (boneless, skinless)</li>\n<li>1 tbsp olive oil</li>\n<li>1 tbsp Dijon mustard</li>\n<li>2 cloves garlic, finely chopped</li>\n<li>1 tsp thyme leaves</li>\n<li>100 ml chicken stock</li>\n<li>80 ml thickened cream</li>\n<li>15 g butter</li>\n<li>Pinch of flaky salt</li>\n<li>Black pepper</li>\n</ul>",
+        "method_html": "<ol>\n<li>Heat the oven to 220 C and line a roasting tray or ovenproof pan.</li>\n<li>Toss the baby potatoes and leek with half the olive oil, half the thyme, a pinch of flaky salt, and black pepper, then spread them over the tray and roast for 10 minutes.</li>\n<li>Meanwhile, toss the chicken thigh fillets with the remaining olive oil, Dijon mustard, garlic, and the rest of the thyme.</li>\n<li>Take the tray out, turn the vegetables, nestle the chicken in among them, and pour the chicken stock around the tray.</li>\n<li>Roast for 15-18 minutes until the chicken is cooked through and the potatoes are tender.</li>\n<li>Drizzle over the thickened cream, dot with the butter, and return to the oven for 3-4 minutes until the sauce looks glossy.</li>\n<li>Rest for 5 minutes, then spoon the chicken, leeks, potatoes, and pan sauce into shallow bowls for serving.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "450 g baby potatoes, halved",
+        "1 leek, halved lengthways and sliced into thick half-moons",
+        "350 g chicken thigh fillets (boneless, skinless)",
+        "1 tbsp olive oil",
+        "1 tbsp Dijon mustard",
+        "2 cloves garlic, finely chopped",
+        "1 tsp thyme leaves",
+        "100 ml chicken stock",
+        "80 ml thickened cream",
+        "15 g butter",
+        "Pinch of flaky salt",
+        "Black pepper"
+      ],
+      "method_items": [
+        "Heat the oven to 220 C and line a roasting tray or ovenproof pan.",
+        "Toss the baby potatoes and leek with half the olive oil, half the thyme, a pinch of flaky salt, and black pepper, then spread them over the tray and roast for 10 minutes.",
+        "Meanwhile, toss the chicken thigh fillets with the remaining olive oil, Dijon mustard, garlic, and the rest of the thyme.",
+        "Take the tray out, turn the vegetables, nestle the chicken in among them, and pour the chicken stock around the tray.",
+        "Roast for 15-18 minutes until the chicken is cooked through and the potatoes are tender.",
+        "Drizzle over the thickened cream, dot with the butter, and return to the oven for 3-4 minutes until the sauce looks glossy.",
+        "Rest for 5 minutes, then spoon the chicken, leeks, potatoes, and pan sauce into shallow bowls for serving."
+      ],
+      "cookbook_slugs": [
+        "date-night-paris-bistro-after-dusk"
+      ],
+      "search_text": "one-pan dijon chicken with leeks, baby potatoes & thyme dijon-coated chicken, sweet leeks, and buttery potatoes deliver an easy bistro main with very little washing up. one-pan main french-inspired 2 624 main chicken one-pan leek potato quick - 450 g baby potatoes, halved - 1 leek, halved lengthways and sliced into thick half-moons - 350 g chicken thigh fillets (boneless, skinless) - 1 tbsp olive oil - 1 tbsp dijon mustard - 2 cloves garlic, finely chopped - 1 tsp thyme leaves - 100 ml chicken stock - 80 ml thickened cream - 15 g butter - pinch of flaky salt - black pepper 1. heat the oven to 220 c and line a roasting tray or ovenproof pan. 2. toss the baby potatoes and leek with half the olive oil, half the thyme, a pinch of flaky salt, and black pepper, then spread them over the tray and roast for 10 minutes. 3. meanwhile, toss the chicken thigh fillets with the remaining olive oil, dijon mustard, garlic, and the rest of the thyme. 4. take the tray out, turn the vegetables, nestle the chicken in among them, and pour the chicken stock around the tray. 5. roast for 15-18 minutes until the chicken is cooked through and the potatoes are tender. 6. drizzle over the thickened cream, dot with the butter, and return to the oven for 3-4 minutes until the sauce looks glossy. 7. rest for 5 minutes, then spoon the chicken, leeks, potatoes, and pan sauce into shallow bowls for serving."
     },
     {
       "id": "416",
@@ -1716,6 +1845,63 @@
       "search_text": "rosemary blackberry verjus fizz a bright blackberry-herb fizz that opens the menu with crisp acidity and a clean finish. mocktail drink mediterranean-inspired 2 80 drink mocktail sparkling blackberry rosemary quick - 90 g blackberries (plus 2 extra for garnish) - 1 tbsp sugar - 1 tsp fresh rosemary leaves, finely chopped - 60 ml white verjus - 30 ml lemon juice - 240 ml chilled sparkling water - 120 ml chilled tonic water - 1 cup ice - 2 rosemary sprigs 1. in a small bowl, muddle blackberries with sugar and chopped rosemary until juicy. 2. strain the mixture into a jug, then stir in verjus and lemon juice. 3. fill two short glasses with ice and divide the blackberry base between them. 4. top each glass with sparkling water and tonic water, stir once, and garnish with a blackberry and rosemary sprig. 5. optional cocktail conversion: add 30 ml (1 oz) gin per glass and stir gently."
     },
     {
+      "id": "433",
+      "slug": "recipe-433-salted-caramel-pots-with-hazelnut-crunch",
+      "title": "Salted Caramel Pots with Hazelnut Crunch",
+      "menu": "Light caramel mousse with toasted hazelnuts keeps dessert rich and bistro-friendly without bringing dark chocolate back to the table.",
+      "category": "sweet",
+      "course": "dessert",
+      "cuisine": "french-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 432,
+      "prep": "12m",
+      "cook": "0m",
+      "rest": "25m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/433-dark-chocolate-pots-with-hazelnut-crunch-and-sea-salt-d922ef5a.png",
+      "image_alt": "Salted Caramel Pots with Hazelnut Crunch",
+      "tags": [
+        "caramel",
+        "dessert",
+        "hazelnut",
+        "no-bake",
+        "quick"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": false
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>180 g Nestle Top &#x27;N Fill Caramel</li>\n<li>100 g cream cheese, softened</li>\n<li>160 ml thickened cream</li>\n<li>1/2 tsp vanilla extract</li>\n<li>30 g roasted hazelnuts, finely chopped</li>\n<li>Pinch of flaky salt</li>\n</ul>",
+        "method_html": "<ol>\n<li>Beat the Nestle Top &#x27;N Fill Caramel, cream cheese, vanilla extract, and a small pinch of flaky salt together until smooth and glossy.</li>\n<li>Whip the thickened cream to soft peaks in a separate bowl.</li>\n<li>Fold two-thirds of the whipped cream through the caramel mixture until light and mousse-like.</li>\n<li>Spoon into two small glasses or ramekins and chill for 25 minutes.</li>\n<li>Top with the remaining whipped cream, the chopped roasted hazelnuts, and a tiny extra pinch of flaky salt before serving.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "180 g Nestle Top 'N Fill Caramel",
+        "100 g cream cheese, softened",
+        "160 ml thickened cream",
+        "1/2 tsp vanilla extract",
+        "30 g roasted hazelnuts, finely chopped",
+        "Pinch of flaky salt"
+      ],
+      "method_items": [
+        "Beat the Nestle Top 'N Fill Caramel, cream cheese, vanilla extract, and a small pinch of flaky salt together until smooth and glossy.",
+        "Whip the thickened cream to soft peaks in a separate bowl.",
+        "Fold two-thirds of the whipped cream through the caramel mixture until light and mousse-like.",
+        "Spoon into two small glasses or ramekins and chill for 25 minutes.",
+        "Top with the remaining whipped cream, the chopped roasted hazelnuts, and a tiny extra pinch of flaky salt before serving."
+      ],
+      "cookbook_slugs": [
+        "date-night-paris-bistro-after-dusk"
+      ],
+      "search_text": "salted caramel pots with hazelnut crunch light caramel mousse with toasted hazelnuts keeps dessert rich and bistro-friendly without bringing dark chocolate back to the table. sweet dessert french-inspired 2 432 dessert caramel hazelnut no-bake quick - 180 g nestle top 'n fill caramel - 100 g cream cheese, softened - 160 ml thickened cream - 1/2 tsp vanilla extract - 30 g roasted hazelnuts, finely chopped - pinch of flaky salt 1. beat the nestle top 'n fill caramel, cream cheese, vanilla extract, and a small pinch of flaky salt together until smooth and glossy. 2. whip the thickened cream to soft peaks in a separate bowl. 3. fold two-thirds of the whipped cream through the caramel mixture until light and mousse-like. 4. spoon into two small glasses or ramekins and chill for 25 minutes. 5. top with the remaining whipped cream, the chopped roasted hazelnuts, and a tiny extra pinch of flaky salt before serving."
+    },
+    {
       "id": "424",
       "slug": "recipe-424-sheet-pan-smoky-chicken-tacos-with-pickled-onion",
       "title": "Sheet-Pan Smoky Chicken Tacos with Pickled Onion",
@@ -1898,6 +2084,67 @@
         "date-night-citrus-glow-italian-night"
       ],
       "search_text": "sparkling basil limonata zesty lemon and basil with gentle sweetness and a crisp sparkling finish. mocktail drink italian-inspired 2 135 mocktail citrus basil sparkling - 1/2 cup fresh lemon juice - 2 tbsp honey or simple syrup - 8 fresh basil leaves, plus extra to garnish - 1 cup chilled apple juice - 1 cup chilled soda water - ice cubes - 2 lemon wheels (for garnish) 1. in a jug, muddle basil leaves with honey and lemon juice for 20-30 seconds. 2. strain into the jug again for a smoother drink, pressing well to keep the basil flavor. 3. add apple juice and stir until combined. 4. fill two glasses with ice and divide the mixture evenly. 5. top each glass with soda water, stir gently, and garnish with a lemon wheel and basil leaf. 6. optional cocktail conversion: add 30 ml (1 oz) gin or vodka per glass, then stir once."
+    },
+    {
+      "id": "430",
+      "slug": "recipe-430-sparkling-pear-thyme-honey-fizz",
+      "title": "Sparkling Pear, Thyme & Honey Fizz",
+      "menu": "Sparkling pear, honey, and thyme open the menu with a softly French bistro feel and more depth than a simple citrus spritz.",
+      "category": "mocktail",
+      "course": "drink",
+      "cuisine": "french-inspired",
+      "occasion": "date-night",
+      "serves": "2",
+      "calories": 112,
+      "prep": "8m",
+      "cook": "3m",
+      "rest": "5m",
+      "difficulty": 1,
+      "rating": null,
+      "image": "assets/images/430-sparkling-pear-thyme-and-honey-fizz-d02bd2aa.png",
+      "image_alt": "Sparkling Pear, Thyme & Honey Fizz",
+      "tags": [
+        "drink",
+        "mocktail",
+        "pear",
+        "quick",
+        "sparkling",
+        "thyme"
+      ],
+      "flags": {
+        "vegetarian": true,
+        "vegan": false,
+        "gluten_free": true,
+        "dairy_free": true
+      },
+      "sections": {
+        "intro_html": "",
+        "ingredients_html": "<ul>\n<li>1 ripe Packham pear, peeled and chopped</li>\n<li>1 tbsp honey</li>\n<li>2 sprigs thyme, plus extra to garnish</li>\n<li>2 tbsp lemon juice</li>\n<li>200 ml chilled water</li>\n<li>150 ml chilled soda water</li>\n<li>Ice cubes</li>\n<li>Optional: 30 ml gin per glass for cocktail serves</li>\n</ul>",
+        "method_html": "<ol>\n<li>Put the honey, thyme sprigs, and 2 tbsp just-boiled water in a small cup, stir to dissolve, and leave it to steep for 5 minutes.</li>\n<li>Add the chopped pear, lemon juice, chilled water, and the strained thyme-honey syrup to a blender and blend until very smooth.</li>\n<li>Strain into a jug, pressing firmly on the solids to get the pear flavour through without a grainy texture.</li>\n<li>Fill two tall glasses with ice, divide the pear mixture between them, and top each glass with soda water.</li>\n<li>Optional cocktail conversion: add 30 ml (1 oz) gin per glass and stir.</li>\n<li>Garnish with a small thyme sprig and serve immediately.</li>\n</ol>",
+        "notes_html": ""
+      },
+      "ingredients_items": [
+        "1 ripe Packham pear, peeled and chopped",
+        "1 tbsp honey",
+        "2 sprigs thyme, plus extra to garnish",
+        "2 tbsp lemon juice",
+        "200 ml chilled water",
+        "150 ml chilled soda water",
+        "Ice cubes",
+        "Optional: 30 ml gin per glass for cocktail serves"
+      ],
+      "method_items": [
+        "Put the honey, thyme sprigs, and 2 tbsp just-boiled water in a small cup, stir to dissolve, and leave it to steep for 5 minutes.",
+        "Add the chopped pear, lemon juice, chilled water, and the strained thyme-honey syrup to a blender and blend until very smooth.",
+        "Strain into a jug, pressing firmly on the solids to get the pear flavour through without a grainy texture.",
+        "Fill two tall glasses with ice, divide the pear mixture between them, and top each glass with soda water.",
+        "Optional cocktail conversion: add 30 ml (1 oz) gin per glass and stir.",
+        "Garnish with a small thyme sprig and serve immediately."
+      ],
+      "cookbook_slugs": [
+        "date-night-paris-bistro-after-dusk"
+      ],
+      "search_text": "sparkling pear, thyme & honey fizz sparkling pear, honey, and thyme open the menu with a softly french bistro feel and more depth than a simple citrus spritz. mocktail drink french-inspired 2 112 drink mocktail pear thyme sparkling quick - 1 ripe packham pear, peeled and chopped - 1 tbsp honey - 2 sprigs thyme, plus extra to garnish - 2 tbsp lemon juice - 200 ml chilled water - 150 ml chilled soda water - ice cubes - optional: 30 ml gin per glass for cocktail serves 1. put the honey, thyme sprigs, and 2 tbsp just-boiled water in a small cup, stir to dissolve, and leave it to steep for 5 minutes. 2. add the chopped pear, lemon juice, chilled water, and the strained thyme-honey syrup to a blender and blend until very smooth. 3. strain into a jug, pressing firmly on the solids to get the pear flavour through without a grainy texture. 4. fill two tall glasses with ice, divide the pear mixture between them, and top each glass with soda water. 5. optional cocktail conversion: add 30 ml (1 oz) gin per glass and stir. 6. garnish with a small thyme sprig and serve immediately."
     },
     {
       "id": "413",
@@ -2578,6 +2825,44 @@
       ]
     },
     {
+      "slug": "date-night-paris-bistro-after-dusk",
+      "title": "Date Night: Paris Bistro After Dusk",
+      "subtitle": "Sunday, March 29, 2026 · Low-effort French-bistro-inspired menu with sparkling pear, goat cheese tartines, Dijon chicken, and salted caramel",
+      "author": "Codex",
+      "date": "2026-03-29",
+      "source_mtime": 1774777235,
+      "description": "",
+      "album_title": "The Paris Concert: Edition One",
+      "album_artist": "Bill Evans Trio",
+      "album_style": "Instrumental jazz (lyrical late-night piano trio fits the candlelit Paris-bistro mood)",
+      "album_youtube_url": "",
+      "recipe_slugs": [
+        "recipe-430-sparkling-pear-thyme-honey-fizz",
+        "recipe-431-goat-cheese-tartines-with-balsamic-shallots-thyme",
+        "recipe-432-one-pan-dijon-chicken-with-leeks-baby-potatoes-thyme",
+        "recipe-433-salted-caramel-pots-with-hazelnut-crunch"
+      ],
+      "reader_intro_html": "",
+      "reader_blocks": [
+        {
+          "type": "recipe",
+          "slug": "recipe-430-sparkling-pear-thyme-honey-fizz"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-431-goat-cheese-tartines-with-balsamic-shallots-thyme"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-432-one-pan-dijon-chicken-with-leeks-baby-potatoes-thyme"
+        },
+        {
+          "type": "recipe",
+          "slug": "recipe-433-salted-caramel-pots-with-hazelnut-crunch"
+        }
+      ]
+    },
+    {
       "slug": "date-night-rooftop-cantina-after-dark",
       "title": "Date Night: Rooftop Cantina After Dark",
       "subtitle": "Sunday, March 8, 2026 · A low-effort late-summer cantina menu with crisp corn, smoky chicken, bright lime, and a lighter fruit dessert",
@@ -2666,6 +2951,7 @@
       "broccolini",
       "burger",
       "caprese",
+      "caramel",
       "carrots",
       "chicken",
       "chocolate",
@@ -2687,13 +2973,16 @@
       "fries",
       "ginger",
       "gnocchi",
+      "goat-cheese",
       "halloumi",
       "handwritten",
+      "hazelnut",
       "heirloom",
       "highly rated",
       "ice-cream",
       "labneh",
       "lamb",
+      "leek",
       "lemon",
       "lettuce-cups",
       "lime",
@@ -2722,6 +3011,7 @@
       "pistachio",
       "plums",
       "pomegranate",
+      "potato",
       "prawns",
       "quick",
       "rice",
@@ -2730,6 +3020,7 @@
       "salad",
       "seafood",
       "sesame",
+      "shallot",
       "skillet",
       "slice",
       "smoky",
@@ -2739,6 +3030,8 @@
       "strawberries",
       "tacos",
       "tahini",
+      "thyme",
+      "toast",
       "tortilla",
       "tostada",
       "tray-bake",
