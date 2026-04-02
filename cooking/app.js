@@ -20,6 +20,7 @@ const state = {
   recipeSlug: "",
   cookbookSlug: "",
   q: "",
+  ratingMin: "",
   flags: new Set(),
   courses: new Set(),
   tags: new Set(),
@@ -29,6 +30,15 @@ const refs = {
   app: document.getElementById("vc-app"),
   tabRecipes: document.getElementById("vc-tab-recipes"),
   tabCookbooks: document.getElementById("vc-tab-cookbooks"),
+  shellLede: document.getElementById("vc-shell-lede"),
+  modeNote: document.getElementById("vc-mode-note"),
+  shellPrimaryLabel: document.getElementById("vc-shell-primary-label"),
+  shellPrimaryValue: document.getElementById("vc-shell-primary-value"),
+  shellSecondaryLabel: document.getElementById("vc-shell-secondary-label"),
+  shellSecondaryValue: document.getElementById("vc-shell-secondary-value"),
+  shellTertiaryLabel: document.getElementById("vc-shell-tertiary-label"),
+  shellTertiaryValue: document.getElementById("vc-shell-tertiary-value"),
+  topbarVisual: document.getElementById("vc-topbar-visual"),
   searchInput: document.getElementById("vc-search-input"),
   filterRow: document.getElementById("vc-filter-row"),
   featureSlot: document.getElementById("vc-feature-slot"),
@@ -57,12 +67,17 @@ const text = (value) => String(value || "").trim();
 const escapeHtml = (value) =>
   text(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char] || char));
 const normalize = (value) => text(value).toLowerCase().replace(/\s+/g, " ").trim();
+const titleize = (value) =>
+  text(value)
+    .replace(/[_-]+/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 const slugify = (value) =>
   normalize(value)
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "") || "section";
+const pluralize = (count, singular, plural = `${singular}s`) => `${count} ${count === 1 ? singular : plural}`;
 const iconClipboard = `
   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
     <rect x="7" y="5" width="10" height="15" rx="2" ry="2"></rect>
@@ -115,10 +130,46 @@ const buildRecipeMarkdown = (recipe) => {
   return `${lines.join("\n").trim()}\n`;
 };
 
+const buildCookbookMarkdown = (cookbook) => {
+  const lines = ["---"];
+
+  if (text(cookbook.title)) lines.push(`title: ${text(cookbook.title)}`);
+  if (text(cookbook.subtitle)) lines.push(`subtitle: ${text(cookbook.subtitle)}`);
+  if (text(cookbook.author)) lines.push(`author: ${text(cookbook.author)}`);
+  if (text(cookbook.date)) lines.push(`date: ${text(cookbook.date)}`);
+  lines.push("---", "");
+
+  const blocks = Array.isArray(cookbook.reader_blocks) ? cookbook.reader_blocks : [];
+  blocks.forEach((block) => {
+    if (block.type === "chapter") {
+      lines.push(`# ${text(block.title || "Chapter")}`, "");
+      return;
+    }
+    if (block.type === "text") {
+      const value = stripHtmlToText(block.html || "");
+      if (value) lines.push(value, "");
+      return;
+    }
+    if (block.type === "recipe" && text(block.path || block.slug)) {
+      const ref = text(block.path || block.slug);
+      lines.push(`![[${ref}]]`, "");
+    }
+  });
+
+  return `${lines.join("\n").trim()}\n`;
+};
+
 const canonicalRecipeUrl = (slug) => {
   const url = new URL(window.location.href);
   url.search = "";
   url.hash = `/recipes/${encodeURIComponent(text(slug))}`;
+  return url.toString();
+};
+
+const canonicalCookbookUrl = (slug) => {
+  const url = new URL(window.location.href);
+  url.search = "";
+  url.hash = `/cookbooks/${encodeURIComponent(text(slug))}`;
   return url.toString();
 };
 
@@ -200,6 +251,31 @@ const isMobileRecipeLayout = () => isMobileViewport(window.innerWidth);
 const shouldUseMorphAnimation = () => shouldMorphCardOpen({ width: window.innerWidth, reducedMotion });
 const canSyncCookbookNav = () =>
   shouldSyncCookbookNav({ now: window.performance.now(), suppressUntil: suppressCookbookNavSyncUntil });
+const countActiveRecipeFilters = () => state.flags.size + state.courses.size + state.tags.size + (state.q ? 1 : 0) + (state.ratingMin ? 1 : 0);
+const staggerNodes = (nodes, stepMs = 42, baseMs = 0) => {
+  nodes.forEach((node, index) => node.style.setProperty("--vc-enter-delay", `${baseMs + Math.min(index, 9) * stepMs}ms`));
+};
+
+const setShellMetric = (labelNode, valueNode, label, value) => {
+  if (!labelNode || !valueNode) return;
+  labelNode.textContent = label;
+  valueNode.textContent = String(value);
+};
+
+const formatRecipeTimeSummary = (recipe) =>
+  [recipe.prep ? `Prep ${text(recipe.prep)}` : "", recipe.cook ? `Cook ${text(recipe.cook)}` : "", recipe.rest ? `Rest ${text(recipe.rest)}` : ""]
+    .filter(Boolean)
+    .join(" / ");
+const recipeRatingStars = (recipe) => {
+  const value = Number(recipe?.rating);
+  if (!Number.isFinite(value) || value <= 0) return 0;
+  return value / 20;
+};
+const roundedRecipeStars = (recipe) => {
+  const stars = recipeRatingStars(recipe);
+  if (!Number.isFinite(stars) || stars <= 0) return 0;
+  return Math.max(1, Math.min(5, Math.round(stars)));
+};
 
 const syncCookbookHeaderHeight = () => {
   const shell = refs.detail.querySelector(".vc-cookbook-shell");
@@ -261,6 +337,7 @@ const parseHash = () => {
     recipeSlug: tab === "recipes" ? slug : "",
     cookbookSlug: tab === "cookbooks" ? slug : "",
     q: text(params.get("q")),
+    ratingMin: text(params.get("rating")),
     flags,
     courses,
     tags,
@@ -272,6 +349,7 @@ const encodeHash = () => {
   const params = new URLSearchParams();
 
   if (state.q) params.set("q", state.q);
+  if (state.ratingMin && state.tab === "recipes") params.set("rating", state.ratingMin);
   if (state.flags.size > 0) params.set("flags", Array.from(state.flags).sort().join(","));
   if (state.courses.size > 0 && state.tab === "recipes") params.set("courses", Array.from(state.courses).sort().join(","));
   if (state.tags.size > 0 && state.tab === "recipes") params.set("tags", Array.from(state.tags).sort().join(","));
@@ -286,6 +364,7 @@ const applyStateFromHash = () => {
   state.recipeSlug = parsed.recipeSlug;
   state.cookbookSlug = parsed.cookbookSlug;
   state.q = parsed.q;
+  state.ratingMin = parsed.ratingMin;
   state.flags = parsed.flags;
   state.courses = parsed.courses;
   state.tags = parsed.tags;
@@ -311,6 +390,10 @@ const updateHash = (replace = false) => {
 const matchesRecipeFilters = (recipe) => {
   const needle = normalize(state.q);
   if (needle && !text(recipe.search_text).includes(needle)) return false;
+  if (state.ratingMin) {
+    const threshold = Number.parseInt(state.ratingMin, 10);
+    if (!Number.isFinite(threshold) || roundedRecipeStars(recipe) < threshold) return false;
+  }
 
   for (const flag of state.flags) {
     if (!recipe.flags || recipe.flags[flag] !== true) return false;
@@ -332,6 +415,7 @@ const matchesCookbookFilters = (cookbook) => {
 const setTab = (tab) => {
   state.tab = tab;
   state.q = "";
+  state.ratingMin = "";
   state.flags = new Set();
   state.courses = new Set();
   state.tags = new Set();
@@ -744,6 +828,124 @@ const getFeaturedDateNightCookbook = () => {
   return [...pool].sort((a, b) => cookbookTimestamp(b) - cookbookTimestamp(a))[0] || null;
 };
 
+const getShellVisualRecipes = () => {
+  if (!data) return [];
+
+  if (state.tab === "recipes") {
+    const selected = recipesBySlug.get(state.recipeSlug);
+    const source = selected
+      ? [selected, ...activeRecipeList.filter((recipe) => recipe.slug !== selected.slug)]
+      : activeRecipeList.length > 0
+        ? activeRecipeList
+        : data.recipes;
+    return source.filter(Boolean).slice(0, 3);
+  }
+
+  const selectedCookbook = cookbooksBySlug.get(state.cookbookSlug);
+  if (selectedCookbook) {
+    return (selectedCookbook.recipe_slugs || [])
+      .map((slug) => recipesBySlug.get(slug))
+      .filter(Boolean)
+      .slice(0, 3);
+  }
+
+  const featured = getFeaturedDateNightCookbook();
+  if (featured) {
+    return (featured.recipe_slugs || [])
+      .map((slug) => recipesBySlug.get(slug))
+      .filter(Boolean)
+      .slice(0, 3);
+  }
+
+  const firstCookbook = activeCookbookList[0] || data.cookbooks[0];
+  if (firstCookbook) {
+    return (firstCookbook.recipe_slugs || [])
+      .map((slug) => recipesBySlug.get(slug))
+      .filter(Boolean)
+      .slice(0, 3);
+  }
+
+  return data.recipes.slice(0, 3);
+};
+
+const renderShellVisual = (recipes, accent = {}) => {
+  if (!refs.topbarVisual) return;
+
+  const items = recipes.filter(Boolean).slice(0, 3);
+  const frames = Array.from({ length: 3 }, (_value, index) => {
+    const recipe = items[index];
+    const label = titleize(recipe?.course || "Recipe");
+    const title = recipe?.title || "Vaultchef";
+    const frameClass = `vc-topbar-frame vc-topbar-frame-${index + 1}`;
+    const body = recipe?.image
+      ? buildImageMarkup({ src: recipe.image, alt: title, title, label, kind: "detail" })
+      : buildImageFallbackMarkup({ title, label, kind: "detail" });
+    return `<figure class="${frameClass}" data-vc-image-frame>${body}</figure>`;
+  }).join("");
+
+  refs.topbarVisual.innerHTML = `
+    <div class="vc-topbar-visual-stack">${frames}</div>
+    <div class="vc-topbar-visual-caption">
+      <p class="vc-topbar-visual-kicker">${escapeHtml(accent.kicker || "Preview")}</p>
+      <p class="vc-topbar-visual-title">${escapeHtml(accent.title || "A calmer shelf for dinner planning.")}</p>
+    </div>
+  `;
+  staggerNodes(Array.from(refs.topbarVisual.querySelectorAll(".vc-topbar-frame")), 60, 120);
+  hydrateImageFallbacks(refs.topbarVisual);
+  refreshImageFocus(refs.topbarVisual);
+};
+
+const renderShellChrome = () => {
+  if (!data) return;
+
+  if (state.tab === "recipes") {
+    const selected = recipesBySlug.get(state.recipeSlug);
+    const activeFilterCount = countActiveRecipeFilters();
+    const activeCount = activeRecipeList.length;
+    const totalRecipes = data.recipes.length;
+
+    if (selected) {
+      refs.shellLede.textContent = text(selected.menu) || "Open the recipe into a focused reader with imagery, timings, and method kept in one place.";
+      refs.modeNote.textContent = "Reader open. Return to the shelf without losing your search, filters, or scroll position.";
+      setShellMetric(refs.shellPrimaryLabel, refs.shellPrimaryValue, "Course", titleize(selected.course || "Recipe"));
+      setShellMetric(refs.shellSecondaryLabel, refs.shellSecondaryValue, "Serves", selected.serves || "Flexible");
+      setShellMetric(refs.shellTertiaryLabel, refs.shellTertiaryValue, "Timing", formatRecipeTimeSummary(selected) || "Cook when ready");
+      renderShellVisual(getShellVisualRecipes(), {
+        kicker: "Open Recipe",
+        title: selected.title || "Recipe reader",
+      });
+      return;
+    }
+
+    refs.shellLede.textContent = "Browse recipes, refine by course or dietary need, and open each dish into a reader built for actual cooking.";
+    refs.modeNote.textContent =
+      activeFilterCount > 0
+        ? `${pluralize(activeCount, "recipe")} match the current search and filter set.`
+        : "Search by dish, course, dietary need, or cookbook, then open the result into a calmer reading surface.";
+    setShellMetric(refs.shellPrimaryLabel, refs.shellPrimaryValue, "In View", activeCount);
+    setShellMetric(refs.shellSecondaryLabel, refs.shellSecondaryValue, "Cookbooks", data.cookbooks.length);
+    setShellMetric(refs.shellTertiaryLabel, refs.shellTertiaryValue, "Archive", pluralize(totalRecipes, "recipe"));
+    renderShellVisual(getShellVisualRecipes(), {
+      kicker: activeFilterCount > 0 ? "Filtered Shelf" : "Recipe Library",
+      title: activeFilterCount > 0 ? `${pluralize(activeCount, "recipe")} ready to cook.` : "Recipes arranged for quick scanning and slower reading.",
+    });
+    return;
+  }
+
+  const dateNightCount = (data.cookbooks || []).filter((cookbook) => normalize(cookbook.title).includes("date night")).length;
+  refs.shellLede.textContent = "Move from curated cookbook covers into a full-screen reader with section navigation and recipe-by-recipe immersion.";
+  refs.modeNote.textContent = activeCookbookList.length > 0
+    ? `${pluralize(activeCookbookList.length, "cookbook")} are in view. Open one to switch into the long-form reader.`
+    : "No cookbooks match the current search.";
+  setShellMetric(refs.shellPrimaryLabel, refs.shellPrimaryValue, "In View", activeCookbookList.length);
+  setShellMetric(refs.shellSecondaryLabel, refs.shellSecondaryValue, "Recipes", data.recipes.length);
+  setShellMetric(refs.shellTertiaryLabel, refs.shellTertiaryValue, "Date Nights", dateNightCount);
+  renderShellVisual(getShellVisualRecipes(), {
+    kicker: dateNightCount > 0 ? "Curated Evenings" : "Cookbooks",
+    title: dateNightCount > 0 ? "From cover to dinner plan in one reader." : "Curated menus, ready for a quieter reading mode.",
+  });
+};
+
 const makeCard = ({ title, body, pills, image, heroHtml, heroClass, onOpen }) => {
   const card = refs.cardTemplate.content.firstElementChild.cloneNode(true);
 
@@ -831,6 +1033,7 @@ const renderSidebarFeature = () => {
   });
 
   refs.featureSlot.appendChild(card);
+  staggerNodes([card], 42, 180);
   refs.featureSlot.hidden = false;
   hydrateImageFallbacks(refs.featureSlot);
 };
@@ -844,7 +1047,7 @@ const renderFilters = () => {
     const chip = document.createElement("button");
     chip.type = "button";
     chip.className = "vc-chip vc-chip-course";
-    chip.textContent = course;
+    chip.textContent = titleize(course);
     chip.setAttribute("aria-pressed", state.courses.has(course) ? "true" : "false");
     chip.addEventListener("click", () => {
       if (state.courses.has(course)) state.courses.delete(course);
@@ -872,6 +1075,26 @@ const renderFilters = () => {
     flagButtons.push(chip);
   });
 
+  const ratingButtons = [];
+  const activeRating = Number.parseInt(state.ratingMin, 10) || 0;
+  Array.from({ length: 5 }, (_value, index) => index + 1).forEach((threshold) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "vc-rating-star";
+    chip.innerHTML = `<span aria-hidden="true">${threshold <= activeRating ? "&#9733;" : "&#9734;"}</span>`;
+    chip.dataset.filled = threshold <= activeRating ? "true" : "false";
+    const value = String(threshold);
+    chip.setAttribute("aria-pressed", activeRating === threshold ? "true" : "false");
+    chip.setAttribute("aria-label", `${threshold} stars and above`);
+    chip.title = `${threshold} stars and above`;
+    chip.addEventListener("click", () => {
+      state.ratingMin = state.ratingMin === value ? "" : value;
+      state.recipeSlug = "";
+      updateHash(true);
+    });
+    ratingButtons.push(chip);
+  });
+
   const tagButtons = [];
   (data.facets.tags || []).slice(0, 10).forEach((tag) => {
     const chip = document.createElement("button");
@@ -890,6 +1113,7 @@ const renderFilters = () => {
 
   [
     renderFilterGroup("Course", courseButtons),
+    renderFilterGroup("Rating", ratingButtons),
     renderFilterGroup("Dietary", flagButtons),
     renderFilterGroup("Tags", tagButtons),
   ]
@@ -911,7 +1135,7 @@ const renderRecipesList = () => {
 
   activeRecipeList.forEach((recipe) => {
     const pills = [];
-    if (recipe.course) pills.push({ label: recipe.course, className: "vc-pill-course" });
+    if (recipe.course) pills.push({ label: titleize(recipe.course), className: "vc-pill-course" });
     if (recipe.serves) pills.push(`Serves ${recipe.serves}`);
     if (recipe.calories) pills.push({ label: formatCalories(recipe.calories), className: "vc-pill-accent" });
     (recipe.tags || []).slice(0, 2).forEach((tag) => pills.push(`#${tag}`));
@@ -925,6 +1149,7 @@ const renderRecipesList = () => {
     });
     refs.list.appendChild(card);
   });
+  staggerNodes(Array.from(refs.list.querySelectorAll(".vc-card")));
   hydrateImageFallbacks(refs.list);
 };
 
@@ -956,15 +1181,16 @@ const renderCookbooksList = () => {
     });
     refs.list.appendChild(card);
   });
+  staggerNodes(Array.from(refs.list.querySelectorAll(".vc-card")));
   hydrateImageFallbacks(refs.list);
 };
 
 const renderRecipeHero = (recipe) => {
   const alt = recipe.image_alt || recipe.title || "Recipe image";
   if (!recipe.image) {
-    return `<figure class="vc-hero vc-hero-placeholder">${buildImageFallbackMarkup({ title: recipe.title, label: recipe.course || "Recipe", kind: "detail" })}</figure>`;
+    return `<figure class="vc-hero vc-hero-placeholder">${buildImageFallbackMarkup({ title: recipe.title, label: titleize(recipe.course || "Recipe"), kind: "detail" })}</figure>`;
   }
-  return `<figure class="vc-hero" data-vc-image-frame>${buildImageMarkup({ src: recipe.image, alt, title: recipe.title, label: recipe.course || "Recipe", kind: "detail" })}</figure>`;
+  return `<figure class="vc-hero" data-vc-image-frame>${buildImageMarkup({ src: recipe.image, alt, title: recipe.title, label: titleize(recipe.course || "Recipe"), kind: "detail" })}</figure>`;
 };
 
 const cookbookLinksHtml = (slugs) =>
@@ -1006,27 +1232,31 @@ const renderRecipeDetail = () => {
           </div>
         </div>
       </header>
-      ${renderRecipeHero(recipe)}
-      <div class="vc-meta-row vc-recipe-meta-row">
-        ${recipe.course ? `<span class="vc-pill vc-pill-course">${escapeHtml(recipe.course)}</span>` : ""}
-        ${recipe.serves ? `<span class="vc-pill">Serves ${escapeHtml(recipe.serves)}</span>` : ""}
-        ${recipe.calories ? `<span class="vc-pill vc-pill-accent">${escapeHtml(formatCalories(recipe.calories, { perServe: true }))}</span>` : ""}
-        ${recipe.prep ? `<span class="vc-pill">Prep ${escapeHtml(recipe.prep)}</span>` : ""}
-        ${recipe.cook ? `<span class="vc-pill">Cook ${escapeHtml(recipe.cook)}</span>` : ""}
-        ${recipe.rest ? `<span class="vc-pill">Rest ${escapeHtml(recipe.rest)}</span>` : ""}
+      <div class="vc-recipe-reader-layout">
+        <div class="vc-recipe-reader-visual-column">
+          ${renderRecipeHero(recipe)}
+          <div class="vc-meta-row vc-recipe-meta-row">
+            ${recipe.course ? `<span class="vc-pill vc-pill-course">${escapeHtml(titleize(recipe.course))}</span>` : ""}
+            ${recipe.serves ? `<span class="vc-pill">Serves ${escapeHtml(recipe.serves)}</span>` : ""}
+            ${recipe.calories ? `<span class="vc-pill vc-pill-accent">${escapeHtml(formatCalories(recipe.calories, { perServe: true }))}</span>` : ""}
+            ${recipe.prep ? `<span class="vc-pill">Prep ${escapeHtml(recipe.prep)}</span>` : ""}
+            ${recipe.cook ? `<span class="vc-pill">Cook ${escapeHtml(recipe.cook)}</span>` : ""}
+            ${recipe.rest ? `<span class="vc-pill">Rest ${escapeHtml(recipe.rest)}</span>` : ""}
+          </div>
+          ${recipe.cookbook_slugs.length > 0 ? `<section class="vc-recipe-reader-cookbooks"><h3>In Cookbooks</h3><div class="vc-meta-row">${cookbookLinksHtml(recipe.cookbook_slugs)}</div></section>` : ""}
+        </div>
+        <div class="vc-detail-grid vc-recipe-reader-prose">
+          <section class="vc-detail-panel vc-detail-panel-ingredients vc-section-panel">
+            <h3>Ingredients</h3>
+            ${recipe.sections.ingredients_html || "<p>No ingredients section found.</p>"}
+          </section>
+          <section class="vc-detail-panel vc-detail-panel-method vc-section-panel">
+            <h3>Method</h3>
+            ${recipe.sections.method_html || "<p>No method section found.</p>"}
+            ${recipe.sections.notes_html ? `<h3>Notes</h3>${recipe.sections.notes_html}` : ""}
+          </section>
+        </div>
       </div>
-      <div class="vc-detail-grid">
-        <section class="vc-detail-panel vc-detail-panel-ingredients">
-          <h3>Ingredients</h3>
-          ${recipe.sections.ingredients_html || "<p>No ingredients section found.</p>"}
-        </section>
-        <section class="vc-detail-panel vc-detail-panel-method">
-          <h3>Method</h3>
-          ${recipe.sections.method_html || "<p>No method section found.</p>"}
-          ${recipe.sections.notes_html ? `<h3>Notes</h3>${recipe.sections.notes_html}` : ""}
-        </section>
-      </div>
-      ${recipe.cookbook_slugs.length > 0 ? `<section><h3>In Cookbooks</h3><div class="vc-meta-row">${cookbookLinksHtml(recipe.cookbook_slugs)}</div></section>` : ""}
     </article>
   `;
 
@@ -1080,7 +1310,7 @@ const renderCookbookRecipeCard = (recipe) => {
               <h2 class="vc-recipe-title">${escapeHtml(recipe.title)}</h2>
               ${recipe.menu ? `<p class="vc-recipe-intro">${escapeHtml(recipe.menu)}</p>` : ""}
               <div class="vc-meta-row vc-recipe-meta-row">
-                ${recipe.course ? `<span class="vc-pill vc-pill-course">${escapeHtml(recipe.course)}</span>` : ""}
+                ${recipe.course ? `<span class="vc-pill vc-pill-course">${escapeHtml(titleize(recipe.course))}</span>` : ""}
                 ${recipe.serves ? `<span class="vc-pill">Serves ${escapeHtml(recipe.serves)}</span>` : ""}
                 ${recipe.calories ? `<span class="vc-pill vc-pill-accent">${escapeHtml(formatCalories(recipe.calories, { perServe: true }))}</span>` : ""}
               </div>
@@ -1186,20 +1416,28 @@ const renderCookbookFullscreen = () => {
             <span class="vc-pill vc-cookbook-count">${cookbook.recipe_slugs.length} recipes</span>
           </div>
         </div>
-        <button
-          class="vc-cookbook-nav-toggle"
-          type="button"
-          data-cookbook-nav-toggle
-          aria-expanded="false"
-          aria-controls="vc-cookbook-menu"
-          aria-label="Open navigation menu"
-        >
-          <span class="vc-nav-icon" aria-hidden="true">
-            <span class="vc-nav-icon-bar"></span>
-            <span class="vc-nav-icon-bar"></span>
-            <span class="vc-nav-icon-bar"></span>
-          </span>
-        </button>
+        <div class="vc-cookbook-header-actions">
+          <button class="vc-icon-btn vc-icon-btn-plain" type="button" data-copy-cookbook aria-label="Copy cookbook markdown" title="Copy cookbook markdown">
+            ${iconClipboard}
+          </button>
+          <button class="vc-icon-btn vc-icon-btn-plain" type="button" data-share-cookbook aria-label="Share cookbook link" title="Share cookbook link">
+            ${iconShare}
+          </button>
+          <button
+            class="vc-cookbook-nav-toggle"
+            type="button"
+            data-cookbook-nav-toggle
+            aria-expanded="false"
+            aria-controls="vc-cookbook-menu"
+            aria-label="Open navigation menu"
+          >
+            <span class="vc-nav-icon" aria-hidden="true">
+              <span class="vc-nav-icon-bar"></span>
+              <span class="vc-nav-icon-bar"></span>
+              <span class="vc-nav-icon-bar"></span>
+            </span>
+          </button>
+        </div>
       </header>
       <div class="vc-cookbook-layout">
         <aside class="vc-cookbook-rail" aria-label="Cookbook navigation">
@@ -1237,6 +1475,31 @@ const renderCookbookFullscreen = () => {
   navToggle?.addEventListener("click", () => {
     const expanded = navToggle.getAttribute("aria-expanded") === "true";
     setNavOpen(!expanded);
+  });
+
+  refs.detail.querySelector("[data-copy-cookbook]")?.addEventListener("click", async (event) => {
+    const trigger = event.currentTarget;
+    try {
+      await writeClipboardText(buildCookbookMarkdown(cookbook));
+      pulseActionButton(trigger);
+    } catch (_error) {
+      // Ignore clipboard failures silently in UI; keyboard shortcuts can still be used.
+    }
+  });
+
+  refs.detail.querySelector("[data-share-cookbook]")?.addEventListener("click", async (event) => {
+    const trigger = event.currentTarget;
+    const shareUrl = canonicalCookbookUrl(cookbook.slug);
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: cookbook.title || "Cookbook", url: shareUrl });
+      } else {
+        await writeClipboardText(shareUrl);
+      }
+      pulseActionButton(trigger);
+    } catch (_error) {
+      // Ignore cancelled/failed share interactions.
+    }
   });
 
   refs.detail.querySelectorAll("[data-back-library]").forEach((button) => {
@@ -1420,6 +1683,7 @@ const render = () => {
 
   if (state.tab === "recipes") {
     renderRecipesList();
+    renderShellChrome();
     if (state.recipeSlug && !recipesBySlug.has(state.recipeSlug)) {
       state.recipeSlug = "";
       updateHash(true);
@@ -1435,6 +1699,7 @@ const render = () => {
   }
 
   renderCookbooksList();
+  renderShellChrome();
   refs.detail.hidden = true;
   refs.detailEmpty.hidden = true;
 };
@@ -1500,6 +1765,7 @@ const bootstrap = async () => {
 
   setupEvents();
   applyStateFromHash();
+  window.requestAnimationFrame(() => document.body.classList.add("vc-ready"));
 };
 
 bootstrap();

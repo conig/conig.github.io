@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-03-29T09:42:14.142901+00:00",
+  "generated_at": "2026-04-02T08:01:52.597055+00:00",
   "recipes": [
     {
       "id": "301",
@@ -191,12 +191,13 @@
       "cook": "5m",
       "rest": "20m",
       "difficulty": 1,
-      "rating": null,
+      "rating": 90.0,
       "image": "assets/images/429-chocolate-malt-mousse-sundae-cups-4817ff4a.png",
       "image_alt": "Chocolate Malt Mousse Sundae Cups",
       "tags": [
         "chocolate",
         "dessert",
+        "highly rated",
         "malt",
         "mousse",
         "no-bake",
@@ -233,7 +234,7 @@
       "cookbook_slugs": [
         "date-night-after-hours-american-diner"
       ],
-      "search_text": "chocolate malt mousse sundae cups silky chocolate mousse with a gentle malt note lands the diner theme in dessert form without asking for any baking. sweet dessert american-diner 2 524 dessert chocolate mousse malt no-bake quick - 150 g milk cooking chocolate (mousse and garnish) - 250 ml thickened cream (mousse and topping) - 1 tbsp malted chocolate powder - 2 tsp caster sugar - 1/2 tsp vanilla extract - pinch of flaky salt 1. put 100 ml of the thickened cream in a small saucepan and warm it just to a simmer. 2. tip the hot cream over the milk chocolate, add the malted chocolate powder, vanilla extract, and flaky salt, then whisk until smooth and glossy. leave it to cool for 10 minutes. 3. whip the remaining thickened cream with the caster sugar to soft peaks. 4. fold two-thirds of the whipped cream through the cooled chocolate mixture until no streaks remain. 5. spoon the mousse into two glasses or sundae cups and chill for 20 minutes. 6. top with the remaining whipped cream, then grate a little of the reserved chocolate over each serve before taking them to the table."
+      "search_text": "chocolate malt mousse sundae cups silky chocolate mousse with a gentle malt note lands the diner theme in dessert form without asking for any baking. sweet dessert american-diner 2 524 dessert chocolate mousse malt no-bake quick highly rated - 150 g milk cooking chocolate (mousse and garnish) - 250 ml thickened cream (mousse and topping) - 1 tbsp malted chocolate powder - 2 tsp caster sugar - 1/2 tsp vanilla extract - pinch of flaky salt 1. put 100 ml of the thickened cream in a small saucepan and warm it just to a simmer. 2. tip the hot cream over the milk chocolate, add the malted chocolate powder, vanilla extract, and flaky salt, then whisk until smooth and glossy. leave it to cool for 10 minutes. 3. whip the remaining thickened cream with the caster sugar to soft peaks. 4. fold two-thirds of the whipped cream through the cooled chocolate mixture until no streaks remain. 5. spoon the mousse into two glasses or sundae cups and chill for 20 minutes. 6. top with the remaining whipped cream, then grate a little of the reserved chocolate over each serve before taking them to the table."
     },
     {
       "id": "304",
@@ -667,7 +668,7 @@
       "cook": "20m",
       "rest": "5m",
       "difficulty": 2,
-      "rating": null,
+      "rating": 96.0,
       "image": "assets/images/428-dutch-oven-fried-chicken-burgers-with-shrettuce-and-pickle-sauce-40163ad0.png",
       "image_alt": "Dutch-Oven Fried Chicken Burgers with Shrettuce & Pickle Sauce",
       "tags": [
@@ -675,6 +676,7 @@
         "chicken",
         "diner",
         "fried",
+        "highly rated",
         "main"
       ],
       "flags": {
@@ -721,7 +723,7 @@
       "cookbook_slugs": [
         "date-night-after-hours-american-diner"
       ],
-      "search_text": "dutch-oven fried chicken burgers with shrettuce & pickle sauce a crunchy dutch-oven fried chicken burger with cool lettuce and sharp pickle sauce makes the whole menu feel like a proper late-night diner order. burger main american-diner 2 862 main burger chicken fried diner - 350 g chicken thigh fillets, trimmed and halved into 2 large pieces - 150 ml buttermilk - 4 tbsp dill pickle brine - 140 g plain flour - 40 g cornflour - 1 tsp smoked paprika - 1 tsp garlic powder - 1/2 tsp onion powder - 1/2 tsp baking powder - 1 tsp flaky salt - 1/2 tsp cracked black pepper - 1 l vegetable oil - 3 tbsp whole-egg mayonnaise - 1 tbsp tomato sauce - 1 tsp american mustard - 1 dill pickle, finely chopped - 2 brioche burger buns - 60 g shredded iceberg lettuce - 6 dill pickle slices 1. toss the chicken with the buttermilk and 2 tbsp of the dill pickle brine, then leave it to marinate for 15 minutes while you prepare the rest. 2. in a shallow bowl, mix the plain flour, cornflour, smoked paprika, garlic powder, onion powder, baking powder, flaky salt, and black pepper. drizzle 1 tbsp of the chicken marinade into the flour and rub it through with your fingertips so the coating forms small craggy clumps. 3. heat the vegetable oil in a medium dutch oven over medium-high heat until it reaches 175 c. while it heats, stir the mayonnaise, tomato sauce, american mustard, finely chopped dill pickle, and the remaining dill pickle brine together for the sauce. 4. lift the chicken out of the marinade, press it firmly into the flour mixture, and fry for 3-4 minutes per side until deep golden and cooked through. rest the chicken on a rack or paper towel for 5 minutes. 5. toast the brioche buns cut-side down in a dry pan until lightly golden. 6. spread the pickle sauce over both bun halves, pile the base buns with shredded iceberg lettuce, top with the fried chicken and dill pickle slices, then close the burgers and serve hot."
+      "search_text": "dutch-oven fried chicken burgers with shrettuce & pickle sauce a crunchy dutch-oven fried chicken burger with cool lettuce and sharp pickle sauce makes the whole menu feel like a proper late-night diner order. burger main american-diner 2 862 main burger chicken fried diner highly rated - 350 g chicken thigh fillets, trimmed and halved into 2 large pieces - 150 ml buttermilk - 4 tbsp dill pickle brine - 140 g plain flour - 40 g cornflour - 1 tsp smoked paprika - 1 tsp garlic powder - 1/2 tsp onion powder - 1/2 tsp baking powder - 1 tsp flaky salt - 1/2 tsp cracked black pepper - 1 l vegetable oil - 3 tbsp whole-egg mayonnaise - 1 tbsp tomato sauce - 1 tsp american mustard - 1 dill pickle, finely chopped - 2 brioche burger buns - 60 g shredded iceberg lettuce - 6 dill pickle slices 1. toss the chicken with the buttermilk and 2 tbsp of the dill pickle brine, then leave it to marinate for 15 minutes while you prepare the rest. 2. in a shallow bowl, mix the plain flour, cornflour, smoked paprika, garlic powder, onion powder, baking powder, flaky salt, and black pepper. drizzle 1 tbsp of the chicken marinade into the flour and rub it through with your fingertips so the coating forms small craggy clumps. 3. heat the vegetable oil in a medium dutch oven over medium-high heat until it reaches 175 c. while it heats, stir the mayonnaise, tomato sauce, american mustard, finely chopped dill pickle, and the remaining dill pickle brine together for the sauce. 4. lift the chicken out of the marinade, press it firmly into the flour mixture, and fry for 3-4 minutes per side until deep golden and cooked through. rest the chicken on a rack or paper towel for 5 minutes. 5. toast the brioche buns cut-side down in a dry pan until lightly golden. 6. spread the pickle sauce over both bun halves, pile the base buns with shredded iceberg lettuce, top with the fried chicken and dill pickle slices, then close the burgers and serve hot."
     },
     {
       "id": "403",
@@ -1987,7 +1989,7 @@
       "cook": "0m",
       "rest": "0m",
       "difficulty": 1,
-      "rating": null,
+      "rating": 63.0,
       "image": "assets/images/426-soda-fountain-cola-spiders-8599799d.png",
       "image_alt": "Soda Fountain Cola Spiders",
       "tags": [

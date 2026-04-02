@@ -9,14 +9,34 @@
 <body>
   <div class="vc-app" id="vc-app">
     <header class="vc-topbar">
-      <div class="vc-brand-wrap">
-        <p class="vc-kicker">Vaultchef</p>
-        <h1>Recipe Library</h1>
+      <div class="vc-topbar-copy">
+        <div class="vc-brand-wrap">
+          <p class="vc-kicker">Recipe Library And Reader</p>
+          <h1>Vaultchef</h1>
+        </div>
+        <p class="vc-topbar-lede" id="vc-shell-lede">Browse recipes, open a focused reader, and move through curated cookbooks without leaving the library.</p>
+        <dl class="vc-shell-metrics" aria-label="Library summary">
+          <div class="vc-shell-metric">
+            <dt id="vc-shell-primary-label">In View</dt>
+            <dd id="vc-shell-primary-value">0</dd>
+          </div>
+          <div class="vc-shell-metric">
+            <dt id="vc-shell-secondary-label">Cookbooks</dt>
+            <dd id="vc-shell-secondary-value">0</dd>
+          </div>
+          <div class="vc-shell-metric">
+            <dt id="vc-shell-tertiary-label">Courses</dt>
+            <dd id="vc-shell-tertiary-value">0</dd>
+          </div>
+        </dl>
       </div>
-      <nav class="vc-tabs" role="tablist" aria-label="View selector">
-        <button class="vc-tab" id="vc-tab-recipes" data-tab="recipes" role="tab" aria-selected="true">Recipes</button>
-        <button class="vc-tab" id="vc-tab-cookbooks" data-tab="cookbooks" role="tab" aria-selected="false">Cookbooks</button>
-      </nav>
+      <div class="vc-topbar-aside">
+        <nav class="vc-tabs" role="tablist" aria-label="View selector">
+          <button class="vc-tab" id="vc-tab-recipes" data-tab="recipes" role="tab" aria-selected="true">Recipes</button>
+          <button class="vc-tab" id="vc-tab-cookbooks" data-tab="cookbooks" role="tab" aria-selected="false">Cookbooks</button>
+        </nav>
+        <p class="vc-mode-note" id="vc-mode-note">Search by dish, course, dietary need, or cookbook, then open the result into a calmer reading surface.</p>
+      </div>
     </header>
 
     <main class="vc-main">
@@ -32,7 +52,11 @@
         <div class="vc-list" id="vc-list"></div>
       </section>
       <section class="vc-detail-pane" aria-label="Detail">
-        <div id="vc-detail-empty" class="vc-detail-empty">Choose an item to see details.</div>
+        <div id="vc-detail-empty" class="vc-detail-empty">
+          <p class="vc-detail-empty-kicker">Recipe Reader</p>
+          <h2>Select A Recipe Or Cookbook</h2>
+          <p>Use the library on the left to open a full reader with imagery, ingredients, and method kept together.</p>
+        </div>
         <article id="vc-detail" class="vc-detail" hidden></article>
       </section>
     </main>

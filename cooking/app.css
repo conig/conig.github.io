@@ -1252,6 +1252,10 @@ img {
   display: none;
 }
 
+.vc-app.vc-mode-cookbook .vc-detail-empty {
+  display: none !important;
+}
+
 .vc-app.vc-mode-cookbook .vc-main {
   grid-template-columns: minmax(0, 1fr);
   gap: 0;
@@ -1312,6 +1316,12 @@ img {
 
 .vc-cookbook-heading .vc-lede {
   margin-top: 4px;
+}
+
+.vc-cookbook-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .vc-cookbook-meta-row {
@@ -1844,5 +1854,778 @@ h2.vc-notes-heading {
 
   .vc-cookbook-layout {
     padding-top: 10px;
+  }
+}
+
+/* Elegant frontend uplift */
+
+:root {
+  --vc-primary: #214c46;
+  --vc-primary-strong: #17352f;
+  --vc-primary-ink: #f7fbf9;
+  --vc-primary-soft: #dcece6;
+  --vc-accent: #ef6f42;
+  --vc-accent-soft: #f9e0d4;
+  --vc-bg: #f3efe8;
+  --vc-surface: #fffdf8;
+  --vc-surface-soft: #eef4f1;
+  --vc-surface-strong: #ffffff;
+  --vc-ink: #17211d;
+  --vc-muted: #596661;
+  --vc-muted-strong: #35443f;
+  --vc-border: rgba(35, 67, 61, 0.14);
+  --vc-border-strong: rgba(33, 76, 70, 0.3);
+  --vc-shadow-1: 0 22px 48px rgba(26, 39, 35, 0.08);
+  --vc-shadow-2: 0 30px 72px rgba(18, 30, 26, 0.12);
+  --vc-shadow-3: 0 44px 100px rgba(14, 24, 21, 0.16);
+  --vc-radius: 28px;
+  --vc-radius-soft: 20px;
+  --vc-gap: clamp(16px, 1.1vw + 10px, 26px);
+  --vc-focus-ring: 0 0 0 3px rgba(239, 111, 66, 0.22);
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(219, 235, 228, 0.85), transparent 24%),
+    radial-gradient(circle at 88% 10%, rgba(255, 216, 198, 0.58), transparent 22%),
+    linear-gradient(180deg, #fbfaf6 0%, #f5f0e8 48%, #f0ebe3 100%);
+}
+
+body::before {
+  height: 160px;
+  background:
+    linear-gradient(180deg, rgba(33, 76, 70, 0.05) 0%, rgba(33, 76, 70, 0) 100%),
+    linear-gradient(90deg, rgba(240, 111, 66, 0.08), rgba(255, 255, 255, 0));
+}
+
+body::after {
+  display: none;
+}
+
+.vc-app {
+  max-width: 1650px;
+  padding: clamp(16px, 1.8vw, 28px);
+}
+
+.vc-topbar,
+.vc-sidebar {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--vc-shadow-1);
+  backdrop-filter: blur(10px);
+}
+
+.vc-topbar {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(10px, 1vw, 16px);
+  padding: clamp(12px, 1.1vw, 16px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(216, 235, 227, 0.95), transparent 32%),
+    radial-gradient(circle at 100% 100%, rgba(255, 220, 204, 0.7), transparent 32%),
+    linear-gradient(135deg, rgba(255, 253, 248, 0.96) 0%, rgba(244, 247, 243, 0.96) 52%, rgba(255, 250, 244, 0.98) 100%);
+}
+
+.vc-topbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(33, 76, 70, 0.07) 0 8px, transparent 8px 100%);
+  width: 12px;
+  inset: 0 auto 0 0;
+  pointer-events: none;
+}
+
+.vc-topbar::after {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.vc-topbar-copy,
+.vc-topbar-aside {
+  position: relative;
+  z-index: 1;
+}
+
+.vc-topbar-copy {
+  display: grid;
+  gap: 6px;
+  align-content: center;
+  max-width: 34rem;
+}
+
+.vc-brand-wrap {
+  gap: 8px;
+}
+
+.vc-brand-wrap::after {
+  width: min(180px, 40vw);
+  background: linear-gradient(90deg, rgba(33, 76, 70, 0.28), rgba(33, 76, 70, 0));
+}
+
+.vc-kicker {
+  color: rgba(23, 53, 47, 0.54);
+  letter-spacing: 0.16em;
+}
+
+.vc-brand-wrap h1 {
+  color: var(--vc-ink);
+  font-size: clamp(1.8rem, 1.48rem + 0.9vw, 2.55rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.vc-topbar-lede,
+.vc-mode-note {
+  margin: 0;
+  max-width: 23rem;
+  color: var(--vc-muted);
+  line-height: 1.38;
+  font-size: 0.86rem;
+}
+
+.vc-shell-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+}
+
+.vc-shell-metric {
+  margin: 0;
+  min-width: 84px;
+  padding: 6px 9px;
+  border-top: 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(33, 76, 70, 0.08);
+  display: grid;
+  gap: 4px;
+}
+
+.vc-shell-metric dt {
+  color: rgba(23, 53, 47, 0.56);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.vc-shell-metric dd {
+  margin: 0;
+  color: var(--vc-ink);
+  font-family: var(--vc-font-ui);
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.vc-topbar-aside {
+  display: grid;
+  justify-items: end;
+  align-content: center;
+  gap: 6px;
+}
+
+.vc-tabs {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(33, 76, 70, 0.08);
+  box-shadow: 0 8px 18px rgba(20, 35, 31, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.vc-tab {
+  color: rgba(23, 53, 47, 0.7);
+  min-width: 118px;
+}
+
+.vc-tab[aria-selected="true"] {
+  background: linear-gradient(180deg, #2d685f 0%, var(--vc-primary) 100%);
+  box-shadow: 0 10px 22px rgba(21, 51, 46, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.vc-mode-note {
+  text-align: right;
+  max-width: 24rem;
+}
+
+.vc-sidebar {
+  padding: clamp(13px, 1vw, 16px);
+  gap: 12px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 252, 0.92) 0%, rgba(247, 249, 247, 0.88) 100%);
+}
+
+.vc-search-field {
+  gap: 6px;
+  font-size: 0.7rem;
+}
+
+.vc-search-field input {
+  min-height: 40px;
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(33, 76, 70, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+.vc-filters {
+  gap: 8px;
+}
+
+.vc-filter-group {
+  gap: 6px;
+}
+
+.vc-filter-heading {
+  font-size: 0.66rem;
+}
+
+.vc-filter-group-row {
+  gap: 8px;
+}
+
+.vc-chip {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(33, 76, 70, 0.1);
+  font-size: 0.76rem;
+}
+
+.vc-chip[aria-pressed="true"] {
+  border-color: rgba(33, 76, 70, 0.22);
+  background: linear-gradient(180deg, rgba(224, 239, 233, 0.98) 0%, rgba(212, 231, 223, 0.98) 100%);
+}
+
+.vc-rating-star {
+  min-height: 38px;
+  min-width: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(33, 76, 70, 0.32);
+  font: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 120ms ease, transform 120ms ease, text-shadow 120ms ease, box-shadow 120ms ease;
+}
+
+.vc-rating-star:hover,
+.vc-rating-star:focus-visible {
+  color: rgba(33, 76, 70, 0.54);
+  outline: none;
+}
+
+.vc-rating-star:focus-visible {
+  box-shadow: var(--vc-focus-ring);
+  border-radius: 10px;
+}
+
+.vc-rating-star[data-filled="true"] {
+  color: var(--vc-accent);
+}
+
+.vc-feature-card {
+  padding: 0 0 18px;
+  gap: 12px;
+  border: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 252, 0.98) 0%, rgba(245, 249, 246, 0.98) 100%);
+  box-shadow: var(--vc-shadow-1);
+}
+
+.vc-feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 38%);
+  pointer-events: none;
+}
+
+.vc-feature-card .vc-feature-kicker,
+.vc-feature-card h3,
+.vc-feature-card .vc-feature-body,
+.vc-feature-card .vc-meta-row {
+  padding-inline: 18px;
+}
+
+.vc-feature-card .vc-feature-kicker {
+  padding-top: 18px;
+}
+
+.vc-feature-card h3 {
+  font-size: clamp(1.24rem, 1rem + 0.5vw, 1.5rem);
+}
+
+.vc-feature-hero {
+  margin: 0 18px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.vc-main,
+.vc-list-pane,
+.vc-list {
+  gap: 16px;
+}
+
+.vc-card {
+  padding: 0 0 14px;
+  gap: 10px;
+  border: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 252, 0.98) 0%, rgba(246, 249, 246, 0.98) 100%);
+  box-shadow: var(--vc-shadow-1);
+}
+
+.vc-card::before {
+  content: none;
+}
+
+.vc-card::after {
+  inset: 12px;
+  border-radius: calc(var(--vc-radius) - 10px);
+  border-color: rgba(33, 76, 70, 0.1);
+  opacity: 0.55;
+}
+
+.vc-card:hover,
+.vc-card:focus-visible,
+.vc-feature-card:hover,
+.vc-feature-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 64px rgba(55, 30, 16, 0.12);
+}
+
+.vc-card-hero {
+  margin: 0;
+  border-radius: 26px 26px 16px 16px;
+  border: 0;
+  background: linear-gradient(180deg, #edf4f1 0%, #e5efea 100%);
+  box-shadow: none;
+  padding: 0;
+  aspect-ratio: 1 / 0.95;
+}
+
+.vc-card-hero img,
+.vc-collage-cell img {
+  object-fit: cover;
+}
+
+.vc-card > h2,
+.vc-card > .vc-card-body,
+.vc-card > .vc-meta-row {
+  padding-inline: 16px;
+}
+
+.vc-card h2 {
+  font-size: clamp(1.34rem, 1.06rem + 0.72vw, 1.68rem);
+}
+
+.vc-card-body {
+  color: var(--vc-muted);
+  line-height: 1.62;
+}
+
+.vc-pill {
+  background: rgba(230, 239, 234, 0.8);
+  color: var(--vc-muted-strong);
+  backdrop-filter: blur(8px);
+}
+
+.vc-pill-course {
+  background: linear-gradient(180deg, rgba(222, 237, 231, 0.98) 0%, rgba(207, 228, 219, 0.98) 100%);
+}
+
+.vc-pill-accent {
+  background: linear-gradient(180deg, rgba(252, 230, 221, 0.98) 0%, rgba(248, 214, 200, 0.98) 100%);
+  color: #93411e;
+}
+
+.vc-detail-empty,
+.vc-empty {
+  border-style: solid;
+  border-color: rgba(33, 76, 70, 0.12);
+  background:
+    radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.62), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 252, 0.94) 0%, rgba(245, 249, 246, 0.9) 100%);
+  box-shadow: var(--vc-shadow-1);
+}
+
+.vc-detail-empty {
+  min-height: 220px;
+  display: grid;
+  align-content: end;
+  gap: 8px;
+}
+
+.vc-detail-empty h2,
+.vc-detail-empty p {
+  margin: 0;
+}
+
+.vc-detail-empty h2 {
+  font-family: var(--vc-font-display);
+  font-size: clamp(1.8rem, 1.4rem + 1vw, 2.5rem);
+  letter-spacing: -0.03em;
+}
+
+.vc-detail-empty-kicker {
+  color: var(--vc-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.vc-detail-surface {
+  border: 0;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(239, 111, 66, 0.08), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 252, 0.98) 0%, rgba(246, 249, 246, 0.98) 100%);
+  box-shadow: var(--vc-shadow-2);
+  padding: clamp(20px, 2.2vw, 32px);
+}
+
+.vc-detail-surface::after {
+  inset: 16px;
+  border-color: rgba(33, 76, 70, 0.1);
+}
+
+.vc-recipe-head {
+  gap: 16px;
+}
+
+.vc-modal-head {
+  align-items: end;
+}
+
+.vc-modal-actions {
+  background: rgba(255, 251, 246, 0.86);
+}
+
+.vc-recipe-reader-layout {
+  display: grid;
+  gap: 22px;
+}
+
+.vc-recipe-reader-visual-column,
+.vc-recipe-reader-prose,
+.vc-recipe-reader-cookbooks {
+  display: grid;
+  gap: 16px;
+}
+
+.vc-recipe-reader-cookbooks {
+  padding: 18px 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(33, 76, 70, 0.1);
+  background: rgba(252, 255, 253, 0.82);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76);
+}
+
+.vc-hero {
+  width: 100%;
+  max-width: none;
+  min-height: 280px;
+  height: clamp(280px, 32vw, 420px);
+  border-radius: 26px;
+  border: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #eef5f1 0%, #e2ece7 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+
+.vc-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vc-hero-placeholder .vc-image-fallback,
+.vc-hero .vc-image-fallback {
+  inset: 0;
+  border-radius: 0;
+  border: 0;
+}
+
+.vc-detail-grid {
+  gap: 18px;
+}
+
+.vc-detail-panel {
+  border: 1px solid rgba(33, 76, 70, 0.1);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 252, 0.96) 0%, rgba(247, 249, 246, 0.94) 100%);
+  padding: 20px 22px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+}
+
+.vc-detail-panel h3 {
+  margin-bottom: 10px;
+}
+
+.vc-cookbook-shell {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(220, 236, 228, 0.66), transparent 36%),
+    radial-gradient(circle at 92% 6%, rgba(255, 221, 206, 0.46), transparent 28%),
+    linear-gradient(180deg, #fbfaf6 0%, #f2eee7 100%);
+}
+
+.vc-cookbook-header {
+  border-bottom: 0;
+  box-shadow: 0 16px 36px rgba(23, 40, 35, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 252, 0.96) 0%, rgba(247, 249, 246, 0.92) 100%);
+}
+
+.vc-nav-panel,
+.vc-music-panel,
+.vc-recipe-card {
+  border: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 252, 0.96) 0%, rgba(246, 249, 246, 0.96) 100%);
+  box-shadow: var(--vc-shadow-1);
+}
+
+.vc-nav-link:hover,
+.vc-nav-link:focus-visible {
+  background: rgba(228, 238, 233, 0.84);
+}
+
+.vc-nav-link[aria-current="true"] {
+  border-color: rgba(33, 76, 70, 0.2);
+  background: linear-gradient(180deg, rgba(224, 239, 233, 0.98) 0%, rgba(210, 230, 221, 0.98) 100%);
+}
+
+.vc-recipe-card {
+  padding: clamp(18px, 2vw, 28px);
+}
+
+.vc-section-panel {
+  border: 1px solid rgba(33, 76, 70, 0.08);
+  border-radius: 20px;
+}
+
+.vc-recipe-visual .vc-hero {
+  width: 100%;
+  min-height: 260px;
+  height: min(38svh, 360px);
+  border-radius: 20px;
+}
+
+body.vc-ready .vc-topbar-copy > * {
+  animation: vc-rise-in 720ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+body.vc-ready .vc-topbar-copy > *:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+body.vc-ready .vc-topbar-copy > *:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+body.vc-ready .vc-topbar-visual {
+  animation: vc-visual-in 840ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+  animation-delay: 120ms;
+}
+
+.vc-card,
+.vc-feature-card {
+  animation: vc-rise-in 620ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+  animation-delay: var(--vc-enter-delay, 0ms);
+}
+
+.vc-app.vc-mode-recipes .vc-topbar,
+.vc-app.vc-mode-cookbook-library .vc-topbar {
+  position: static;
+  top: auto;
+}
+
+@keyframes vc-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vc-visual-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (min-width: 980px) {
+  .vc-main {
+    grid-template-columns: minmax(340px, 0.88fr) minmax(0, 1.12fr);
+  }
+
+  .vc-topbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  .vc-mode-note {
+    display: none;
+  }
+
+  .vc-list-pane {
+    max-height: calc(100dvh - 32px);
+  }
+
+  .vc-detail-pane {
+    max-height: calc(100dvh - 36px);
+  }
+
+  .vc-app.vc-mode-recipes .vc-list-pane,
+  .vc-app.vc-mode-cookbook-library .vc-list-pane {
+    grid-template-columns: minmax(228px, 258px) minmax(0, 1fr);
+  }
+
+  .vc-app.vc-mode-recipes .vc-list,
+  .vc-app.vc-mode-cookbook-library .vc-list {
+    grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
+    gap: 14px;
+  }
+
+  .vc-app.vc-mode-recipes .vc-card,
+  .vc-app.vc-mode-cookbook-library .vc-card {
+    padding-bottom: 12px;
+    gap: 8px;
+  }
+
+  .vc-app.vc-mode-recipes .vc-card-hero,
+  .vc-app.vc-mode-cookbook-library .vc-card-hero {
+    aspect-ratio: 1 / 0.82;
+  }
+
+  .vc-app.vc-mode-recipes .vc-card > h2,
+  .vc-app.vc-mode-recipes .vc-card > .vc-card-body,
+  .vc-app.vc-mode-recipes .vc-card > .vc-meta-row,
+  .vc-app.vc-mode-cookbook-library .vc-card > h2,
+  .vc-app.vc-mode-cookbook-library .vc-card > .vc-card-body,
+  .vc-app.vc-mode-cookbook-library .vc-card > .vc-meta-row {
+    padding-inline: 14px;
+  }
+
+  .vc-app.vc-mode-recipes .vc-card h2,
+  .vc-app.vc-mode-cookbook-library .vc-card h2 {
+    font-size: clamp(0.98rem, 0.92rem + 0.2vw, 1.1rem);
+    line-height: 1;
+  }
+
+  .vc-app.vc-mode-recipes .vc-card-body,
+  .vc-app.vc-mode-cookbook-library .vc-card-body {
+    font-size: 0.92rem;
+    line-height: 1.42;
+    -webkit-line-clamp: 2;
+    min-height: 2.84em;
+  }
+
+  .vc-app.vc-mode-recipe-open .vc-main {
+    grid-template-columns: minmax(380px, 0.9fr) minmax(440px, 1.1fr);
+  }
+
+  .vc-recipe-reader-layout {
+    grid-template-columns: minmax(250px, 0.82fr) minmax(0, 1.18fr);
+    align-items: start;
+  }
+
+  .vc-recipe-reader-visual-column {
+    position: sticky;
+    top: 16px;
+  }
+
+  .vc-app.vc-mode-recipe-open .vc-detail-pane {
+    max-height: calc(100dvh - 32px);
+  }
+
+  .vc-app.vc-mode-recipes .vc-topbar,
+  .vc-app.vc-mode-cookbook-library .vc-topbar {
+    position: static;
+  }
+
+  .vc-app.vc-mode-recipes .vc-sidebar,
+  .vc-app.vc-mode-cookbook-library .vc-sidebar,
+  .vc-app.vc-mode-recipe-open .vc-detail-pane {
+    top: 16px;
+  }
+
+  .vc-chip {
+    min-height: 32px;
+    padding: 0 10px;
+  }
+
+  .vc-app.vc-mode-recipes .vc-card .vc-pill,
+  .vc-app.vc-mode-cookbook-library .vc-card .vc-pill {
+    min-height: 24px;
+    font-size: 0.68rem;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 979px) {
+  .vc-topbar {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
+  }
+
+  .vc-topbar-aside {
+    justify-items: start;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .vc-mode-note {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .vc-shell-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 959px) {
+  .vc-app.vc-mode-recipe-reader .vc-topbar {
+    min-height: auto;
+    padding: 16px 18px;
+    gap: 10px;
+    background:
+      linear-gradient(180deg, rgba(33, 76, 70, 0.97) 0%, rgba(40, 89, 82, 0.95) 100%);
+  }
+
+  .vc-app.vc-mode-recipe-reader .vc-topbar-lede,
+  .vc-app.vc-mode-recipe-reader .vc-shell-metrics,
+  .vc-app.vc-mode-recipe-reader .vc-mode-note {
+    display: none;
+  }
+
+  .vc-app.vc-mode-recipe-reader .vc-brand-wrap h1 {
+    font-size: clamp(2rem, 1.42rem + 2vw, 2.75rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.vc-ready .vc-topbar-copy > *,
+  .vc-card,
+  .vc-feature-card {
+    animation: none;
   }
 }
