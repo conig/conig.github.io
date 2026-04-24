@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conigrave Track</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">England, 1100-1788</p>
+        <h1>Conigrave Track</h1>
+      </div>
+      <div class="topbar__status" aria-live="polite">
+        <span id="dataStatus">Loading records</span>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="map-panel" aria-label="Surname animation map">
+        <div class="timeline-strip">
+          <div>
+            <p class="label">Year</p>
+            <output id="yearLabel" class="year-label" for="yearRange">1788</output>
+          </div>
+          <div class="controls" aria-label="Animation controls">
+            <div class="control-field control-field--play">
+              <span>Playback</span>
+              <button id="playButton" type="button" class="control-button" aria-pressed="false">Play</button>
+            </div>
+            <label class="speed-control control-field">
+              <span>Speed</span>
+              <select id="speedSelect">
+                <option value="8">Measured</option>
+                <option value="20" selected>Steady</option>
+                <option value="55">Fast</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="mapCanvas" width="1200" height="860" aria-label="Map of England with animated surname records"></canvas>
+          <div id="tooltip" class="tooltip" role="status" aria-live="polite" hidden></div>
+          <div class="map-caption">
+            <span>Dots are plotted for source-backed English birth or lived locations.</span>
+            <span>Foreign death places are represented as exits, not map points.</span>
+          </div>
+        </div>
+
+        <div class="range-row">
+          <span id="timelineStartLabel">1100</span>
+          <input id="yearRange" type="range" min="1100" max="1788" value="1788" step="1" aria-label="Timeline year">
+          <span id="timelineEndLabel">1788</span>
+        </div>
+      </section>
+
+      <aside class="side-panel" aria-label="Records and research panel">
+        <section class="stats-grid" aria-label="Current year summary">
+          <div>
+            <p class="label">Visible</p>
+            <strong id="visibleCount">0</strong>
+          </div>
+          <div>
+            <p class="label">Births</p>
+            <strong id="birthCount">0</strong>
+          </div>
+          <div>
+            <p class="label">Lived</p>
+            <strong id="livedCount">0</strong>
+          </div>
+          <div>
+            <p class="label">Deaths</p>
+            <strong id="deathCount">0</strong>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>Map Layers</h2>
+          </div>
+          <div class="layer-list">
+            <label class="layer-item">
+              <input id="staffordshireToggle" type="checkbox">
+              <span class="layer-swatch layer-swatch--staffordshire"></span>
+              <span>Staffordshire boundary</span>
+            </label>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>Filters</h2>
+            <button id="resetFilters" type="button" class="text-button">Reset</button>
+          </div>
+          <div class="filter-list">
+            <label class="filter-item">
+              <input id="maleOnlyToggle" type="checkbox">
+              <span>Male records only</span>
+              <span id="maleFilterCount" class="subtle"></span>
+            </label>
+          </div>
+          <div class="filter-subheading-row">
+            <p class="label filter-subheading">Variants</p>
+            <button id="clearVariants" type="button" class="text-button text-button--quiet">Unselect all</button>
+          </div>
+          <div id="variantFilters" class="variant-list"></div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>Records</h2>
+            <span id="recordTotal" class="subtle"></span>
+          </div>
+          <div id="recordList" class="record-list" role="list"></div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>Research Ledger</h2>
+            <span id="leadTotal" class="subtle"></span>
+          </div>
+          <div id="leadList" class="lead-list" role="list"></div>
+        </section>
+      </aside>
+    </main>
+
+    <dialog id="recordModal" class="record-modal" aria-labelledby="recordModalTitle">
+      <div class="record-modal__header">
+        <div>
+          <p class="label">Selected Record</p>
+          <h2 id="recordModalTitle">Record details</h2>
+        </div>
+        <button id="recordModalClose" type="button" class="icon-button" aria-label="Close record details">X</button>
+      </div>
+      <div id="recordDetails" class="record-modal__body"></div>
+    </dialog>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
