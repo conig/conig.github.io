@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "generatedFrom": "data/people.json",
-  "generatedAt": "2026-04-24T05:50:33.954Z",
+  "generatedAt": "2026-04-24T12:04:56.604Z",
   "events": [
     {
       "personId": "alan-de-cungrave-staffordshire-1203",
@@ -100,6 +100,22 @@
       "evidenceType": "common-pleas-plaintiff-index"
     },
     {
+      "personId": "richard-congrave-loughton-essex",
+      "type": "lived",
+      "year": 1471,
+      "startYear": 1471,
+      "endYear": 1471,
+      "date": "1471-02-03",
+      "dateLabel": "West Tilbury final concord, 3 February 1471",
+      "place": "West Tilbury, Essex",
+      "country": "England",
+      "lat": 51.47,
+      "lon": 0.42,
+      "surnameVariant": "congrave",
+      "gender": "male",
+      "evidenceType": "feet-of-fines-remainder-attestation"
+    },
+    {
       "personId": "agnes-harpur-congreve",
       "type": "lived",
       "year": 1475,
@@ -162,6 +178,22 @@
       "surnameVariant": "conygrave",
       "gender": "male",
       "evidenceType": "payment-attestation"
+    },
+    {
+      "personId": "richard-congrave-loughton-essex",
+      "type": "death",
+      "year": 1496,
+      "startYear": 1496,
+      "endYear": 1496,
+      "date": null,
+      "dateLabel": null,
+      "place": "Loughton, Essex",
+      "country": "England",
+      "lat": 51.646,
+      "lon": 0.055,
+      "surnameVariant": "congrave",
+      "gender": "male",
+      "evidenceType": "death"
     },
     {
       "personId": "richard-congrave-loughton-essex",
@@ -319,7 +351,7 @@
       "country": "England",
       "lat": 51.5074,
       "lon": -0.1278,
-      "surnameVariant": "conygrave",
+      "surnameVariant": "conigrave",
       "gender": "male",
       "evidenceType": "common-pleas-attestation"
     },
@@ -351,7 +383,7 @@
       "country": "England",
       "lat": 51.8517,
       "lon": -0.5039,
-      "surnameVariant": "conygrave",
+      "surnameVariant": "conigrave",
       "gender": "male",
       "evidenceType": "manor-conveyance"
     },
@@ -425,8 +457,8 @@
       "year": 1556,
       "startYear": 1556,
       "endYear": 1556,
-      "date": null,
-      "dateLabel": "University of Oxford register, 1556",
+      "date": "1556-12-09",
+      "dateLabel": "B.A. supplication Nov. 1556; admitted 9 Dec. 1556; determined 1557",
       "place": "Oxford, Oxfordshire",
       "country": "England",
       "lat": 51.752,
@@ -881,6 +913,22 @@
       "lon": -2.254,
       "surnameVariant": "congreve",
       "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
+      "personId": "margaret-congreave-wolverhampton-1607",
+      "type": "birth",
+      "year": 1607,
+      "startYear": 1607,
+      "endYear": 1607,
+      "date": "1607-12-02",
+      "dateLabel": null,
+      "place": "St Peter, Wolverhampton, Staffordshire",
+      "country": "England",
+      "lat": 52.587,
+      "lon": -2.128,
+      "surnameVariant": "congreave",
+      "gender": "female",
       "evidenceType": "birth"
     },
     {
@@ -2016,7 +2064,7 @@
       "lat": 52.587,
       "lon": -2.128,
       "surnameVariant": "congrave",
-      "gender": "unknown",
+      "gender": "male",
       "evidenceType": "death"
     },
     {
@@ -2048,7 +2096,7 @@
       "lat": 52.587,
       "lon": -2.128,
       "surnameVariant": "congrave",
-      "gender": "unknown",
+      "gender": "male",
       "evidenceType": "burial"
     },
     {
@@ -2964,6 +3012,22 @@
       "evidenceType": "parish-marriage-attestation"
     },
     {
+      "personId": "thomas-congreave-elford-1673",
+      "type": "birth",
+      "year": 1673,
+      "startYear": 1673,
+      "endYear": 1673,
+      "date": "1673-08-03",
+      "dateLabel": null,
+      "place": "St Peter, Elford, Staffordshire",
+      "country": "England",
+      "lat": 52.68736,
+      "lon": -1.7203551,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
       "personId": "mary-conigrave-aldgate-widow-1674",
       "type": "lived",
       "year": 1674,
@@ -2978,6 +3042,22 @@
       "surnameVariant": "conigrave",
       "gender": "female",
       "evidenceType": "chancery-property-suit"
+    },
+    {
+      "personId": "john-congreave-elford-1675",
+      "type": "birth",
+      "year": 1675,
+      "startYear": 1675,
+      "endYear": 1675,
+      "date": "1675-02-16",
+      "dateLabel": "baptised 16 February 1674/75",
+      "place": "St Peter, Elford, Staffordshire",
+      "country": "England",
+      "lat": 52.68736,
+      "lon": -1.7203551,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
     },
     {
       "personId": "francis-congrave-polesworth-1675",
@@ -3010,6 +3090,22 @@
       "surnameVariant": "congrave",
       "gender": "female",
       "evidenceType": "parish-marriage-attestation"
+    },
+    {
+      "personId": "ann-congreave-elford-1676",
+      "type": "birth",
+      "year": 1676,
+      "startYear": 1676,
+      "endYear": 1676,
+      "date": "1676-09-25",
+      "dateLabel": null,
+      "place": "St Peter, Elford, Staffordshire",
+      "country": "England",
+      "lat": 52.68736,
+      "lon": -1.7203551,
+      "surnameVariant": "congreave",
+      "gender": "female",
+      "evidenceType": "birth"
     },
     {
       "personId": "william-congrave-kingsbury-1676",
@@ -3088,6 +3184,22 @@
       "lat": 52.6184,
       "lon": -1.6105,
       "surnameVariant": "congrave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
+      "personId": "william-congreave-elford-1678",
+      "type": "birth",
+      "year": 1678,
+      "startYear": 1678,
+      "endYear": 1678,
+      "date": "1678-03-14",
+      "dateLabel": "baptised 14 March 1677/78",
+      "place": "St Peter, Elford, Staffordshire",
+      "country": "England",
+      "lat": 52.68736,
+      "lon": -1.7203551,
+      "surnameVariant": "congreave",
       "gender": "male",
       "evidenceType": "birth"
     },
@@ -3172,6 +3284,22 @@
       "evidenceType": "parish-marriage-attestation"
     },
     {
+      "personId": "mary-congreave-elford-1680",
+      "type": "birth",
+      "year": 1680,
+      "startYear": 1680,
+      "endYear": 1680,
+      "date": "1680-01-21",
+      "dateLabel": "baptised 21 January 1679/80",
+      "place": "St Peter, Elford, Staffordshire",
+      "country": "England",
+      "lat": 52.68736,
+      "lon": -1.7203551,
+      "surnameVariant": "congreave",
+      "gender": "female",
+      "evidenceType": "birth"
+    },
+    {
       "personId": "richard-congreve-stretton-cavalier",
       "type": "lived",
       "year": 1680,
@@ -3186,6 +3314,22 @@
       "surnameVariant": "congreve",
       "gender": "male",
       "evidenceType": "published-pedigree-family-placement"
+    },
+    {
+      "personId": "robert-congreave-elford-1681",
+      "type": "birth",
+      "year": 1681,
+      "startYear": 1681,
+      "endYear": 1681,
+      "date": "1681-11-16",
+      "dateLabel": null,
+      "place": "St Peter, Elford, Staffordshire",
+      "country": "England",
+      "lat": 52.68736,
+      "lon": -1.7203551,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
     },
     {
       "personId": "abigail-harwood-congreve",
@@ -3634,6 +3778,22 @@
       "surnameVariant": "congrave",
       "gender": "female",
       "evidenceType": "burial"
+    },
+    {
+      "personId": "john-congreave-kingsbury-1698",
+      "type": "birth",
+      "year": 1698,
+      "startYear": 1698,
+      "endYear": 1698,
+      "date": "1698-04-06",
+      "dateLabel": null,
+      "place": "SS Peter and Paul, Kingsbury, Warwickshire",
+      "country": "England",
+      "lat": 52.5621,
+      "lon": -1.6786,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
     },
     {
       "personId": "joseph-congreave-gnosall-1698",
@@ -4100,6 +4260,22 @@
       "evidenceType": "parish-marriage-attestation"
     },
     {
+      "personId": "william-congreave-sheffield-1729",
+      "type": "birth",
+      "year": 1729,
+      "startYear": 1729,
+      "endYear": 1729,
+      "date": "1729-06-20",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
       "personId": "william-congreve-playwright",
       "type": "death",
       "year": 1729,
@@ -4178,6 +4354,22 @@
       "surnameVariant": "congrave",
       "gender": "unknown",
       "evidenceType": "burial"
+    },
+    {
+      "personId": "elizabeth-congreave-walsall-1732",
+      "type": "birth",
+      "year": 1732,
+      "startYear": 1732,
+      "endYear": 1732,
+      "date": "1732-02-25",
+      "dateLabel": "baptised 25 February 1731/2",
+      "place": "St Matthew, Walsall, Staffordshire",
+      "country": "England",
+      "lat": 52.58372,
+      "lon": -1.9817,
+      "surnameVariant": "congreave",
+      "gender": "female",
+      "evidenceType": "birth"
     },
     {
       "personId": "nicholas-congrave-north-walsham-1732",
@@ -4308,6 +4500,22 @@
       "evidenceType": "birth"
     },
     {
+      "personId": "isaac-congreave-spalding-1752",
+      "type": "birth",
+      "year": 1752,
+      "startYear": 1752,
+      "endYear": 1752,
+      "date": "1752-06-17",
+      "dateLabel": null,
+      "place": "St Mary and St Nicholas, Spalding, Lincolnshire",
+      "country": "England",
+      "lat": 52.7871,
+      "lon": -0.1514,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
       "personId": "phobe-congrave-austrey-1752",
       "type": "death",
       "year": 1752,
@@ -4338,6 +4546,22 @@
       "surnameVariant": "congrave",
       "gender": "female",
       "evidenceType": "burial"
+    },
+    {
+      "personId": "willm-congreave-sheffield-1753",
+      "type": "birth",
+      "year": 1753,
+      "startYear": 1753,
+      "endYear": 1753,
+      "date": "1753-10-03",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
     },
     {
       "personId": "mary-conigrave-coventry-1754",
@@ -4436,6 +4660,22 @@
       "evidenceType": "birth"
     },
     {
+      "personId": "saml-congreave-sheffield-1756",
+      "type": "birth",
+      "year": 1756,
+      "startYear": 1756,
+      "endYear": 1756,
+      "date": "1756-02-13",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
       "personId": "saray-congrave-austrey-1756",
       "type": "birth",
       "year": 1756,
@@ -4448,6 +4688,38 @@
       "lat": 52.6245,
       "lon": -1.5848,
       "surnameVariant": "congrave",
+      "gender": "female",
+      "evidenceType": "birth"
+    },
+    {
+      "personId": "willm-congreave-sheffield-1757",
+      "type": "birth",
+      "year": 1757,
+      "startYear": 1757,
+      "endYear": 1757,
+      "date": "1757-06-22",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
+      "personId": "jane-congreave-sheffield-1759",
+      "type": "birth",
+      "year": 1759,
+      "startYear": 1759,
+      "endYear": 1759,
+      "date": "1759-09-14",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
       "gender": "female",
       "evidenceType": "birth"
     },
@@ -4482,6 +4754,38 @@
       "surnameVariant": "congrave",
       "gender": "male",
       "evidenceType": "parish-marriage-attestation"
+    },
+    {
+      "personId": "thos-congreave-sheffield-1761",
+      "type": "birth",
+      "year": 1761,
+      "startYear": 1761,
+      "endYear": 1761,
+      "date": "1761-10-30",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
+      "personId": "eliz-congreave-sheffield-1764",
+      "type": "birth",
+      "year": 1764,
+      "startYear": 1764,
+      "endYear": 1764,
+      "date": "1764-01-13",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "female",
+      "evidenceType": "birth"
     },
     {
       "personId": "mary-congrave-derby-1764",
@@ -4660,6 +4964,22 @@
       "evidenceType": "parish-marriage-attestation"
     },
     {
+      "personId": "samuel-congreave-sheffield-1768",
+      "type": "birth",
+      "year": 1768,
+      "startYear": 1768,
+      "endYear": 1768,
+      "date": "1768-11-20",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
       "personId": "fanny-congrave-farringdon-1769",
       "type": "death",
       "year": 1769,
@@ -4770,6 +5090,22 @@
       "surnameVariant": "conigrave",
       "gender": "male",
       "evidenceType": "monumental-inscription-death"
+    },
+    {
+      "personId": "mary-congreave-sheffield-1771",
+      "type": "birth",
+      "year": 1771,
+      "startYear": 1771,
+      "endYear": 1771,
+      "date": "1771-01-20",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "female",
+      "evidenceType": "birth"
     },
     {
       "personId": "ammishay-congrave-stoke-golding-1771",
@@ -5044,6 +5380,22 @@
       "evidenceType": "birth"
     },
     {
+      "personId": "hannah-congreave-sheffield-1774",
+      "type": "birth",
+      "year": 1774,
+      "startYear": 1774,
+      "endYear": 1774,
+      "date": "1774-05-22",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "female",
+      "evidenceType": "birth"
+    },
+    {
       "personId": "mary-congrave-mancetter-1775",
       "type": "birth",
       "year": 1775,
@@ -5300,6 +5652,38 @@
       "evidenceType": "burial"
     },
     {
+      "personId": "danl-congreave-halesowen-1780",
+      "type": "birth",
+      "year": 1780,
+      "startYear": 1780,
+      "endYear": 1780,
+      "date": "1780-01-03",
+      "dateLabel": null,
+      "place": "St John the Baptist, Halesowen, Worcestershire",
+      "country": "England",
+      "lat": 52.4489,
+      "lon": -2.0539,
+      "surnameVariant": "congreave",
+      "gender": "male",
+      "evidenceType": "birth"
+    },
+    {
+      "personId": "james-congreave-halesowen-1780",
+      "type": "birth",
+      "year": 1780,
+      "startYear": 1780,
+      "endYear": 1780,
+      "date": "1780-01-03",
+      "dateLabel": null,
+      "place": "St John the Baptist, Halesowen, Worcestershire",
+      "country": "England",
+      "lat": 52.4489,
+      "lon": -2.0539,
+      "surnameVariant": "congreave",
+      "gender": "unknown",
+      "evidenceType": "birth"
+    },
+    {
       "personId": "mary-congrave-spalding-1767",
       "type": "death",
       "year": 1780,
@@ -5426,6 +5810,22 @@
       "surnameVariant": "congrave",
       "gender": "male",
       "evidenceType": "burial"
+    },
+    {
+      "personId": "ann-congreave-sheffield-1786",
+      "type": "birth",
+      "year": 1786,
+      "startYear": 1786,
+      "endYear": 1786,
+      "date": "1786-08-27",
+      "dateLabel": null,
+      "place": "St Peter and St Paul, Sheffield, Yorkshire, West Riding",
+      "country": "England",
+      "lat": 53.383,
+      "lon": -1.4694,
+      "surnameVariant": "congreave",
+      "gender": "female",
+      "evidenceType": "birth"
     },
     {
       "personId": "ann-conigrave-coventry-1787",

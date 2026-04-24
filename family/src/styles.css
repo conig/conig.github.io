@@ -247,24 +247,6 @@ h2 {
   cursor: crosshair;
 }
 
-.map-caption {
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 12px;
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 10px;
-  border: 1px solid rgba(18, 29, 24, 0.08);
-  border-radius: 6px;
-  background: rgba(255, 254, 249, 0.74);
-  color: rgba(18, 29, 24, 0.74);
-  font-size: 0.78rem;
-  backdrop-filter: blur(8px);
-  pointer-events: none;
-}
-
 .tooltip {
   position: absolute;
   z-index: 4;
@@ -589,8 +571,7 @@ input[type="range"] {
 
 @media (max-width: 680px) {
   .topbar,
-  .timeline-strip,
-  .map-caption {
+  .timeline-strip {
     align-items: flex-start;
     flex-direction: column;
   }

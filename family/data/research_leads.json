@@ -354,13 +354,16 @@
       "variant": "Congreve",
       "period": "1440-1530 and later",
       "place": "Staffordshire, Essex, London",
-      "summary": "AALT indexes exposed Richard Congreve in 1440, Richard Congrave of Loughton in 1483, Margery and John Congreve in a 1521 Staffordshire dower action, and Ralph Congreve in a 1530 Staffordshire debt action.",
-      "nextAction": "Search all AALT CP40 plaintiff/defendant indexes for every active target spelling plus Connigrave and common OCR variants, then inspect membranes where family relationships may be stated.",
+      "summary": "AALT indexes exposed Richard Congreve in 1440, Richard Congrave of Loughton in 1483, Margery and John Congreve in a 1521 Staffordshire dower action, and Ralph Congreve in a 1530 Staffordshire debt action. Follow-up bridge evidence now adds the 1471 West Tilbury final concord and a 1492 Richard Harpour will discussion naming Christopher as son of Richard Congreve and Anne Harper.",
+      "nextAction": "Search all AALT CP40 plaintiff/defendant indexes for every active target spelling plus Connigrave and common OCR variants, then inspect membranes where family relationships may be stated. For the early Richard cluster, specifically inspect PCC 33 Vox, close roll entry CCR 1485-1500 no. 333, Essex Feet of Fines 1489 no. 39, Staffordshire visitations, and D1057 deeds to decide whether the Loughton/Laughton Richard and Stretton pedigree Richard are the same person.",
       "sourceIds": [
         "aalt-cp40-717-congreve",
         "aalt-cp40-883-congrave",
         "aalt-cp40-1031-congreve",
-        "aalt-cp40-1064-congreve"
+        "aalt-cp40-1064-congreve",
+        "medievalgenealogy-west-tilbury-congreue-1471",
+        "richardiii-skrene-harpour-congreve-2011",
+        "tna-d1057-congreve-family"
       ]
     },
     {
