@@ -16,11 +16,13 @@ import {
   filterPeopleByActiveFilters,
   getVariantsWithPeople
 } from "./variantFilters.js";
+import { buildFamilyTree } from "./familyTree.js";
 
 const CLUSTER_GROUP_DISTANCE = 9;
 const CLUSTER_SPACING = 14;
 const LINEAGE_SPLIT_YEARS = 9;
 const SAME_PLACE_SPLIT_PROGRESS = 0.45;
+const NON_ROUTE_MOVEMENT_ROLES = new Set(["identity-alias"]);
 
 const CITY_LABELS = [
   { name: "London", lat: 51.5074, lon: -0.1278 },
@@ -48,6 +50,8 @@ const els = {
   livedCount: document.querySelector("#livedCount"),
   deathCount: document.querySelector("#deathCount"),
   staffordshireToggle: document.querySelector("#staffordshireToggle"),
+  directLineageToggle: document.querySelector("#directLineageToggle"),
+  directLineageCount: document.querySelector("#directLineageCount"),
   maleOnlyToggle: document.querySelector("#maleOnlyToggle"),
   maleFilterCount: document.querySelector("#maleFilterCount"),
   variantFilters: document.querySelector("#variantFilters"),
@@ -78,6 +82,7 @@ const state = {
   playing: false,
   speed: Number(els.speedSelect.value),
   showStaffordshire: false,
+  showDirectLineage: true,
   maleOnly: false,
   hoverId: null,
   selectedId: null,
@@ -107,8 +112,10 @@ async function init() {
 
     const livedOnly = state.people.filter((person) => !person.birth && person.lived?.length).length;
     const familyLeads = state.people.filter(hasOpenFamilyLead).length;
+    const deathLeads = state.people.filter(hasOpenDeathResearch).length;
     const genderCounts = countPeopleByGender(state.people);
-    els.dataStatus.textContent = `${state.people.length} people, ${genderCounts.get("male") || 0} male, ${livedOnly} lived-only, ${familyLeads} family leads, ${state.leads.length} research leads`;
+    els.dataStatus.textContent = `${state.people.length} people, ${genderCounts.get("male") || 0} male, ${livedOnly} lived-only, ${deathLeads} death leads, ${familyLeads} family leads, ${state.leads.length} research leads`;
+    renderLayerControls();
     renderGenderFilter();
     renderVariantFilters();
     renderRecordList();
@@ -175,6 +182,12 @@ function bindEvents() {
     draw();
   });
 
+  els.directLineageToggle.addEventListener("change", () => {
+    state.showDirectLineage = els.directLineageToggle.checked;
+    renderRecordList();
+    draw();
+  });
+
   els.maleOnlyToggle.addEventListener("change", () => {
     state.maleOnly = els.maleOnlyToggle.checked;
     state.hoverId = null;
@@ -195,6 +208,7 @@ function bindEvents() {
   });
 
   els.recordModalClose.addEventListener("click", closeRecordModal);
+  els.recordDetails.addEventListener("click", handleRecordDetailsClick);
   els.recordModal.addEventListener("click", (event) => {
     if (event.target === els.recordModal) {
       closeRecordModal();
@@ -364,9 +378,11 @@ function drawTrack(entry) {
   if (!entry.pathStart || !entry.point) return;
 
   ctx.save();
-  ctx.globalAlpha = 0.16;
-  ctx.strokeStyle = getVariantColor(entry.person.surnameVariant);
-  ctx.lineWidth = 1.2;
+  const isLineage = isDirectLineage(entry.person) && state.showDirectLineage;
+  ctx.globalAlpha = isLineage ? 0.46 : 0.16;
+  ctx.strokeStyle = isLineage ? getCss("--direct-lineage") : getVariantColor(entry.person.surnameVariant);
+  ctx.lineWidth = isLineage ? 3 : 1.2;
+  if (isLineage) ctx.setLineDash([8, 5]);
   ctx.beginPath();
   ctx.moveTo(entry.pathStart.x, entry.pathStart.y);
   ctx.lineTo(entry.point.x, entry.point.y);
@@ -404,11 +420,22 @@ function drawPerson(entry, year) {
   const fade = getLifeOpacity(person, year);
   const color = getVariantColor(person.surnameVariant);
   const radius = isHighlighted ? 8.5 : 5 + Math.max(0, person.confidence - 0.7) * 7;
+  const isLineage = isDirectLineage(person) && state.showDirectLineage;
 
-  state.projected.set(person.id, { ...position, radius, person });
+  state.projected.set(person.id, { ...position, radius: isLineage ? radius + 5 : radius, person });
 
   ctx.save();
   ctx.globalAlpha = fade;
+  if (isLineage) {
+    ctx.fillStyle = "rgba(241, 198, 75, 0.62)";
+    ctx.strokeStyle = getCss("--direct-lineage");
+    ctx.lineWidth = isHighlighted ? 4 : 3;
+    ctx.beginPath();
+    ctx.arc(position.x, position.y, radius + 5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+  }
+
   ctx.fillStyle = color;
   ctx.strokeStyle = "rgba(255, 253, 247, 0.95)";
   ctx.lineWidth = isHighlighted ? 3 : 2;
@@ -458,6 +485,13 @@ function renderGenderFilter() {
   els.maleFilterCount.textContent = `${genderCounts.get("male") || 0}/${state.people.length}`;
 }
 
+function renderLayerControls() {
+  const directLineageCount = state.people.filter(isDirectLineage).length;
+  els.staffordshireToggle.checked = state.showStaffordshire;
+  els.directLineageToggle.checked = state.showDirectLineage;
+  els.directLineageCount.textContent = `(${directLineageCount})`;
+}
+
 function renderVariantFilters() {
   const people = getGenderFilteredPeople();
   const counts = countPeopleByVariant(people);
@@ -497,6 +531,9 @@ function renderRecordList() {
     if (state.selectedId === person.id) {
       row.classList.add("is-selected");
     }
+    if (isDirectLineage(person) && state.showDirectLineage) {
+      row.classList.add("is-direct-lineage");
+    }
     row.setAttribute("aria-pressed", String(state.selectedId === person.id));
     row.style.borderLeftColor = getVariantColor(person.surnameVariant);
     row.innerHTML = `
@@ -521,6 +558,10 @@ function getActivePeople() {
   return filterPeopleByActiveFilters(state.people, state.activeVariants, { maleOnly: state.maleOnly });
 }
 
+function isDirectLineage(person) {
+  return person.lineage?.role === "direct-paternal-ancestor";
+}
+
 function getGenderFilteredPeople() {
   if (!state.maleOnly) return state.people;
   return state.people.filter((person) => person.gender === "male");
@@ -541,7 +582,7 @@ function renderLeadList() {
   }));
 }
 
-function openRecordModal(person) {
+function openRecordModal(person, options = {}) {
   els.recordModalTitle.textContent = person.displayName;
   const sourceLinks = person.sourceIds
     .map((id) => state.sources.get(id))
@@ -550,19 +591,29 @@ function openRecordModal(person) {
     .join("");
 
   els.recordDetails.innerHTML = `
-    <div class="detail-line">${formatRecordSummary(person)} · ${variantLabel(person.surnameVariant)}</div>
-    <div class="detail-line">Gender: ${formatGender(person.gender)}</div>
-    ${formatAlternateNames(person)}
-    <div class="detail-line">First evidence: ${formatPrimaryPlace(person)}</div>
-    ${formatBirthLine(person)}
-    ${formatLivedLines(person)}
-    ${formatFamilyLines(person)}
-    <div class="detail-line">Died: ${formatDeathPlace(person)}</div>
-    <div class="detail-line">Confidence: ${Math.round(person.confidence * 100)}%</div>
-    <div class="detail-line">Record updated: ${person.lastUpdated || "not recorded"}</div>
-    <div class="detail-line">${person.notes}</div>
-    <div class="source-links">${sourceLinks}</div>
+    <div class="record-view-toggle" role="tablist" aria-label="Record view">
+      <button type="button" class="view-toggle is-active" data-record-view="details" role="tab" aria-selected="true">Details</button>
+      <button type="button" class="view-toggle" data-record-view="family" role="tab" aria-selected="false">Family tree</button>
+    </div>
+    <div data-modal-panel="details">
+      <div class="detail-line">${formatRecordSummary(person)} · ${variantLabel(person.surnameVariant)}</div>
+      ${formatLineageLine(person)}
+      <div class="detail-line">Gender: ${formatGender(person.gender)}</div>
+      ${formatAlternateNames(person)}
+      <div class="detail-line">First evidence: ${formatPrimaryPlace(person)}</div>
+      ${formatBirthLine(person)}
+      ${formatLivedLines(person)}
+      ${formatFamilyLines(person)}
+      <div class="detail-line">Died: ${formatDeathPlace(person)}</div>
+      <div class="detail-line">Confidence: ${Math.round(person.confidence * 100)}%</div>
+      <div class="detail-line">Record updated: ${person.lastUpdated || "not recorded"}</div>
+      <div class="detail-line">${person.notes}</div>
+      <div class="source-links">${sourceLinks}</div>
+    </div>
+    <div id="familyTreePanel" data-modal-panel="family" hidden></div>
   `;
+  renderFamilyTreePanel(person, els.recordDetails.querySelector("#familyTreePanel"));
+  setRecordModalView(options.view || "details");
 
   if (!els.recordModal.open) {
     els.recordModal.showModal();
@@ -578,6 +629,200 @@ function closeRecordModal() {
     els.tooltip.hidden = true;
     renderRecordList();
   }
+}
+
+function handleRecordDetailsClick(event) {
+  const viewButton = event.target.closest("[data-record-view]");
+  if (viewButton) {
+    setRecordModalView(viewButton.dataset.recordView);
+    return;
+  }
+
+  const personButton = event.target.closest("[data-person-id]");
+  if (!personButton) return;
+
+  const person = state.peopleById.get(personButton.dataset.personId);
+  if (!person) return;
+
+  const stayInTree = Boolean(personButton.closest("[data-modal-panel='family']"));
+  state.selectedId = person.id;
+  state.hoverId = person.id;
+  openRecordModal(person, { view: stayInTree ? "family" : "details" });
+  renderRecordList();
+  draw();
+}
+
+function setRecordModalView(view) {
+  const nextView = view === "family" ? "family" : "details";
+  els.recordDetails.querySelectorAll("[data-record-view]").forEach((button) => {
+    const isActive = button.dataset.recordView === nextView;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+  });
+  els.recordDetails.querySelectorAll("[data-modal-panel]").forEach((panel) => {
+    panel.hidden = panel.dataset.modalPanel !== nextView;
+  });
+}
+
+function renderFamilyTreePanel(person, panel) {
+  if (!panel) return;
+
+  const tree = buildFamilyTree(state.people, person.id);
+  const wrapper = document.createElement("div");
+  wrapper.className = "family-tree";
+
+  const confirmedCount = Number(Boolean(tree.father)) + tree.siblings.length + tree.children.length;
+  const summary = document.createElement("p");
+  summary.className = "family-tree__summary";
+  summary.textContent = confirmedCount
+    ? `${confirmedCount} confirmed in-database family link${confirmedCount === 1 ? "" : "s"} shown.`
+    : "No confirmed in-database family links have been recorded for this person yet.";
+  wrapper.append(summary);
+
+  const canvas = document.createElement("div");
+  canvas.className = "family-tree__canvas";
+  appendFamilyGeneration(canvas, "Father", tree.father ? [tree.father] : [], {
+    emptyText: `No linked father · ${formatStatusLabel(tree.statuses.father)}`
+  });
+  appendFamilyBranch(canvas, Boolean(tree.father));
+  appendFamilyGeneration(canvas, tree.siblings.length ? "Person and siblings" : "Person", getCenteredFamilyRow(tree.root, tree.siblings), {
+    connected: Boolean(tree.father),
+    currentId: tree.root.id
+  });
+  appendFamilyBranch(canvas, tree.children.length > 0);
+  appendFamilyGeneration(canvas, "Children", tree.children, {
+    connected: tree.children.length > 0,
+    emptyText: `No linked children · ${formatStatusLabel(tree.statuses.children)}`
+  });
+  wrapper.append(canvas);
+
+  const notes = createFamilyResearchNotes(tree);
+  if (notes) wrapper.append(notes);
+
+  panel.replaceChildren(wrapper);
+}
+
+function appendFamilyGeneration(container, label, people, options = {}) {
+  const generation = document.createElement("section");
+  generation.className = "family-generation";
+
+  const heading = document.createElement("h3");
+  heading.className = "family-generation__label";
+  heading.textContent = label;
+  generation.append(heading);
+
+  const nodes = document.createElement("div");
+  nodes.className = "family-generation__nodes";
+  if (options.connected) {
+    nodes.classList.add("family-generation__nodes--connected");
+  }
+  if (people.length) {
+    nodes.append(...people.map((person) => createFamilyNode(person, {
+      connected: options.connected,
+      current: person.id === options.currentId
+    })));
+  } else {
+    const empty = document.createElement("div");
+    empty.className = "family-node family-node--empty";
+    empty.textContent = options.emptyText || "No linked person";
+    nodes.append(empty);
+  }
+
+  generation.append(nodes);
+  container.append(generation);
+}
+
+function appendFamilyBranch(container, active) {
+  const branch = document.createElement("div");
+  branch.className = active ? "family-branch" : "family-branch family-branch--muted";
+  branch.setAttribute("aria-hidden", "true");
+  container.append(branch);
+}
+
+function createFamilyNode(person, options = {}) {
+  const node = document.createElement(options.current ? "div" : "button");
+  node.className = options.current ? "family-node family-node--current" : "family-node";
+  if (options.connected) {
+    node.classList.add("family-node--connected");
+  }
+  if (!options.current) {
+    node.type = "button";
+    node.dataset.personId = person.id;
+  }
+
+  const name = document.createElement("strong");
+  name.textContent = person.displayName;
+  const meta = document.createElement("span");
+  meta.textContent = `${formatRecordSummary(person)} · ${variantLabel(person.surnameVariant)}`;
+  node.append(name, meta);
+  return node;
+}
+
+function createFamilyResearchNotes(tree) {
+  const items = [];
+  if (tree.candidates.fathers.length) {
+    items.push(createResearchNote("Candidate father", tree.candidates.fathers.map(createInlinePersonButton)));
+  } else if (tree.external.father) {
+    items.push(createResearchNote("External father", [document.createTextNode(tree.external.father)]));
+  }
+
+  if (tree.candidates.children.length) {
+    items.push(createResearchNote("Candidate children", tree.candidates.children.map(createInlinePersonButton)));
+  }
+
+  if (tree.external.children.length) {
+    items.push(createResearchNote("External children", tree.external.children.map((child) => {
+      return document.createTextNode(child.displayName);
+    })));
+  }
+
+  if (!items.length) return null;
+
+  const notes = document.createElement("div");
+  notes.className = "family-tree__notes";
+  const heading = document.createElement("h3");
+  heading.textContent = "Research Notes";
+  const list = document.createElement("ul");
+  list.append(...items);
+  notes.append(heading, list);
+  return notes;
+}
+
+function createResearchNote(label, values) {
+  const item = document.createElement("li");
+  const strong = document.createElement("strong");
+  strong.textContent = `${label}: `;
+  item.append(strong);
+  values.forEach((value, index) => {
+    if (index > 0) item.append(document.createTextNode(", "));
+    item.append(value);
+  });
+  return item;
+}
+
+function createInlinePersonButton(person) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "family-note-link";
+  button.dataset.personId = person.id;
+  button.textContent = person.displayName;
+  return button;
+}
+
+function getCenteredFamilyRow(root, siblings) {
+  const sortedSiblings = [...siblings].sort(compareFamilyNodes);
+  const splitIndex = Math.ceil(sortedSiblings.length / 2);
+  return [
+    ...sortedSiblings.slice(0, splitIndex),
+    root,
+    ...sortedSiblings.slice(splitIndex)
+  ];
+}
+
+function compareFamilyNodes(a, b) {
+  return getFirstEvidenceYear(a) - getFirstEvidenceYear(b)
+    || a.displayName.localeCompare(b.displayName)
+    || a.id.localeCompare(b.id);
 }
 
 function handlePointerMove(event) {
@@ -597,7 +842,7 @@ function handlePointerMove(event) {
   els.tooltip.hidden = false;
   els.tooltip.style.left = `${Math.min(rect.width - 18, x + 14)}px`;
   els.tooltip.style.top = `${Math.max(12, y - 18)}px`;
-  els.tooltip.innerHTML = `<strong>${nearest.person.displayName}</strong>${formatRecordSummary(nearest.person)}<br>${formatPrimaryPlace(nearest.person)}`;
+  els.tooltip.innerHTML = `<strong>${nearest.person.displayName}</strong>${formatRecordSummary(nearest.person)}<br>${formatLineageTooltip(nearest.person)}${formatPrimaryPlace(nearest.person)}`;
   draw();
 }
 
@@ -745,12 +990,12 @@ function getBasePersonPosition(person, year, width, height) {
   if (!timeline.length) return null;
 
   const active = timeline
-    .filter((item) => year >= item.startYear && year <= item.endYear)
-    .sort((a, b) => b.startYear - a.startYear)[0];
+    .filter((item) => year >= item.animationStartYear && year <= item.animationEndYear)
+    .sort((a, b) => b.animationStartYear - a.animationStartYear)[0];
   if (active) return active.point;
 
   const milestones = timeline
-    .map((item) => ({ ...item, year: item.startYear }))
+    .map((item) => ({ ...item, year: item.animationStartYear }))
     .sort((a, b) => a.year - b.year);
 
   const first = milestones[0];
@@ -889,7 +1134,10 @@ function getTimedLocations(person, width, height) {
     });
   }
 
-  return locations.sort((a, b) => a.startYear - b.startYear || a.endYear - b.endYear || a.type.localeCompare(b.type));
+  const routeLocations = locations.filter((location) => isRouteLocation(location.location));
+  const animationLocations = routeLocations.length ? routeLocations : locations;
+  return assignAnimationYears(animationLocations)
+    .sort((a, b) => a.animationStartYear - b.animationStartYear || a.animationEndYear - b.animationEndYear || compareTimedLocations(a, b));
 }
 
 function addTimedLocation(locations, location, options) {
@@ -900,8 +1148,77 @@ function addTimedLocation(locations, location, options) {
     startYear: options.startYear,
     endYear: options.endYear,
     point,
-    location
+    location,
+    sequence: locations.length
   });
+}
+
+function isRouteLocation(location) {
+  return !NON_ROUTE_MOVEMENT_ROLES.has(location.movementRole);
+}
+
+function assignAnimationYears(locations) {
+  const byYear = new Map();
+  for (const location of locations) {
+    const key = location.startYear;
+    if (!byYear.has(key)) byYear.set(key, []);
+    byYear.get(key).push(location);
+  }
+
+  const animated = [];
+  for (const group of byYear.values()) {
+    const pointEvents = group.filter((location) => location.startYear === location.endYear);
+    const rangeEvents = group.filter((location) => location.startYear !== location.endYear);
+    animated.push(...rangeEvents.map((location) => ({
+      ...location,
+      animationStartYear: location.startYear,
+      animationEndYear: location.endYear
+    })));
+
+    if (!pointEvents.length) continue;
+    if (new Set(pointEvents.map((location) => getPointKey(location.point))).size <= 1) {
+      animated.push(...pointEvents.map((location) => ({
+        ...location,
+        animationStartYear: location.startYear,
+        animationEndYear: location.endYear
+      })));
+      continue;
+    }
+
+    const ordered = [...pointEvents].sort(compareTimedLocations);
+    const denominator = Math.max(1, ordered.length - 1);
+    ordered.forEach((location, index) => {
+      const animationYear = location.startYear + index / denominator;
+      animated.push({
+        ...location,
+        animationStartYear: animationYear,
+        animationEndYear: animationYear
+      });
+    });
+  }
+
+  return animated;
+}
+
+function compareTimedLocations(a, b) {
+  return getMovementOrder(a.location) - getMovementOrder(b.location)
+    || getDateSortValue(a.location) - getDateSortValue(b.location)
+    || a.type.localeCompare(b.type)
+    || a.sequence - b.sequence;
+}
+
+function getMovementOrder(location) {
+  return Number.isInteger(location.movementOrder) ? location.movementOrder : Number.MAX_SAFE_INTEGER;
+}
+
+function getDateSortValue(location) {
+  if (!location.date) return Number.MAX_SAFE_INTEGER;
+  const parsed = Date.parse(`${location.date}T00:00:00Z`);
+  return Number.isNaN(parsed) ? Number.MAX_SAFE_INTEGER : parsed;
+}
+
+function getPointKey(point) {
+  return `${point.x.toFixed(2)},${point.y.toFixed(2)}`;
 }
 
 function projectLocation(location, width, height) {
@@ -1008,6 +1325,16 @@ function formatAlternateNames(person) {
   return `<div class="detail-line">Also indexed as: ${person.alternateNames.join(", ")}</div>`;
 }
 
+function formatLineageLine(person) {
+  if (!isDirectLineage(person)) return "";
+  return `<div class="detail-line">Lineage: ${person.lineage.label}, order ${person.lineage.order} · confidence ${Math.round(person.lineage.confidence * 100)}%</div>`;
+}
+
+function formatLineageTooltip(person) {
+  if (!isDirectLineage(person) || !state.showDirectLineage) return "";
+  return `${person.lineage.label}<br>`;
+}
+
 function formatFamilyLines(person) {
   if (!person.family) return "";
   return `
@@ -1064,8 +1391,14 @@ function hasOpenFamilyLead(person) {
   });
 }
 
+function hasOpenDeathResearch(person) {
+  return person.deathResearch?.status && person.deathResearch.status !== "sourced";
+}
+
 function formatDeathPlace(person) {
-  if (!person.death) return "Death not yet sourced";
+  if (!person.death) {
+    return `Death ${formatStatusLabel(person.deathResearch?.status)}`;
+  }
   if (person.death.outsideEngland) return person.death.label || "Died outside England";
   if (person.death.country === "England" && person.death.place) return person.death.place;
   if (person.death.year > state.timelineEnd) return "After visible timeline";

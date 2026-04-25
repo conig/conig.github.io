@@ -72,6 +72,13 @@
       "accessed": "2026-04-24"
     },
     {
+      "id": "historic-england-congreve-house",
+      "shortTitle": "Historic England: Congreve House",
+      "title": "Congreve House, Congreve Close, Stafford, ST17 0LN, National Heritage List for England entry 1493361",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1493361",
+      "accessed": "2026-04-25"
+    },
+    {
       "id": "britannica-william-congreve-2nd-baronet",
       "shortTitle": "Britannica: Sir William Congreve",
       "title": "Sir William Congreve, 2nd Baronet",
@@ -205,6 +212,20 @@
       "accessed": "2026-04-25"
     },
     {
+      "id": "register-freemen-london-henry-viii-edward-vi-john-congreve",
+      "shortTitle": "London Freemen: John Congreve",
+      "title": "Register of Freemen in the City of London in the Reigns of Henry VIII and Edward VI, entry for John Congreve apprenticed to John Core, citizen and grocer",
+      "url": "https://archive.org/details/registerfreemen00welcgoog",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "register-freemen-london-henry-viii-edward-vi-reginald-conygrave",
+      "shortTitle": "London Freemen: Reginald Conygrave",
+      "title": "Register of Freemen in the City of London in the Reigns of Henry VIII and Edward VI, entries naming Reginald Conygrave, citizen and merchant tailor, as apprenticeship master",
+      "url": "https://archive.org/details/registerfreemen00welcgoog",
+      "accessed": "2026-04-25"
+    },
+    {
       "id": "st-saviour-southwark-sewers-1605",
       "shortTitle": "St Saviour Southwark: Sewers 1605",
       "title": "Parishioners Named in the Records of the Surrey and Kent Commissions of Sewers, Part One",
@@ -234,30 +255,16 @@
     },
     {
       "id": "royalsociety-john-congreave",
-      "shortTitle": "Royal Society: John Congreave",
-      "title": "Letter from John Congreave to W Brereton, dated at Bridgenorth",
-      "url": "https://makingscience.royalsociety.org/items/rcp-18i-234/letter-from-john-congreave-to-w-brereton-dated-at-bridgenorth",
-      "accessed": "2026-04-24"
+      "shortTitle": "Royal Society: John Congreave storm letter",
+      "title": "L&P/6/150: Letter, 'Of a storm at Bridgnorth' from John Congreave to Owen Salusbury Brereton",
+      "url": "https://makingscience.royalsociety.org/people/na1598/owen-salusbury-brereton",
+      "accessed": "2026-04-25"
     },
     {
       "id": "broughfamily-elizabeth-congreave",
       "shortTitle": "Brough Family: Elizabeth Congreave",
       "title": "Elizabeth Congreave",
       "url": "https://www.broughfamily.org/genealogy/getperson.php?personID=I6798&tree=BT",
-      "accessed": "2026-04-24"
-    },
-    {
-      "id": "wikipedia-charles-walter-congreve",
-      "shortTitle": "Wikipedia: Charles Walter Congreve",
-      "title": "Charles Walter Congreve",
-      "url": "https://en.wikipedia.org/wiki/Charles_Walter_Congreve",
-      "accessed": "2026-04-24"
-    },
-    {
-      "id": "wikipedia-ralph-congreve",
-      "shortTitle": "Wikipedia: Ralph Congreve",
-      "title": "Ralph Congreve",
-      "url": "https://en.wikipedia.org/wiki/Ralph_Congreve",
       "accessed": "2026-04-24"
     },
     {
@@ -301,6 +308,13 @@
       "title": "Records of the Congreve family of Congreve and Stretton",
       "url": "https://discovery.nationalarchives.gov.uk/redirect/a2a/?cat=169-d1057&cid=0",
       "accessed": "2026-04-24"
+    },
+    {
+      "id": "tna-prob-11-10-614-richard-congrave-1496",
+      "shortTitle": "PCC will: Richard Congrave 1496",
+      "title": "Will of Richard Congrave of Loughton, Essex, gentleman, PROB 11/10/614, proved September 1496",
+      "url": "references/prob-11-10-614-richard-congrave-loughton-1496.pdf",
+      "accessed": "2026-04-25"
     },
     {
       "id": "medievalgenealogy-west-tilbury-congreue-1471",
@@ -371,6 +385,20 @@
       "title": "Abstracts of Inquisitiones post mortem relating to the city of London, returned into the Court of Chancery during the Tudor period, entry for Reginald Conygrave/Conigrave",
       "url": "https://archive.org/stream/abstractsofinqui15grea/abstractsofinqui15grea_djvu.txt",
       "accessed": "2026-04-24"
+    },
+    {
+      "id": "tna-c1-765-24-reynold-conygrave-alias-conye",
+      "shortTitle": "TNA: Chester v Conygrave",
+      "title": "Chester v Conygrave, C 1/765/24: Reynold Conygrave alias Conye and the sheriffs of London, 1532-1538",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C7480878",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "tna-c1-1145-22-reynold-conygrave-gild",
+      "shortTitle": "TNA: Marshall v Conygrave",
+      "title": "Marshall v Conygrave, C 1/1145/22: Reynold Conygrave, master of the gild of St Mary and St Dunstan in the West, 1544-1551",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C7494392",
+      "accessed": "2026-04-25"
     },
     {
       "id": "waalt-cp40-826-conygrave",
@@ -464,11 +492,39 @@
       "accessed": "2026-04-24"
     },
     {
+      "id": "tna-prob-coniers-connigrave-1692",
+      "shortTitle": "TNA: Coniers Connigrave will 1692",
+      "title": "Will of Coniers Connigrave or Conigrave, Mariner of Saint Botolph without Aldgate, City of London, 15 March 1692",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/D760397",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "historic-coventry-eighteenth-century-licensees",
+      "shortTitle": "Historic Coventry: Eighteenth Century Licensees",
+      "title": "Appendix 2: Eighteenth Century Licensees, Coventry",
+      "url": "https://pubhistory.historiccoventry.co.uk/resource/appendix_2.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "tna-coventry-benjamin-conigrave-defeasance-1752",
+      "shortTitle": "Coventry Archives: Benjamin Conigrave defeasance 1752",
+      "title": "Defeasance naming Benjamin Conigrave of Coventry, innkeeper, 23 December 1752",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/c04d9829-f703-4d92-b130-8b6f99998e38",
+      "accessed": "2026-04-25"
+    },
+    {
       "id": "tna-coventry-benjamin-conigrave-security-1754",
       "shortTitle": "Coventry Archives: Benjamin Conigrave security 1754",
       "title": "Security charging Benjamin Conigrave's Coventry premises for Sir Thomas White's charity loan, 7 January 1754",
       "url": "https://discovery.nationalarchives.gov.uk/details/r/b6541212-8feb-4229-8d9d-b392145e8a34",
       "accessed": "2026-04-24"
+    },
+    {
+      "id": "tna-coventry-benjamin-conigrave-mortgage-1765",
+      "shortTitle": "Coventry Archives: Benjamin Conigrave mortgage 1765",
+      "title": "Assignment and confirmation of mortgage naming Benjamin Conigrave of Coventry, gent., 27 April 1765",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/3473cf19-6898-4cfd-8692-fa2a945c40ec",
+      "accessed": "2026-04-25"
     },
     {
       "id": "tna-coventry-benjamin-conigrave-will-1770",
@@ -483,6 +539,13 @@
       "title": "Lease and release with partition of Coventry property among William Conigrave's children, 1799",
       "url": "https://discovery.nationalarchives.gov.uk/details/r/8c82e199-d274-4433-87fc-86acb1fe1edc",
       "accessed": "2026-04-24"
+    },
+    {
+      "id": "familysearch-james-conigrave-holy-trinity-coventry-1776",
+      "shortTitle": "FamilySearch: James Conigrave 1776",
+      "title": "James Conigrave baptism, Holy Trinity, Coventry, Warwickshire, 1776, son of William and Alice Conigrave",
+      "url": "https://www.familysearch.org/search/collection/1473014",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-jane-congreve-castle-church-1567",
@@ -558,29 +621,29 @@
       "id": "freereg-elias-congrave-cheap-1617",
       "shortTitle": "FreeREG extract: Elias Congrave 1617",
       "title": "Elias Congrave baptism, Allhallows, Cheap, London (City), 06 July 1617 (Other Transcript; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6843ef7e86557488167d8650/elias-congrave-baptism-london-city-cheap-1617-07-06",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-john-congrave-cheap-1618",
       "shortTitle": "FreeREG extract: John Congrave 1618",
       "title": "John Congrave baptism, Allhallows, Cheap, London (City), 12 November 1618 (Other Transcript; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6843ef7e86557488167d869f/john-congrave-baptism-london-city-cheap-1618-11-12",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-roger-congrave-cheap-1620",
       "shortTitle": "FreeREG extract: Roger Congrave 1620",
       "title": "Roger Congrave baptism, Allhallows, Cheap, London (City), 09 July 1620 (Other Transcript; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6843ef7f86557488167d8707/roger-congrave-baptism-london-city-cheap-1620-07-09",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-elizabeth-congrave-cheap-1621",
       "shortTitle": "FreeREG extract: Elizabeth Congrave 1621",
       "title": "Elizabeth Congrave baptism, Allhallows, Cheap, London (City), 06 July 1621 (Other Transcript; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6843ef7f86557488167d8738/elizabeth-congrave-baptism-london-city-cheap-1621-07-06",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-ralph-congrave-caverswall-1633",
@@ -593,57 +656,57 @@
       "id": "freereg-john-congrave-polesworth-1636",
       "shortTitle": "FreeREG extract: John Congrave 1636",
       "title": "John Congrave baptism, St Editha, Polesworth, Warwickshire, 15 March 1635/36 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/685aba7986557483f7d578cb/john-congrave-baptism-warwickshire-polesworth-1636-03-15",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-willm-congrave-polesworth-1638",
       "shortTitle": "FreeREG extract: Willm Congrave 1638",
       "title": "Willm Congrave baptism, St Editha, Polesworth, Warwickshire, 27 May 1638 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fc8ef493fd7217201143/willm-congrave-baptism-warwickshire-polesworth-1638-05-27",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-edward-congrave-polesworth-1638",
       "shortTitle": "FreeREG extract: Edward Congrave 1638",
       "title": "Edward Congrave baptism, St Editha, Polesworth, Warwickshire, 23 December 1638 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fc8ff493fd7217201189/edward-congrave-baptism-warwickshire-polesworth-1638-12-23",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-hester-congrave-polesworth-1640",
       "shortTitle": "FreeREG extract: Hester Congrave 1640",
       "title": "Hester Congrave baptism, St Editha, Polesworth, Warwickshire, 23 February 1639/40 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/685aba7c86557483f7d57a00/hester-congrave-baptism-warwickshire-polesworth-1640-02-23",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-frances-congrave-polesworth-1642",
       "shortTitle": "FreeREG extract: Frances Congrave 1642",
       "title": "Frances Congrave baptism, St Editha, Polesworth, Warwickshire, 25 March 1642 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fc99f493fd7217201349/frances-congrave-baptism-warwickshire-polesworth-1642-03-25",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-john-congrave-polesworth-1642",
       "shortTitle": "FreeREG extract: John Congrave 1642",
       "title": "John Congrave baptism, St Editha, Polesworth, Warwickshire, 20 November 1642 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fc9af493fd721720139a/john-congrave-baptism-warwickshire-polesworth-1642-11-20",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-henry-congrave-polesworth-1644",
       "shortTitle": "FreeREG extract: Henry Congrave 1644",
       "title": "Henry Congrave baptism, St Editha, Polesworth, Warwickshire, 07 April 1644 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fc9ef493fd721720147b/henry-congrave-baptism-warwickshire-polesworth-1644-04-07",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-john-congrave-polesworth-1645",
       "shortTitle": "FreeREG extract: John Congrave 1645",
       "title": "John Congrave baptism, St Editha, Polesworth, Warwickshire, 30 March 1645 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fca1f493fd721720151d/john-congrave-baptism-warwickshire-polesworth-1645-03-30",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-anne-congrave-bath-1645",
@@ -656,71 +719,71 @@
       "id": "freereg-bridget-congrave-polesworth-1647",
       "shortTitle": "FreeREG extract: Bridget Congrave 1647",
       "title": "Bridget Congrave baptism, St Editha, Polesworth, Warwickshire, 03 April 1647 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fca4f493fd72172015c6/bridget-congrave-baptism-warwickshire-polesworth-1647-04-03",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-henry-congrave-polesworth-1648",
       "shortTitle": "FreeREG extract: Henry Congrave 1648",
       "title": "Henry Congrave baptism, St Editha, Polesworth, Warwickshire, 15 February 1647/48 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/685aba8486557483f7d57d1e/henry-congrave-baptism-warwickshire-polesworth-1648-02-15",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-mary-congrave-polesworth-1648",
       "shortTitle": "FreeREG extract: Mary Congrave 1648",
       "title": "Mary Congrave baptism, St Editha, Polesworth, Warwickshire, 09 March 1647/48 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/685aba8486557483f7d57d28/mary-congrave-baptism-warwickshire-polesworth-1648-03-09",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-elizabeath-congrave-polesworth-1655",
       "shortTitle": "FreeREG extract: Elizabeath Congrave 1655",
       "title": "Elizabeath Congrave baptism, St Editha, Polesworth, Warwickshire, 04 November 1655 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fcadf493fd7217201753/elizabeath-congrave-baptism-warwickshire-polesworth-1655-11-04",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-margaret-congrave-polesworth-1670",
       "shortTitle": "FreeREG extract: Margaret Congrave 1670",
       "title": "Margaret Congrave baptism, St Editha, Polesworth, Warwickshire, 22 May 1670 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fccef493fd7217201cb5/margaret-congrave-baptism-warwickshire-polesworth-1670-05-22",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-william-congrave-kingsbury-1676",
       "shortTitle": "FreeREG extract: William Congrave 1676",
       "title": "William Congrave baptism, SS Peter and Paul, Kingsbury, Warwickshire, November 1676 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/601e83c5f493fd28c1d24b04/william-congrave-baptism-warwickshire-kingsbury-1676-11-",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-francis-congrave-polesworth-1678",
       "shortTitle": "FreeREG extract: Francis Congrave 1678",
       "title": "Francis Congrave baptism, St Editha, Polesworth, Warwickshire, 14 July 1678 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fcdcf493fd721720202b/francis-congrave-baptism-warwickshire-polesworth-1678-07-14",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-ann-congrave-polesworth-1679",
       "shortTitle": "FreeREG extract: Ann Congrave 1679",
       "title": "Ann Congrave baptism, St Editha, Polesworth, Warwickshire, 01 May 1679 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fcddf493fd7217202087/ann-congrave-baptism-warwickshire-polesworth-1679-05-01",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-john-congrave-polesworth-1690",
       "shortTitle": "FreeREG extract: John Congrave 1690",
       "title": "John Congrave baptism, St Editha, Polesworth, Warwickshire, 19 June 1690 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fcf1f493fd72172025bd/john-congrave-baptism-warwickshire-polesworth-1690-06-19",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-mary-congrave-polesworth-1693",
       "shortTitle": "FreeREG extract: Mary Congrave 1693",
       "title": "Mary Congrave baptism, St Editha, Polesworth, Warwickshire, 25 January 1692/93 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/685abaa486557483f7d58960/mary-congrave-baptism-warwickshire-polesworth-1693-01-25",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-john-congrave-westminster-1695",
@@ -733,22 +796,22 @@
       "id": "freereg-john-congrave-shrewsbury-1696",
       "shortTitle": "FreeREG extract: John Congrave 1696",
       "title": "John Congrave baptism, St Chad, Shrewsbury, Shropshire, 10 March 1695/6 (Unspecified; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5c755545f493fd38f4b149d2/john-congrave-baptism-shropshire-shrewsbury-1696-03-10",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-richard-congrave-shrewsbury-1698",
       "shortTitle": "FreeREG extract: Richard Congrave 1698",
       "title": "Richard Congrave baptism, St Chad, Shrewsbury, Shropshire, 07 April 1698 (Unspecified; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5c755569f493fd38f4b14e1f/richard-congrave-baptism-shropshire-shrewsbury-1698-04-07",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-william-congrave-shrewsbury-1699",
       "shortTitle": "FreeREG extract: William Congrave 1699",
       "title": "William Congrave baptism, St Chad, Shrewsbury, Shropshire, 26 September 1699 (Unspecified; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5c7c190df493fd203f4a23f3/william-congrave-baptism-shropshire-shrewsbury-1699-09-26",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-james-congrave-westminster-1700",
@@ -761,22 +824,22 @@
       "id": "freereg-thomas-congrave-shrewsbury-1700",
       "shortTitle": "FreeREG extract: Thomas Congrave 1700",
       "title": "Thomas Congrave baptism, St Chad, Shrewsbury, Shropshire, 17 October 1700 (Unspecified; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5c7e8cd8f493fd1f35ed094b/thomas-congrave-baptism-shropshire-shrewsbury-1700-10-17",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-francis-congrave-shrewsbury-1702",
       "shortTitle": "FreeREG extract: Francis Congrave 1702",
       "title": "Francis Congrave baptism, St Chad, Shrewsbury, Shropshire, 22 March 1701/2 (Unspecified; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5c87e215f493fd98066075c5/francis-congrave-baptism-shropshire-shrewsbury-1702-03-22",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-mary-congrave-shrewsbury-1703",
       "shortTitle": "FreeREG extract: Mary Congrave 1703",
       "title": "Mary Congrave baptism, St Chad, Shrewsbury, Shropshire, 01 July 1703 (Unspecified; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5c87e228f493fd98066078d9/mary-congrave-baptism-shropshire-shrewsbury-1703-07-01",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-elizabeth-congrave-nether-whitacre-1707",
@@ -796,15 +859,15 @@
       "id": "freereg-hannah-congrave-polesworth-1715",
       "shortTitle": "FreeREG extract: Hannah Congrave 1715",
       "title": "Hannah Congrave baptism, St Editha, Polesworth, Warwickshire, 11 October 1715 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fd27f493fd721720304f/hannah-congrave-baptism-warwickshire-polesworth-1715-10-11",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-john-congrave-polesworth-1715",
       "shortTitle": "FreeREG extract: John Congrave 1715",
       "title": "John Congrave baptism, St Editha, Polesworth, Warwickshire, 11 October 1715 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fd27f493fd7217203053/john-congrave-baptism-warwickshire-polesworth-1715-10-11",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-anna-congrave-worthen-1720",
@@ -817,36 +880,36 @@
       "id": "freereg-benjamin-congrave-polesworth-1722",
       "shortTitle": "FreeREG extract: Benjamin Congrave 1722",
       "title": "Benjamin Congrave baptism, St Editha, Polesworth, Warwickshire, 15 August 1722 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6087fd33f493fd7217203376/benjamin-congrave-baptism-warwickshire-polesworth-1722-08-15",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-nicholas-congrave-north-walsham-1732",
       "shortTitle": "FreeREG extract: Nicholas Congrave 1732",
       "title": "Nicholas Congrave baptism, St Nicholas, North Walsham, Norfolk, 22 October 1732 (Archdeacon's Transcript; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/6849ccde86557454056df660/nicholas-congrave-baptism-norfolk-north-walsham-1732-10-22",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-mary-congrave-crowland-1748",
       "shortTitle": "FreeREG extract: Mary Congrave 1748",
       "title": "Mary Congrave baptism, St Mary, St Bartholomew and St Guthlac, Crowland, Lincolnshire, 18 May 1748 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5eea4e16f493fd958aa13dbe/mary-congrave-baptism-lincolnshire-crowland-1748-05-18",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-mary-congrave-crowland-1749",
       "shortTitle": "FreeREG extract: Mary Congrave 1749",
       "title": "Mary Congrave baptism, St Mary, St Bartholomew and St Guthlac, Crowland, Lincolnshire, 24 September 1749 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5eea4e20f493fd958aa13fa0/mary-congrave-baptism-lincolnshire-crowland-1749-09-24",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-rebekah-congrave-crowland-1751",
       "shortTitle": "FreeREG extract: Rebekah Congrave 1751",
       "title": "Rebekah Congrave baptism, St Mary, St Bartholomew and St Guthlac, Crowland, Lincolnshire, 30 January 1750/1 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/68413a2d865574f305b67609/rebekah-congrave-baptism-lincolnshire-crowland-1751-01-30",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-catherina-congrave-harlestone-1756",
@@ -859,43 +922,43 @@
       "id": "freereg-saray-congrave-austrey-1756",
       "shortTitle": "FreeREG extract: Saray Congrave 1756",
       "title": "Saray Congrave baptism, St Nicholas, Austrey, Warwickshire, 26 December 1756 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5f98f1f1f493fde8ce687e36/saray-congrave-baptism-warwickshire-austrey-1756-12-26",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-mary-congrave-spalding-1767",
       "shortTitle": "FreeREG extract: Mary Congrave 1767",
       "title": "Mary Congrave baptism, St Mary and St Nicholas, Spalding, Lincolnshire, 03 April 1767 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/684318f3865574f3057ca596/mary-congrave-baptism-lincolnshire-spalding-1767-04-03",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-ann-congrave-nuneaton-1772",
       "shortTitle": "FreeREG extract: Ann Congrave 1772",
       "title": "Ann Congrave baptism, St Nicolas, Nuneaton, Warwickshire, 22 March 1772 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5ddfeac0f493fd7eaccec70b/ann-congrave-baptism-warwickshire-nuneaton-1772-03-22",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-benjamin-congrave-nuneaton-1774",
       "shortTitle": "FreeREG extract: Benjamin Congrave 1774",
       "title": "Benjamin Congrave baptism, St Nicolas, Nuneaton, Warwickshire, 15 May 1774 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5ddfeaf4f493fd7eaccecbd2/benjamin-congrave-baptism-warwickshire-nuneaton-1774-05-15",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-mary-congrave-mancetter-1775",
       "shortTitle": "FreeREG extract: Mary Congrave 1775",
       "title": "Mary Congrave baptism, St Peter, Mancetter, Warwickshire, 20 September 1775 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/685aa33a86557483f7cce831/mary-congrave-mary-congrave-baptism-warwickshire-mancetter-1775-09-20",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-elizabeth-congrave-nuneaton-1776",
       "shortTitle": "FreeREG extract: Elizabeth Congrave 1776",
       "title": "Elizabeth Congrave baptism, St Nicolas, Nuneaton, Warwickshire, 26 December 1776 (Parish Register; user-supplied FreeREG extract)",
-      "url": "congrave_baptism.md",
-      "accessed": "2026-04-24"
+      "url": "https://www.freereg.org.uk/search_records/5ddfeb20f493fd7eacced21d/elizabeth-congrave-baptism-warwickshire-nuneaton-1776-12-26",
+      "accessed": "2026-04-25"
     },
     {
       "id": "freereg-george-congrave-queenhithe-1607",
@@ -1640,10 +1703,52 @@
       "accessed": "2026-04-25"
     },
     {
+      "id": "patent-rolls-henry-vi-vol4-thomas-congreve-1442",
+      "shortTitle": "Patent Rolls Henry VI vol. 4: Thomas Congreve",
+      "title": "Calendar of the Patent Rolls, Henry VI, volume 4, 1441-1446: Thomas Congreve of Staffordshire, Rickmansworth, and Barking, 1442",
+      "url": "https://archive.org/details/calendarpatentr00blacgoog",
+      "accessed": "2026-04-25"
+    },
+    {
       "id": "waalt-cp40-776-conygrave-congreve-1455",
       "shortTitle": "WAALT: CP40/776 Conygrave/Congreve entries",
       "title": "CP40/776: Hilary Term 1455, index entries naming John Conygrave of St Albans, Thomas Congrave/Congreve of Barking, and Richard Congreve",
       "url": "https://waalt.uh.edu/index.php/CP40/776",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "waalt-cp40-797-thomas-congreve-barking-1460",
+      "shortTitle": "WAALT: CP40/797 Thomas Congreve",
+      "title": "CP40/797: Easter Term 1460, index entries naming Thomas Congreve, Thomas Congreve junior of Barking, and Thomas Congreve senior of Barking",
+      "url": "https://waalt.uh.edu/index.php/IDXCP40no797",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "waalt-cp40-798-thomas-congreve-junior-1460",
+      "shortTitle": "WAALT: CP40/798 Thomas Congreve junior",
+      "title": "CP40/798: Trinity Term 1460, index entry naming Thomas Congreve junior of Barking, Essex, yeoman",
+      "url": "https://waalt.uh.edu/index.php/IDXCP40no798",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "waalt-cp40-799-thomas-congreve-barking-1460",
+      "shortTitle": "WAALT: CP40/799 Thomas Congreve",
+      "title": "CP40/799: Michaelmas Term 1460, index entries naming Thomas Congreve junior of Barking and Thomas Congreve of Barking, gentleman",
+      "url": "https://waalt.uh.edu/index.php/IDXCP40no799",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "waalt-cp40-800-thomas-congreve-barking-1461",
+      "shortTitle": "WAALT: CP40/800 Thomas Congreve",
+      "title": "CP40/800: Hilary Term 1461, index entries naming Thomas Congreve junior of Barking and Thomas Congreve senior of Barking",
+      "url": "https://waalt.uh.edu/index.php/IDXCP40no800",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "aalt-cp40-776-d1489-john-conygrave-image",
+      "shortTitle": "AALT: CP40/776 d 1489",
+      "title": "AALT image CP40/776 d 1489, Hilary Term 1455, membrane indexed by WAALT as naming John Conygrave of St Albans",
+      "url": "http://aalt.law.uh.edu/AALT1/H6/CP40no776/bCP40no776dorses/IMG_1489.htm",
       "accessed": "2026-04-25"
     },
     {
@@ -1652,6 +1757,153 @@
       "title": "Feet of Fines CP 25/1/91/117 no. 179, Hertfordshire final concord naming Michael Conygraue, 1 May 1457",
       "url": "https://www.medievalgenealogy.org.uk/fines/abstracts/CP_25_1_91_117.shtml",
       "accessed": "2026-04-25"
+    },
+    {
+      "id": "essex-feet-fines-vol4-katharine-congreve-1466",
+      "shortTitle": "Feet of Fines for Essex vol. 4: Katharine Congreve",
+      "title": "Feet of Fines for Essex, volume IV, 1423-1547: Michaelmas 1466 fine naming Katharine late wife of Thomas Congreve",
+      "url": "https://www.esah1852.org.uk/library/files/F1400000.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "essex-feet-fines-vol4-richard-congreve-1471-1489",
+      "shortTitle": "Feet of Fines for Essex vol. 4: Richard Congreve",
+      "title": "Feet of Fines for Essex, volume IV, 1423-1547: 1471 West Tilbury and 1489 Latton fines naming Richard Congreve",
+      "url": "https://www.esah1852.org.uk/library/files/F1400000.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-robert-conygrave-hester-norman-coventry-1665",
+      "shortTitle": "FreeREG: Robert Conygrave and Hester Norman 1665",
+      "title": "Robert Conygrave and Hester Norman marriage, St Michael, Coventry, Warwickshire, 4 October 1665",
+      "url": "https://www.freereg.org.uk/search_records/686abbfab18f7c7913124f34/hester-norman-robert-conygrave-marriage-warwickshire-coventry-1665-10-04",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-elizabeth-conygrave-coventry-1669-baptism",
+      "shortTitle": "FreeREG: Elizabeth Conygrave baptism 1669",
+      "title": "Elizabeth Conygrave baptism, St Michael, Coventry, Warwickshire, 22 September 1669",
+      "url": "https://www.freereg.org.uk/search_records/67e294efb18f7c40f6e82ae7/elizabeth-conygrave-elizabeth-conygrave-baptism-warwickshire-coventry-1669-09-22",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-elizabeth-conygrave-coventry-1669-burial",
+      "shortTitle": "FreeREG: Elizabeth Conygrave burial 1669",
+      "title": "Elizabeth Conygrave burial, St Michael, Coventry, Warwickshire, 23 November 1669",
+      "url": "https://www.freereg.org.uk/search_records/68853e0eb18f7c5012f01afc/elizabeth-conygrave-burial-warwickshire-coventry-1669-11-23",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-meary-conygrave-coventry-1669-burial",
+      "shortTitle": "FreeREG: Meary Conygrave burial 1669",
+      "title": "Meary Conygrave burial, St Michael, Coventry, Warwickshire, 22 October 1669",
+      "url": "https://www.freereg.org.uk/search_records/68853e0cb18f7c5012f01ac6/meary-conygrave-burial-warwickshire-coventry-1669-10-22",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-margery-connygrave-coventry-1673-burial",
+      "shortTitle": "FreeREG: Margery Connygrave burial 1673",
+      "title": "Margery Connygrave burial, St Michael, Coventry, Warwickshire, 18 July 1673",
+      "url": "https://www.freereg.org.uk/search_records/68862f78b18f7cee5f40c309/margery-connygrave-burial-warwickshire-coventry-1673-07-18",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-mary-connygrave-coventry-1673-baptism",
+      "shortTitle": "FreeREG: Mary Connygrave baptism 1673",
+      "title": "Mary Connygrave baptism, St Michael, Coventry, Warwickshire, 15 November 1673",
+      "url": "https://www.freereg.org.uk/search_records/67e2951cb18f7c40f6e83b09/mary-connygrave-mary-connygrave-baptism-warwickshire-coventry-1673-11-15",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-mary-connygrave-coventry-1673-burial",
+      "shortTitle": "FreeREG: Mary Connygrave burial 1673",
+      "title": "Mary Connygrave burial, St Michael, Coventry, Warwickshire, 20 November 1673",
+      "url": "https://www.freereg.org.uk/search_records/6886559db18f7c8a22dbb109/mary-connygrave-burial-warwickshire-coventry-1673-11-20",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-john-conygrave-southwark-1666",
+      "shortTitle": "FreeREG: John Conygrave baptism 1666",
+      "title": "John Conygrave baptism, St Olave, Southwark, Surrey, 27 December 1666",
+      "url": "https://www.freereg.org.uk/search_records/62640402f493fd6259875e9d/john-conygrave-baptism-surrey-southwark-1666-12-27",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-elizabethe-connigrave-northampton-1600",
+      "shortTitle": "FreeREG: Elizabethe Connigrave baptism 1600",
+      "title": "Elizabethe Connigrave baptism, St Giles, Northampton, Northamptonshire, 23 November 1600",
+      "url": "https://www.freereg.org.uk/search_records/5e5a7743f493fdbadd339c50/elizabethe-connigrave-baptism-northamptonshire-northampton-1600-11-23",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-tobyas-conygrave-waltham-abbey-1612",
+      "shortTitle": "FreeREG: Tobyas Conygrave marriage 1612",
+      "title": "Tobyas Conygrave and Elsabeth Cramphorne marriage, St Lawrence and Holy Cross, Waltham Abbey, Essex, 13 September 1612",
+      "url": "https://www.freereg.org.uk/search_records/69e20328b18f7c93b644af7c/elsabeth-cramphorne-tobyas-conygrave-marriage-essex-waltham-abbey-1612-09-13",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-tobias-conygrave-waltham-abbey-1614",
+      "shortTitle": "FreeREG: Tobias Conygrave burial 1614",
+      "title": "Tobias Conygrave burial, St Lawrence and Holy Cross, Waltham Abbey, Essex, 15 May 1614",
+      "url": "https://www.freereg.org.uk/search_records/69e5e382b18f7c349cea6a0f/tobias-conygrave-burial-essex-waltham-abbey-1614-05-15",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-francis-conygrave-greenwich-1651",
+      "shortTitle": "FreeREG: Francis Conygrave burial 1651",
+      "title": "Francis Conygrave child burial, St Alfege, Greenwich, Kent, 30 July 1651",
+      "url": "https://www.freereg.org.uk/search_records/670b760eb18f7c11194e4923/francis-conygrave-burial-kent-greenwich-1651-07-30",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "westminster-abbey-charles-walter-congreve",
+      "shortTitle": "Westminster Abbey: Charles Walter Congreve",
+      "title": "Charles Walter Congreve",
+      "url": "https://www.westminster-abbey.org/abbey-commemorations/commemorations/charles-walter-congreve",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "wikisource-alumni-oxonienses-charles-walter-congreve",
+      "shortTitle": "Alumni Oxonienses: Charles Walter Congreve",
+      "title": "Alumni Oxonienses: the Members of the University of Oxford, 1715-1886/Congreve, Charles (Walter)",
+      "url": "https://en.wikisource.org/wiki/Alumni_Oxonienses:_the_Members_of_the_University_of_Oxford,_1715-1886/Congreve,_Charles_(Walter)",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "wikisource-alumni-oxonienses-congreve-page-307",
+      "shortTitle": "Alumni Oxonienses: Congreve entries",
+      "title": "Page: Alumni Oxoniensis (1715-1886) volume 1.djvu/307",
+      "url": "https://en.wikisource.org/wiki/Page:Alumni_Oxoniensis_(1715-1886)_volume_1.djvu/307",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "freereg-henry-congrave-margaret-thomson-polesworth-1644",
+      "shortTitle": "FreeREG: Henry Congrave and Margaret Thomson, 1644",
+      "title": "Henry Congrave and Margaret Thomson marriage, St Editha, Polesworth, Warwickshire, 02 July 1644",
+      "url": "https://www.freereg.org.uk/search_records/608801c9f493fd7217206e8b/margaret-thomson-henry-congrave-marriage-warwickshire-polesworth-1644-07-02",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "flickr-breedon-francis-shirley-dorothy-giffard-1571",
+      "shortTitle": "Flickr: Breedon Shirley monument 1571",
+      "title": "Breedon on the Hill, Leicestershire: Francis Shirley and Dorothy Giffard monument, 1571",
+      "url": "https://www.flickr.com/photos/52219527@N00/50780182816/",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "essex-archsoc-barking-wills-thomas-alice-congreve-obit-1504",
+      "shortTitle": "Essex Archaeological Society: Barking wills obit",
+      "title": "Transactions of the Essex Archaeological Society: Barking wills and obits, Thomas Congreve and Alice C. obit clue, 1504",
+      "url": "https://www.esah1852.org.uk/library/files/T2060000.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "gnosall-burials-date",
+      "shortTitle": "Gnosall History: Burials date index",
+      "title": "St Lawrence, Gnosall, St Mary's, Moreton and Christ Church, Knightley burials date index",
+      "url": "https://www.gnosallhistory.co.uk/index_htm_files/Burials_date.pdf?id=1",
+      "accessed": "2026-04-26"
     }
   ]
 }
