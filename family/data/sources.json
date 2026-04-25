@@ -191,6 +191,41 @@
       "accessed": "2026-04-24"
     },
     {
+      "id": "returns-aliens-london-vol1",
+      "shortTitle": "Returns of Aliens, vol. 1",
+      "title": "Returns of Aliens Dwelling in the City and Suburbs of London from the Reign of Henry VIII to that of James I, volume 1",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Returns_of_aliens_dwelling_in_the_city_and_suburbs_of_London_from_the_reign_of_Henry_VIII._to_that_of_James_I_%28IA_returnsofaliensd01kirk%29.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "returns-aliens-london-vol2",
+      "shortTitle": "Returns of Aliens, vol. 2",
+      "title": "Returns of Aliens Dwelling in the City and Suburbs of London from the Reign of Henry VIII to that of James I, volume 2",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Returns_of_aliens_dwelling_in_the_city_and_suburbs_of_London_from_the_reign_of_Henry_VIII._to_that_of_James_I_%28IA_returnsofaliensd02kirk%29.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "st-saviour-southwark-sewers-1605",
+      "shortTitle": "St Saviour Southwark: Sewers 1605",
+      "title": "Parishioners Named in the Records of the Surrey and Kent Commissions of Sewers, Part One",
+      "url": "https://stsaviour.folger.edu/SKCS-1.html",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "st-saviour-southwark-laysub-1608",
+      "shortTitle": "St Saviour Southwark: Lay Subsidy 1608",
+      "title": "St Saviour, Southwark, Lay Subsidy Assessment, TNA E179/381/9",
+      "url": "https://stsaviour.folger.edu/laysubs/laysub-E179-381-9.html",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "casebooks-catherine-conygrave",
+      "shortTitle": "Casebooks: Catherine Conygrave",
+      "title": "Mrs Catherine Conygrave (PERSON29255), The casebooks of Simon Forman and Richard Napier",
+      "url": "https://casebooks.lib.cam.ac.uk/identified-entities/PERSON29255",
+      "accessed": "2026-04-25"
+    },
+    {
       "id": "cambridge-making-babies-congreve",
       "shortTitle": "Cambridge: Thomas Congreve diary",
       "title": "Making Babies in Early Modern England, Chapter 4: Men, Midwives and a Place to Give Birth",
@@ -1568,6 +1603,55 @@
       "title": "Ann Congreave baptism, Sheffield, Yorkshire, West Riding, 27 August 1786",
       "url": "https://www.freereg.org.uk/search_records/62544673f493fdee258b973e/ann-congreave-baptism-yorkshire-west-riding-sheffield-1786-08-27",
       "accessed": "2026-04-24"
+    },
+    {
+      "id": "staffordshire-collections-vol3-alan-cungrave-1203",
+      "shortTitle": "Staffordshire Collections: Alan de Cungrave 1203",
+      "title": "Collections for a History of Staffordshire, volume 3: Curia Regis and Assize Roll extracts naming Alan de Cungrave, 1203",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Collections_for_a_history_of_Staffordshire_%28IA_collectionsforhi03staf%29.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "staffordshire-collections-1893-geoffrey-congreve-1335",
+      "shortTitle": "Staffordshire Collections: Geoffrey de Congreve 1335",
+      "title": "Collections for a History of Staffordshire, 1893: Coram Rege roll extract naming Geoffrey de Congreve at Stretton, 1335",
+      "url": "https://www.staffordshirecountystudies.uk/WSAS%201893%20Sample.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "staffordshire-collections-1899-geoffrey-katherine-congreve",
+      "shortTitle": "Staffordshire Collections: Geoffrey and Katherine Congreve",
+      "title": "Collections for a History of Staffordshire, new series volume 2: Champion/Peshale deeds naming Geoffrey de Congreve and Katherine his wife",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Collections_for_a_history_of_Staffordshire_%28IA_collectionsforhi02staf_0%29.pdf",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "waalt-cp40-589-roger-cungreve",
+      "shortTitle": "WAALT: CP40/589 Roger Cungreve",
+      "title": "CP40/589: Easter Term 1408, defendant index naming Roger Cungreve of Wolverhampton",
+      "url": "https://waalt.uh.edu/index.php/CP40/589%3A_K-Z",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "waalt-cp40-768-thomas-congreve-1453",
+      "shortTitle": "WAALT: CP40/768 Thomas Congreve",
+      "title": "CP40/768: Hilary Term 1453, plaintiff index naming Thomas Congreve in an Essex debt action",
+      "url": "https://waalt.uh.edu/index.php/CP40/768",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "waalt-cp40-776-conygrave-congreve-1455",
+      "shortTitle": "WAALT: CP40/776 Conygrave/Congreve entries",
+      "title": "CP40/776: Hilary Term 1455, index entries naming John Conygrave of St Albans, Thomas Congrave/Congreve of Barking, and Richard Congreve",
+      "url": "https://waalt.uh.edu/index.php/CP40/776",
+      "accessed": "2026-04-25"
+    },
+    {
+      "id": "medievalgenealogy-herts-fine-michael-conygraue-1457",
+      "shortTitle": "Feet of Fines: Michael Conygraue 1457",
+      "title": "Feet of Fines CP 25/1/91/117 no. 179, Hertfordshire final concord naming Michael Conygraue, 1 May 1457",
+      "url": "https://www.medievalgenealogy.org.uk/fines/abstracts/CP_25_1_91_117.shtml",
+      "accessed": "2026-04-25"
     }
   ]
 }

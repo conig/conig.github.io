@@ -4,7 +4,7 @@
     "startYear": 1100,
     "endYear": 1788,
     "status": "public-source population expanded with Stretton pedigree, Common Pleas legal attestations, surname-origin attestations, Conigrave probate/household records, and 1754-1787 Coventry monument records; lower-confidence pedigree placements are explicitly marked",
-    "updated": "2026-04-24"
+    "updated": "2026-04-25"
   },
   "variants": [
     {
@@ -75,50 +75,71 @@
       "surnameVariant": "cungrave",
       "gender": "male",
       "status": "early-record-lived",
-      "confidence": 0.52,
+      "confidence": 0.68,
       "lived": [
         {
-          "dateLabel": "Assize Court Rolls witness, 1203",
-          "place": "Staffordshire",
+          "date": "1203-10-05",
+          "dateLabel": "Curia Regis roll, 5 October 1203",
+          "place": "Shrewsbury, Shropshire",
+          "county": "Shropshire",
+          "country": "England",
+          "lat": 52.7073,
+          "lon": -2.7553,
+          "precision": "court-place",
+          "evidenceType": "curia-regis-roll-attestation",
+          "summary": "Staffordshire suits extracted from the Curia Regis rolls include Margery Croc versus Alan de Cungrave in a mort d'ancestor plea, with the day given as the Sunday after Michaelmas at Shrewsbury.",
+          "sourceIds": [
+            "staffordshire-collections-vol3-alan-cungrave-1203"
+          ],
+          "year": 1203
+        },
+        {
+          "dateLabel": "Assize Roll 5 John, 1203",
+          "place": "Cuttlestone Hundred, Staffordshire",
           "county": "Staffordshire",
           "country": "England",
-          "lat": 52.8067,
-          "lon": -2.117,
-          "precision": "year-county",
+          "lat": 52.736,
+          "lon": -2.05,
+          "precision": "hundred",
           "evidenceType": "assize-roll-attestation",
-          "summary": "SurnameDB identifies Alan de Cungrave as a 1203 witness in the Assize Court Rolls of Staffordshire.",
+          "summary": "The Assize Roll for 5 John includes Alexander de Folaue's appeal against Alan de Cungrave for head wounds and rupture in the Cuttlestone Hundred presentments.",
           "sourceIds": [
-            "surnamedb-congreve"
+            "staffordshire-collections-vol3-alan-cungrave-1203"
           ],
           "year": 1203
         }
       ],
-      "notes": "Early surname attestation from a surname-origin database; original Assize Court Roll needs direct verification.",
+      "notes": "Early locative surname attestation now backed by Staffordshire roll extracts rather than only a surname-origin database. The public surname summary describes Alan as a 1203 Assize Court Rolls witness, but the checked Staffordshire Collections text specifically shows Alan de Cungrave in a Curia Regis mort d'ancestor plea and an Assize Roll 5 John appeal.",
       "sourceIds": [
+        "staffordshire-collections-vol3-alan-cungrave-1203",
         "surnamedb-congreve"
       ],
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-25",
         "father": {
           "status": "not-found-public-sweep",
           "personId": null,
           "displayName": null,
           "candidatePersonIds": [],
-          "notes": "The public surname-origin extract does not identify Alan's father.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "notes": "The checked public roll extracts do not identify Alan's father.",
+          "sourceIds": [
+            "staffordshire-collections-vol3-alan-cungrave-1203"
+          ],
+          "lastUpdated": "2026-04-25"
         },
         "children": {
           "status": "not-found-public-sweep",
           "personIds": [],
           "candidatePersonIds": [],
           "external": [],
-          "notes": "The public surname-origin extract does not identify Alan's children.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "notes": "The checked public roll extracts do not identify Alan's children.",
+          "sourceIds": [
+            "staffordshire-collections-vol3-alan-cungrave-1203"
+          ],
+          "lastUpdated": "2026-04-25"
         }
       },
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-25"
     },
     {
       "id": "william-congreve-stretton-edward-ii",
@@ -151,7 +172,7 @@
       ],
       "lastUpdated": "2026-04-24",
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-25",
         "father": {
           "status": "not-yet-researched",
           "personId": null,
@@ -162,15 +183,188 @@
           "lastUpdated": "2026-04-24"
         },
         "children": {
-          "status": "not-yet-researched",
+          "status": "candidate",
+          "personIds": [],
+          "candidatePersonIds": [
+            "geoffrey-de-congreve-stretton-1335"
+          ],
+          "external": [],
+          "notes": "Geoffrey de Congreve is a candidate next-generation Stretton bridge because he appears at Stretton from 1335 after William's published Edward II-era move there; no source has proved the parent-child relationship.",
+          "sourceIds": [
+            "gutenberg-noble-gentlemen-congreve",
+            "staffordshire-collections-1893-geoffrey-congreve-1335"
+          ],
+          "lastUpdated": "2026-04-25"
+        }
+      }
+    },
+    {
+      "id": "geoffrey-de-congreve-stretton-1335",
+      "displayName": "Geoffrey de Congreve",
+      "surnameVariant": "congreve",
+      "gender": "male",
+      "alternateNames": [
+        "Geoffrye Congreve"
+      ],
+      "status": "legal-record-lived",
+      "confidence": 0.78,
+      "lived": [
+        {
+          "year": 1335,
+          "dateLabel": "Coram Rege roll, Michaelmas 9 Edward III",
+          "place": "Stretton, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.7,
+          "lon": -2.1667,
+          "precision": "property-place",
+          "evidenceType": "coram-rege-trespass-attestation",
+          "summary": "Staffordshire Collections prints a Coram Rege Roll extract in which Henry de Yus and Geoffrey de Congreve sued John de Titteley for breaking into their houses at Stretton and taking goods and chattels.",
+          "sourceIds": [
+            "staffordshire-collections-1893-geoffrey-congreve-1335"
+          ]
+        },
+        {
+          "year": 1366,
+          "dateLabel": "Weston-under-Lizard deed, 40 Edward III",
+          "place": "Weston-under-Lizard, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.693,
+          "lon": -2.286,
+          "precision": "property-place",
+          "evidenceType": "deed-attestation",
+          "summary": "A Staffordshire Collections account of the Weston manor material says Geoffrey de Congreve and Katherine his wife joined Henry de Jus and Maude his wife in conceding lands and tenements in the fee of Weston-under-Lizard to Adam de Peshale.",
+          "sourceIds": [
+            "staffordshire-collections-1899-geoffrey-katherine-congreve"
+          ]
+        },
+        {
+          "year": 1377,
+          "dateLabel": "Weston-under-Lizard and Blymhill deed, 51 Edward III",
+          "place": "Weston-under-Lizard and Blymhill, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.706,
+          "lon": -2.307,
+          "precision": "multi-place-property-cluster",
+          "evidenceType": "deed-attestation",
+          "summary": "The same account says Geoffrey de Congreve and Katherine his wife conceded lands and tenements in Weston-under-Lizard and Blymhill to Adam de Peshale and Elizabeth his wife.",
+          "sourceIds": [
+            "staffordshire-collections-1899-geoffrey-katherine-congreve"
+          ]
+        }
+      ],
+      "notes": "This is the strongest current plug in the gap between the published Edward II-era Stretton move and the later 1381/1408/1440 legal records. Geoffrey appears at Stretton in 1335 and with wife Katherine in Champion/Peshale-related deeds in 1366 and 1377. He is not merged into any later Richard or Robert because the sources do not state descent.",
+      "sourceIds": [
+        "staffordshire-collections-1893-geoffrey-congreve-1335",
+        "staffordshire-collections-1899-geoffrey-katherine-congreve"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "candidate",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [
+            "william-congreve-stretton-edward-ii"
+          ],
+          "notes": "William Congreve is a candidate father or earlier-generation bridge only because published lineage places William at Stretton in Edward II's reign and Geoffrey appears at Stretton by 1335; no source proves the relationship.",
+          "sourceIds": [
+            "gutenberg-noble-gentlemen-congreve",
+            "staffordshire-collections-1893-geoffrey-congreve-1335"
+          ],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
           "personIds": [],
           "candidatePersonIds": [],
           "external": [],
-          "notes": "Likely Stretton descendants require deeds, visitations, and parish or manor evidence before linking.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "notes": "The checked Staffordshire roll and deed extracts do not name Geoffrey's children.",
+          "sourceIds": [
+            "staffordshire-collections-1893-geoffrey-congreve-1335",
+            "staffordshire-collections-1899-geoffrey-katherine-congreve"
+          ],
+          "lastUpdated": "2026-04-25"
         }
-      }
+      },
+      "lastUpdated": "2026-04-25"
+    },
+    {
+      "id": "katherine-congreve-wife-of-geoffrey-1366",
+      "displayName": "Katherine Congreve",
+      "surnameVariant": "congreve",
+      "gender": "female",
+      "alternateNames": [
+        "Katherine wife of Geoffrey de Congreve",
+        "Catherine wife of Geoffrye Congreve",
+        "Katrine wife of Geoffrey de Congreve"
+      ],
+      "status": "legal-record-lived",
+      "confidence": 0.74,
+      "lived": [
+        {
+          "year": 1366,
+          "dateLabel": "Weston-under-Lizard deed, 40 Edward III",
+          "place": "Weston-under-Lizard, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.693,
+          "lon": -2.286,
+          "precision": "property-place",
+          "evidenceType": "deed-attestation",
+          "summary": "A Staffordshire Collections account names Geoffrey de Congreve and Katherine his wife in a deed conceding lands and tenements in the fee of Weston-under-Lizard to Adam de Peshale.",
+          "sourceIds": [
+            "staffordshire-collections-1899-geoffrey-katherine-congreve"
+          ]
+        },
+        {
+          "year": 1377,
+          "dateLabel": "Weston-under-Lizard and Blymhill deed, 51 Edward III",
+          "place": "Weston-under-Lizard and Blymhill, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.706,
+          "lon": -2.307,
+          "precision": "multi-place-property-cluster",
+          "evidenceType": "deed-attestation",
+          "summary": "The same account says Geoffrey de Congreve and Katherine his wife conceded lands and tenements in Weston-under-Lizard and Blymhill to Adam de Peshale and Elizabeth his wife.",
+          "sourceIds": [
+            "staffordshire-collections-1899-geoffrey-katherine-congreve"
+          ]
+        }
+      ],
+      "notes": "Katherine is a married-in Congreve record and a key Champion/Peshale coheir clue. The source also says a Champion pedigree names Catherine wife of Geoffrye Congreve among Thomas le Champion's sisters and coheirs, but her parentage is not promoted until the underlying manuscript or deeds are checked.",
+      "sourceIds": [
+        "staffordshire-collections-1899-geoffrey-katherine-congreve"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "not-found-public-sweep",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [],
+          "notes": "The public Staffordshire Collections passage implies Katherine belonged to the Champion coheir cluster but does not name her father in the extracted wording.",
+          "sourceIds": [
+            "staffordshire-collections-1899-geoffrey-katherine-congreve"
+          ],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "The checked public deed extracts do not name Katherine's children.",
+          "sourceIds": [
+            "staffordshire-collections-1899-geoffrey-katherine-congreve"
+          ],
+          "lastUpdated": "2026-04-25"
+        }
+      },
+      "lastUpdated": "2026-04-25"
     },
     {
       "id": "robert-cungreve-staffordshire-1381",
@@ -224,12 +418,122 @@
       "lastUpdated": "2026-04-24"
     },
     {
+      "id": "roger-cungreve-wolverhampton-1408",
+      "displayName": "Roger Cungreve",
+      "surnameVariant": "congreve",
+      "gender": "male",
+      "status": "legal-record-lived",
+      "confidence": 0.7,
+      "lived": [
+        {
+          "year": 1408,
+          "dateLabel": "Common Pleas index, Easter Term 1408",
+          "place": "Wolverhampton, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.5862,
+          "lon": -2.1288,
+          "precision": "town",
+          "evidenceType": "common-pleas-defendant-index",
+          "summary": "WAALT's CP40/589 defendant index names Roger Cungreve of Wolverhampton among defendants in a Staffordshire trespass action brought by John Maunffeld.",
+          "sourceIds": [
+            "waalt-cp40-589-roger-cungreve"
+          ]
+        }
+      ],
+      "notes": "This plugs a direct Cungreve-form legal attestation between Robert Cungreve's 1381 subsidy-summary lead and Richard Congreve's 1440 Common Pleas record. No kinship is stated, so Roger is not linked to the Stretton pedigree.",
+      "sourceIds": [
+        "waalt-cp40-589-roger-cungreve"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "not-found-public-sweep",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [],
+          "notes": "WAALT's public CP40/589 index does not name Roger's father.",
+          "sourceIds": [
+            "waalt-cp40-589-roger-cungreve"
+          ],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "WAALT's public CP40/589 index does not name Roger's children.",
+          "sourceIds": [
+            "waalt-cp40-589-roger-cungreve"
+          ],
+          "lastUpdated": "2026-04-25"
+        }
+      },
+      "lastUpdated": "2026-04-25"
+    },
+    {
+      "id": "john-conygrave-st-albans-1455",
+      "displayName": "John Conygrave",
+      "surnameVariant": "conygrave",
+      "gender": "male",
+      "status": "legal-record-lived",
+      "confidence": 0.72,
+      "lived": [
+        {
+          "year": 1455,
+          "dateLabel": "Common Pleas index, Hilary Term 1455",
+          "place": "St Albans, Hertfordshire",
+          "county": "Hertfordshire",
+          "country": "England",
+          "lat": 51.7527,
+          "lon": -0.3394,
+          "precision": "town",
+          "evidenceType": "common-pleas-defendant-index",
+          "summary": "WAALT's CP40/776 defendant index names John Conygrave of St Albans, Hertfordshire, yeoman, among defendants in a Norfolk debt action brought by Thomas Wulvysby.",
+          "sourceIds": [
+            "waalt-cp40-776-conygrave-congreve-1455"
+          ]
+        }
+      ],
+      "notes": "This is now the earliest display-ready exact Conygrave-spelling person in the dataset and is only two years before Michael Conygraue's 1457 Hertfordshire fine. The index gives a St Albans residence/description, but it does not state kinship with Michael, so John is not linked as Michael's father or child.",
+      "sourceIds": [
+        "waalt-cp40-776-conygrave-congreve-1455"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "not-found-public-sweep",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [],
+          "notes": "WAALT's public CP40/776 index does not name John's father.",
+          "sourceIds": [
+            "waalt-cp40-776-conygrave-congreve-1455"
+          ],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "WAALT's public CP40/776 index does not name John's children; Michael Conygraue remains an unlinked local follow-up, not a proved son.",
+          "sourceIds": [
+            "waalt-cp40-776-conygrave-congreve-1455"
+          ],
+          "lastUpdated": "2026-04-25"
+        }
+      },
+      "lastUpdated": "2026-04-25"
+    },
+    {
       "id": "richard-congreve-common-pleas-1440",
       "displayName": "Richard Congreve",
       "surnameVariant": "congreve",
       "gender": "male",
       "status": "legal-record-lived",
-      "confidence": 0.64,
+      "confidence": 0.68,
       "lived": [
         {
           "dateLabel": "Common Pleas index, 1440",
@@ -245,43 +549,118 @@
             "aalt-cp40-717-congreve"
           ],
           "year": 1440
+        },
+        {
+          "year": 1455,
+          "dateLabel": "Common Pleas index, Hilary Term 1455",
+          "place": "Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.8067,
+          "lon": -2.117,
+          "precision": "year-county",
+          "evidenceType": "common-pleas-plaintiff-index",
+          "summary": "WAALT's CP40/776 plaintiff index names Richard Congreve in a Staffordshire trespass:close action against Nicholas Creswell of Penkridge, cooper.",
+          "sourceIds": [
+            "waalt-cp40-776-conygrave-congreve-1455"
+          ]
         }
       ],
-      "notes": "Legal-record person not merged into the Stretton pedigree because the index does not provide kinship.",
+      "notes": "Legal-record person not merged into the Stretton pedigree because the indexes do not provide kinship. The added 1455 Staffordshire Common Pleas record makes him a stronger recurring Staffordshire legal actor, but John Conygrave of St Albans in 1455 and Michael Conygraue of Hertfordshire in 1457 remain unlinked local/southeast records unless original pleadings prove a relationship.",
       "sourceIds": [
-        "aalt-cp40-717-congreve"
+        "aalt-cp40-717-congreve",
+        "waalt-cp40-776-conygrave-congreve-1455"
       ],
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-25",
         "father": {
           "status": "not-found-public-sweep",
           "personId": null,
           "displayName": null,
           "candidatePersonIds": [],
-          "notes": "The public Common Pleas index does not name Richard's father.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "notes": "The public Common Pleas indexes do not name Richard's father.",
+          "sourceIds": [
+            "aalt-cp40-717-congreve",
+            "waalt-cp40-776-conygrave-congreve-1455"
+          ],
+          "lastUpdated": "2026-04-25"
         },
         "children": {
-          "status": "not-found-public-sweep",
+          "status": "candidate",
           "personIds": [],
-          "candidatePersonIds": [],
+          "candidatePersonIds": [
+            "michael-conygrave-hertfordshire-1468"
+          ],
           "external": [],
-          "notes": "The public Common Pleas index does not name Richard's children.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "notes": "The public Common Pleas indexes do not name Richard's children. Michael Conygrave of Hertfordshire in 1468 is a weak candidate bridge only because his dated attestation falls in the next plausible generation after Richard's 1440 and 1455 Staffordshire actions; no source proves kinship.",
+          "sourceIds": [
+            "aalt-cp40-717-congreve",
+            "waalt-cp40-776-conygrave-congreve-1455",
+            "waalt-cp40-826-conygrave"
+          ],
+          "lastUpdated": "2026-04-25"
         }
       },
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-25"
     },
     {
       "id": "thomas-congreve-essex-feet-of-fines-1466",
       "displayName": "Thomas Congreve",
       "surnameVariant": "congreve",
       "gender": "male",
-      "status": "early-record-lived",
-      "confidence": 0.52,
+      "alternateNames": [
+        "Thomas Congrave",
+        "Thomas Congrave of Berkyng",
+        "Thomas Congreve of Barking"
+      ],
+      "status": "legal-record-lived",
+      "confidence": 0.7,
       "lived": [
+        {
+          "year": 1453,
+          "dateLabel": "Common Pleas index, Hilary Term 1453",
+          "place": "Essex",
+          "county": "Essex",
+          "country": "England",
+          "lat": 51.7343,
+          "lon": 0.4691,
+          "precision": "year-county",
+          "evidenceType": "common-pleas-plaintiff-index",
+          "summary": "WAALT's CP40/768 plaintiff index names Thomas Congreve in an Essex debt action against John Herdwyk of Laleham, Middlesex, gentleman.",
+          "sourceIds": [
+            "waalt-cp40-768-thomas-congreve-1453"
+          ]
+        },
+        {
+          "year": 1455,
+          "dateLabel": "Common Pleas index, Hilary Term 1455",
+          "place": "Barking, Essex",
+          "county": "Essex",
+          "country": "England",
+          "lat": 51.536,
+          "lon": 0.0789,
+          "precision": "town",
+          "evidenceType": "common-pleas-defendant-index",
+          "summary": "WAALT's CP40/776 index names Thomas Congrave of Berkyng, gentleman, among defendants in an Essex debt action brought by Walter Burre.",
+          "sourceIds": [
+            "waalt-cp40-776-conygrave-congreve-1455"
+          ]
+        },
+        {
+          "year": 1455,
+          "dateLabel": "Common Pleas index, Hilary Term 1455",
+          "place": "Barking, Essex",
+          "county": "Essex",
+          "country": "England",
+          "lat": 51.536,
+          "lon": 0.0789,
+          "precision": "town",
+          "evidenceType": "common-pleas-plaintiff-index",
+          "summary": "The same CP40/776 index names Thomas Congreve as plaintiff in Essex trespass actions against Walter and John Burre of Barking and against John Frende senior, John Frende junior, and John Durneys of Barking.",
+          "sourceIds": [
+            "waalt-cp40-776-conygrave-congreve-1455"
+          ]
+        },
         {
           "dateLabel": "Feet of Fines entry, 1466",
           "place": "Essex",
@@ -298,32 +677,42 @@
           "year": 1466
         }
       ],
-      "notes": "Early Essex legal attestation; not merged with any Staffordshire Thomas Congreve because the public extract does not prove identity.",
+      "notes": "This is now a stronger southeast pre-Michael variant cluster, with Thomas appearing in Essex Common Pleas indexes in 1453 and 1455 before the weaker 1466 Feet of Fines surname-summary attestation. The 1455 defendant entry localises him as Thomas Congrave of Barking, gentleman. He is not merged with Richard Congrave of Loughton or Thomas Conygrave of London/Westminster because no source proves identity or descent.",
       "sourceIds": [
+        "waalt-cp40-768-thomas-congreve-1453",
+        "waalt-cp40-776-conygrave-congreve-1455",
         "surnamedb-congreve"
       ],
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-25",
         "father": {
           "status": "not-found-public-sweep",
           "personId": null,
           "displayName": null,
           "candidatePersonIds": [],
-          "notes": "The public surname-origin extract does not identify Thomas's father.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "notes": "The public Common Pleas indexes and surname-origin extract do not identify Thomas's father.",
+          "sourceIds": [
+            "waalt-cp40-768-thomas-congreve-1453",
+            "waalt-cp40-776-conygrave-congreve-1455",
+            "surnamedb-congreve"
+          ],
+          "lastUpdated": "2026-04-25"
         },
         "children": {
           "status": "not-found-public-sweep",
           "personIds": [],
           "candidatePersonIds": [],
           "external": [],
-          "notes": "The public surname-origin extract does not identify Thomas's children.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "notes": "The public Common Pleas indexes and surname-origin extract do not identify Thomas's children.",
+          "sourceIds": [
+            "waalt-cp40-768-thomas-congreve-1453",
+            "waalt-cp40-776-conygrave-congreve-1455",
+            "surnamedb-congreve"
+          ],
+          "lastUpdated": "2026-04-25"
         }
       },
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-25"
     },
     {
       "id": "agnes-harpur-congreve",
@@ -518,7 +907,7 @@
           "tna-d1057-congreve-family"
         ]
       },
-      "notes": "AALT 1483 and TNA D1057 likely refer to the same Loughton/Laughton Essex man. The 1471 West Tilbury fine and the 1492 Harpour will discussion strengthen the Essex-Harpur-Congreve bridge, especially by naming Christopher as son of Richard Congreve and Anne, sister of Richard Harper. Still retained as a legal/archive record distinct from the Staffordshire pedigree Richard until the Stretton and Loughton identities are proven to be the same man.",
+      "notes": "AALT 1483 and TNA D1057 likely refer to the same Loughton/Laughton Essex man. The 1471 West Tilbury fine and the 1492 Harpour will discussion strengthen the Essex-Harpur-Congreve bridge, especially by naming Christopher as son of Richard Congreve and Anne, sister of Richard Harper. Thomas Conygrave of London/Westminster in 1490 is retained as a candidate later member of this southeast cluster only; no source proves that Richard was his father. Still retained as a legal/archive record distinct from the Staffordshire pedigree Richard until the Stretton and Loughton identities are proven to be the same man.",
       "sourceIds": [
         "medievalgenealogy-west-tilbury-congreue-1471",
         "aalt-cp40-883-congrave",
@@ -526,7 +915,7 @@
         "richardiii-skrene-harpour-congreve-2011"
       ],
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-25",
         "father": {
           "status": "not-found-public-sweep",
           "personId": null,
@@ -541,7 +930,8 @@
           "personIds": [],
           "candidatePersonIds": [
             "ralfe-congreve-stretton",
-            "reginald-reynold-conygrave"
+            "reginald-reynold-conygrave",
+            "thomas-conygrave-windsor-clockmaker"
           ],
           "external": [
             {
@@ -549,25 +939,44 @@
               "notes": "The 1492 Richard Harpour will discussion names Christopher as son of Richard Congreve and Anne, sister of Richard Harper."
             }
           ],
-          "notes": "Christopher is the strongest child evidence from the Richard Harpour will discussion. Ralfe Congreve of Stretton is a candidate only if the Loughton/Laughton Richard is the same as the Stretton pedigree Richard. Reginald Conigrave remains a major unproven candidate relevant to the Conigrave line.",
+          "notes": "Christopher is the strongest child evidence from the Richard Harpour will discussion. Ralfe Congreve of Stretton is a candidate only if the Loughton/Laughton Richard is the same as the Stretton pedigree Richard. Reginald Conigrave remains a major unproven candidate relevant to the Conigrave line. Thomas Conygrave of London/Westminster in 1490 is added only as a southeast-cluster candidate because of date, place, and rare spelling proximity; no source names him as Richard's son.",
           "sourceIds": [
             "richardiii-skrene-harpour-congreve-2011",
             "stirnet-congreve-stretton",
-            "user-extract-reginald-conygrave-will-1550"
+            "user-extract-reginald-conygrave-will-1550",
+            "stgeorges-curfew-tower"
           ],
-          "lastUpdated": "2026-04-24"
+          "lastUpdated": "2026-04-25"
         }
       },
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-25"
     },
     {
       "id": "thomas-conygrave-windsor-clockmaker",
       "displayName": "Thomas Conygrave",
       "surnameVariant": "conygrave",
       "gender": "male",
+      "alternateNames": [
+        "Thomas Conygrave of London"
+      ],
       "status": "verified-public-lived",
-      "confidence": 0.78,
+      "confidence": 0.82,
       "lived": [
+        {
+          "year": 1490,
+          "dateLabel": "1490 Westminster/London clockmaking attestation",
+          "place": "Westminster, Middlesex",
+          "county": "Middlesex",
+          "country": "England",
+          "lat": 51.4995,
+          "lon": -0.1357,
+          "precision": "year",
+          "evidenceType": "clockmaking-attestation",
+          "summary": "St George's Chapel material describes Thomas Conygrave as a London clockmaker and says the new clock was specially made in Westminster before being brought to Windsor.",
+          "sourceIds": [
+            "stgeorges-curfew-tower"
+          ]
+        },
         {
           "year": 1490,
           "dateLabel": "1490",
@@ -584,21 +993,30 @@
           ]
         }
       ],
-      "notes": "Counted from a dated Windsor work/payment attestation; no birth or death found yet.",
+      "notes": "Counted from dated St George's Chapel clockmaking/payment evidence. A 2026-04-25 check corrected the place context: the clock was for Windsor, but the maker is described as Thomas Conygrave of London and the work was made in Westminster before being brought down to Windsor. No birth or death has been found yet. No source-backed link to the Staffordshire pedigree has been found; Michael Conygrave of Hertfordshire and Richard Congrave of Loughton are recorded only as candidate southeast-cluster bridges.",
       "sourceIds": [
         "stgeorges-curfew-tower"
       ],
-      "lastUpdated": "2026-04-24",
+      "lastUpdated": "2026-04-25",
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-25",
         "father": {
-          "status": "not-found-public-sweep",
+          "status": "candidate",
           "personId": null,
           "displayName": null,
-          "candidatePersonIds": [],
-          "notes": "Public sweep found the 1490 Windsor payment attestation but no father.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "candidatePersonIds": [
+            "michael-conygrave-hertfordshire-1468",
+            "richard-congrave-loughton-essex"
+          ],
+          "notes": "Public sweep found the 1490 London/Westminster/Windsor clockmaking attestation but no father. Michael Conygrave of Hertfordshire and Richard Congrave of Loughton are candidate bridge placements only because they are earlier nearby Conygrave/Congrave attestations; no record names Thomas's father.",
+          "sourceIds": [
+            "stgeorges-curfew-tower",
+            "waalt-cp40-826-conygrave",
+            "medievalgenealogy-west-tilbury-congreue-1471",
+            "aalt-cp40-883-congrave",
+            "tna-d1057-congreve-family"
+          ],
+          "lastUpdated": "2026-04-25"
         },
         "children": {
           "status": "not-found-public-sweep",
@@ -607,7 +1025,7 @@
           "external": [],
           "notes": "Public sweep found no children for Thomas Conygrave; Windsor, Berkshire, and royal-household records remain next targets.",
           "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "lastUpdated": "2026-04-25"
         }
       }
     },
@@ -920,6 +1338,291 @@
           "lastUpdated": "2026-04-24"
         }
       }
+    },
+    {
+      "id": "john-conygrave-joiner-st-olave-southwark",
+      "displayName": "John Conygrave",
+      "surnameVariant": "conygrave",
+      "gender": "male",
+      "alternateNames": [
+        "John Conegrave",
+        "John Conygraue",
+        "John Conigrave"
+      ],
+      "status": "verified-public-lived",
+      "confidence": 0.88,
+      "lived": [
+        {
+          "startYear": 1567,
+          "endYear": 1571,
+          "dateLabel": "1567-1571 alien returns",
+          "place": "St Olave, Southwark, Surrey",
+          "county": "Surrey",
+          "country": "England",
+          "lat": 51.5053,
+          "lon": -0.09,
+          "precision": "parish-period",
+          "evidenceType": "alien-return-occupational-attestation",
+          "summary": "Returns of aliens list John Conygrave/Conegrave as a Dutch joiner in St Olave, Southwark; the returns say he was born in Luke or the Land of Gulick, was a denizen, and had a wife born in Antwerp.",
+          "sourceIds": [
+            "returns-aliens-london-vol1",
+            "returns-aliens-london-vol2"
+          ]
+        }
+      ],
+      "notes": "Key origin record. The non-English birthplace is not plotted, but the wording points to the Liège/Gulick-Jülich region, with a household connection to Antwerp. A 1549 subsidy entry for John Conygrave in goods may be the same man, but the 1567-1571 St Olave joiner entries are the stronger identity anchor.",
+      "sourceIds": [
+        "returns-aliens-london-vol1",
+        "returns-aliens-london-vol2"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "not-found-public-sweep",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [],
+          "notes": "The alien-return entries name John's birthplace and wife but not his father.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "The inspected alien-return entries did not name children for John Conygrave.",
+          "sourceIds": [
+            "returns-aliens-london-vol1",
+            "returns-aliens-london-vol2"
+          ],
+          "lastUpdated": "2026-04-25"
+        }
+      },
+      "lastUpdated": "2026-04-25"
+    },
+    {
+      "id": "harman-conygrave-joiner-st-olave-southwark",
+      "displayName": "Harman Conygrave",
+      "surnameVariant": "conygrave",
+      "gender": "male",
+      "alternateNames": [
+        "Harmon Conygrave",
+        "Harmane Conygrave",
+        "Harman Connyegrave",
+        "Harman Conigraue"
+      ],
+      "status": "verified-public-lived",
+      "confidence": 0.88,
+      "lived": [
+        {
+          "startYear": 1567,
+          "endYear": 1571,
+          "dateLabel": "1567-1571 alien returns",
+          "place": "St Olave, Southwark, Surrey",
+          "county": "Surrey",
+          "country": "England",
+          "lat": 51.5053,
+          "lon": -0.09,
+          "precision": "parish-period",
+          "evidenceType": "alien-return-occupational-attestation",
+          "summary": "Returns of aliens list Harman Conygrave as a Dutch joiner and denizen in St Olave, Southwark; they say he was born in Lukeland or the Land of Gulick, with a wife born in Luke and servants born in Cologne/Hensbroek.",
+          "sourceIds": [
+            "returns-aliens-london-vol1",
+            "returns-aliens-london-vol2"
+          ]
+        }
+      ],
+      "notes": "Key origin record. The non-English birthplace is not plotted, but the returns place this Conygrave household in the Liège/Gulick-Jülich orbit. The 1571 return says the household came for work.",
+      "sourceIds": [
+        "returns-aliens-london-vol1",
+        "returns-aliens-london-vol2"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "not-found-public-sweep",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [],
+          "notes": "The alien-return entries name Harman's birthplace, wife, and servants but not his father.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "The inspected alien-return entries did not name children for Harman Conygrave.",
+          "sourceIds": [
+            "returns-aliens-london-vol1",
+            "returns-aliens-london-vol2"
+          ],
+          "lastUpdated": "2026-04-25"
+        }
+      },
+      "lastUpdated": "2026-04-25"
+    },
+    {
+      "id": "william-conygrave-southwark-sewers-1605",
+      "displayName": "William Conygrave",
+      "surnameVariant": "conygrave",
+      "gender": "male",
+      "status": "verified-public-lived",
+      "confidence": 0.7,
+      "lived": [
+        {
+          "date": "1605-06-28",
+          "year": 1605,
+          "dateLabel": "Surrey and Kent Commissioners of Sewers presentment, 28 June 1605",
+          "place": "St Saviour, Southwark, Surrey",
+          "county": "Surrey",
+          "country": "England",
+          "lat": 51.505,
+          "lon": -0.09,
+          "precision": "parish-day",
+          "evidenceType": "sewer-commission-presentment",
+          "summary": "The St Saviour, Southwark, sewers extracts present William Conygrave for reinforcing his iron grate so filth did not issue through it.",
+          "sourceIds": [
+            "st-saviour-southwark-sewers-1605"
+          ]
+        }
+      ],
+      "notes": "Separate from William Connigrave/Conygrave of the Tudor London subsidy-index cluster unless later evidence proves identity. The 1605 Southwark date is too late to merge safely with the earlier broad 1520-1550 William cluster.",
+      "sourceIds": [
+        "st-saviour-southwark-sewers-1605"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "not-found-public-sweep",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [],
+          "notes": "The sewers presentment does not name William's father.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "The sewers presentment does not name William's children.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-25"
+        }
+      },
+      "lastUpdated": "2026-04-25"
+    },
+    {
+      "id": "john-conygrave-southwark-laysub-1608",
+      "displayName": "John Conygrave",
+      "surnameVariant": "conygrave",
+      "gender": "male",
+      "status": "verified-public-lived",
+      "confidence": 0.66,
+      "lived": [
+        {
+          "date": "1608-06-28",
+          "year": 1608,
+          "dateLabel": "Southwark lay subsidy certificate, 28 June 1608",
+          "place": "Southwark, Surrey",
+          "county": "Surrey",
+          "country": "England",
+          "lat": 51.5035,
+          "lon": -0.091,
+          "precision": "borough-day",
+          "evidenceType": "lay-subsidy-attestation",
+          "summary": "TNA E179/381/9, as excerpted for St Saviour, Southwark, lists John Conygrave per poll in a 1608 subsidy certificate for persons dead, departed, gone, or without goods or chattels.",
+          "sourceIds": [
+            "st-saviour-southwark-laysub-1608"
+          ]
+        }
+      ],
+      "notes": "Not merged with John Conygrave the 1567-1571 St Olave joiner. The 1608 poll entry could be a later namesake or descendant, and the public extract does not prove continuity.",
+      "sourceIds": [
+        "st-saviour-southwark-laysub-1608"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "not-found-public-sweep",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [],
+          "notes": "The 1608 subsidy certificate does not name John's father.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "The 1608 subsidy certificate does not name John's children.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-25"
+        }
+      },
+      "lastUpdated": "2026-04-25"
+    },
+    {
+      "id": "catherine-conygrave-offley-casebooks",
+      "displayName": "Catherine Conygrave",
+      "surnameVariant": "conygrave",
+      "gender": "female",
+      "alternateNames": [
+        "Katherin Cunnygraffe",
+        "Mrs Catherine Conygrave"
+      ],
+      "status": "verified-public-lived",
+      "confidence": 0.82,
+      "lived": [
+        {
+          "startYear": 1618,
+          "endYear": 1620,
+          "dateLabel": "Casebooks consultations, 1618-1620",
+          "place": "Offley, Hertfordshire",
+          "county": "Hertfordshire",
+          "country": "England",
+          "lat": 51.9279,
+          "lon": -0.3387,
+          "precision": "village-period",
+          "evidenceType": "medical-casebook-residence",
+          "summary": "The Forman/Napier casebooks identify Mrs Catherine Conygrave with residence at Offley in 1618 and 1620; one consultation in Sir John Spencer's household records her as Katherin Cunnygraffe.",
+          "sourceIds": [
+            "casebooks-catherine-conygrave"
+          ]
+        }
+      ],
+      "notes": "The casebooks estimate Catherine's birth around 1577, but this is not treated as a source-backed birth event. The casebook page records no spouse or death.",
+      "sourceIds": [
+        "casebooks-catherine-conygrave"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-25",
+        "father": {
+          "status": "not-found-public-sweep",
+          "personId": null,
+          "displayName": null,
+          "candidatePersonIds": [],
+          "notes": "The casebooks page does not name Catherine's father.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-25"
+        },
+        "children": {
+          "status": "not-found-public-sweep",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "The casebooks page records no spouse or children for Catherine.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-25"
+        }
+      },
+      "lastUpdated": "2026-04-25"
     },
     {
       "id": "john-congreve-staffs-dower-1521",
@@ -5899,9 +6602,44 @@
       "displayName": "Michael Conygrave",
       "surnameVariant": "conygrave",
       "gender": "male",
+      "alternateNames": [
+        "Michael Conygraue"
+      ],
       "status": "legal-record-lived",
-      "confidence": 0.62,
+      "confidence": 0.74,
       "lived": [
+        {
+          "year": 1457,
+          "date": "1457-05-01",
+          "dateLabel": "Hertfordshire final concord, 1 May 1457",
+          "place": "Westminster, Middlesex",
+          "county": "Middlesex",
+          "country": "England",
+          "lat": 51.4995,
+          "lon": -0.1357,
+          "precision": "court-place",
+          "evidenceType": "feet-of-fines-querent-attestation",
+          "summary": "The Hertfordshire feet-of-fines abstract for CP 25/1/91/117 no. 179 names Michael Conygraue as one of the querents in a plea of covenant heard at Westminster.",
+          "sourceIds": [
+            "medievalgenealogy-herts-fine-michael-conygraue-1457"
+          ]
+        },
+        {
+          "year": 1457,
+          "date": "1457-05-01",
+          "dateLabel": "Hertfordshire property fine, 1 May 1457",
+          "place": "Stapleford, Bengeo, and Datchworth, Hertfordshire",
+          "county": "Hertfordshire",
+          "country": "England",
+          "lat": 51.829,
+          "lon": -0.108,
+          "precision": "multi-place-property-cluster",
+          "evidenceType": "feet-of-fines-property-attestation",
+          "summary": "The same fine concerns 2 messuages, 1 water mill, 260 acres of land, and 20 acres of meadow in Stapleford, Bengeo, and Datchworth; this places Michael in a Hertfordshire property/legal context but does not prove residence in each place.",
+          "sourceIds": [
+            "medievalgenealogy-herts-fine-michael-conygraue-1457"
+          ]
+        },
         {
           "year": 1468,
           "dateLabel": "Hilary Term 1468 Common Pleas debt action",
@@ -5912,38 +6650,49 @@
           "lon": -0.2377,
           "precision": "year-county",
           "evidenceType": "common-pleas-plaintiff-index",
-          "summary": "WAALT CP40/826 indexes Michael Conygrave as plaintiff in a Hertfordshire debt action in Hilary Term 1468.",
+          "summary": "WAALT CP40/826 indexes Michael Conygrave as plaintiff in a Hertfordshire debt action in Hilary Term 1468; the named defendants were of St Albans, Hertford, Panshanger, and Hertford.",
           "sourceIds": [
             "waalt-cp40-826-conygrave"
           ]
         }
       ],
-      "notes": "Incremental record-scan addition from the WAALT Common Pleas index; no parish or family details extracted yet.",
+      "notes": "Michael remains the earliest display-ready Conygraue spelling and the first known Hertfordshire property-fine actor in this spelling cluster, but he is no longer the earliest exact Conygrave-form person after the 1455 John Conygrave of St Albans Common Pleas find. Michael is attested as Michael Conygraue in a Hertfordshire final concord on 1 May 1457 and as Michael Conygrave in a Hertfordshire Common Pleas debt action in Hilary Term 1468. The 1457 fine supports Westminster court context and a Hertfordshire property cluster at Stapleford, Bengeo, and Datchworth; it does not prove that Michael resided in every property place. No parish or family details have been extracted. John Conygrave of St Albans in 1455 is a stronger local antecedent/kinsman lead than the Staffordshire Richard bridge, but no source proves that John was Michael's father. Thomas Conygrave of London/Westminster in 1490 is retained only as a possible later southeast-cluster continuation.",
       "sourceIds": [
+        "medievalgenealogy-herts-fine-michael-conygraue-1457",
         "waalt-cp40-826-conygrave"
       ],
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-25",
         "father": {
-          "status": "not-yet-researched",
+          "status": "candidate",
           "personId": null,
           "displayName": null,
-          "candidatePersonIds": [],
-          "notes": "No father search completed for this incremental legal-record addition.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "candidatePersonIds": [
+            "richard-congreve-common-pleas-1440"
+          ],
+          "notes": "No source names Michael's father. Richard Congreve in the 1440 and 1455 Staffordshire Common Pleas indexes is a weak earlier-generation bridge only by chronology and surname proximity, not a proven pedigree link. John Conygrave of St Albans in 1455 is a local antecedent/kinsman lead, but he is not added as a father candidate because the index does not establish generation or kinship.",
+          "sourceIds": [
+            "waalt-cp40-826-conygrave",
+            "aalt-cp40-717-congreve"
+          ],
+          "lastUpdated": "2026-04-25"
         },
         "children": {
-          "status": "not-yet-researched",
+          "status": "candidate",
           "personIds": [],
-          "candidatePersonIds": [],
+          "candidatePersonIds": [
+            "thomas-conygrave-windsor-clockmaker"
+          ],
           "external": [],
-          "notes": "No children search completed for this incremental legal-record addition.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-24"
+          "notes": "No source names Michael's children. Thomas Conygrave of London/Westminster in 1490 is a candidate later southeast-cluster continuation only because of rare spelling, chronology, and Hertfordshire-London proximity.",
+          "sourceIds": [
+            "waalt-cp40-826-conygrave",
+            "stgeorges-curfew-tower"
+          ],
+          "lastUpdated": "2026-04-25"
         }
       },
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-25"
     },
     {
       "id": "margret-congrieve-gnosall-1629",
