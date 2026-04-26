@@ -129,7 +129,7 @@
         "surnamedb-congreve"
       ],
       "family": {
-        "lastUpdated": "2026-04-25",
+        "lastUpdated": "2026-04-26",
         "father": {
           "status": "not-found-public-sweep",
           "personId": null,
@@ -1135,68 +1135,6 @@
       "lastUpdated": "2026-04-25"
     },
     {
-      "id": "richard-congreve-stretton-early",
-      "displayName": "Richard Congreve",
-      "surnameVariant": "congreve",
-      "gender": "male",
-      "status": "published-pedigree-lived",
-      "confidence": 0.52,
-      "lived": [
-        {
-          "startYear": 1475,
-          "endYear": 1525,
-          "dateLabel": "published early Tudor pedigree generation",
-          "place": "Stretton Hall, Staffordshire",
-          "county": "Staffordshire",
-          "country": "England",
-          "lat": 52.7,
-          "lon": -2.1667,
-          "precision": "period",
-          "evidenceType": "published-pedigree-family-placement",
-          "summary": "Stirnet's Congreve of Stretton pedigree places Richard Congreve at Stretton as father of Ralfe Congreve.",
-          "sourceIds": [
-            "stirnet-congreve-stretton"
-          ]
-        }
-      ],
-      "deathResearch": {
-        "status": "not-found-public-sweep",
-        "notes": "Late-medieval/early-Tudor death pass checked the public pedigree/source trail already used for this person plus broad web/TNA-style searches; no source-backed death date and place were found.",
-        "sourceIds": [],
-        "lastUpdated": "2026-04-25"
-      },
-      "notes": "Early Stretton pedigree record; date range is generational placement, not a vital date.",
-      "sourceIds": [
-        "stirnet-congreve-stretton"
-      ],
-      "family": {
-        "lastUpdated": "2026-04-26",
-        "father": {
-          "status": "not-yet-researched",
-          "personId": null,
-          "displayName": null,
-          "candidatePersonIds": [],
-          "notes": "Father still needs an individual deep dive. A 2026-04-26 source/context or cluster-level pass found no immediate linked father, but this record should not be treated as a researched dead end.",
-          "sourceIds": [],
-          "lastUpdated": "2026-04-26"
-        },
-        "children": {
-          "status": "partial-linked",
-          "personIds": [
-            "ralfe-congreve-stretton"
-          ],
-          "candidatePersonIds": [],
-          "external": [],
-          "notes": "Published pedigree names Ralfe Congreve of Stretton as Richard's son.",
-          "sourceIds": [
-            "stirnet-congreve-stretton"
-          ],
-          "lastUpdated": "2026-04-24"
-        }
-      },
-      "lastUpdated": "2026-04-26"
-    },
-    {
       "id": "richard-congrave-loughton-essex",
       "displayName": "Richard Congrave",
       "surnameVariant": "congrave",
@@ -1206,6 +1144,9 @@
         "Richard Congreve",
         "Richard Congreue",
         "Richard C.",
+        "Richard Congreve of Stretton",
+        "Richard Congreve of Penkridge",
+        "Richard Conggrave of Penkeryche",
         "Richard Congrave of Loughton",
         "Richard Congreve of Loughton",
         "Richard Congreve of Laughton"
@@ -1213,6 +1154,45 @@
       "status": "legal-record-lived",
       "confidence": 0.9,
       "lived": [
+        {
+          "startYear": 1422,
+          "endYear": 1461,
+          "dateLabel": "published Stretton pedigree, temp. Henry VI",
+          "place": "Stretton Hall, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.7,
+          "lon": -2.1667,
+          "precision": "regnal-reign",
+          "evidenceType": "published-pedigree-family-placement",
+          "movementRole": "attested-location",
+          "movementConfidence": 0.68,
+          "movementNote": "Route-driving Stretton point is supported by the published pedigree and strengthened by the PCC index tying the 1496 Loughton testator to Penkeryche/Penkridge; it does not by itself prove a specific travel date.",
+          "summary": "The Stretton pedigree places Richard Congreve at Stretton in the Henry VI generation as husband of a Harpur of Rushall and father of Ralfe Congreve.",
+          "sourceIds": [
+            "stirnet-congreve-stretton",
+            "pcc-index-conggrave-richard-loughton-penkeryche-1496",
+            "tna-d1057-congreve-family"
+          ]
+        },
+        {
+          "year": 1462,
+          "dateLabel": "De Banco, Easter Term 2 Edward IV, 1462",
+          "place": "Stretton, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.7,
+          "lon": -2.1667,
+          "precision": "place",
+          "evidenceType": "de-banco-trespass-close-attestation",
+          "movementRole": "attested-location",
+          "movementConfidence": 0.82,
+          "movementNote": "This is the strongest event-level Stretton route point before the Essex property attestations.",
+          "summary": "Staffordshire Collections prints a De Banco extract for Easter Term 2 Edward IV in which Richard Congreve sued William Holt of Kynwaston, husbandman, for breaking into Richard's close at Stretton and depasturing cattle on his grass.",
+          "sourceIds": [
+            "staffordshire-collections-ns-vol4-richard-congreve-stretton-1462"
+          ]
+        },
         {
           "year": 1471,
           "date": "1471-02-03",
@@ -1275,6 +1255,22 @@
             "tna-d1057-congreve-family"
           ],
           "year": 1496
+        },
+        {
+          "year": 1496,
+          "dateLabel": "PCC will index, 33 Vox",
+          "place": "Penkridge, Staffordshire",
+          "county": "Staffordshire",
+          "country": "England",
+          "lat": 52.725,
+          "lon": -2.116,
+          "precision": "probate-index-place",
+          "evidenceType": "probate-index-place-association",
+          "movementRole": "identity-alias",
+          "summary": "The PCC wills index entry for Richard Conggrave, gentleman, gives Loughton, Essex and Penkeryche/Penkridge, Staffordshire in the same 1496 probate reference, 33 Vox.",
+          "sourceIds": [
+            "pcc-index-conggrave-richard-loughton-penkeryche-1496"
+          ]
         }
       ],
       "death": {
@@ -1300,13 +1296,16 @@
         ],
         "lastUpdated": "2026-04-25"
       },
-      "notes": "AALT 1483, the PCC will, and TNA D1057 likely refer to the same Loughton/Laughton Essex man. The 1496 will directly names Richard's wife Johane, son John Congrave, and daughter Agnes Congrave. The 1471 West Tilbury and 1489 Latton fines both put Richard Congreve in Essex land settlements with Harpur/Harpur-circle parties, and the Latton limitation to the heirs of Richard Congreve is stronger than a trustee-only mention. The 1492 Harpour will discussion separately strengthens the Essex-Harpur-Congreve bridge by naming Christopher as son of Richard Congreve and Anne, sister of Richard Harper; reconcile Anne/Johane and Christopher against the original wills before treating all children as one complete sibling set. Thomas Conygrave of London/Westminster in 1490 is retained as a candidate later member of this southeast cluster only; no source proves that Richard was his father. Still retained as a legal/archive record distinct from the Staffordshire pedigree Richard until the Stretton and Loughton identities are proven to be the same man.",
+      "notes": "The 1496 PCC will/index evidence now supplies a direct identity bridge: the same probate index entry for Richard Conggrave, gentleman, associates Loughton, Essex and Penkeryche/Penkridge, Staffordshire, and TNA D1057 independently says the Richard Congreve who died in 1496 lived at Laughton/Loughton while cataloguing the Congreve and Stretton family papers. The former separate Stretton pedigree Richard has therefore been collapsed into this record. The 1496 will directly names Richard's wife Johane, son John Congrave, and daughter Agnes Congrave. The 1471 West Tilbury and 1489 Latton fines both put Richard Congreve in Essex land settlements with Harpur/Harpur-circle parties, and the Latton limitation to the heirs of Richard Congreve is stronger than a trustee-only mention. The 1492 Harpour will discussion separately strengthens the Essex-Harpur-Congreve bridge by naming Christopher as son of Richard Congreve and Anne, sister of Richard Harper; Christopher remains a cautious candidate child because the original Harpour will has not been inspected and Anne/Johane still needs reconciliation. The later visitation pedigree details are useful for the Stretton frame and Ralfe link, but should still be checked against original deeds and the complete PCC will before treating every pedigree detail as settled.",
       "sourceIds": [
         "medievalgenealogy-west-tilbury-congreue-1471",
         "essex-feet-fines-vol4-richard-congreve-1471-1489",
         "aalt-cp40-883-congrave",
         "tna-prob-11-10-614-richard-congrave-1496",
+        "pcc-index-conggrave-richard-loughton-penkeryche-1496",
+        "staffordshire-collections-ns-vol4-richard-congreve-stretton-1462",
         "tna-d1057-congreve-family",
+        "stirnet-congreve-stretton",
         "richardiii-skrene-harpour-congreve-2011"
       ],
       "family": {
@@ -1324,31 +1323,93 @@
           "status": "partial-linked",
           "personIds": [
             "john-congrave-loughton-1496",
-            "agnes-congrave-loughton-1496"
+            "agnes-congrave-loughton-1496",
+            "ralfe-congreve-stretton"
           ],
           "candidatePersonIds": [
-            "ralfe-congreve-stretton",
+            "christopher-congreve-harper-nephew-1493",
             "reginald-reynold-conygrave",
             "thomas-conygrave-windsor-clockmaker"
           ],
-          "external": [
-            {
-              "displayName": "Christopher Congreve",
-              "notes": "The 1492 Richard Harpour will discussion names Christopher as son of Richard Congreve and Anne, sister of Richard Harper."
-            }
-          ],
-          "notes": "Richard's 1496 PCC will directly names John Congrave as his son and Agnes Congrave as his daughter. Christopher is separate strong child evidence from the Richard Harpour will discussion, but the Loughton will names wife Johane rather than Anne, so Christopher remains external-known pending reconciliation against the original Harpour will and related deeds. Ralfe Congreve of Stretton is a candidate only if the Loughton/Laughton Richard is the same as the Stretton pedigree Richard. Reginald Conigrave remains a major unproven candidate relevant to the Conigrave line. Thomas Conygrave of London/Westminster in 1490 is added only as a southeast-cluster candidate because of date, place, and rare spelling proximity; no source names him as Richard's son.",
+          "external": [],
+          "notes": "Richard's 1496 PCC will directly names John Congrave as his son and Agnes Congrave as his daughter. The Stretton pedigree names Ralfe Congreve as son of Richard Congreve of Stretton; the PCC index Loughton/Penkeryche bridge is now strong enough to keep Ralfe linked under this combined Richard record, while still awaiting original-will/deed confirmation of the full visitation frame. Christopher is separate strong child evidence from the Richard Harpour will discussion, but the Loughton will names wife Johane rather than Anne and the Harpour source is still a published discussion rather than the inspected original will, so Christopher is a candidate child pending reconciliation against the original Harpour will and related deeds. Reginald Conigrave remains a major unproven candidate relevant to the Conigrave line. Thomas Conygrave of London/Westminster in 1490 is added only as a southeast-cluster candidate because of date, place, and rare spelling proximity; no source names him as Richard's son.",
           "sourceIds": [
             "tna-prob-11-10-614-richard-congrave-1496",
+            "pcc-index-conggrave-richard-loughton-penkeryche-1496",
             "richardiii-skrene-harpour-congreve-2011",
             "stirnet-congreve-stretton",
             "user-extract-reginald-conygrave-will-1550",
             "stgeorges-curfew-tower"
           ],
-          "lastUpdated": "2026-04-25"
+          "lastUpdated": "2026-04-26"
         }
       },
-      "lastUpdated": "2026-04-25"
+      "lastUpdated": "2026-04-26"
+    },
+    {
+      "id": "christopher-congreve-harper-nephew-1493",
+      "displayName": "Christopher Congreve",
+      "surnameVariant": "congreve",
+      "gender": "male",
+      "status": "probate-family-lived",
+      "confidence": 0.7,
+      "lived": [
+        {
+          "year": 1493,
+          "date": "1493-01-18",
+          "dateLabel": "Richard Harper will proved 18 January 1493",
+          "place": "Latton, Essex",
+          "county": "Essex",
+          "country": "England",
+          "lat": 51.771,
+          "lon": 0.103,
+          "precision": "property-context",
+          "evidenceType": "will-remainder-attestation",
+          "movementRole": "property-context",
+          "summary": "A Ricardian article summarising Richard Harper's will says Harper, esquire of Epping, left remainders after nearer heirs to his nephew Christopher, son of Anne and her husband Richard Congreve; the same discussion places the Harper estate context at Latton and Chambers.",
+          "sourceIds": [
+            "richardiii-skrene-harpour-congreve-2011"
+          ]
+        }
+      ],
+      "deathResearch": {
+        "status": "not-yet-researched",
+        "notes": "No systematic death search has been recorded yet; this record is currently based on Richard Harper's will-remainder discussion.",
+        "sourceIds": [],
+        "lastUpdated": "2026-04-26"
+      },
+      "notes": "This is property/inheritance-network evidence, not proof that Christopher was born or resident at Latton. The source names his parents as Anne, sister of Richard Harper, and her husband Richard Congreve. He is kept as a candidate child of Richard Congrave of Loughton because the Latton fine and Harpur/Harper context match that Essex cluster, but the original Harpour will and the Anne/Johane wife-name conflict still need checking before linking the relationship as proved.",
+      "sourceIds": [
+        "richardiii-skrene-harpour-congreve-2011"
+      ],
+      "family": {
+        "lastUpdated": "2026-04-26",
+        "father": {
+          "status": "candidate",
+          "personId": null,
+          "displayName": "Richard Congreve",
+          "candidatePersonIds": [
+            "richard-congrave-loughton-essex"
+          ],
+          "notes": "The Richard Harper will discussion names Christopher as son of Anne and her husband Richard Congreve. The existing Loughton Richard is the strongest in-database candidate because of the 1471 West Tilbury, 1489 Latton, 1483 Loughton, and 1496 Loughton evidence, but the source has not yet been reconciled with Richard Congrave's PCC will naming wife Johane.",
+          "sourceIds": [
+            "richardiii-skrene-harpour-congreve-2011",
+            "essex-feet-fines-vol4-richard-congreve-1471-1489",
+            "tna-prob-11-10-614-richard-congrave-1496"
+          ],
+          "lastUpdated": "2026-04-26"
+        },
+        "children": {
+          "status": "not-yet-researched",
+          "personIds": [],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "Children of Christopher Congreve have not yet been searched.",
+          "sourceIds": [],
+          "lastUpdated": "2026-04-26"
+        }
+      },
+      "lastUpdated": "2026-04-26"
     },
     {
       "id": "john-congrave-loughton-1496",
@@ -1738,22 +1799,23 @@
         "sourceIds": [],
         "lastUpdated": "2026-04-25"
       },
-      "notes": "May be related to the separately entered Ralph Congreve found in Staffordshire Common Pleas in 1530, but identity is not merged.",
+      "notes": "Published Stretton-pedigree son of the combined Richard Congrave/Congreve of Stretton, Penkridge, and Loughton record. May be related to the separately entered Ralph Congreve found in Staffordshire Common Pleas in 1530, but that identity is not merged.",
       "sourceIds": [
         "stirnet-congreve-stretton"
       ],
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-26",
         "father": {
           "status": "linked",
-          "personId": "richard-congreve-stretton-early",
+          "personId": "richard-congrave-loughton-essex",
           "displayName": null,
           "candidatePersonIds": [],
-          "notes": "Published pedigree makes Ralfe son of Richard Congreve of Stretton.",
+          "notes": "Published pedigree makes Ralfe son of Richard Congreve of Stretton. The 1496 PCC index entry associating Richard Conggrave of Loughton with Penkeryche/Penkridge supports treating the Stretton pedigree Richard and the Loughton probate Richard as the same display person, pending original-will/deed confirmation.",
           "sourceIds": [
-            "stirnet-congreve-stretton"
+            "stirnet-congreve-stretton",
+            "pcc-index-conggrave-richard-loughton-penkeryche-1496"
           ],
-          "lastUpdated": "2026-04-24"
+          "lastUpdated": "2026-04-26"
         },
         "children": {
           "status": "partial-linked",
@@ -1769,7 +1831,7 @@
           "lastUpdated": "2026-04-24"
         }
       },
-      "lastUpdated": "2026-04-25"
+      "lastUpdated": "2026-04-26"
     },
     {
       "id": "dorothy-giffard-congreve",

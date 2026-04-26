@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "generatedFrom": "data/people.json",
-  "generatedAt": "2026-04-25T21:17:35.227Z",
+  "generatedAt": "2026-04-26T05:12:34.208Z",
   "events": [
     {
       "personId": "alan-de-cungrave-staffordshire-1203",
@@ -170,6 +170,25 @@
       "surnameVariant": "congreve",
       "gender": "male",
       "evidenceType": "common-pleas-defendant-index"
+    },
+    {
+      "personId": "richard-congrave-loughton-essex",
+      "type": "lived",
+      "year": 1422,
+      "startYear": 1422,
+      "endYear": 1461,
+      "date": null,
+      "dateLabel": "published Stretton pedigree, temp. Henry VI",
+      "place": "Stretton Hall, Staffordshire",
+      "country": "England",
+      "lat": 52.7,
+      "lon": -2.1667,
+      "surnameVariant": "congrave",
+      "gender": "male",
+      "evidenceType": "published-pedigree-family-placement",
+      "movementRole": "attested-location",
+      "movementConfidence": 0.68,
+      "movementNote": "Route-driving Stretton point is supported by the published pedigree and strengthened by the PCC index tying the 1496 Loughton testator to Penkeryche/Penkridge; it does not by itself prove a specific travel date."
     },
     {
       "personId": "richard-congreve-common-pleas-1440",
@@ -478,6 +497,25 @@
       "evidenceType": "common-pleas-defendant-index"
     },
     {
+      "personId": "richard-congrave-loughton-essex",
+      "type": "lived",
+      "year": 1462,
+      "startYear": 1462,
+      "endYear": 1462,
+      "date": null,
+      "dateLabel": "De Banco, Easter Term 2 Edward IV, 1462",
+      "place": "Stretton, Staffordshire",
+      "country": "England",
+      "lat": 52.7,
+      "lon": -2.1667,
+      "surnameVariant": "congrave",
+      "gender": "male",
+      "evidenceType": "de-banco-trespass-close-attestation",
+      "movementRole": "attested-location",
+      "movementConfidence": 0.82,
+      "movementNote": "This is the strongest event-level Stretton route point before the Essex property attestations."
+    },
+    {
       "personId": "katharine-congreve-barking-1466",
       "type": "lived",
       "year": 1466,
@@ -539,22 +577,6 @@
       "lon": -2.1667,
       "surnameVariant": "congreve",
       "gender": "female",
-      "evidenceType": "published-pedigree-family-placement"
-    },
-    {
-      "personId": "richard-congreve-stretton-early",
-      "type": "lived",
-      "year": 1475,
-      "startYear": 1475,
-      "endYear": 1525,
-      "date": null,
-      "dateLabel": "published early Tudor pedigree generation",
-      "place": "Stretton Hall, Staffordshire",
-      "country": "England",
-      "lat": 52.7,
-      "lon": -2.1667,
-      "surnameVariant": "congreve",
-      "gender": "male",
       "evidenceType": "published-pedigree-family-placement"
     },
     {
@@ -630,6 +652,23 @@
       "movementNote": "Ordered after Westminster because the same source says the clock was made there before delivery/payment context at Windsor."
     },
     {
+      "personId": "christopher-congreve-harper-nephew-1493",
+      "type": "lived",
+      "year": 1493,
+      "startYear": 1493,
+      "endYear": 1493,
+      "date": "1493-01-18",
+      "dateLabel": "Richard Harper will proved 18 January 1493",
+      "place": "Latton, Essex",
+      "country": "England",
+      "lat": 51.771,
+      "lon": 0.103,
+      "surnameVariant": "congreve",
+      "gender": "male",
+      "evidenceType": "will-remainder-attestation",
+      "movementRole": "property-context"
+    },
+    {
       "personId": "richard-congrave-loughton-essex",
       "type": "death",
       "year": 1496,
@@ -692,6 +731,23 @@
       "surnameVariant": "congrave",
       "gender": "male",
       "evidenceType": "will-and-archive-attestation"
+    },
+    {
+      "personId": "richard-congrave-loughton-essex",
+      "type": "lived",
+      "year": 1496,
+      "startYear": 1496,
+      "endYear": 1496,
+      "date": null,
+      "dateLabel": "PCC will index, 33 Vox",
+      "place": "Penkridge, Staffordshire",
+      "country": "England",
+      "lat": 52.725,
+      "lon": -2.116,
+      "surnameVariant": "congrave",
+      "gender": "male",
+      "evidenceType": "probate-index-place-association",
+      "movementRole": "identity-alias"
     },
     {
       "personId": "agnes-erdeswick-congreve",
