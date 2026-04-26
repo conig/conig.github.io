@@ -14,6 +14,19 @@
       "sourceIds": []
     },
     {
+      "id": "mark-hugh-conigrave-stoke-albany-parentage",
+      "label": "Mark and Hugh Conigrave, Stoke Albany parentage",
+      "variant": "Conigrave",
+      "period": "1561-1645",
+      "place": "Stoke Albany, Northamptonshire",
+      "summary": "Mark Conigrave was rector of St Botolph's, Stoke Albany from 1561 to 1614, and Hugh Conigrave immediately followed as rector from 1614 to 1645. The data keeps Mark and Hugh linked as father and son with a caution note because the succession, same community role in the same parish, rare surname, and lack of a better Stoke Albany candidate support a working attachment. In the current dataset, Mark is the first known target-surname actor at Stoke Albany, though other Conigrave-form records exist elsewhere in Northamptonshire. Targeted public checks on 2026-04-26 found no source directly stating that Mark had a son Hugh. The Stoke Albany page only records successive incumbencies; Leicestershire Medics proves Hugh as father of Conyers Conigrave and husband of Mary Henchman but does not name Hugh's father.",
+      "nextAction": "Inspect Stoke Albany parish registers from 1575 onward, bishop's transcripts, Peterborough diocesan institution records, wills/probate, sequestration material, and any surviving Mark or Hugh Conigrave clerical records for a kinship-bearing statement; keep the working link unless a better candidate or contrary source appears.",
+      "sourceIds": [
+        "stoke-albany-memorabilia",
+        "leicestershire-medics-conigrave"
+      ]
+    },
+    {
       "id": "congreve-of-congreve-stretton-lineage",
       "label": "Congreve of Congreve and Stretton lineage",
       "variant": "Congreve",

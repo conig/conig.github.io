@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "generatedFrom": "data/people.json",
-  "generatedAt": "2026-04-26T06:44:07.029Z",
+  "generatedAt": "2026-04-26T09:43:05.411Z",
   "events": [
     {
       "personId": "alan-de-cungrave-staffordshire-1203",
@@ -1132,7 +1132,7 @@
       "lon": -0.1278,
       "surnameVariant": "conigrave",
       "gender": "male",
-      "evidenceType": "candidate-family-probate-attestation"
+      "evidenceType": "family-probate-attestation"
     },
     {
       "personId": "robert-conygrave-reginald-son-1550",

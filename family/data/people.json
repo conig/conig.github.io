@@ -2443,7 +2443,7 @@
         "sourceIds": [],
         "lastUpdated": "2026-04-25"
       },
-      "notes": "Primary display form is now Reginald Conigrave. Source spellings include Reginald Conygrave and Reynold Conygrave, which are preserved as alternate names; a Chancery catalogue also gives alias Conye. The London inquisition-post-mortem abstract quotes Reginald's will dated 7 May 1550 and names sons George, Thomas, Edward, Mark, Robert, William, and Edmund, but no inspected source names Reginald's father. George, Thomas, Edward, Robert, William, and Edmund now have person records from the will/IPM abstract alone. Mark Conigrave of Oxford/Stoke Albany remains the current in-database candidate for the named son Mark, but the identity is not proven. The 1548 freemen-register reference to Joan as executrix conflicts with the 1550 IPM death date if read literally, so it should be checked against the damaged manuscript context before being used for death chronology.",
+      "notes": "Primary display form is now Reginald Conigrave. Source spellings include Reginald Conygrave and Reynold Conygrave, which are preserved as alternate names; a Chancery catalogue also gives alias Conye. The London inquisition-post-mortem abstract quotes Reginald's will dated 7 May 1550 and names sons George, Thomas, Edward, Mark, Robert, William, and Edmund, but no inspected source names Reginald's father. George, Thomas, Edward, Mark, Robert, William, and Edmund now have person records from the will/IPM abstract. The named son Mark is linked with caution to Mark Conigrave of Oxford/Stoke Albany because the rare name, chronology, and Conigrave/Conygrave/Cunygrave spellings align and no competing contemporary Mark is currently known. The 1548 freemen-register reference to Joan as executrix conflicts with the 1550 IPM death date if read literally, so it should be checked against the damaged manuscript context before being used for death chronology.",
       "sourceIds": [
         "bedsarchives-f130-conygrave",
         "bedford-kensworth-damsaries",
@@ -2485,23 +2485,25 @@
             "george-conygrave-reginald-son-1550",
             "thomas-conygrave-reginald-son-1550",
             "edward-conygrave-reginald-son-1550",
+            "mark-conigrave-stoke-albany",
             "robert-conygrave-reginald-son-1550",
             "william-conygrave-reginald-son-1550",
             "edmund-conygrave-reginald-son-1550"
           ],
-          "candidatePersonIds": [
-            "mark-conigrave-stoke-albany"
-          ],
+          "candidatePersonIds": [],
           "external": [],
-          "notes": "The 1550 London inquisition-post-mortem abstract names sons George, Thomas, Edward, Mark, Robert, William, and Edmund. George is named as son and next heir aged 17 years and more; Thomas, Edward, Robert, William, and Edmund are named in remainder clauses and now have source-backed person records. Mark Conigrave of Oxford/Stoke Albany is the current candidate for the named son Mark, but that identity remains unproven.",
+          "notes": "The 1550 London inquisition-post-mortem abstract names sons George, Thomas, Edward, Mark, Robert, William, and Edmund. George is named as son and next heir aged 17 years and more; Thomas, Edward, Robert, William, and Edmund are named in remainder clauses. Mark is linked with caution to Mark Conigrave of Oxford/Stoke Albany because the date, rare forename/surname combination, and Conigrave/Conygrave/Cunygrave spelling pattern align, and no other plausible contemporary Mark is currently known. Reopen this link if another in-scope Mark appears or a contradictory source is found.",
           "sourceIds": [
             "bedsarchives-f130-conygrave",
             "bedford-kensworth-damsaries",
             "aalt-cp40-1124-conygrave",
             "aalt-cp40-1084-conygrave",
-            "user-extract-reginald-conygrave-will-1550"
+            "user-extract-reginald-conygrave-will-1550",
+            "oxford-register-mark-conigrave-1556",
+            "forebears-congreve-bardsley",
+            "stoke-albany-memorabilia"
           ],
-          "lastUpdated": "2026-04-25"
+          "lastUpdated": "2026-04-26"
         }
       }
     },
@@ -3105,8 +3107,8 @@
           "lat": 51.5074,
           "lon": -0.1278,
           "precision": "city",
-          "evidenceType": "candidate-family-probate-attestation",
-          "summary": "The London inquisition-post-mortem abstract for Reginald Conygrave's will names a son Mark. This is treated as Mark Conigrave's likely early London family context before Oxford, but the identity is still candidate rather than proven.",
+          "evidenceType": "family-probate-attestation",
+          "summary": "The London inquisition-post-mortem abstract for Reginald Conygrave's will names a son Mark. This record links that son to Mark Conigrave of Oxford/Stoke Albany with caution because the rare name, timing, and Conigrave/Conygrave/Cunygrave spellings align and no competing contemporary Mark is currently known.",
           "sourceIds": [
             "user-extract-reginald-conygrave-will-1550"
           ]
@@ -3165,7 +3167,7 @@
         "sourceIds": [],
         "lastUpdated": "2026-04-25"
       },
-      "notes": "Added explicitly as requested. This is a strong lived record, not a birth/death record. The likely movement path is now London family/probate context in 1550, Oxford university attestation in 1556-1557, then Stoke Albany rectory from 1561 to 1614. The Oxford University register records Mark Conigrave or Cunygrave in the 1556-1557 B.A. sequence, and Bardsley's surname note independently pointed to the same register citation. The London inquisition-post-mortem abstract for Reginald Conygrave's 1550 will names a son Mark, making Reginald a strong candidate father, but the identity is not yet proven. No source-backed birth or baptism has been found; Stoke Albany's surviving parish register begins in 1575, too late for a man already in Oxford by 1556 and rector by 1561. Forebears' Bardsley extract separately identifies Mark Conigrave or Cunygrave in the 1556 Register of the University of Oxford.",
+      "notes": "Added explicitly as requested. This is a strong lived record, not a birth/death record. The likely movement path is now London family/probate context in 1550, Oxford university attestation in 1556-1557, then Stoke Albany rectory from 1561 to 1614. The Oxford University register records Mark Conigrave or Cunygrave in the 1556-1557 B.A. sequence, and Bardsley's surname note independently pointed to the same register citation. The London inquisition-post-mortem abstract for Reginald Conygrave's 1550 will names a son Mark; this record links Mark to Reginald with caution because the rare name, date, clerical/educational path, and Conigrave/Conygrave/Cunygrave spellings align and no competing contemporary Mark is currently known. No source-backed birth or baptism has been found; Stoke Albany's surviving parish register begins in 1575, too late for a man already in Oxford by 1556 and rector by 1561. Forebears' Bardsley extract separately identifies Mark Conigrave or Cunygrave in the 1556 Register of the University of Oxford.",
       "sourceIds": [
         "stoke-albany-memorabilia",
         "forebears-congreve-bardsley",
@@ -3176,30 +3178,32 @@
       "family": {
         "lastUpdated": "2026-04-24",
         "father": {
-          "status": "candidate",
-          "personId": null,
+          "status": "linked",
+          "personId": "reginald-reynold-conygrave",
           "displayName": null,
-          "candidatePersonIds": [
-            "reginald-reynold-conygrave"
-          ],
-          "notes": "The London inquisition-post-mortem abstract of Reginald Conygrave's 1550 will names a son Mark. The date and surname-variant pattern make Reginald a strong candidate father for Mark Conigrave of Oxford/Stoke Albany, but the sources do not yet prove they are the same person.",
+          "candidatePersonIds": [],
+          "notes": "Linked with caution: the London inquisition-post-mortem abstract of Reginald Conygrave's 1550 will names a son Mark, and the date, rare name, clerical/educational path, and Conigrave/Conygrave/Cunygrave spellings align with Mark Conigrave of Oxford/Stoke Albany. No other plausible contemporary Mark is currently known; reopen if another candidate or contrary source appears.",
           "sourceIds": [
-            "user-extract-reginald-conygrave-will-1550"
-          ],
-          "lastUpdated": "2026-04-24"
-        },
-        "children": {
-          "status": "candidate",
-          "personIds": [],
-          "candidatePersonIds": [
-            "hugh-conigrave-stoke-albany"
-          ],
-          "external": [],
-          "notes": "Hugh Conigrave succeeded Mark as rector at Stoke Albany and may be related, but the current evidence does not prove a father-child link.",
-          "sourceIds": [
+            "user-extract-reginald-conygrave-will-1550",
+            "oxford-register-mark-conigrave-1556",
+            "forebears-congreve-bardsley",
             "stoke-albany-memorabilia"
           ],
-          "lastUpdated": "2026-04-24"
+          "lastUpdated": "2026-04-26"
+        },
+        "children": {
+          "status": "partial-linked",
+          "personIds": [
+            "hugh-conigrave-stoke-albany"
+          ],
+          "candidatePersonIds": [],
+          "external": [],
+          "notes": "Linked with caution as a working attachment: Hugh Conigrave immediately succeeded Mark as rector at Stoke Albany in 1614, held the same community role in the same parish, shares the rare surname form, and no better Stoke Albany father candidate is currently known. In the current dataset, Mark is the first known target-surname actor at Stoke Albany, though other Conigrave-form records exist elsewhere in Northamptonshire. A targeted 2026-04-26 public-source check found no source directly stating that Mark had a son Hugh; the Stoke Albany page only gives successive tenures, and Leicestershire Medics proves Hugh as father of Conyers Conigrave and husband of Mary Henchman but does not name Hugh's father. Keep attached unless a better candidate or contrary source appears.",
+          "sourceIds": [
+            "stoke-albany-memorabilia",
+            "leicestershire-medics-conigrave"
+          ],
+          "lastUpdated": "2026-04-26"
         }
       }
     },
@@ -6186,26 +6190,25 @@
         ],
         "lastUpdated": "2026-04-24"
       },
-      "notes": "Included because rector tenure and death year are source-backed; no birth record has been found.",
+      "notes": "Included because rector tenure and death year are source-backed; no birth record has been found. Mark Conigrave is linked with caution as Hugh's working father because he immediately preceded Hugh as rector at Stoke Albany in 1614, held the same community role in the same parish, shares the rare surname form, and no better Stoke Albany father candidate is currently known. A targeted 2026-04-26 public-source check found no source directly stating that Mark had a son Hugh.",
       "sourceIds": [
         "stoke-albany-memorabilia",
         "leicestershire-medics-conigrave"
       ],
-      "lastUpdated": "2026-04-24",
+      "lastUpdated": "2026-04-26",
       "family": {
-        "lastUpdated": "2026-04-24",
+        "lastUpdated": "2026-04-26",
         "father": {
-          "status": "candidate",
-          "personId": null,
+          "status": "linked",
+          "personId": "mark-conigrave-stoke-albany",
           "displayName": null,
-          "candidatePersonIds": [
-            "mark-conigrave-stoke-albany"
-          ],
-          "notes": "Mark Conigrave is a plausible lead because he immediately precedes Hugh in the Stoke Albany incumbency list, but this is not proof.",
+          "candidatePersonIds": [],
+          "notes": "Linked with caution as a working attachment: Mark Conigrave immediately precedes Hugh in the Stoke Albany incumbency list, held the same community role in the same parish, the rare surname form aligns, and no better Stoke Albany father candidate is currently known. A targeted 2026-04-26 public-source check found no source directly stating that Mark had a son Hugh; keep attached unless a better candidate or contrary source appears.",
           "sourceIds": [
-            "stoke-albany-memorabilia"
+            "stoke-albany-memorabilia",
+            "leicestershire-medics-conigrave"
           ],
-          "lastUpdated": "2026-04-24"
+          "lastUpdated": "2026-04-26"
         },
         "children": {
           "status": "partial-linked",
