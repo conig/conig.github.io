@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "generatedFrom": "data/people.json",
-  "generatedAt": "2026-04-26T05:12:34.208Z",
+  "generatedAt": "2026-04-26T05:35:07.191Z",
   "events": [
     {
       "personId": "alan-de-cungrave-staffordshire-1203",
@@ -577,6 +577,22 @@
       "lon": -2.1667,
       "surnameVariant": "congreve",
       "gender": "female",
+      "evidenceType": "published-pedigree-family-placement"
+    },
+    {
+      "personId": "richard-congreve-stretton-early",
+      "type": "lived",
+      "year": 1475,
+      "startYear": 1475,
+      "endYear": 1525,
+      "date": null,
+      "dateLabel": "published early Tudor pedigree generation",
+      "place": "Stretton Hall, Staffordshire",
+      "country": "England",
+      "lat": 52.7,
+      "lon": -2.1667,
+      "surnameVariant": "congreve",
+      "gender": "unknown",
       "evidenceType": "published-pedigree-family-placement"
     },
     {
@@ -1173,6 +1189,22 @@
       "endYear": 1556,
       "date": "1556-12-09",
       "dateLabel": "B.A. supplication Nov. 1556; admitted 9 Dec. 1556; determined 1557",
+      "place": "Oxford, Oxfordshire",
+      "country": "England",
+      "lat": 51.752,
+      "lon": -1.2577,
+      "surnameVariant": "conigrave",
+      "gender": "male",
+      "evidenceType": "university-register-attestation"
+    },
+    {
+      "personId": "mark-conigrave-stoke-albany",
+      "type": "lived",
+      "year": 1556,
+      "startYear": 1556,
+      "endYear": 1556,
+      "date": null,
+      "dateLabel": "University of Oxford register, 1556",
       "place": "Oxford, Oxfordshire",
       "country": "England",
       "lat": 51.752,

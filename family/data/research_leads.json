@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-04-25",
+  "updated": "2026-04-24",
   "scope": "1100-1788 England; unresolved attestations and out-of-scope records only",
   "leads": [
     {
@@ -414,24 +414,15 @@
       "id": "common-pleas-congreve-systematic-scan",
       "label": "Common Pleas Congreve/Congrave systematic scan",
       "variant": "Congreve",
-      "period": "1408-1530 and later",
+      "period": "1440-1530 and later",
       "place": "Staffordshire, Essex, London",
-      "summary": "AALT/WAALT indexes exposed Roger Cungreve of Wolverhampton in 1408, Richard Congreve in 1440 and 1455, Thomas Congreve/Congrave in Essex in 1453 and 1455, John Conygrave of St Albans in 1455, Richard Congrave of Loughton in 1483, Margery and John Congreve in a 1521 Staffordshire dower action, and Ralph Congreve in a 1530 Staffordshire debt action. Follow-up bridge evidence now adds the 1471 West Tilbury final concord, the 1489 Latton final concord limited to the heirs of Richard Congreve, Richard Congrave of Loughton's 1496 PCC will naming son John and daughter Agnes, the PCC index associating the same 1496 probate with Penkeryche/Penkridge, and a 1492 Richard Harpour will discussion naming Christopher as son of Richard Congreve and Anne Harper. The Stretton/Penkridge-to-Loughton Richard identity is now represented as one display person. Christopher has a cautious display record from the Latton/Epping inheritance context, but his link to the Loughton Richard remains candidate-only until the original Harpour will and wife-name conflict are reconciled.",
-      "nextAction": "Search all AALT/WAALT CP40 plaintiff/defendant indexes for every active target spelling plus Connigrave and common OCR variants, then inspect membranes where family relationships may be stated. For the early cluster, specifically inspect CP40/589, CP40/717, CP40/768, CP40/776, CP40/826, PCC 33 Vox, close roll entry CCR 1485-1500 no. 333, the original Richard Harpur will, Staffordshire visitations, and D1057 family deeds to decide whether the Staffordshire, St Albans, Barking, Latton, and Loughton records are one connected line or separate branches.",
+      "summary": "AALT indexes exposed Richard Congreve in 1440, Richard Congrave of Loughton in 1483, Margery and John Congreve in a 1521 Staffordshire dower action, and Ralph Congreve in a 1530 Staffordshire debt action.",
+      "nextAction": "Search all AALT CP40 plaintiff/defendant indexes for every active target spelling plus Connigrave and common OCR variants, then inspect membranes where family relationships may be stated.",
       "sourceIds": [
-        "waalt-cp40-589-roger-cungreve",
         "aalt-cp40-717-congreve",
-        "waalt-cp40-768-thomas-congreve-1453",
-        "waalt-cp40-776-conygrave-congreve-1455",
         "aalt-cp40-883-congrave",
         "aalt-cp40-1031-congreve",
-        "aalt-cp40-1064-congreve",
-        "medievalgenealogy-west-tilbury-congreue-1471",
-        "essex-feet-fines-vol4-richard-congreve-1471-1489",
-        "tna-prob-11-10-614-richard-congrave-1496",
-        "pcc-index-conggrave-richard-loughton-penkeryche-1496",
-        "richardiii-skrene-harpour-congreve-2011",
-        "tna-d1057-congreve-family"
+        "aalt-cp40-1064-congreve"
       ]
     },
     {
@@ -440,11 +431,9 @@
       "variant": "Congreve/Congrave/Cungrave",
       "period": "1203-1667",
       "place": "Staffordshire, Essex, London, Kent, Oxfordshire",
-      "summary": "SurnameDB and Forebears/Bardsley expose additional display-ready people and spouse households from rolls, Feet of Fines, parish marriages, Oxford register evidence, and a Canterbury marriage allegation. Alan de Cungrave's 1203 roll context has now been checked against Staffordshire Collections. Thomas Congreve's 1466 Essex Feet of Fines clue has been checked against Feet of Fines for Essex, volume IV; the full abstract names Katharine, late wife of Thomas Congreve, as the Barking life-tenant and should not be used as a Thomas lived event. Robert Cungreve's 1381 subsidy still needs original-record verification.",
-      "nextAction": "Prioritise original records for Robert Cungreve 1381, then verify each later surname-dictionary extraction against the original roll, parish register, university register, or Canterbury marriage allegation before upgrading confidence.",
+      "summary": "SurnameDB and Forebears/Bardsley expose additional display-ready people and spouse households from rolls, Feet of Fines, parish marriages, Oxford register evidence, and a Canterbury marriage allegation.",
+      "nextAction": "Verify each surname-dictionary extraction against the original roll, parish register, university register, or Canterbury marriage allegation, then search each marriage household depth-first for baptisms, burials, fathers, and named children.",
       "sourceIds": [
-        "staffordshire-collections-vol3-alan-cungrave-1203",
-        "essex-feet-fines-vol4-katharine-congreve-1466",
         "surnamedb-congreve",
         "forebears-congreve-bardsley"
       ]
