@@ -36,7 +36,10 @@ export function getDisplayEndYear(person, timelineEnd = DEFAULT_TIMELINE_END) {
     return Math.min(person.death.year, timelineEnd);
   }
 
-  return Math.min(getFirstEvidenceYear(person) + UNKNOWN_DEATH_DISPLAY_YEARS, timelineEnd);
+  const firstEvidenceYear = getFirstEvidenceYear(person);
+  const defaultEndYear = firstEvidenceYear + UNKNOWN_DEATH_DISPLAY_YEARS;
+  const lastEvidenceYear = getLastEvidenceYear(person, firstEvidenceYear);
+  return Math.min(Math.max(defaultEndYear, lastEvidenceYear), timelineEnd);
 }
 
 export function getEvidenceYears(person) {

@@ -895,12 +895,7 @@ function isVisibleInYear(person, year) {
     return year <= getDisplayEndYear(person, state.timelineEnd);
   }
 
-  const hasActiveLivedEvidence = (person.lived || []).some((event) => {
-    return year >= getEventStart(event) && year <= getEventEnd(event);
-  });
-  if (hasActiveLivedEvidence) return true;
-
-  return person.death?.year === year;
+  return year <= getDisplayEndYear(person, state.timelineEnd);
 }
 
 function createFrameLayout(visiblePeople, year, width, height) {
