@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "generatedFrom": "data/people.json",
-  "generatedAt": "2026-04-26T05:35:07.191Z",
+  "generatedAt": "2026-04-26T06:44:07.029Z",
   "events": [
     {
       "personId": "alan-de-cungrave-staffordshire-1203",
@@ -221,9 +221,10 @@
       "surnameVariant": "congreve",
       "gender": "male",
       "evidenceType": "patent-roll-pardon-identity",
-      "movementRole": "identity-alias",
-      "movementConfidence": 0.3,
-      "movementNote": "Staffordshire is part of Thomas's identity in the pardon, not a same-day route stop."
+      "movementRole": "attested-location",
+      "movementOrder": 1,
+      "movementConfidence": 0.58,
+      "movementNote": "Staffordshire is a county-level legal identity in the pardon and is used as Thomas's route origin before the later 1442 Rickmansworth attestation; it does not prove same-day travel."
     },
     {
       "personId": "thomas-congreve-essex-feet-of-fines-1466",
@@ -260,7 +261,7 @@
       "gender": "male",
       "evidenceType": "patent-roll-legal-attestation",
       "movementRole": "attested-location",
-      "movementOrder": 1,
+      "movementOrder": 2,
       "movementConfidence": 0.72,
       "movementNote": "This is the route-driving 1442 attestation because the entry styles Thomas directly as of Rykmeresworth."
     },

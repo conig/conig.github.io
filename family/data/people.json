@@ -837,9 +837,10 @@
           "lon": -2.117,
           "precision": "year-county",
           "evidenceType": "patent-roll-pardon-identity",
-          "movementRole": "identity-alias",
-          "movementConfidence": 0.3,
-          "movementNote": "Staffordshire is part of Thomas's identity in the pardon, not a same-day route stop.",
+          "movementRole": "attested-location",
+          "movementOrder": 1,
+          "movementConfidence": 0.58,
+          "movementNote": "Staffordshire is a county-level legal identity in the pardon and is used as Thomas's route origin before the later 1442 Rickmansworth attestation; it does not prove same-day travel.",
           "summary": "The Calendar of Patent Rolls pardons the king's servant Thomas Congreve of the county of Stafford, gentleman, alias of Bykmeresworth in Hertfordshire and alias of Berkyng in Essex.",
           "sourceIds": [
             "patent-rolls-henry-vi-vol4-thomas-congreve-1442"
@@ -876,7 +877,7 @@
           "precision": "town",
           "evidenceType": "patent-roll-legal-attestation",
           "movementRole": "attested-location",
-          "movementOrder": 1,
+          "movementOrder": 2,
           "movementConfidence": 0.72,
           "movementNote": "This is the route-driving 1442 attestation because the entry styles Thomas directly as of Rykmeresworth.",
           "summary": "The Calendar of Patent Rolls names Thomas Congreve of Rykmeresworth, Hertfordshire, gentleman, for not appearing before the justices of the Bench in a London debt plea.",
