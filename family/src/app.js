@@ -431,8 +431,8 @@ function drawPlaceLabels(width, height, labelObstacles = []) {
     if (!available) continue;
 
     drawClusterTownLabel(label, point, available.placement, style);
-    placedRects.push(available.collisionRect);
-    renderedRects.push(available.collisionRect);
+    placedRects.push(...available.collisionRects);
+    renderedRects.push(...available.collisionRects);
   }
   ctx.restore();
   return renderedRects;
@@ -443,29 +443,30 @@ function getClusterTownLabelStyle(label, compact) {
   const fontSize = compact ? (major ? 10.8 : 10) : (major ? 12 : 10.8);
   return {
     font: `${major ? 800 : 760} ${fontSize}px Inter, system-ui, sans-serif`,
-    height: compact ? (major ? 19 : 17) : (major ? 22 : 19),
-    gap: compact ? 7 : 8,
-    paddingX: compact ? (major ? 6 : 5) : (major ? 7 : 6),
-    dotRadius: compact ? (major ? 3.1 : 2.5) : (major ? 3.5 : 2.8),
-    background: major ? "rgba(255, 254, 249, 0.92)" : "rgba(255, 254, 249, 0.84)",
-    border: major ? "rgba(182, 83, 58, 0.45)" : "rgba(83, 101, 88, 0.28)",
-    text: major ? getCss("--forest") : "rgba(23, 41, 32, 0.84)",
-    leader: major ? "rgba(145, 54, 31, 0.42)" : "rgba(83, 101, 88, 0.28)"
+    height: compact ? (major ? 15 : 14) : (major ? 17 : 15),
+    gap: compact ? 6 : 7,
+    dotRadius: compact ? (major ? 2.6 : 2.2) : (major ? 3 : 2.5),
+    dot: "rgba(83, 101, 88, 0.78)",
+    text: major ? "rgba(46, 60, 52, 0.9)" : "rgba(83, 101, 88, 0.82)",
+    halo: "rgba(255, 254, 249, 0.82)"
   };
 }
 
 function getAvailableClusterTownLabelPlacement(label, point, width, height, style, compact, placedRects) {
-  const baseOffset = compact && Number.isFinite(label.compactOffsetY) ? label.compactOffsetY : label.offsetY || 0;
-  const offsetCandidates = getLabelOffsetCandidates(baseOffset, compact ? 22 : 26);
+  const baseOffset = compact ? 2 : 3;
+  const offsetCandidates = getLabelOffsetCandidates(baseOffset, compact ? 10 : 12);
   const preferredSide = compact && label.compactSide ? label.compactSide : label.side || (point.x > width * 0.62 ? "left" : "right");
   const fallbackSide = preferredSide === "left" ? "right" : "left";
 
   for (const side of [preferredSide, fallbackSide]) {
     for (const offsetY of offsetCandidates) {
       const placement = getClusterTownLabelPlacement(label, point, width, height, style, side, offsetY);
-      const collisionRect = expandRect(placement.rect, compact ? 2 : 3);
-      if (placedRects.some((rect) => rectsOverlap(collisionRect, rect))) continue;
-      return { placement, collisionRect };
+      const collisionRects = [
+        expandRect(placement.rect, compact ? 2 : 3),
+        expandRect(placement.dotRect, 1)
+      ];
+      if (collisionRects.some((candidate) => placedRects.some((rect) => rectsOverlap(candidate, rect)))) continue;
+      return { placement, collisionRects };
     }
   }
 
@@ -478,29 +479,29 @@ function getLabelOffsetCandidates(baseOffset, step) {
     baseOffset - step,
     baseOffset + step,
     baseOffset - step * 2,
-    baseOffset + step * 2,
-    baseOffset - step * 3,
-    baseOffset + step * 3
+    baseOffset + step * 2
   ];
 }
 
 function getClusterTownLabelPlacement(label, point, width, height, style, sidePreference, offsetY) {
   const textWidth = Math.ceil(ctx.measureText(label.name).width);
-  const rectWidth = textWidth + style.paddingX * 2;
+  const rectWidth = textWidth;
   const rectHeight = style.height;
   const side = getClusterTownLabelSide(sidePreference, point, width, rectWidth, style.gap);
   const rawX = side === "left" ? point.x - style.gap - rectWidth : point.x + style.gap;
   const rectX = clamp(rawX, 8, width - rectWidth - 8);
   const rectY = clamp(point.y + offsetY - rectHeight / 2, 8, height - rectHeight - 8);
-  const edgeLeft = Math.abs(point.x - rectX) < Math.abs(point.x - (rectX + rectWidth));
-  const anchorX = edgeLeft ? rectX : rectX + rectWidth;
 
   return {
     rect: { x: rectX, y: rectY, width: rectWidth, height: rectHeight },
-    textX: rectX + style.paddingX,
-    textY: rectY + rectHeight / 2,
-    anchorX,
-    anchorY: rectY + rectHeight / 2
+    dotRect: {
+      x: point.x - style.dotRadius - 2,
+      y: point.y - style.dotRadius - 2,
+      width: (style.dotRadius + 2) * 2,
+      height: (style.dotRadius + 2) * 2
+    },
+    textX: rectX,
+    textY: rectY + rectHeight / 2
   };
 }
 
@@ -511,32 +512,21 @@ function getClusterTownLabelSide(preferredSide, point, width, rectWidth, gap) {
 }
 
 function drawClusterTownLabel(label, point, placement, style) {
-  const rect = placement.rect;
-
   ctx.save();
-  ctx.strokeStyle = style.leader;
-  ctx.lineWidth = label.count >= 14 ? 1.25 : 1;
-  ctx.beginPath();
-  ctx.moveTo(point.x, point.y);
-  ctx.lineTo(placement.anchorX, placement.anchorY);
-  ctx.stroke();
-
-  drawRoundedRect(rect.x, rect.y, rect.width, rect.height, Math.min(7, rect.height / 2));
-  ctx.fillStyle = style.background;
-  ctx.fill();
-  ctx.strokeStyle = style.border;
-  ctx.stroke();
-
-  ctx.fillStyle = label.count >= 14 ? getCss("--accent") : "rgba(83, 101, 88, 0.88)";
-  ctx.strokeStyle = "rgba(255, 254, 249, 0.95)";
-  ctx.lineWidth = 2;
+  ctx.fillStyle = style.dot;
+  ctx.strokeStyle = style.halo;
+  ctx.lineWidth = 1.8;
   ctx.beginPath();
   ctx.arc(point.x, point.y, style.dotRadius, 0, Math.PI * 2);
   ctx.fill();
   ctx.stroke();
 
   ctx.fillStyle = style.text;
+  ctx.strokeStyle = style.halo;
+  ctx.lineWidth = 3;
   ctx.textAlign = "left";
+  ctx.textBaseline = "middle";
+  ctx.strokeText(label.name, placement.textX, placement.textY);
   ctx.fillText(label.name, placement.textX, placement.textY);
   ctx.restore();
 }

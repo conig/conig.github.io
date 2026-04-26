@@ -895,14 +895,14 @@ button.family-node:focus-visible {
 
   .timeline-strip {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: end;
-    gap: 12px;
-    padding: 12px;
+    gap: 8px;
+    padding: 8px 10px;
   }
 
   .year-label {
-    font-size: clamp(2.25rem, 15vw, 4.3rem);
+    font-size: clamp(1.95rem, 12vw, 3rem);
   }
 
   .canvas-wrap {
@@ -919,8 +919,8 @@ button.family-node:focus-visible {
   .controls {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: minmax(68px, 0.72fr) minmax(88px, 1fr);
+    gap: 5px;
   }
 
   .control-field--play,
@@ -931,9 +931,15 @@ button.family-node:focus-visible {
 
   .control-button,
   .speed-control select {
-    min-height: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
+    min-height: 32px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 0.74rem;
+  }
+
+  .control-field {
+    gap: 3px;
+    font-size: 0.6rem;
   }
 
   .range-row {
