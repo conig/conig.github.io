@@ -25,14 +25,15 @@ const SAME_PLACE_SPLIT_PROGRESS = 0.45;
 const NON_ROUTE_MOVEMENT_ROLES = new Set(["identity-alias"]);
 
 const CITY_LABELS = [
-  { name: "London", lat: 51.5074, lon: -0.1278 },
-  { name: "Stretton", lat: 52.7, lon: -2.1667 },
-  { name: "Stoke Albany", lat: 52.491, lon: -0.814 },
-  { name: "Leicester", lat: 52.6369, lon: -1.1398 },
-  { name: "Kensworth", lat: 51.8517, lon: -0.5039 },
-  { name: "Windsor", lat: 51.4817, lon: -0.6136 },
-  { name: "Bardsey", lat: 53.884, lon: -1.445 },
-  { name: "Hinckley", lat: 52.541, lon: -1.373 }
+  { name: "London", lat: 51.5074, lon: -0.1278, minWidth: 0 },
+  { name: "Coventry", lat: 52.4068, lon: -1.5197, minWidth: 0 },
+  { name: "Stoke Albany", lat: 52.491, lon: -0.814, minWidth: 460 },
+  { name: "Stretton", lat: 52.7, lon: -2.1667, minWidth: 500 },
+  { name: "Leicester", lat: 52.6369, lon: -1.1398, minWidth: 540 },
+  { name: "Kensworth", lat: 51.8517, lon: -0.5039, minWidth: 600 },
+  { name: "Windsor", lat: 51.4817, lon: -0.6136, minWidth: 620 },
+  { name: "Bardsey", lat: 53.884, lon: -1.445, minWidth: 620 },
+  { name: "Hinckley", lat: 52.541, lon: -1.373, minWidth: 680 }
 ];
 
 const els = {
@@ -296,12 +297,15 @@ function draw() {
 
 function drawBaseMap(width, height) {
   ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = getCss("--sea");
+  const seaGradient = ctx.createLinearGradient(0, 0, width, height);
+  seaGradient.addColorStop(0, getCss("--sea"));
+  seaGradient.addColorStop(1, getCss("--sea-deep"));
+  ctx.fillStyle = seaGradient;
   ctx.fillRect(0, 0, width, height);
 
   ctx.save();
-  ctx.globalAlpha = 0.23;
-  ctx.strokeStyle = "#7598a0";
+  ctx.globalAlpha = width < 520 ? 0.16 : 0.22;
+  ctx.strokeStyle = "#72949c";
   ctx.lineWidth = 1;
   for (let lon = Math.ceil(MAP_BOUNDS.minLon); lon <= MAP_BOUNDS.maxLon; lon += 1) {
     const top = project(lon, MAP_BOUNDS.maxLat, width, height);
@@ -316,9 +320,15 @@ function drawBaseMap(width, height) {
   ctx.restore();
 
   ctx.save();
-  ctx.fillStyle = getCss("--land");
+  const landGradient = ctx.createLinearGradient(0, 0, width, height);
+  landGradient.addColorStop(0, getCss("--land"));
+  landGradient.addColorStop(1, getCss("--land-warm"));
+  ctx.fillStyle = landGradient;
   ctx.strokeStyle = getCss("--land-edge");
-  ctx.lineWidth = 2;
+  ctx.lineWidth = width < 520 ? 1.5 : 2;
+  ctx.shadowColor = "rgba(17, 29, 24, 0.22)";
+  ctx.shadowBlur = width < 520 ? 9 : 14;
+  ctx.shadowOffsetY = width < 520 ? 2 : 3;
   drawGeoJsonGeometry(state.englandBoundary, width, height);
   ctx.restore();
 
@@ -359,17 +369,25 @@ function drawStaffordshireBoundary(width, height) {
 
 function drawPlaceLabels(width, height) {
   ctx.save();
-  ctx.fillStyle = "rgba(23, 33, 29, 0.62)";
+  const compact = width < 520;
+  ctx.fillStyle = "rgba(23, 33, 29, 0.66)";
   ctx.strokeStyle = "rgba(255, 253, 247, 0.7)";
   ctx.lineWidth = 3;
-  ctx.font = "700 12px Inter, system-ui, sans-serif";
+  ctx.font = `700 ${compact ? 10.5 : 12}px Inter, system-ui, sans-serif`;
   for (const city of CITY_LABELS) {
+    if (width < city.minWidth) continue;
+
     const point = project(city.lon, city.lat, width, height);
+    const alignRight = point.x > width - (compact ? 84 : 108);
+    const textX = point.x + (alignRight ? -7 : 7);
+    const textY = clamp(point.y + 4, 14, height - 10);
+    ctx.textAlign = alignRight ? "right" : "left";
+
     ctx.beginPath();
     ctx.arc(point.x, point.y, 2.4, 0, Math.PI * 2);
     ctx.fill();
-    ctx.strokeText(city.name, point.x + 7, point.y + 4);
-    ctx.fillText(city.name, point.x + 7, point.y + 4);
+    ctx.strokeText(city.name, textX, textY);
+    ctx.fillText(city.name, textX, textY);
   }
   ctx.restore();
 }
@@ -871,10 +889,11 @@ function handleCanvasClick(event) {
 function getNearestProjectedPoint(x, y) {
   let nearest = null;
   let nearestDistance = Infinity;
+  const hitRadius = els.canvas.clientWidth < 520 ? 20 : 12;
 
   for (const point of state.projected.values()) {
     const distance = Math.hypot(point.x - x, point.y - y);
-    if (distance < Math.max(12, point.radius + 8) && distance < nearestDistance) {
+    if (distance < Math.max(hitRadius, point.radius + 8) && distance < nearestDistance) {
       nearest = point;
       nearestDistance = distance;
     }

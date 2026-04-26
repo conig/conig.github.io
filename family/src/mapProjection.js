@@ -5,17 +5,27 @@ export const MAP_BOUNDS = Object.freeze({
   maxLat: 55.95
 });
 
-const MAP_VIEWBOX = Object.freeze({
-  width: 1200,
-  height: 860
+const PROJECTED_BOUNDS = Object.freeze({
+  minX: mercatorX(MAP_BOUNDS.minLon),
+  maxX: mercatorX(MAP_BOUNDS.maxLon),
+  minY: mercatorY(MAP_BOUNDS.minLat),
+  maxY: mercatorY(MAP_BOUNDS.maxLat)
 });
+
+export const MAP_PROJECTED_RATIO =
+  (PROJECTED_BOUNDS.maxX - PROJECTED_BOUNDS.minX) / (PROJECTED_BOUNDS.maxY - PROJECTED_BOUNDS.minY);
 
 export function getMapViewport(width, height) {
   const safeWidth = Math.max(1, width);
   const safeHeight = Math.max(1, height);
-  const scale = Math.min(safeWidth / MAP_VIEWBOX.width, safeHeight / MAP_VIEWBOX.height);
-  const renderedWidth = MAP_VIEWBOX.width * scale;
-  const renderedHeight = MAP_VIEWBOX.height * scale;
+  const padding = getViewportPadding(safeWidth, safeHeight);
+  const availableWidth = Math.max(1, safeWidth - padding.x * 2);
+  const availableHeight = Math.max(1, safeHeight - padding.y * 2);
+  const projectedWidth = PROJECTED_BOUNDS.maxX - PROJECTED_BOUNDS.minX;
+  const projectedHeight = PROJECTED_BOUNDS.maxY - PROJECTED_BOUNDS.minY;
+  const scale = Math.min(availableWidth / projectedWidth, availableHeight / projectedHeight);
+  const renderedWidth = projectedWidth * scale;
+  const renderedHeight = projectedHeight * scale;
 
   return {
     x: (safeWidth - renderedWidth) / 2,
@@ -28,29 +38,38 @@ export function getMapViewport(width, height) {
 
 export function project(lon, lat, width, height) {
   const viewport = getMapViewport(width, height);
-  const designPoint = projectToViewbox(lon, lat);
+  const projectedX = mercatorX(lon);
+  const projectedY = mercatorY(lat);
 
   return {
-    x: viewport.x + designPoint.x * viewport.scale,
-    y: viewport.y + designPoint.y * viewport.scale
+    x: viewport.x + (projectedX - PROJECTED_BOUNDS.minX) * viewport.scale,
+    y: viewport.y + (PROJECTED_BOUNDS.maxY - projectedY) * viewport.scale
   };
 }
 
-function projectToViewbox(lon, lat) {
-  const paddingX = Math.max(30, MAP_VIEWBOX.width * 0.07);
-  const paddingY = Math.max(24, MAP_VIEWBOX.height * 0.06);
-  const availableWidth = MAP_VIEWBOX.width - paddingX * 2;
-  const availableHeight = MAP_VIEWBOX.height - paddingY * 2;
-  const boundsWidth = MAP_BOUNDS.maxLon - MAP_BOUNDS.minLon;
-  const boundsHeight = MAP_BOUNDS.maxLat - MAP_BOUNDS.minLat;
-  const scale = Math.min(availableWidth / boundsWidth, availableHeight / boundsHeight);
-  const renderedWidth = boundsWidth * scale;
-  const renderedHeight = boundsHeight * scale;
-  const offsetX = (MAP_VIEWBOX.width - renderedWidth) / 2;
-  const offsetY = (MAP_VIEWBOX.height - renderedHeight) / 2;
+function getViewportPadding(width, height) {
+  const shortSide = Math.min(width, height);
 
   return {
-    x: offsetX + (lon - MAP_BOUNDS.minLon) * scale,
-    y: offsetY + (MAP_BOUNDS.maxLat - lat) * scale
+    x: clamp(shortSide * 0.045, 12, 52),
+    y: clamp(shortSide * 0.05, 14, 58)
   };
+}
+
+function mercatorX(lon) {
+  return toRadians(lon);
+}
+
+function mercatorY(lat) {
+  const clampedLat = clamp(lat, -85, 85);
+  const radians = toRadians(clampedLat);
+  return Math.log(Math.tan(Math.PI / 4 + radians / 2));
+}
+
+function toRadians(degrees) {
+  return degrees * Math.PI / 180;
+}
+
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
 }
