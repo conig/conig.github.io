@@ -1,6 +1,7 @@
 export const DEFAULT_TIMELINE_START = 1100;
 export const DEFAULT_TIMELINE_END = 1788;
 export const UNKNOWN_DEATH_DISPLAY_YEARS = 30;
+const TIMELINE_START_LEAD_IN_YEARS = 3;
 
 export function getTimelineBounds(people, coverage = {}) {
   const scopeStart = Number.isInteger(coverage.startYear) ? coverage.startYear : DEFAULT_TIMELINE_START;
@@ -12,7 +13,8 @@ export function getTimelineBounds(people, coverage = {}) {
   }
 
   const boundedYears = evidenceYears.map((year) => clamp(year, scopeStart, scopeEnd));
-  const startYear = Math.min(...boundedYears);
+  const firstEvidenceYear = Math.min(...boundedYears);
+  const startYear = Math.max(scopeStart, firstEvidenceYear - TIMELINE_START_LEAD_IN_YEARS);
   const endYear = Math.max(...boundedYears);
 
   return {

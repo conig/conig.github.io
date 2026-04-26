@@ -683,23 +683,33 @@ function drawSurnameIntroLabels(frameLayout, width, height, timestamp, labelObst
   });
 
   const compact = width < 520;
+  const viewportKey = `${Math.round(width)}x${Math.round(height)}:${compact ? "compact" : "wide"}`;
   const placedRects = [...labelObstacles];
   for (const intro of state.activeSurnameIntros) {
     if (!isIntroVisibleUnderFilters(intro)) continue;
-
-    const point = projectLocation(intro.location, width, height) || frameLayout.get(intro.person.id)?.point;
-    if (!point) continue;
 
     const age = timestamp - intro.startedAt;
     const fadeStart = SURNAME_INTRO_DURATION_MS - SURNAME_INTRO_FADE_MS;
     const alpha = age <= fadeStart ? 1 : clamp(1 - (age - fadeStart) / SURNAME_INTRO_FADE_MS, 0, 1);
     const label = variantLabel(intro.variantKey);
     const color = getVariantColor(intro.variantKey);
-    const placement = getSurnameIntroPlacement(label, point, width, height, placedRects, compact);
-    if (!placement) continue;
+    if (!intro.frozenPlacement || intro.frozenPlacement.viewportKey !== viewportKey) {
+      const point = projectLocation(intro.location, width, height) || frameLayout.get(intro.person.id)?.point;
+      if (!point) continue;
 
-    drawSurnameIntroLabel(label, point, placement, color, alpha, compact);
-    placedRects.push(expandRect(placement.rect, 3));
+      const placement = getSurnameIntroPlacement(label, point, width, height, placedRects, compact);
+      if (!placement) continue;
+
+      intro.frozenPlacement = {
+        viewportKey,
+        point,
+        placement,
+        collisionRect: expandRect(placement.rect, 3)
+      };
+    }
+
+    drawSurnameIntroLabel(label, intro.frozenPlacement.point, intro.frozenPlacement.placement, color, alpha, compact);
+    placedRects.push(intro.frozenPlacement.collisionRect);
   }
 }
 
