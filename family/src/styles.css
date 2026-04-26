@@ -434,6 +434,14 @@ input[type="range"] {
   background: var(--direct-lineage-ring);
 }
 
+.layer-swatch--surname-intro {
+  border-color: rgba(18, 29, 24, 0.3);
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, var(--accent) 0 42%, transparent 42% 58%, #2f69d9 58% 100%),
+    var(--panel);
+}
+
 .record-modal {
   width: min(760px, calc(100vw - 32px));
   max-height: min(760px, calc(100vh - 32px));
@@ -911,7 +919,7 @@ button.family-node:focus-visible {
   .controls {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: 8px;
   }
 

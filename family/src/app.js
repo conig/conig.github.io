@@ -22,18 +22,38 @@ const CLUSTER_GROUP_DISTANCE = 9;
 const CLUSTER_SPACING = 14;
 const LINEAGE_SPLIT_YEARS = 9;
 const SAME_PLACE_SPLIT_PROGRESS = 0.45;
+const SURNAME_INTRO_DURATION_MS = 3600;
+const SURNAME_INTRO_FADE_MS = 1200;
 const NON_ROUTE_MOVEMENT_ROLES = new Set(["identity-alias"]);
 
-const CITY_LABELS = [
-  { name: "London", lat: 51.5074, lon: -0.1278, minWidth: 0 },
-  { name: "Coventry", lat: 52.4068, lon: -1.5197, minWidth: 0 },
-  { name: "Stoke Albany", lat: 52.491, lon: -0.814, minWidth: 460 },
-  { name: "Stretton", lat: 52.7, lon: -2.1667, minWidth: 500 },
-  { name: "Leicester", lat: 52.6369, lon: -1.1398, minWidth: 540 },
-  { name: "Kensworth", lat: 51.8517, lon: -0.5039, minWidth: 600 },
-  { name: "Windsor", lat: 51.4817, lon: -0.6136, minWidth: 620 },
-  { name: "Bardsey", lat: 53.884, lon: -1.445, minWidth: 620 },
-  { name: "Hinckley", lat: 52.541, lon: -1.373, minWidth: 680 }
+const CLUSTER_TOWN_LABELS = [
+  { name: "Stretton", lat: 52.7, lon: -2.1667, count: 56, minWidth: 0, side: "left", offsetY: -18, compactOffsetY: -18 },
+  { name: "Polesworth", lat: 52.6184, lon: -1.6105, count: 55, minWidth: 540, side: "right", offsetY: -22 },
+  { name: "London", lat: 51.5052, lon: -0.1266, count: 26, minWidth: 0, side: "right", compactSide: "left", offsetY: 5, compactOffsetY: 6 },
+  { name: "Coventry", lat: 52.4081, lon: -1.5106, count: 14, minWidth: 0, side: "right", offsetY: 24, compactOffsetY: 18 },
+  { name: "Oxford", lat: 51.752, lon: -1.2577, count: 3, minWidth: 0, side: "left", offsetY: -2, compactOffsetY: -3 },
+  { name: "Sheffield", lat: 53.383, lon: -1.4694, count: 16, minWidth: 0, side: "right", offsetY: -4 },
+  { name: "Gnosall", lat: 52.785, lon: -2.254, count: 15, minWidth: 560, side: "left", offsetY: 18 },
+  { name: "Shrewsbury", lat: 52.7085, lon: -2.7524, count: 9, minWidth: 600, side: "left", offsetY: -2 },
+  { name: "Stafford", lat: 52.8055, lon: -2.1174, count: 9, minWidth: 700, side: "right", offsetY: -24 },
+  { name: "Mancetter", lat: 52.5767, lon: -1.5287, count: 9, minWidth: 760, side: "right", offsetY: 31 },
+  { name: "Spalding", lat: 52.7871, lon: -0.1514, count: 8, minWidth: 600, side: "right", offsetY: -2 },
+  { name: "Wolverhampton", lat: 52.5869, lon: -2.1281, count: 7, minWidth: 780, side: "left", offsetY: 30 },
+  { name: "Austrey", lat: 52.6245, lon: -1.5848, count: 7, minWidth: 720, side: "right", offsetY: 1 },
+  { name: "Elford", lat: 52.6874, lon: -1.7204, count: 7, minWidth: 740, side: "right", offsetY: -17 },
+  { name: "North Walsham", lat: 52.8212, lon: 1.3857, count: 7, minWidth: 620, side: "left", offsetY: -2 },
+  { name: "Grendon", lat: 52.564, lon: -1.596, count: 6, minWidth: 780, side: "left", offsetY: 16 },
+  { name: "Nuneaton", lat: 52.523, lon: -1.4684, count: 6, minWidth: 720, side: "right", offsetY: 15 },
+  { name: "Leicester", lat: 52.6379, lon: -1.1349, count: 5, minWidth: 540, side: "right", offsetY: -1 },
+  { name: "Kingsbury", lat: 52.5619, lon: -1.6789, count: 5, minWidth: 700, side: "left", offsetY: 1 },
+  { name: "Belton", lat: 52.7477, lon: -1.3705, count: 5, minWidth: 760, side: "right", offsetY: -19 },
+  { name: "Stoke Albany", lat: 52.4908, lon: -0.8155, count: 4, minWidth: 660, side: "right", offsetY: 6 },
+  { name: "Crowland", lat: 52.6755, lon: -0.1678, count: 4, minWidth: 760, side: "right", offsetY: 18 },
+  { name: "Handsworth", lat: 52.5107, lon: -1.9341, count: 4, minWidth: 780, side: "left", offsetY: -14 },
+  { name: "Loughton", lat: 51.646, lon: 0.055, count: 3, minWidth: 700, side: "right", offsetY: -9 },
+  { name: "Barking", lat: 51.536, lon: 0.0789, count: 3, minWidth: 760, side: "right", offsetY: 19 },
+  { name: "Brewood", lat: 52.677, lon: -2.174, count: 3, minWidth: 760, side: "left", offsetY: 2 },
+  { name: "Bardsey", lat: 53.884, lon: -1.445, count: 3, minWidth: 620, side: "right", offsetY: 2 }
 ];
 
 const els = {
@@ -53,6 +73,8 @@ const els = {
   staffordshireToggle: document.querySelector("#staffordshireToggle"),
   directLineageToggle: document.querySelector("#directLineageToggle"),
   directLineageCount: document.querySelector("#directLineageCount"),
+  surnameIntroToggle: document.querySelector("#surnameIntroToggle"),
+  surnameIntroCount: document.querySelector("#surnameIntroCount"),
   maleOnlyToggle: document.querySelector("#maleOnlyToggle"),
   maleFilterCount: document.querySelector("#maleFilterCount"),
   variantFilters: document.querySelector("#variantFilters"),
@@ -84,10 +106,14 @@ const state = {
   speed: Number(els.speedSelect.value),
   showStaffordshire: false,
   showDirectLineage: true,
+  showSurnameIntros: true,
   maleOnly: false,
   hoverId: null,
   selectedId: null,
   lastFrame: 0,
+  variantIntroductions: [],
+  activeSurnameIntros: [],
+  seenSurnameIntroVariants: new Set(),
   projected: new Map()
 };
 
@@ -110,6 +136,7 @@ async function init() {
     state.sources = new Map(sourceData.sources.map((source) => [source.id, source]));
     state.englandBoundary = boundaryData.features?.[0]?.geometry || null;
     setTimelineBounds(getTimelineBounds(state.people, peopleData.coverage));
+    state.variantIntroductions = getVariantIntroductions();
 
     const livedOnly = state.people.filter((person) => !person.birth && person.lived?.length).length;
     const familyLeads = state.people.filter(hasOpenFamilyLead).length;
@@ -143,12 +170,16 @@ function bindEvents() {
   els.yearRange.addEventListener("input", () => {
     state.year = Number(els.yearRange.value);
     state.playing = false;
+    resetSurnameIntroPlayback();
     updatePlayButton();
     draw();
   });
 
   els.playButton.addEventListener("click", () => {
     state.playing = !state.playing;
+    if (state.playing) {
+      prepareSurnameIntroPlayback();
+    }
     updatePlayButton();
   });
 
@@ -186,6 +217,15 @@ function bindEvents() {
   els.directLineageToggle.addEventListener("change", () => {
     state.showDirectLineage = els.directLineageToggle.checked;
     renderRecordList();
+    draw();
+  });
+
+  els.surnameIntroToggle.addEventListener("change", () => {
+    state.showSurnameIntros = els.surnameIntroToggle.checked;
+    if (!state.showSurnameIntros) {
+      resetSurnameIntroPlayback();
+    }
+    renderLayerControls();
     draw();
   });
 
@@ -241,12 +281,17 @@ function tick(timestamp) {
   state.lastFrame = timestamp;
 
   if (state.playing) {
+    const previousYear = state.year;
     state.year += deltaSeconds * state.speed;
     if (state.year > state.timelineEnd) {
       state.year = state.timelineStart;
+      resetSurnameIntroPlayback();
+      triggerSurnameIntros(state.timelineStart - 0.001, state.year, timestamp);
+    } else {
+      triggerSurnameIntros(previousYear, state.year, timestamp);
     }
     els.yearRange.value = Math.round(state.year);
-    draw();
+    draw(timestamp);
   }
 
   requestAnimationFrame(tick);
@@ -269,18 +314,18 @@ function setTimelineBounds(bounds) {
   els.yearLabel.value = bounds.endYear;
 }
 
-function draw() {
+function draw(timestamp = performance.now()) {
   const width = els.canvas.clientWidth;
   const height = els.canvas.clientHeight;
   const year = Math.round(state.year);
   state.projected.clear();
 
   els.yearLabel.value = year;
-  drawBaseMap(width, height);
-
   const visiblePeople = getActivePeople()
     .filter((person) => isVisibleInYear(person, state.year));
   const frameLayout = createFrameLayout(visiblePeople, state.year, width, height);
+  const dotObstacleRects = getDotObstacleRects(frameLayout, width < 520);
+  const mapLabelRects = drawBaseMap(width, height, dotObstacleRects);
 
   for (const entry of frameLayout.values()) {
     drawTrack(entry);
@@ -292,10 +337,12 @@ function draw() {
     drawPerson(entry, state.year);
   }
 
+  drawSurnameIntroLabels(frameLayout, width, height, timestamp, [...mapLabelRects, ...dotObstacleRects]);
+
   renderStats(year, visiblePeople);
 }
 
-function drawBaseMap(width, height) {
+function drawBaseMap(width, height, labelObstacles = []) {
   ctx.clearRect(0, 0, width, height);
   const seaGradient = ctx.createLinearGradient(0, 0, width, height);
   seaGradient.addColorStop(0, getCss("--sea"));
@@ -336,7 +383,7 @@ function drawBaseMap(width, height) {
     drawStaffordshireBoundary(width, height);
   }
 
-  drawPlaceLabels(width, height);
+  return drawPlaceLabels(width, height, labelObstacles);
 }
 
 function drawStaffordshireBoundary(width, height) {
@@ -367,28 +414,391 @@ function drawStaffordshireBoundary(width, height) {
   ctx.restore();
 }
 
-function drawPlaceLabels(width, height) {
+function drawPlaceLabels(width, height, labelObstacles = []) {
   ctx.save();
   const compact = width < 520;
-  ctx.fillStyle = "rgba(23, 33, 29, 0.66)";
-  ctx.strokeStyle = "rgba(255, 253, 247, 0.7)";
-  ctx.lineWidth = 3;
-  ctx.font = `700 ${compact ? 10.5 : 12}px Inter, system-ui, sans-serif`;
-  for (const city of CITY_LABELS) {
-    if (width < city.minWidth) continue;
+  const placedRects = [...labelObstacles];
+  const renderedRects = [];
+  for (const label of CLUSTER_TOWN_LABELS) {
+    if (width < label.minWidth) continue;
 
-    const point = project(city.lon, city.lat, width, height);
-    const alignRight = point.x > width - (compact ? 84 : 108);
-    const textX = point.x + (alignRight ? -7 : 7);
-    const textY = clamp(point.y + 4, 14, height - 10);
-    ctx.textAlign = alignRight ? "right" : "left";
+    const point = project(label.lon, label.lat, width, height);
+    const style = getClusterTownLabelStyle(label, compact);
+    ctx.font = style.font;
+    ctx.textBaseline = "middle";
 
-    ctx.beginPath();
-    ctx.arc(point.x, point.y, 2.4, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.strokeText(city.name, textX, textY);
-    ctx.fillText(city.name, textX, textY);
+    const available = getAvailableClusterTownLabelPlacement(label, point, width, height, style, compact, placedRects);
+    if (!available) continue;
+
+    drawClusterTownLabel(label, point, available.placement, style);
+    placedRects.push(available.collisionRect);
+    renderedRects.push(available.collisionRect);
   }
+  ctx.restore();
+  return renderedRects;
+}
+
+function getClusterTownLabelStyle(label, compact) {
+  const major = label.count >= 14 || label.name === "Oxford";
+  const fontSize = compact ? (major ? 10.8 : 10) : (major ? 12 : 10.8);
+  return {
+    font: `${major ? 800 : 760} ${fontSize}px Inter, system-ui, sans-serif`,
+    height: compact ? (major ? 19 : 17) : (major ? 22 : 19),
+    gap: compact ? 7 : 8,
+    paddingX: compact ? (major ? 6 : 5) : (major ? 7 : 6),
+    dotRadius: compact ? (major ? 3.1 : 2.5) : (major ? 3.5 : 2.8),
+    background: major ? "rgba(255, 254, 249, 0.92)" : "rgba(255, 254, 249, 0.84)",
+    border: major ? "rgba(182, 83, 58, 0.45)" : "rgba(83, 101, 88, 0.28)",
+    text: major ? getCss("--forest") : "rgba(23, 41, 32, 0.84)",
+    leader: major ? "rgba(145, 54, 31, 0.42)" : "rgba(83, 101, 88, 0.28)"
+  };
+}
+
+function getAvailableClusterTownLabelPlacement(label, point, width, height, style, compact, placedRects) {
+  const baseOffset = compact && Number.isFinite(label.compactOffsetY) ? label.compactOffsetY : label.offsetY || 0;
+  const offsetCandidates = getLabelOffsetCandidates(baseOffset, compact ? 22 : 26);
+  const preferredSide = compact && label.compactSide ? label.compactSide : label.side || (point.x > width * 0.62 ? "left" : "right");
+  const fallbackSide = preferredSide === "left" ? "right" : "left";
+
+  for (const side of [preferredSide, fallbackSide]) {
+    for (const offsetY of offsetCandidates) {
+      const placement = getClusterTownLabelPlacement(label, point, width, height, style, side, offsetY);
+      const collisionRect = expandRect(placement.rect, compact ? 2 : 3);
+      if (placedRects.some((rect) => rectsOverlap(collisionRect, rect))) continue;
+      return { placement, collisionRect };
+    }
+  }
+
+  return null;
+}
+
+function getLabelOffsetCandidates(baseOffset, step) {
+  return [
+    baseOffset,
+    baseOffset - step,
+    baseOffset + step,
+    baseOffset - step * 2,
+    baseOffset + step * 2,
+    baseOffset - step * 3,
+    baseOffset + step * 3
+  ];
+}
+
+function getClusterTownLabelPlacement(label, point, width, height, style, sidePreference, offsetY) {
+  const textWidth = Math.ceil(ctx.measureText(label.name).width);
+  const rectWidth = textWidth + style.paddingX * 2;
+  const rectHeight = style.height;
+  const side = getClusterTownLabelSide(sidePreference, point, width, rectWidth, style.gap);
+  const rawX = side === "left" ? point.x - style.gap - rectWidth : point.x + style.gap;
+  const rectX = clamp(rawX, 8, width - rectWidth - 8);
+  const rectY = clamp(point.y + offsetY - rectHeight / 2, 8, height - rectHeight - 8);
+  const edgeLeft = Math.abs(point.x - rectX) < Math.abs(point.x - (rectX + rectWidth));
+  const anchorX = edgeLeft ? rectX : rectX + rectWidth;
+
+  return {
+    rect: { x: rectX, y: rectY, width: rectWidth, height: rectHeight },
+    textX: rectX + style.paddingX,
+    textY: rectY + rectHeight / 2,
+    anchorX,
+    anchorY: rectY + rectHeight / 2
+  };
+}
+
+function getClusterTownLabelSide(preferredSide, point, width, rectWidth, gap) {
+  if (preferredSide === "left" && point.x - gap - rectWidth < 8) return "right";
+  if (preferredSide === "right" && point.x + gap + rectWidth > width - 8) return "left";
+  return preferredSide;
+}
+
+function drawClusterTownLabel(label, point, placement, style) {
+  const rect = placement.rect;
+
+  ctx.save();
+  ctx.strokeStyle = style.leader;
+  ctx.lineWidth = label.count >= 14 ? 1.25 : 1;
+  ctx.beginPath();
+  ctx.moveTo(point.x, point.y);
+  ctx.lineTo(placement.anchorX, placement.anchorY);
+  ctx.stroke();
+
+  drawRoundedRect(rect.x, rect.y, rect.width, rect.height, Math.min(7, rect.height / 2));
+  ctx.fillStyle = style.background;
+  ctx.fill();
+  ctx.strokeStyle = style.border;
+  ctx.stroke();
+
+  ctx.fillStyle = label.count >= 14 ? getCss("--accent") : "rgba(83, 101, 88, 0.88)";
+  ctx.strokeStyle = "rgba(255, 254, 249, 0.95)";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.arc(point.x, point.y, style.dotRadius, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.fillStyle = style.text;
+  ctx.textAlign = "left";
+  ctx.fillText(label.name, placement.textX, placement.textY);
+  ctx.restore();
+}
+
+function drawRoundedRect(x, y, width, height, radius) {
+  const r = Math.min(radius, width / 2, height / 2);
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + width - r, y);
+  ctx.quadraticCurveTo(x + width, y, x + width, y + r);
+  ctx.lineTo(x + width, y + height - r);
+  ctx.quadraticCurveTo(x + width, y + height, x + width - r, y + height);
+  ctx.lineTo(x + r, y + height);
+  ctx.quadraticCurveTo(x, y + height, x, y + height - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+function expandRect(rect, padding) {
+  return {
+    x: rect.x - padding,
+    y: rect.y - padding,
+    width: rect.width + padding * 2,
+    height: rect.height + padding * 2
+  };
+}
+
+function rectsOverlap(a, b) {
+  return a.x < b.x + b.width
+    && a.x + a.width > b.x
+    && a.y < b.y + b.height
+    && a.y + a.height > b.y;
+}
+
+function getVariantIntroductions() {
+  const byVariant = new Map();
+  for (const person of state.people) {
+    const evidence = getFirstIntroEvidence(person);
+    if (!evidence || evidence.year > state.timelineEnd) continue;
+
+    const intro = {
+      variantKey: person.surnameVariant,
+      person,
+      year: Math.max(evidence.year, state.timelineStart),
+      location: evidence.location
+    };
+    const current = byVariant.get(person.surnameVariant);
+    if (!current || compareVariantIntroductions(intro, current) < 0) {
+      byVariant.set(person.surnameVariant, intro);
+    }
+  }
+
+  return [...byVariant.values()].sort(compareVariantIntroductions);
+}
+
+function getFirstIntroEvidence(person) {
+  const candidates = [];
+  if (person.birth) {
+    addIntroEvidence(candidates, person.birth, {
+      type: "birth",
+      year: person.birth.year,
+      sequence: candidates.length
+    });
+  }
+
+  for (const event of person.lived || []) {
+    addIntroEvidence(candidates, event, {
+      type: "lived",
+      year: getEventStart(event),
+      sequence: candidates.length
+    });
+  }
+
+  if (person.death?.country === "England") {
+    addIntroEvidence(candidates, person.death, {
+      type: "death",
+      year: person.death.year,
+      sequence: candidates.length
+    });
+  }
+
+  const routeCandidates = candidates.filter((candidate) => isRouteLocation(candidate.location));
+  const usableCandidates = routeCandidates.length ? routeCandidates : candidates;
+  return usableCandidates.sort(compareIntroEvidence)[0] || null;
+}
+
+function addIntroEvidence(candidates, location, options) {
+  if (!Number.isFinite(options.year)) return;
+  if (typeof location.lat !== "number" || typeof location.lon !== "number") return;
+  candidates.push({
+    location,
+    type: options.type,
+    year: options.year,
+    sequence: options.sequence
+  });
+}
+
+function compareVariantIntroductions(a, b) {
+  return a.year - b.year
+    || a.person.displayName.localeCompare(b.person.displayName)
+    || a.person.id.localeCompare(b.person.id);
+}
+
+function compareIntroEvidence(a, b) {
+  return a.year - b.year
+    || getMovementOrder(a.location) - getMovementOrder(b.location)
+    || getDateSortValue(a.location) - getDateSortValue(b.location)
+    || a.type.localeCompare(b.type)
+    || a.sequence - b.sequence;
+}
+
+function prepareSurnameIntroPlayback() {
+  state.activeSurnameIntros = [];
+  state.seenSurnameIntroVariants = new Set(
+    state.variantIntroductions
+      .filter((intro) => intro.year < state.year)
+      .map((intro) => intro.variantKey)
+  );
+}
+
+function resetSurnameIntroPlayback() {
+  state.activeSurnameIntros = [];
+  state.seenSurnameIntroVariants.clear();
+}
+
+function triggerSurnameIntros(previousYear, nextYear, timestamp) {
+  if (!state.showSurnameIntros) return;
+
+  for (const intro of state.variantIntroductions) {
+    if (state.seenSurnameIntroVariants.has(intro.variantKey)) continue;
+    if (intro.year < previousYear || intro.year > nextYear) continue;
+
+    state.seenSurnameIntroVariants.add(intro.variantKey);
+    if (!isIntroVisibleUnderFilters(intro)) continue;
+
+    state.activeSurnameIntros.push({
+      ...intro,
+      startedAt: timestamp
+    });
+  }
+}
+
+function isIntroVisibleUnderFilters(intro) {
+  return state.activeVariants.has(intro.variantKey)
+    && (!state.maleOnly || intro.person.gender === "male");
+}
+
+function drawSurnameIntroLabels(frameLayout, width, height, timestamp, labelObstacles = []) {
+  if (!state.showSurnameIntros || !state.activeSurnameIntros.length) return;
+
+  state.activeSurnameIntros = state.activeSurnameIntros.filter((intro) => {
+    return timestamp - intro.startedAt < SURNAME_INTRO_DURATION_MS;
+  });
+
+  const compact = width < 520;
+  const placedRects = [...labelObstacles];
+  for (const intro of state.activeSurnameIntros) {
+    if (!isIntroVisibleUnderFilters(intro)) continue;
+
+    const point = projectLocation(intro.location, width, height) || frameLayout.get(intro.person.id)?.point;
+    if (!point) continue;
+
+    const age = timestamp - intro.startedAt;
+    const fadeStart = SURNAME_INTRO_DURATION_MS - SURNAME_INTRO_FADE_MS;
+    const alpha = age <= fadeStart ? 1 : clamp(1 - (age - fadeStart) / SURNAME_INTRO_FADE_MS, 0, 1);
+    const label = variantLabel(intro.variantKey);
+    const color = getVariantColor(intro.variantKey);
+    const placement = getSurnameIntroPlacement(label, point, width, height, placedRects, compact);
+    if (!placement) continue;
+
+    drawSurnameIntroLabel(label, point, placement, color, alpha, compact);
+    placedRects.push(expandRect(placement.rect, 3));
+  }
+}
+
+function getDotObstacleRects(frameLayout, compact) {
+  const padding = compact ? 6 : 7;
+  return [...frameLayout.values()]
+    .filter((entry) => entry.point)
+    .map((entry) => {
+      const isHighlighted = state.hoverId === entry.person.id || state.selectedId === entry.person.id;
+      const radius = getPersonDotRadius(entry.person, isHighlighted)
+        + (isDirectLineage(entry.person) && state.showDirectLineage ? 5 : 0)
+        + padding;
+      return {
+        x: entry.point.x - radius,
+        y: entry.point.y - radius,
+        width: radius * 2,
+        height: radius * 2
+      };
+    });
+}
+
+function getSurnameIntroPlacement(label, point, width, height, placedRects, compact) {
+  ctx.save();
+  ctx.font = `850 ${compact ? 12 : 13}px Inter, system-ui, sans-serif`;
+  const textWidth = Math.ceil(ctx.measureText(label).width);
+  ctx.restore();
+
+  const rectWidth = textWidth + (compact ? 28 : 31);
+  const rectHeight = compact ? 23 : 26;
+  const gap = compact ? 10 : 12;
+  const preferredSide = point.x > width * 0.58 ? "left" : "right";
+  const fallbackSide = preferredSide === "left" ? "right" : "left";
+  const sides = [preferredSide, fallbackSide];
+  const offsets = [0, -30, 30, -58, 58, -86, 86];
+
+  for (const sidePreference of sides) {
+    for (const offsetY of offsets) {
+      const side = getClusterTownLabelSide(sidePreference, point, width, rectWidth, gap);
+      const rawX = side === "left" ? point.x - gap - rectWidth : point.x + gap;
+      const rect = {
+        x: clamp(rawX, 8, width - rectWidth - 8),
+        y: clamp(point.y + offsetY - rectHeight / 2, 8, height - rectHeight - 8),
+        width: rectWidth,
+        height: rectHeight
+      };
+      const collisionRect = expandRect(rect, 3);
+      if (placedRects.some((placed) => rectsOverlap(collisionRect, placed))) continue;
+
+      const edgeLeft = Math.abs(point.x - rect.x) < Math.abs(point.x - (rect.x + rect.width));
+      return {
+        rect,
+        dotX: rect.x + 10,
+        textX: rect.x + (compact ? 20 : 22),
+        textY: rect.y + rect.height / 2,
+        anchorX: edgeLeft ? rect.x : rect.x + rect.width,
+        anchorY: rect.y + rect.height / 2
+      };
+    }
+  }
+
+  return null;
+}
+
+function drawSurnameIntroLabel(label, point, placement, color, alpha, compact) {
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 1.6;
+  ctx.beginPath();
+  ctx.moveTo(point.x, point.y);
+  ctx.lineTo(placement.anchorX, placement.anchorY);
+  ctx.stroke();
+
+  drawRoundedRect(placement.rect.x, placement.rect.y, placement.rect.width, placement.rect.height, 8);
+  ctx.fillStyle = "rgba(255, 254, 249, 0.96)";
+  ctx.fill();
+  ctx.strokeStyle = color;
+  ctx.stroke();
+
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(placement.dotX, placement.textY, compact ? 4 : 4.5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = getCss("--forest");
+  ctx.font = `850 ${compact ? 12 : 13}px Inter, system-ui, sans-serif`;
+  ctx.textAlign = "left";
+  ctx.textBaseline = "middle";
+  ctx.fillText(label, placement.textX, placement.textY);
   ctx.restore();
 }
 
@@ -437,7 +847,7 @@ function drawPerson(entry, year) {
   const isHighlighted = isHover || isSelected;
   const fade = getLifeOpacity(person, year);
   const color = getVariantColor(person.surnameVariant);
-  const radius = isHighlighted ? 8.5 : 5 + Math.max(0, person.confidence - 0.7) * 7;
+  const radius = getPersonDotRadius(person, isHighlighted);
   const isLineage = isDirectLineage(person) && state.showDirectLineage;
 
   state.projected.set(person.id, { ...position, radius: isLineage ? radius + 5 : radius, person });
@@ -483,6 +893,11 @@ function drawPerson(entry, year) {
   ctx.restore();
 }
 
+function getPersonDotRadius(person, isHighlighted = false) {
+  if (isHighlighted) return 8.5;
+  return 5 + Math.max(0, person.confidence - 0.7) * 7;
+}
+
 function renderStats(year, visiblePeople) {
   const activePeople = getActivePeople();
   const births = activePeople.filter((person) => person.birth?.year === year).length;
@@ -508,6 +923,8 @@ function renderLayerControls() {
   els.staffordshireToggle.checked = state.showStaffordshire;
   els.directLineageToggle.checked = state.showDirectLineage;
   els.directLineageCount.textContent = `(${directLineageCount})`;
+  els.surnameIntroToggle.checked = state.showSurnameIntros;
+  els.surnameIntroCount.textContent = `(${state.variantIntroductions.length})`;
 }
 
 function renderVariantFilters() {
