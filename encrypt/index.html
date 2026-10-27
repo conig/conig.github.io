@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Create SQL-compatible patient linkage keys locally in your browser.">
+  <meta name="description" content="Create consistent linkage keys from IDs or text, locally in your browser.">
   <title>Linkage keys · Conigrave.com</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./style.css">
@@ -17,7 +17,7 @@
       <a class="home" href="/">Conigrave.com</a>
       <p class="eyebrow">A small data tool</p>
       <h1>Linkage keys</h1>
-      <p class="intro">One patient ID. One secret. The same key, every time.</p>
+      <p class="intro">The same value and secret. The same key, every time.</p>
       <p class="local">Processed in your browser. No uploads, analytics or browser storage.</p>
     </header>
 
@@ -25,14 +25,14 @@
     <form id="linkage-form" autocomplete="off">
       <fieldset class="mode">
         <legend class="sr-only">Input mode</legend>
-        <label><input type="radio" name="mode" value="single" checked> One ID</label>
+        <label><input type="radio" name="mode" value="single" checked> One value</label>
         <label><input type="radio" name="mode" value="csv"> CSV file</label>
       </fieldset>
 
       <div id="single-fields" class="field">
-        <label for="patient-id">Patient ID</label>
-        <input id="patient-id" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="e.g. 12345" aria-describedby="id-help">
-        <p id="id-help" class="help">A positive whole-number ID, exactly as used in your SQL export.</p>
+        <label for="patient-id">ID or value</label>
+        <textarea id="patient-id" rows="2" autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="id-help"></textarea>
+        <p id="id-help" class="help">Any text. Case, spaces and leading zeroes are preserved exactly.</p>
       </div>
 
       <div id="csv-fields" hidden>
@@ -47,13 +47,13 @@
           <select id="id-column" disabled><option>Choose a file first</option></select>
           <p id="file-summary" class="help"></p>
         </div>
-        <p class="notice">Only the selected column is replaced. Other columns, including names or identifying details, remain unchanged. Blank, zero and negative IDs become empty cells.</p>
+        <p class="notice">Only the selected column is replaced. Other columns, including identifying details, remain unchanged. Empty cells stay blank; all other values are hashed as text.</p>
       </div>
 
       <div class="field">
         <label for="passphrase">Secret passphrase</label>
-        <input id="passphrase" type="password" autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="phrase-help">
-        <p id="phrase-help" class="help">12–200 characters, no outer spaces. Use the exact same secret as your SQL script. Prefer a password-manager-generated random secret.</p>
+        <input id="passphrase" type="text" autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="phrase-help">
+        <p id="phrase-help" class="help">Visible so you can check it. Use the exact same secret each time: 12–200 characters, no outer spaces. Prefer a password-manager-generated random secret.</p>
       </div>
       <div class="actions">
         <button id="generate" type="submit" disabled>Generate linkage key</button>
@@ -78,11 +78,12 @@
     </section>
 
     <footer>
-      <p>HMAC-SHA256 · SQL-compatible · Not reversible encryption</p>
+      <p>HMAC-SHA256 · Browser-only · Not reversible encryption</p>
       <details>
         <summary>Compatibility &amp; privacy</summary>
-        <p>The secret is encoded as SQL <code>nvarchar</code> (UTF-16LE), hashed with SHA-256, then used as the HMAC-SHA256 key for <code>patient|ID</code>. Output is 64 uppercase hexadecimal characters. Leading zeroes in numeric IDs are removed, as in SQL.</p>
-        <p>Set <code>@EncryptPatientIDs = 1</code> in your SQL export. Use this tool on original IDs, not already-generated keys. IDs must fit a signed SQL <code>bigint</code>.</p>
+        <p>The secret is encoded as SQL <code>nvarchar</code> (UTF-16LE), hashed with SHA-256, then used as the HMAC-SHA256 key for <code>patient|</code> plus your exact value in UTF-8. Output is 64 uppercase hexadecimal characters. Nothing is trimmed, case-folded or converted to a number.</p>
+        <p>Plain positive decimal IDs such as <code>12345</code> still match your SQL export with <code>@EncryptPatientIDs = 1</code>. Leading zeroes, spaces, signs and arbitrary text now have their own keys; the original SQL converts numeric IDs to canonical decimal text. Non-ASCII text also depends on the SQL database’s <code>varchar</code> encoding.</p>
+        <p>An empty single value can be hashed. Empty CSV cells are left blank so missing IDs are not assigned a shared linkage key. Use original values, not already-generated keys.</p>
         <p>These are pseudonyms, not anonymous data. Protect the secret: anyone who knows it can test possible IDs. Use separate secrets for projects that should not be linked. Other identifying fields can still reveal a person.</p>
         <p>The page does not save inputs or send them to a server. Clear all removes inputs and results from the page, but cannot erase clipboard contents or downloaded files. Use a trusted browser and device.</p>
       </details>

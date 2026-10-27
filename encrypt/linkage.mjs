@@ -24,23 +24,10 @@ export async function createPatientHasher(phrase) {
   const key = await crypto.subtle.importKey('raw', digest, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
   new Uint8Array(digest).fill(0);
   return async (id) => {
-    const canonical = normalisePatientID(id);
-    if (canonical === null) return '';
-    const signature = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`patient|${canonical}`));
+    // Values are exact UTF-8 text. Do not trim, case-fold or coerce to numbers.
+    const signature = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`patient|${id}`));
     return Array.from(new Uint8Array(signature), byte => byte.toString(16).padStart(2, '0')).join('').toUpperCase();
   };
-}
-
-// Strings and BigInt avoid rounding SQL bigint IDs above Number.MAX_SAFE_INTEGER.
-export function normalisePatientID(value) {
-  const text = value.trim();
-  if (text === '') return null;
-  if (!/^[+-]?\d+$/.test(text)) throw new Error('IDs must be whole numbers, not decimals, scientific notation or linkage keys.');
-  const id = BigInt(text);
-  if (id < -9223372036854775808n || id > 9223372036854775807n) {
-    throw new Error('ID is outside the SQL bigint range.');
-  }
-  return id > 0n ? id.toString() : null;
 }
 
 // Strict comma-separated CSV, including quoted commas, quotes and newlines.
@@ -101,28 +88,24 @@ export function stringifyCSV(rows) {
 }
 
 export async function pseudonymiseCSV(rows, column, hasHeader, hash, { onProgress = () => {}, signal } = {}) {
-  if (!Number.isInteger(column) || column < 0 || column >= rows[0].length) throw new Error('Choose an ID column.');
   const start = hasHeader ? 1 : 0;
   if (rows.length <= start) throw new Error('The CSV has no data rows.');
-  // Validate all records before producing any output; never silently hash bad IDs.
-  const ids = rows.slice(start).map((row, index) => {
-    try { return normalisePatientID(row[column]); }
-    catch (error) { throw new Error(`CSV record ${index + start + 1}: ${error.message}`); }
-  });
+  if (!Number.isInteger(column) || column < 0 || column >= rows[0].length) throw new Error('Choose an ID column.');
+  const count = rows.length - start;
   const output = hasHeader ? [[...rows[0]]] : [];
   let empty = 0;
-  for (let i = 0; i < ids.length; i++) {
+  for (let i = 0; i < count; i++) {
     signal?.throwIfAborted();
     const record = [...rows[i + start]];
-    record[column] = ids[i] === null ? '' : await hash(ids[i]);
-    if (ids[i] === null) empty++;
+    if (record[column] === '') empty++;
+    else record[column] = await hash(record[column]);
     output.push(record);
     if ((i + 1) % 250 === 0) {
-      onProgress(i + 1, ids.length);
+      onProgress(i + 1, count);
       await new Promise(resolve => setTimeout(resolve, 0));
     }
   }
   signal?.throwIfAborted();
-  onProgress(ids.length, ids.length);
-  return { csv: stringifyCSV(output), count: ids.length, empty };
+  onProgress(count, count);
+  return { csv: stringifyCSV(output), count, empty };
 }

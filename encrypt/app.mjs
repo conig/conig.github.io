@@ -1,4 +1,4 @@
-import { createPatientHasher, normalisePatientID, parseCSV, pseudonymiseCSV } from './linkage.mjs';
+import { createPatientHasher, parseCSV, pseudonymiseCSV } from './linkage.mjs';
 
 const byId = id => document.getElementById(id);
 const form = byId('linkage-form');
@@ -110,8 +110,7 @@ form.addEventListener('submit', async event => {
   const signal = controller.signal;
   setBusy(true);
   try {
-    const id = mode() === 'single' ? normalisePatientID(byId('patient-id').value) : null;
-    if (mode() === 'single' && id === null) throw new Error('Enter a positive whole-number patient ID.');
+    const id = byId('patient-id').value;
     if (mode() === 'csv' && !rows) throw new Error('Choose a valid CSV first.');
     const hash = await createPatientHasher(byId('passphrase').value);
     if (current !== revision) return;
@@ -131,7 +130,7 @@ form.addEventListener('submit', async event => {
       if (current !== revision) return;
       downloadURL = URL.createObjectURL(new Blob([result.csv], { type: 'text/csv;charset=utf-8' }));
       byId('download').href = downloadURL;
-      byId('csv-summary').textContent = `${result.count.toLocaleString()} rows processed; ${result.empty.toLocaleString()} empty or non-positive IDs left blank.`;
+      byId('csv-summary').textContent = `${result.count.toLocaleString()} rows processed; ${result.empty.toLocaleString()} empty cells left blank.`;
       byId('csv-result').hidden = false;
       status.textContent = 'CSV ready. Review other columns before sharing.';
     }
