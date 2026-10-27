@@ -21,6 +21,7 @@ function invalidate() {
   if (downloadURL) URL.revokeObjectURL(downloadURL);
   downloadURL = null;
   byId('download').removeAttribute('href');
+  byId('download').download = '';
   byId('output').value = '';
   byId('single-result').hidden = true;
   byId('csv-result').hidden = true;
@@ -130,6 +131,7 @@ form.addEventListener('submit', async event => {
       if (current !== revision) return;
       downloadURL = URL.createObjectURL(new Blob([result.csv], { type: 'text/csv;charset=utf-8' }));
       byId('download').href = downloadURL;
+      byId('download').download = `${fileInput.files[0].name.replace(/\.csv$/i, '')}_anonymised.csv`;
       byId('csv-summary').textContent = `${result.count.toLocaleString()} rows processed; ${result.empty.toLocaleString()} empty cells left blank.`;
       byId('csv-result').hidden = false;
       status.textContent = 'CSV ready. Review other columns before sharing.';

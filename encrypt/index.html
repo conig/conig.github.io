@@ -15,9 +15,7 @@
   <main>
     <header>
       <a class="home" href="/">Conigrave.com</a>
-      <p class="eyebrow">A small data tool</p>
       <h1>Linkage keys</h1>
-      <p class="intro">The same value and secret. The same key, every time.</p>
       <p class="local">Processed in your browser. No uploads, analytics or browser storage.</p>
     </header>
 
@@ -30,9 +28,8 @@
       </fieldset>
 
       <div id="single-fields" class="field">
-        <label for="patient-id">ID or value</label>
-        <textarea id="patient-id" rows="2" autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="id-help"></textarea>
-        <p id="id-help" class="help">Any text. Case, spaces and leading zeroes are preserved exactly.</p>
+        <label for="patient-id">Value to anonymise</label>
+        <textarea id="patient-id" rows="2" autocomplete="off" spellcheck="false" autocapitalize="none"></textarea>
       </div>
 
       <div id="csv-fields" hidden>
@@ -53,7 +50,7 @@
       <div class="field">
         <label for="passphrase">Secret passphrase</label>
         <input id="passphrase" type="text" autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="phrase-help">
-        <p id="phrase-help" class="help">Visible so you can check it. Use the exact same secret each time: 12–200 characters, no outer spaces. Prefer a password-manager-generated random secret.</p>
+        <p id="phrase-help" class="help">Use the same passphrase to receive a consistent value back.</p>
       </div>
       <div class="actions">
         <button id="generate" type="submit" disabled>Generate linkage key</button>
@@ -73,7 +70,7 @@
     <section id="csv-result" class="result" aria-labelledby="download-title" hidden>
       <h2 id="download-title">Your CSV is ready</h2>
       <p id="csv-summary"></p>
-      <a id="download" class="button" download="linkage-keys.csv">Download CSV</a>
+      <a id="download" class="button" download>Download CSV</a>
       <p class="help">The downloaded file stays on your device. Open untrusted CSVs as data, not formulas.</p>
     </section>
 
