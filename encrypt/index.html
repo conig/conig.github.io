@@ -86,12 +86,12 @@
       <p>HMAC-SHA256 · Browser-only · Not reversible encryption</p>
       <details>
         <summary>Compatibility &amp; privacy</summary>
-        <p>The secret is encoded as SQL <code>nvarchar</code> (UTF-16LE), hashed with SHA-256, then used as the HMAC-SHA256 key for <code>patient|</code> plus your exact value in UTF-8. Output is 64 uppercase hexadecimal characters. Nothing is trimmed, case-folded or converted to a number.</p>
+        <p>The secret is encoded as SQL <code>nvarchar</code> (UTF-16LE), hashed with SHA-256, then used as the HMAC-SHA256 key for <code>patient|</code> plus your exact value in UTF-8. Output is 64 uppercase hexadecimal characters. Values are not trimmed, case-folded or converted to a number.</p>
         <p>Plain positive decimal IDs such as <code>12345</code> still match your SQL export with <code>@EncryptPatientIDs = 1</code>. Leading zeroes, spaces, signs and arbitrary text now have their own keys; the original SQL converts numeric IDs to canonical decimal text. Non-ASCII text also depends on the SQL database’s <code>varchar</code> encoding.</p>
         <p>An empty single value can be hashed. Empty CSV cells are left blank so missing IDs are not assigned a shared linkage key. Use original values, not already-generated keys.</p>
         <p>These are pseudonyms, not anonymous data. Protect the secret: anyone who knows it can test possible IDs. Use separate secrets for projects that should not be linked. Other identifying fields can still reveal a person.</p>
         <p>The page does not save inputs or send them to a server. Clear all removes inputs and results from the page, but cannot erase clipboard contents or downloaded files. Use a trusted browser and device.</p>
-        <p>Use the upload icon in the passphrase field to load a UTF-8 <code>.txt</code> file (12–200 characters, up to 4 KiB). No line breaks or spaces at either end; nothing is trimmed. The loaded passphrase is locked against edits.</p>
+        <p>Use the upload icon in the passphrase field to load a UTF-8 <code>.txt</code> file (12–200 characters after trimming, up to 4 KiB). Trailing whitespace, including spaces, tabs and newlines, is removed. Leading and internal characters are preserved; leading spaces and embedded line breaks are rejected. The loaded passphrase is locked against edits.</p>
       </details>
     </footer>
   </main>

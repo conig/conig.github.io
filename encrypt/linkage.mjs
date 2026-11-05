@@ -25,9 +25,11 @@ export async function readPassphraseFile(file) {
     try { phrase = new TextDecoder('utf-8', { fatal: true }).decode(bytes); }
     catch { throw new Error('Save the passphrase file as UTF-8 text and try again.'); }
     if (phrase.includes('\0')) throw new Error('Save the passphrase file as UTF-8 text without NUL characters.');
-    // Text inputs discard CR/LF. Reject them before assigning to the field so
-    // the displayed passphrase and the hashed passphrase cannot diverge.
-    if (/[\r\n]/.test(phrase)) throw new Error('The passphrase file must have no line breaks, including at the end. Nothing has been trimmed.');
+    // Ignore trailing file whitespace, including editor-added line endings.
+    // Keep leading/internal characters unchanged; never case-fold or normalise.
+    phrase = phrase.trimEnd();
+    // Text inputs discard CR/LF, so reject remaining breaks before assignment.
+    if (/[\r\n]/.test(phrase)) throw new Error('The passphrase file must have no embedded line breaks.');
     validatePhrase(phrase);
     return phrase;
   } finally {
