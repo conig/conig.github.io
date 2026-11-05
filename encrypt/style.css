@@ -65,6 +65,11 @@ button:active, .button:active { background: color-mix(in srgb, var(--md-sys-colo
 .secondary:hover { background: color-mix(in srgb, var(--md-sys-color-primary) 8%, var(--md-sys-color-surface)); box-shadow: none; }
 .secondary:active { background: color-mix(in srgb, var(--md-sys-color-primary) 12%, var(--md-sys-color-surface)); }
 button:disabled { opacity: .38; cursor: not-allowed; box-shadow: none; }
+.passphrase-control { position: relative; }
+.passphrase-control input { padding-inline-end: 64px; }
+.passphrase-control .icon-button { position: absolute; inset-inline-end: 6px; top: 50%; transform: translateY(-50%); width: 44px; min-height: 44px; padding: 12px; border: 0; border-radius: 50%; background: transparent; color: var(--md-sys-color-primary); }
+.passphrase-control .icon-button:hover { background: color-mix(in srgb, var(--md-sys-color-primary) 8%, var(--md-sys-color-surface)); box-shadow: none; }
+.icon-button svg { width: 20px; height: 20px; fill: currentColor; }
 :focus-visible { outline: 3px solid var(--md-sys-color-primary); outline-offset: 3px; }
 #status { font-size: 14px; line-height: 20px; min-height: 20px; margin: 16px 0 0; }
 .error { color: var(--md-sys-color-on-error-container); background: var(--md-sys-color-error-container); border-radius: 12px; padding: 16px; font-size: 14px; }

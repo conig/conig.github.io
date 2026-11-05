@@ -88,6 +88,8 @@ function clearPassphrase() {
   byId('type-passphrase').hidden = true;
 }
 
+byId('load-passphrase').addEventListener('click', () => phraseFileInput.click());
+
 phraseFileInput.addEventListener('change', async () => {
   invalidate();
   const current = revision;
