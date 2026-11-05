@@ -52,6 +52,13 @@
         <input id="passphrase" type="text" autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="phrase-help">
         <p id="phrase-help" class="help">Use the same passphrase to receive a consistent value back.</p>
       </div>
+      <div class="field">
+        <label for="passphrase-file">Or load a passphrase from a .txt file</label>
+        <input id="passphrase-file" type="file" accept=".txt,text/plain" aria-describedby="phrase-file-help">
+        <p id="phrase-file-help" class="help">UTF-8, 12–200 characters, no line breaks or spaces at either end. Text is never trimmed. The file stays on your device; the loaded passphrase is locked against edits.</p>
+        <p id="phrase-file-summary" class="help" role="status"></p>
+      </div>
+      <button id="type-passphrase" type="button" class="secondary" hidden>Type a passphrase instead</button>
       <div class="actions">
         <button id="generate" type="submit" disabled>Generate linkage key</button>
         <button id="clear" type="button" class="secondary">Clear all</button>

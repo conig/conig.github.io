@@ -15,6 +15,26 @@ export function validatePhrase(phrase) {
   }
 }
 
+export async function readPassphraseFile(file) {
+  if (!/\.txt$/i.test(file.name)) throw new Error('Choose a .txt passphrase file.');
+  if (file.size > 4096) throw new Error('Choose a passphrase file no larger than 4 KiB.');
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  try {
+    let phrase;
+    // A UTF-8 BOM is an encoding marker, not part of the secret.
+    try { phrase = new TextDecoder('utf-8', { fatal: true }).decode(bytes); }
+    catch { throw new Error('Save the passphrase file as UTF-8 text and try again.'); }
+    if (phrase.includes('\0')) throw new Error('Save the passphrase file as UTF-8 text without NUL characters.');
+    // Text inputs discard CR/LF. Reject them before assigning to the field so
+    // the displayed passphrase and the hashed passphrase cannot diverge.
+    if (/[\r\n]/.test(phrase)) throw new Error('The passphrase file must have no line breaks, including at the end. Nothing has been trimmed.');
+    validatePhrase(phrase);
+    return phrase;
+  } finally {
+    bytes.fill(0);
+  }
+}
+
 export async function createPatientHasher(phrase) {
   validatePhrase(phrase);
   if (!globalThis.crypto?.subtle) throw new Error('Open this page over HTTPS in a browser with Web Crypto support.');

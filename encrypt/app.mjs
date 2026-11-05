@@ -1,9 +1,11 @@
-import { createPatientHasher, parseCSV, pseudonymiseCSV } from './linkage.mjs';
+import { createPatientHasher, readPassphraseFile, parseCSV, pseudonymiseCSV } from './linkage.mjs';
 
 const byId = id => document.getElementById(id);
 const form = byId('linkage-form');
 const generate = byId('generate');
 const fileInput = byId('csv-file');
+const phraseInput = byId('passphrase');
+const phraseFileInput = byId('passphrase-file');
 const columnInput = byId('id-column');
 const headerInput = byId('has-header');
 const status = byId('status');
@@ -78,6 +80,41 @@ columnInput.addEventListener('change', () => {
   invalidate();
 });
 
+function clearPassphrase() {
+  phraseInput.value = '';
+  phraseInput.readOnly = false;
+  phraseFileInput.value = '';
+  byId('phrase-file-summary').textContent = '';
+  byId('type-passphrase').hidden = true;
+}
+
+phraseFileInput.addEventListener('change', async () => {
+  invalidate();
+  const current = revision;
+  const file = phraseFileInput.files[0];
+  clearPassphrase();
+  if (!file) return;
+  setBusy(true);
+  try {
+    const phrase = await readPassphraseFile(file);
+    if (current !== revision) return;
+    phraseInput.value = phrase;
+    phraseInput.readOnly = true;
+    byId('phrase-file-summary').textContent = `Loaded ${file.name}. Passphrase locked against edits.`;
+    byId('type-passphrase').hidden = false;
+  } catch (error) {
+    if (current === revision) showError(error.message);
+  } finally {
+    if (current === revision) setBusy(false);
+  }
+});
+
+byId('type-passphrase').addEventListener('click', () => {
+  invalidate();
+  clearPassphrase();
+  phraseInput.focus();
+});
+
 fileInput.addEventListener('change', async () => {
   invalidate();
   const current = revision;
@@ -113,7 +150,7 @@ form.addEventListener('submit', async event => {
   try {
     const id = byId('patient-id').value;
     if (mode() === 'csv' && !rows) throw new Error('Choose a valid CSV first.');
-    const hash = await createPatientHasher(byId('passphrase').value);
+    const hash = await createPatientHasher(phraseInput.value);
     if (current !== revision) return;
     if (mode() === 'single') {
       const key = await hash(id);
@@ -164,6 +201,7 @@ function clearAll() {
   invalidate();
   rows = null;
   form.reset();
+  clearPassphrase();
   delete columnInput.dataset.selected;
   updateColumns();
   byId('single-fields').hidden = false;
