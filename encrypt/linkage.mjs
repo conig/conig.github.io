@@ -46,8 +46,9 @@ export async function createPatientHasher(phrase) {
   const key = await crypto.subtle.importKey('raw', digest, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
   new Uint8Array(digest).fill(0);
   return async (id) => {
-    // Values are exact UTF-8 text. Do not trim, case-fold or coerce to numbers.
-    const signature = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`patient|${id}`));
+    // Match the SQL nvarchar message bytes too, not only the secret encoding.
+    // Preserve exact text: no trimming, case-folding or numeric coercion.
+    const signature = await crypto.subtle.sign('HMAC', key, utf16le(`patient|${id}`));
     return Array.from(new Uint8Array(signature), byte => byte.toString(16).padStart(2, '0')).join('').toUpperCase();
   };
 }
